@@ -1,0 +1,12 @@
+name: phenopposites
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - pip:
+    - pronto
+    - owlready2
+    - rdflib
+    - python-dotenv

@@ -1,1 +1,7 @@
 /.project
+.DS_Store
+__pycache__/
+
+# Ignore all files in data/input/ but keep the folder
+data/input/*
+!.gitkeep

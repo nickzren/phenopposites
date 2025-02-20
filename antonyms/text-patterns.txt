@@ -107,7 +107,8 @@ combustible,noncombustible
 modified direction,unmodified direction
 fasciculated,defasciculated
 frequent,infrequent
-colored,discoloreddiscriminate,indiscriminate
+colored,discolored
+discriminate,indiscriminate
 contiguous,discontiguous
 ornamented,unornamented
 polar,nonpolar
@@ -141,3 +142,23 @@ lumenized,unlumenized
 aromatic,non-aromatic
 transparent,non-transparent
 micro,macro
+ventral,dorsal
+proximal,distal
+anterior,posterior
+superior,inferior
+medial,lateral
+hypertrophy,atrophy
+dilated,constricted
+tachycardia,bradycardia
+gain-of-function,loss-of-function
+external,internal
+hypertonia,hypotonia
+hypermobility,hypomobility
+ectopic,orthotopic
+bilateral,unilateral
+susceptible,resistant
+transparent,opaque
+inflated,deflated
+localized,mislocalized
+functional,dysfunctional
+lumenized,unlumenized
