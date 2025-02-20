@@ -41,6 +41,9 @@ This fork of **phenopposites** was created to modernize and extend the original 
    # extracts opposite terms using logical definitions from ontology structure
    python src/hpo_opposites_logical.py
 
-   # (optional) inherits opposite-of relationships to descendant terms
+   # merges text-based and logical opposite pairs into a single dataset
    python src/unify_hpo_opposites.py  
+
+   # (optional) inherits opposite-of relationships to descendant terms
+   python src/propagate_hpo_opposites.py  
    ```
