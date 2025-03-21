@@ -19,14 +19,6 @@ MORPH_RULES = [
     (re.compile(r'\bbrady(\w*)\b', re.IGNORECASE), r'tachy\1'),
     (re.compile(r'\bhyperplastic(\w*)\b', re.IGNORECASE), r'hypoplastic\1'),
     (re.compile(r'\bhypoplastic(\w*)\b', re.IGNORECASE), r'hyperplastic\1'),
-    (re.compile(r'\bintra(\w*)\b', re.IGNORECASE), r'extra\1'),
-    (re.compile(r'\bextra(\w*)\b', re.IGNORECASE), r'intra\1'),
-    (re.compile(r'\bendo(\w*)\b', re.IGNORECASE), r'exo\1'),
-    (re.compile(r'\bexo(\w*)\b', re.IGNORECASE), r'endo\1'),
-    (re.compile(r'\bpre(\w*)\b', re.IGNORECASE), r'post\1'),
-    (re.compile(r'\bpost(\w*)\b', re.IGNORECASE), r'pre\1'),
-    (re.compile(r'\bpoly(\w*)\b', re.IGNORECASE), r'mono\1'),
-    (re.compile(r'\bmono(\w*)\b', re.IGNORECASE), r'poly\1'),
 ]
 
 def load_antonyms(csv_path):
