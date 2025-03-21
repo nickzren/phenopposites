@@ -5,16 +5,54 @@ import re
 from dotenv import load_dotenv
 from pronto import Ontology
 
+# Load environment variables (like INPUT_DIR, OUTPUT_DIR) from .env file
 load_dotenv()
 INPUT_DIR = os.getenv("INPUT_DIR")
 OUTPUT_DIR = os.getenv("OUTPUT_DIR")
 
+# Morphological prefix swaps (both directions).
+# Each tuple is (pattern, replacement). For every prefix pair, we
+# include two rules (A->B, B->A).
+MORPH_RULES = [
+    # (hemi)?hyper <-> (hemi)?hypo
+    (re.compile(r'\b(hemi)?hyper(\w*)\b', re.IGNORECASE), r'\1hypo\2'),
+    (re.compile(r'\b(hemi)?hypo(\w*)\b',  re.IGNORECASE), r'\1hyper\2'),
+
+    # macro <-> micro
+    (re.compile(r'\bmacro(\w*)\b', re.IGNORECASE), r'micro\1'),
+    (re.compile(r'\bmicro(\w*)\b', re.IGNORECASE), r'macro\1'),
+
+    # tachy <-> brady
+    (re.compile(r'\btachy(\w*)\b', re.IGNORECASE), r'brady\1'),
+    (re.compile(r'\bbrady(\w*)\b', re.IGNORECASE), r'tachy\1'),
+
+    # hyperplastic <-> hypoplastic
+    (re.compile(r'\bhyperplastic(\w*)\b', re.IGNORECASE), r'hypoplastic\1'),
+    (re.compile(r'\bhypoplastic(\w*)\b', re.IGNORECASE), r'hyperplastic\1'),
+
+    # intra <-> extra
+    (re.compile(r'\bintra(\w*)\b', re.IGNORECASE), r'extra\1'),
+    (re.compile(r'\bextra(\w*)\b', re.IGNORECASE), r'intra\1'),
+
+    # endo <-> exo
+    (re.compile(r'\bendo(\w*)\b', re.IGNORECASE), r'exo\1'),
+    (re.compile(r'\bexo(\w*)\b', re.IGNORECASE), r'endo\1'),
+
+    # pre <-> post
+    (re.compile(r'\bpre(\w*)\b', re.IGNORECASE), r'post\1'),
+    (re.compile(r'\bpost(\w*)\b', re.IGNORECASE), r'pre\1'),
+
+    # poly <-> mono
+    (re.compile(r'\bpoly(\w*)\b', re.IGNORECASE), r'mono\1'),
+    (re.compile(r'\bmono(\w*)\b', re.IGNORECASE), r'poly\1'),
+]
+
 def load_antonyms(csv_path):
     """
     Load antonym pairs from CSV into:
-      1) whole_word_map     (for single-word antonym pairs)
-      2) prefix_map         (for short prefix swaps)
-      3) multi_word_map     (for multi-word or hyphenated antonym patterns)
+      1) whole_word_map  (single-word antonym pairs)
+      2) prefix_map      (short prefix swaps for short words)
+      3) multi_word_map  (multi-word or hyphenated antonym patterns)
 
     CSV columns: left,right
     """
@@ -30,17 +68,17 @@ def load_antonyms(csv_path):
             left = row[0].strip().lower()
             right = row[1].strip().lower()
 
-            # Multi-word or hyphenated pairs
+            # 1) Multi-word or hyphenated
             if ' ' in left or ' ' in right or '-' in left or '-' in right:
                 multi_word_map[left] = right
                 multi_word_map[right] = left
 
-            # Short single-word pairs => treat as prefix swaps
+            # 2) Short single-word => prefix-based mapping
             elif len(left) < 6 or len(right) < 6:
                 prefix_map[left] = right
                 prefix_map[right] = left
 
-            # Regular single-word antonym pairs
+            # 3) Regular single-word antonyms
             else:
                 whole_word_map[left] = right
                 whole_word_map[right] = left
@@ -49,7 +87,8 @@ def load_antonyms(csv_path):
 
 def extract_labels_and_synonyms(ontology):
     """
-    Returns a dict of HPO IDs -> set of labels + synonyms (excluding 'RELATED').
+    Returns a dict of HPO IDs -> set of labels + synonyms.
+    Excludes synonyms with scope == 'RELATED'.
     """
     term_dict = {}
     for term in ontology.terms():
@@ -64,7 +103,7 @@ def extract_labels_and_synonyms(ontology):
 
 def build_label_index(term_dict):
     """
-    Build a reverse index: label -> set of term_ids that have that label.
+    Build a reverse index: label -> set of term_ids with that label.
     """
     label_to_ids = {}
     for term_id, labels in term_dict.items():
@@ -74,16 +113,31 @@ def build_label_index(term_dict):
 
 def morphological_swaps(label):
     """
-    Applies known morphological regex swaps, e.g., 'hemi?hyper' -> 'hemi?hypo'.
-    Returns swapped label or None if no change.
+    Applies known morphological prefix swaps to 'label'.
+    Returns a set of all distinct transformations or empty set if no rule applies.
+
+    Example:
+      'hypertonia' -> {'hypotonia'}
+      'intraarticular' -> {'extraarticular'}
+      'bradycardia' -> {'tachycardia'}
     """
-    swapped = re.sub(r'\b(hemi)?hyper(\w*)\b', r'\1hypo\2', label)
-    return swapped if swapped != label else None
+    results = set()
+    original_label = label.lower()
+
+    for pattern, replacement in MORPH_RULES:
+        swapped = pattern.sub(replacement, original_label)
+        if swapped != original_label:
+            # Standardize to lowercase and strip spaces
+            results.add(swapped.strip().lower())
+
+    return results
 
 def generate_opposite_labels(label, whole_word_map, prefix_map, multi_word_map):
     """
-    Generate opposite labels based on multi-word exact replacements,
-    morphological swaps, and single-word/prefix-based replacements.
+    1) Check multi-word exact replacements
+    2) Perform morphological swaps
+    3) Single-word or prefix-based replacements
+    Returns a sorted list of candidate opposite strings.
     """
     label_l = label.lower()
     opposite_labels = set()
@@ -93,12 +147,11 @@ def generate_opposite_labels(label, whole_word_map, prefix_map, multi_word_map):
         opposite_labels.add(multi_word_map[label_l])
 
     # 2) Morphological swaps
-    morph_swapped = morphological_swaps(label_l)
-    if morph_swapped:
-        print(f"Morphological swap: {label_l} -> {morph_swapped}")
-        opposite_labels.add(morph_swapped)
+    morph_swapped_set = morphological_swaps(label_l)
+    if morph_swapped_set:
+        opposite_labels.update(morph_swapped_set)
 
-    # 3) Single-word or prefix-based replacements
+    # 3) Single-word or prefix-based
     parts = re.findall(r'\w+|\W+', label_l)
     for i, token in enumerate(parts):
         if token.isalnum():
@@ -119,7 +172,11 @@ def generate_opposite_labels(label, whole_word_map, prefix_map, multi_word_map):
 
 def find_opposites_text_matching(ontology_path, antonyms_csv, output_file):
     """
-    Detect opposite terms in HPO via text matching.
+    Detect opposite terms in the HPO using text-matching based on:
+      - multi-word mappings
+      - morphological swaps
+      - whole-word or prefix-based replacements
+    Writes results to output_file.
     """
     whole_word_map, prefix_map, multi_word_map = load_antonyms(antonyms_csv)
     ontology = Ontology(ontology_path)
@@ -131,10 +188,12 @@ def find_opposites_text_matching(ontology_path, antonyms_csv, output_file):
     seen_pairs = set()
     term_ids = sorted(term_dict.keys())
 
+    # Check each term's labels for potential antonyms
     for term_id in term_ids:
         for label in term_dict[term_id]:
             candidates = generate_opposite_labels(label, whole_word_map, prefix_map, multi_word_map)
             for opp_label in candidates:
+                # See if the opposite label appears in other terms
                 if opp_label in label_to_ids:
                     for other_id in label_to_ids[opp_label]:
                         if other_id != term_id:
@@ -155,4 +214,5 @@ if __name__ == "__main__":
     hp_obo = os.path.join(INPUT_DIR, "hp.obo")
     antonyms_csv = os.path.join("antonyms", "text-patterns.txt")
     output_file = os.path.join(OUTPUT_DIR, "hpo_opposites_text.tsv")
+
     find_opposites_text_matching(hp_obo, antonyms_csv, output_file)

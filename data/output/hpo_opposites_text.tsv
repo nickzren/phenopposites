@@ -20,8 +20,8 @@ HP:0000215	Thick upper lip vermilion	HP:0000219	Thin upper lip vermilion
 HP:0000233	Thin vermilion border	HP:0012471	Thick vermilion border
 HP:0000239	Large fontanelles	HP:0005486	Small fontanelle
 HP:0000248	Brachycephaly	HP:0000268	Dolichocephaly
-HP:0000252	Microcephaly	HP:0000256	Macrocephaly
 HP:0000252	Microcephaly	HP:0040194	Increased head circumference
+HP:0000252	Microcephaly	HP:0000256	Macrocephaly
 HP:0000253	Progressive microcephaly	HP:0004481	Progressive macrocephaly
 HP:0000255	Acute sinusitis	HP:0011109	Chronic sinusitis
 HP:0000260	Wide anterior fontanel	HP:0000237	Small anterior fontanelle
@@ -45,6 +45,8 @@ HP:0000336	Prominent supraorbital ridges	HP:0009891	Underdeveloped supraorbital 
 HP:0000337	Broad forehead	HP:0000341	Narrow forehead
 HP:0000350	Small forehead	HP:0002003	Large forehead
 HP:0000371	Acute otitis media	HP:0000389	Chronic otitis media
+HP:0000384	Preauricular skin tag	HP:0004451	Postauricular skin tag
+HP:0000399	Prelingual sensorineural hearing impairment	HP:0008596	Postlingual sensorineural hearing impairment
 HP:0000400	Macrotia	HP:0008551	Microtia
 HP:0000418	Narrow nasal ridge	HP:0012811	Wide nasal ridge
 HP:0000426	Prominent nasal bridge	HP:0005280	Depressed nasal bridge
@@ -88,6 +90,8 @@ HP:0000973	Cutis laxa	HP:0000974	Hyperextensible skin
 HP:0000998	Hypertrichosis	HP:0008070	Sparse hair
 HP:0001034	Hypermelanotic macule	HP:0009719	Hypomelanotic macule
 HP:0001115	Posterior polar cataract	HP:0001134	Anterior polar cataract
+HP:0001161	Hand polydactyly	HP:0004058	Hand monodactyly
+HP:0001162	Postaxial hand polydactyly	HP:0001177	Preaxial hand polydactyly
 HP:0001169	Broad palm	HP:0004283	Narrow palm
 HP:0001176	Large hands	HP:0200055	Small hand
 HP:0001196	Short umbilical cord	HP:0011417	Long umbilical cord
@@ -96,14 +100,17 @@ HP:0001204	Distal symphalangism of hands	HP:0009857	Symphalangism affecting the 
 HP:0001238	Slender finger	HP:0001500	Broad finger
 HP:0001252	Hypotonia	HP:0001276	Hypertonia
 HP:0001265	Hyporeflexia	HP:0001347	Hyperreflexia
+HP:0001271	Polyneuropathy	HP:0009831	Mononeuropathy
 HP:0001315	Reduced tendon reflexes	HP:0001347	Hyperreflexia
 HP:0001349	Facial diplegia	HP:0012799	Unilateral facial palsy
 HP:0001376	Limitation of joint mobility	HP:0001382	Joint hypermobility
 HP:0001403	Macrovesicular hepatic steatosis	HP:0001414	Microvesicular hepatic steatosis
+HP:0001406	Intrahepatic cholestasis	HP:0012334	Extrahepatic cholestasis
 HP:0001413	Micronodular cirrhosis	HP:0006577	Macronodular cirrhosis
 HP:0001476	Delayed closure of the anterior fontanelle	HP:0005458	Premature closure of fontanelles
 HP:0001477	Compensatory chin elevation	HP:0031706	Compensatory chin depression
 HP:0001488	Bilateral ptosis	HP:0007687	Unilateral ptosis
+HP:0001511	Intrauterine growth retardation	HP:0008897	Postnatal growth retardation
 HP:0001520	Large for gestational age	HP:0001518	Small for gestational age
 HP:0001558	Decreased fetal movement	HP:0010519	Increased fetal movement
 HP:0001561	Polyhydramnios	HP:0001562	Oligohydramnios
@@ -121,6 +128,8 @@ HP:0001769	Broad foot	HP:0001786	Narrow foot
 HP:0001773	Short foot	HP:0001833	Long foot
 HP:0001805	Onychogryphosis	HP:0001816	Thin nail
 HP:0001821	Broad nail	HP:0011313	Narrow nail
+HP:0001829	Foot polydactyly	HP:0200054	Foot monodactyly
+HP:0001830	Postaxial foot polydactyly	HP:0001841	Preaxial foot polydactyly
 HP:0001831	Short toe	HP:0010511	Long toe
 HP:0001837	Broad toe	HP:0011308	Slender toe
 HP:0001847	Long hallux	HP:0010109	Short hallux
@@ -163,6 +172,7 @@ HP:0002714	Downturned corners of mouth	HP:0010805	Upturned corners of mouth
 HP:0002716	Lymphadenopathy	HP:0002732	Lymph node hypoplasia
 HP:0002720	Decreased circulating IgA concentration	HP:0003261	Increased circulating IgA concentration
 HP:0002731	Decreased lymphocyte apoptosis	HP:0030887	Increased lymphocyte apoptosis
+HP:0002789	Tachypnea	HP:0046507	Bradypnea
 HP:0002791	Hypoventilation	HP:0002883	Hyperventilation
 HP:0002850	Decreased circulating total IgM	HP:0003496	Increased circulating IgM level
 HP:0002901	Hypocalcemia	HP:0003072	Hypercalcemia
@@ -236,6 +246,7 @@ HP:0004328	Abnormal anterior eye segment morphology	HP:0004329	Abnormal posterio
 HP:0004330	Increased skull ossification	HP:0004331	Decreased skull ossification
 HP:0004349	Reduced bone mineral density	HP:0011001	Increased bone mineral density
 HP:0004369	Decreased circulating purine concentration	HP:0004368	Increased circulating purine concentration
+HP:0004464	Postauricular pit	HP:0004467	Preauricular pit
 HP:0004469	Chronic bronchitis	HP:0012388	Acute bronchitis
 HP:0004488	Macrocephaly at birth	HP:0011451	Primary microcephaly
 HP:0004528	Generalized hypotrichosis	HP:0004554	Generalized hypertrichosis
@@ -249,10 +260,12 @@ HP:0004826	Folate-unresponsive megaloblastic anemia	HP:0004851	Folate-responsive
 HP:0004879	Intermittent hyperventilation	HP:0004881	Episodic hypoventilation
 HP:0004905	Reduced circulating vitamin A concentration	HP:4000212	Increased circulating vitamin A concentration
 HP:0004923	Hyperphenylalaninemia	HP:0500141	Hypophenylalaninemia
+HP:0004945	Extracranial internal carotid artery dissection	HP:0012160	Intracranial internal carotid artery dissection
 HP:0004966	Medial calcification of large arteries	HP:0012458	Medial calcification of small arteries
 HP:0004977	Bilateral radial aplasia	HP:0011908	Unilateral radial aplasia
 HP:0005036	Unilateral ulnar hypoplasia	HP:0005648	Bilateral ulnar hypoplasia
 HP:0005084	Anterior radial head dislocation	HP:0005798	Posterior radial head dislocation
+HP:0005151	Preductal coarctation of the aorta	HP:0011647	Postductal coarctation of the aorta
 HP:0005165	Shortened PR interval	HP:0012248	Prolonged PR interval
 HP:0005170	Complete heart block with broad QRS complexes	HP:0005178	Complete heart block with narrow QRS complexes
 HP:0005172	Left posterior fascicular block	HP:0011711	Left anterior fascicular block
@@ -287,6 +300,7 @@ HP:0006384	Club-shaped distal femur	HP:0006406	Club-shaped proximal femur
 HP:0006387	Wide distal femoral metaphysis	HP:0008783	Wide proximal femoral metaphysis
 HP:0006429	Broad femoral neck	HP:0008819	Narrow femoral neck
 HP:0006431	Abnormal proximal femoral metaphysis morphology	HP:0030299	Abnormal distal femoral metaphysis morphology
+HP:0006544	Extrapulmonary lobar sequestration	HP:0011278	Intrapulmonary lobar sequestration
 HP:0006554	Acute hepatic failure	HP:0100626	Chronic hepatic failure
 HP:0006927	Unilateral polymicrogyria	HP:0025646	Bilateral polymicrogyria
 HP:0007048	Large basal ganglia	HP:0012697	Small basal ganglia
@@ -331,6 +345,7 @@ HP:0008757	Unilateral vocal cord paralysis	HP:0012820	Bilateral vocal cord paral
 HP:0008818	Large iliac wing	HP:0002866	Hypoplastic iliac wing
 HP:0008823	Inferior pubic ramus hypoplasia	HP:0034708	Superior pubic ramus hypoplasia
 HP:0008828	Delayed proximal femoral epiphyseal ossification	HP:6000866	Delayed distal femoral epiphyseal ossification
+HP:0008846	Severe intrauterine growth retardation	HP:0008850	Severe postnatal growth retardation
 HP:0008944	Distal lower limb amyotrophy	HP:0008956	Proximal lower limb amyotrophy
 HP:0008948	Proximal upper limb amyotrophy	HP:0040266	Proximal upper limb muscle hypertrophy
 HP:0008972	Decreased activity of mitochondrial respiratory chain	HP:0040015	Increased activity of mitochondrial respiratory chain
@@ -603,11 +618,13 @@ HP:0010906	Hyperhistidinemia	HP:0500145	Hypohistidinemia
 HP:0010910	Hypervalinemia	HP:0500132	Hypovalinemia
 HP:0010911	Hyperleucinemia	HP:0500143	Hypoleucinemia
 HP:0010913	Hyperisoleucinemia	HP:0500144	Hypoisoleucinemia
+HP:0010961	obsolete Intralobar sequestration	HP:0010962	obsolete Extralobar sequestration
 HP:0010964	Abnormal circulating long-chain fatty-acid concentration	HP:0033147	Abnormal circulating short-chain fatty-acid concentration
 HP:0010976	B lymphocytopenia	HP:0005404	Increased B cell count
 HP:0010980	Hyperlipoproteinemia	HP:0010981	Hypolipoproteinemia
 HP:0011009	Acute	HP:0011010	Chronic
 HP:0011037	Decreased urine output	HP:0000103	Polyuria
+HP:0011040	Abnormal intrahepatic bile duct morphology	HP:0035013	Abnormal extrahepatic bile duct morphology
 HP:0011105	Hypervolemia	HP:0011106	Hypovolemia
 HP:0011173	Focal behavior arrest seizure	HP:0011174	Focal hyperkinetic seizure
 HP:0011189	Bilateral multifocal epileptiform discharges	HP:0011191	Unilateral multifocal epileptiform discharges
@@ -640,6 +657,7 @@ HP:0012026	Hyperornithinemia	HP:0500163	Hypoornithinemia
 HP:0012052	Low serum calcitriol	HP:0031415	High serum calcitriol
 HP:0012053	Decreased circulating calcifediol concentration	HP:0031414	High serum calcifediol
 HP:0012081	Enlarged cerebellum	HP:0001321	Cerebellar hypoplasia
+HP:0012092	Abnormality of exocrine pancreas physiology	HP:0012093	Abnormality of endocrine pancreas physiology
 HP:0012107	Increased fibular diameter	HP:0031107	Decreased fibular diameter
 HP:0012122	Anterior uveitis	HP:0012123	Posterior uveitis
 HP:0012132	Erythroid hyperplasia	HP:0012133	Erythroid hypoplasia
@@ -793,6 +811,7 @@ HP:0031426	Decreased circulating beta-C-terminal telopeptide concentration	HP:00
 HP:0031429	Decreased circulating osteocalcin level	HP:0031428	Increased circulating osteocalcin level
 HP:0031507	Decreased circulating T4 concentration	HP:0031506	Increased circulating T4 concentration
 HP:0031594	PR segment depression	HP:0031597	PR segment elevation
+HP:0031676	Monomorphic ventricular tachycardia	HP:0031677	Polymorphic ventricular tachycardia
 HP:0031742	Inferior rectus muscle underaction	HP:0031747	Superior rectus muscle underaction
 HP:0031743	Inferior rectus muscle overaction	HP:0031745	Superior rectus muscle overaction
 HP:0031750	Lateral rectus muscle weakness	HP:0031753	Medial rectus muscle weakness
@@ -804,8 +823,10 @@ HP:0031817	Decreased circulating parathyroid hormone level	HP:0003165	Elevated c
 HP:0031820	Decreased waist to hip ratio	HP:0031819	Increased waist to hip ratio
 HP:0031831	Decreased serum zinc	HP:0011424	Increased serum zinc
 HP:0031837	Decreased circulating superoxide dismutase concentration	HP:0031836	Increased circulating superoxide dismutase concentration
+HP:0031843	Abnormally slow thought process	HP:0033844	Racing thoughts
 HP:0031861	Decreased heart rate variability	HP:0031862	Increased heart rate variability
 HP:0031873	Early chronotype	HP:0031874	Late chronotype
+HP:0031937	Tachylalia	HP:5200038	Bradylalia
 HP:0031997	Early inspiratory crackles	HP:0031998	Late inspiratory crackles
 HP:0032030	Lateral canthal tendon laxity	HP:0032031	Medial canthal tendon laxity
 HP:0032097	Hypermanganesemia	HP:0032098	Hypomanganesemia
@@ -821,6 +842,10 @@ HP:0032210	Decreased circulating free T3	HP:0011788	Increased circulating free T
 HP:0032218	Decreased proportion of CD4-positive T cells	HP:0032219	Increased proportion of CD4-positive T cells
 HP:0032305	Decreased circulating mannose-binding protein concentration	HP:0032306	Increased circulating mannose-binding protein concentration
 HP:0032312	Decreased circulating globulin level	HP:0032311	Increased circulating globulin level
+HP:0032333	Polyclonal elevation of circulating IgA	HP:0032335	Monoclonal elevation of circulating IgA
+HP:0032337	Monoclonal elevated circulating IgE concentration	HP:0032339	Polyclonal elevated circulating IgE concentration
+HP:0032356	Decreased pre-bronchodilator forced vital capacity	HP:0032357	Decreased post-bronchodilator forced vital capacity
+HP:0032360	Decreased pre-bronchodilator forced expiratory flow 25-75%	HP:0032361	Decreased post-bronchodilator forced expiratory flow 25-75%
 HP:0032363	Decreased circulating corticosterone level	HP:0032362	Increased circulating corticosterone level
 HP:0032406	Unilateral perisylvian polymicrogyria	HP:0032407	Bilateral perisylvian polymicrogyria
 HP:0032411	Posterior predominant subcortical band heterotopia	HP:0032412	Anterior predominant subcortical band heterotopia
@@ -848,13 +873,16 @@ HP:0033211	Decreased total iron binding capacity	HP:0025196	Increased total iron
 HP:0033222	Decreased CD4:CD8 ratio	HP:0033221	Increased CD4:CD8 ratio
 HP:0033299	Reduced circulating complement factor H related protein 1 concentration	HP:0033300	Increased circulating complement factor H related protein 1 concentration
 HP:0033306	Decreased circulating fetuin A concentration	HP:0033307	Increased circulating fetuin A concentration
+HP:0033365	Endogenous lipoid pneumonia	HP:0033366	Exogenous lipoid pneumonia
 HP:0033374	Decreased KCO	HP:0033373	Increased KCO
 HP:0033449	Decreased mid-arm muscle circumference	HP:0033448	Increased mid-arm muscle circumference
 HP:0033507	Decreased esterified to free carnitine ratio	HP:0033506	Increased esterified to free carnitine ratio
 HP:0033531	Decreased cardiac index	HP:0033530	Increased cardiac index
 HP:0033532	Decreased cardiac output	HP:0033533	Increased cardiac output
+HP:0033578	Pre-capillary pulmonary hypertension	HP:0033635	Post-capillary pulmonary hypertension
 HP:0033633	Decreased alveolar volume	HP:0033634	Increased alveolar volume
 HP:0033687	Short term memory impairment	HP:0033688	Long term memory impairment
+HP:0033698	Monomorphic vesicular eruption	HP:0033699	Polymorphic vesicular eruption
 HP:0033733	Low-grade vesicoureteral reflux	HP:0033734	High-grade vesicoureteral reflux
 HP:0033748	Hypoesthesia	HP:0100963	Hyperesthesia
 HP:0033756	Decreased left ventricular end-diastolic volume	HP:0033755	Increased left ventricular end-diastolic volume
@@ -978,6 +1006,7 @@ HP:0100211	Stippling of the epiphysis of the distal phalanx of the 5th toe	HP:01
 HP:0100212	Triangular epiphysis of the distal phalanx of the 5th toe	HP:0100234	Triangular epiphysis of the proximal phalanx of the 5th toe
 HP:0100216	Enlarged epiphysis of the middle phalanx of the 5th toe	HP:0100221	Small epiphysis of the middle phalanx of the 5th toe
 HP:0100227	Enlarged epiphysis of the proximal phalanx of the 5th toe	HP:0100232	Small epiphysis of the proximal phalanx of the 5th toe
+HP:0100258	Preaxial polydactyly	HP:0100259	Postaxial polydactyly
 HP:0100263	Distal symphalangism	HP:0100264	Proximal symphalangism
 HP:0100281	Chronic colitis	HP:0100282	Acute colitis
 HP:0100293	Hypertrophied muscle fibers	HP:0100295	Muscle fiber atrophy
@@ -1114,6 +1143,7 @@ HP:4000158	Typified by high penetrance	HP:4000160	Typified by low penetrance
 HP:5200320	Diminishment of relationship seeking	HP:5200315	Amplification of relationship seeking
 HP:5200321	Amplification of sexual behavior	HP:5200327	Diminishment of sexual behavior
 HP:5200328	Diminishment of emotional expression	HP:5200322	Amplification of emotional expression
+HP:5200352	Hypnagogic sleep paralysis	HP:5200353	Hypnopompic sleep paralysis
 HP:5201000	Incomplete unilateral cleft lip	HP:5201001	Complete unilateral cleft lip
 HP:5201000	Incomplete unilateral cleft lip	HP:5201012	Incomplete bilateral cleft lip
 HP:5201001	Complete unilateral cleft lip	HP:5201011	Complete bilateral cleft lip
