@@ -54,7 +54,7 @@ def propagate_opposites(hpo_obo_path, unified_opposites_path, output_path):
     """
     Propagates opposite_of relationships by:
       1. Building an HPO graph (parent->children).
-      2. Reading original opposite pairs from `hpo_opposites_unified.tsv`.
+      2. Reading original opposite pairs from `hpo_opposites_unified.csv`.
       3. For each pair, DFS from both sides with early stopping.
       4. Cross all descendant nodes to create new inherited pairs.
       5. Mark new nodes in `known_opposites` to stop expansions in later pairs.
@@ -71,7 +71,7 @@ def propagate_opposites(hpo_obo_path, unified_opposites_path, output_path):
     existing_pairs = set()
     rows_original = []
     with open(unified_opposites_path, "r", encoding="utf-8", newline="") as fin:
-        reader = csv.DictReader(fin, delimiter="\t")
+        reader = csv.DictReader(fin)
         for row in reader:
             id1 = row["id1"].strip()
             id2 = row["id2"].strip()
@@ -121,7 +121,7 @@ def propagate_opposites(hpo_obo_path, unified_opposites_path, output_path):
 
     # Write output
     with open(output_path, "w", encoding="utf-8", newline="") as fout:
-        writer = csv.DictWriter(fout, fieldnames=fieldnames, delimiter="\t")
+        writer = csv.DictWriter(fout, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(final_rows)
 
@@ -133,7 +133,7 @@ if __name__ == "__main__":
         raise ValueError("[ERROR] INPUT_DIR and OUTPUT_DIR must be set.")
 
     hpo_obo = os.path.join(INPUT_DIR, "hp.obo")
-    unified_opposites = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.tsv")
-    output_file = os.path.join(OUTPUT_DIR, "hpo_opposites_inherited.tsv")
+    unified_opposites = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.csv")
+    output_file = os.path.join(OUTPUT_DIR, "hpo_opposites_inherited.csv")
 
     propagate_opposites(hpo_obo, unified_opposites, output_file)

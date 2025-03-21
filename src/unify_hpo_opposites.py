@@ -23,17 +23,17 @@ def combine_flags(group):
     return row
 
 def main():
-    text_file = os.path.join(OUTPUT_DIR, "hpo_opposites_text.tsv")
-    logical_file = os.path.join(OUTPUT_DIR, "hpo_opposites_logical.tsv")
-    output_file = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.tsv")
+    text_file = os.path.join(OUTPUT_DIR, "hpo_opposites_text.csv")
+    logical_file = os.path.join(OUTPUT_DIR, "hpo_opposites_logical.csv")
+    output_file = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.csv")
 
     # Read text-based file and assign flags: text = 't', logical = 'f'
-    df_text = pd.read_csv(text_file, sep='\t')
+    df_text = pd.read_csv(text_file)
     df_text['text'] = 't'
     df_text['logical'] = 'f'
     
     # Read logical file and assign flags: text = 'f', logical = 't'
-    df_logical = pd.read_csv(logical_file, sep='\t')
+    df_logical = pd.read_csv(logical_file)
     df_logical['text'] = 'f'
     df_logical['logical'] = 't'
 
@@ -63,7 +63,7 @@ def main():
     df_unified = df_unified[column_order]
     
     # Write out the unified output
-    df_unified.to_csv(output_file, sep='\t', index=False)
+    df_unified.to_csv(output_file, index=False)
     print(f"[INFO] Wrote {len(df_unified)} unified pairs to {output_file}")
 
 if __name__ == '__main__':

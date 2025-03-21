@@ -39,7 +39,7 @@ This fork of **phenopposites** was created to modernize and extend the original 
    python src/hpo_opposites_text_matching.py 
 
    # extracts opposite terms using logical definitions from ontology structure
-   python src/hpo_opposites_logical.py
+   python src/hpo_opposites_logical_matching.py
 
    # merges text-based and logical opposite pairs into a single dataset
    python src/unify_hpo_opposites.py  

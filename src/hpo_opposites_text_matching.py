@@ -127,15 +127,16 @@ def find_opposites_text_matching(ontology_path, antonyms_csv, output_file):
                                 opposites.append((term_id, label, other_id, opp_label))
 
     # Write results
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write("hpo_id1\thpo_term1\thpo_id2\thpo_term2\n")
+    with open(output_file, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(["hpo_id1", "hpo_term1", "hpo_id2", "hpo_term2"])
         for t1, lbl1, t2, lbl2 in sorted(opposites):
             name1 = id_to_canonical_label.get(t1, "N/A")
             name2 = id_to_canonical_label.get(t2, "N/A")
-            f.write(f"{t1}\t{name1}\t{t2}\t{name2}\n")
+            writer.writerow([t1, name1, t2, name2])
 
 if __name__ == "__main__":
     hp_obo = os.path.join(INPUT_DIR, "hp.obo")
     antonyms_csv = os.path.join("antonyms", "text-patterns.txt")
-    output_file = os.path.join(OUTPUT_DIR, "hpo_opposites_text.tsv")
+    output_file = os.path.join(OUTPUT_DIR, "hpo_opposites_text.csv")
     find_opposites_text_matching(hp_obo, antonyms_csv, output_file)
