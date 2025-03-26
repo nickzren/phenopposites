@@ -10,3 +10,5 @@ dependencies:
     - owlready2
     - rdflib
     - python-dotenv
+    - openai
+    - tqdm

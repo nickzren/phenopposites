@@ -38,6 +38,9 @@ This fork of **phenopposites** was created to modernize and extend the original 
    # identifies opposite terms using text-based antonym replacement
    python src/hpo_opposites_text_matching.py 
 
+   # validate opposite terms using LLM
+   python src/validate_hpo_opposites_by_llm.py --input_file ./data/output/hpo_opposites_text.csv
+
    # extracts opposite terms using logical definitions from ontology structure
    python src/hpo_opposites_logical_matching.py
 
