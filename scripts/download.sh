@@ -7,3 +7,4 @@ wget --timestamping --directory-prefix data/input/ https://purl.obolibrary.org/o
 
 # Download the MONDO ontology
 wget --timestamping --directory-prefix data/input/ http://purl.obolibrary.org/obo/mondo.obo
+wget --timestamping --directory-prefix data/input/ http://purl.obolibrary.org/obo/mondo.owl

@@ -8,11 +8,11 @@ def canonicalize_pair(id1, id2):
 def main():
     load_dotenv()
     OUTPUT_DIR = os.getenv("OUTPUT_DIR")
-    unified_file = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.tsv")
+    unified_file = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.csv")
     antonyms_file = os.path.join("opposites", "antonyms_HP.csv")
     
     # Read the unified file (TSV)
-    df_unified = pd.read_csv(unified_file, sep='\t', dtype=str)
+    df_unified = pd.read_csv(unified_file, dtype=str)
     # Read the phenopposite antonyms CSV file
     df_antonyms = pd.read_csv(antonyms_file, dtype=str)
     
