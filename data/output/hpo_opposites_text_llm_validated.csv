@@ -16,7 +16,7 @@ HP:0000215,Thick upper lip vermilion,HP:0000219,Thin upper lip vermilion,0.9915,
 HP:0000233,Thin vermilion border,HP:0012471,Thick vermilion border,0.9919,t
 HP:0000239,Large fontanelles,HP:0005486,Small fontanelle,0.9768,t
 HP:0000248,Brachycephaly,HP:0000268,Dolichocephaly,0.8848,t
-HP:0000252,Microcephaly,HP:0040194,Increased head circumference,0.8090,f
+HP:0000252,Microcephaly,HP:0040194,Increased head circumference,0.8090,t
 HP:0000252,Microcephaly,HP:0000256,Macrocephaly,0.9598,t
 HP:0000253,Progressive microcephaly,HP:0004481,Progressive macrocephaly,0.9753,t
 HP:0000255,Acute sinusitis,HP:0011109,Chronic sinusitis,0.9406,t
@@ -74,7 +74,7 @@ HP:0000890,Long clavicles,HP:0000894,Short clavicles,0.9905,t
 HP:0000953,Hyperpigmentation of the skin,HP:0001010,Hypopigmentation of the skin,0.9644,t
 HP:0000963,Thin skin,HP:0001072,Thickened skin,0.8992,t
 HP:0000966,Hypohidrosis,HP:0000975,Hyperhidrosis,0.9532,t
-HP:0000973,Cutis laxa,HP:0000974,Hyperextensible skin,0.8098,f
+HP:0000973,Cutis laxa,HP:0000974,Hyperextensible skin,0.8098,t
 HP:0000998,Hypertrichosis,HP:0008070,Sparse hair,0.7698,t
 HP:0001034,Hypermelanotic macule,HP:0009719,Hypomelanotic macule,0.9840,t
 HP:0001169,Broad palm,HP:0004283,Narrow palm,0.8887,t
@@ -86,7 +86,7 @@ HP:0001265,Hyporeflexia,HP:0001347,Hyperreflexia,0.9636,t
 HP:0001315,Reduced tendon reflexes,HP:0001347,Hyperreflexia,0.8325,t
 HP:0001376,Limitation of joint mobility,HP:0001382,Joint hypermobility,0.7998,t
 HP:0001403,Macrovesicular hepatic steatosis,HP:0001414,Microvesicular hepatic steatosis,0.9769,t
-HP:0001413,Micronodular cirrhosis,HP:0006577,Macronodular cirrhosis,0.9773,f
+HP:0001413,Micronodular cirrhosis,HP:0006577,Macronodular cirrhosis,0.9773,t
 HP:0001476,Delayed closure of the anterior fontanelle,HP:0005458,Premature closure of fontanelles,0.9670,t
 HP:0001477,Compensatory chin elevation,HP:0031706,Compensatory chin depression,0.9466,t
 HP:0001520,Large for gestational age,HP:0001518,Small for gestational age,0.9908,t
@@ -680,7 +680,7 @@ HP:5201003,Complete cleft hard palate,HP:5201005,Complete cleft soft palate,0.99
 HP:5201004,Incomplete cleft hard palate,HP:5201006,Incomplete cleft soft palate,0.9893,f
 HP:5201005,Complete cleft soft palate,HP:5201006,Incomplete cleft soft palate,0.9933,t
 HP:5201007,Incomplete cleft maxillary alveolar ridge,HP:5201008,Complete cleft maxillary alveolar ridge,0.9962,t
-HP:5201011,Complete bilateral cleft lip,HP:5201012,Incomplete bilateral cleft lip,0.9875,f
+HP:5201011,Complete bilateral cleft lip,HP:5201012,Incomplete bilateral cleft lip,0.9875,t
 HP:6000126,Decreased urinary bile acid level,HP:6000523,Increased urinary bile acid level,0.9961,t
 HP:6000244,Decreased circulating thyroglobulin concentration,HP:0025484,Increased circulating thyroglobulin concentration,0.9959,t
 HP:6000674,Decreased CSF N-acetylaspartic acid concentration,HP:0032274,Increased CSF N-acetylaspartic acid concentration,0.9978,t
