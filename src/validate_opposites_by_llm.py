@@ -56,10 +56,7 @@ def query_llm(client, prompt, model, retries=3):
                 temperature=0
             )
             answer = response.choices[0].message.content.strip().lower()
-            if answer == "yes":
-                return "t"
-            elif answer == "no":
-                return "f"
+            return answer if answer in ["yes", "no"] else "N/A"
         except Exception:
             pass
     return "N/A"
