@@ -32,7 +32,7 @@ MONDO:0001120,chronic frontal sinusitis,MONDO:0001912,acute frontal sinusitis,ye
 MONDO:0001122,chronic maxillary sinusitis,MONDO:0002186,acute maxillary sinusitis,yes
 MONDO:0001123,chronic sphenoidal sinusitis,MONDO:0001624,acute sphenoidal sinusitis,yes
 MONDO:0001149,microcephaly,MONDO:0016608,megalencephaly,yes
-MONDO:0001171,acute salpingo-oophoritis,MONDO:0001474,chronic salpingo-oophoritis,no
+MONDO:0001171,acute salpingo-oophoritis,MONDO:0001474,chronic salpingo-oophoritis,yes
 MONDO:0001173,acute salpingitis,MONDO:0003617,chronic salpingitis,yes
 MONDO:0001208,acute respiratory failure,MONDO:0021113,respiratory failure,no
 MONDO:0001213,serous glue ear,MONDO:0001312,acute serous otitis media,no
@@ -98,7 +98,7 @@ MONDO:0004963,T-cell acute lymphoblastic leukemia,MONDO:0019468,T-cell prolympho
 MONDO:0005003,chronic pancreatitis,MONDO:0006515,acute pancreatitis,yes
 MONDO:0005008,colorectal adenocarcinoma,MONDO:0003198,small intestine adenocarcinoma,no
 MONDO:0005044,hypertensive disorder,MONDO:0005468,hypotensive disorder,yes
-MONDO:0005057,large cell neuroendocrine carcinoma,MONDO:0000402,small cell carcinoma,no
+MONDO:0005057,large cell neuroendocrine carcinoma,MONDO:0000402,small cell carcinoma,yes
 MONDO:0005152,hypopituitarism,MONDO:0006793,hyperpituitarism,yes
 MONDO:0005231,hepatitis C virus infection,MONDO:0100371,acute hepatitis C virus infection,no
 MONDO:0005232,large cell carcinoma,MONDO:0000402,small cell carcinoma,yes
@@ -210,7 +210,7 @@ MONDO:0019328,macrocystic lymphatic malformation,MONDO:0019329,microcystic lymph
 MONDO:0019542,acute liver failure,MONDO:0100193,chronic liver failure,yes
 MONDO:0019704,obsolete primary bone dysplasia with decreased bone density,MONDO:0019703,obsolete primary bone dysplasia with increased bone density,yes
 MONDO:0019704,obsolete primary bone dysplasia with decreased bone density,MONDO:0800084,obsolete primary bone dysplasia with increased bone density,yes
-MONDO:0019798,obsolete acute hepatic porphyria,MONDO:0019800,obsolete chronic hepatic porphyria,no
+MONDO:0019798,obsolete acute hepatic porphyria,MONDO:0019800,obsolete chronic hepatic porphyria,yes
 MONDO:0020139,obsolete early-onset ataxia with dementia,MONDO:0020140,obsolete late-onset ataxia with dementia,yes
 MONDO:0020307,self-limited epilepsy with autonomic seizures,MONDO:0020308,childhood occipital visual epilepsy,no
 MONDO:0020546,acute graft versus host disease,MONDO:0020547,chronic graft versus host disease,yes
