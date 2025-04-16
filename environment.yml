@@ -5,14 +5,9 @@ channels:
 dependencies:
   - python=3.10
   - pandas
-  - numpy<2
-  - scikit-learn
-  - pytorch
   - pip:
     - pronto
     - owlready2
     - rdflib
     - python-dotenv
     - openai
-    - tqdm
-    - sentence-transformers

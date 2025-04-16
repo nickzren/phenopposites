@@ -6,16 +6,11 @@ import pandas as pd
 from collections import defaultdict
 from owlready2 import World
 from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
 
 # Load environment variables
 load_dotenv()
 INPUT_DIR = os.getenv("INPUT_DIR")
 OUTPUT_DIR = os.getenv("OUTPUT_DIR")
-
-# Load Bio_ClinicalBERT model once at module level
-model = SentenceTransformer('emilyalsentzer/Bio_ClinicalBERT')
 
 if not INPUT_DIR or not OUTPUT_DIR:
     raise EnvironmentError("INPUT_DIR and OUTPUT_DIR environment variables must be set.")
@@ -156,25 +151,18 @@ def main():
 
     opposite_phenos = find_opposites(bearer_quality_map, opposite_map, hp_labels)
 
-    # Build final rows with similarity score
-    rows = []
-    for (c1, lbl1, c2, lbl2, bearer, q1, q2) in opposite_phenos:
-        # Safeguard against empty labels
-        text1 = lbl1 if lbl1 else ""
-        text2 = lbl2 if lbl2 else ""
-
-        emb1 = model.encode(text1, convert_to_tensor=True)
-        emb2 = model.encode(text2, convert_to_tensor=True)
-        score = cosine_similarity(emb1.cpu().numpy().reshape(1, -1),
-                                  emb2.cpu().numpy().reshape(1, -1))[0][0]
-
-        rows.append({
+    rows = [
+        {
             "hpo_id1": c1,
             "hpo_term1": lbl1,
             "hpo_id2": c2,
             "hpo_term2": lbl2,
-            "similarity_score": f"{score:.4f}"
-        })
+            "bearer_iri": bearer,
+            "quality1": q1,
+            "quality2": q2
+        }
+        for (c1, lbl1, c2, lbl2, bearer, q1, q2) in opposite_phenos
+    ]
 
     out_csv = os.path.join(OUTPUT_DIR, "hpo_opposites_logical.csv")
     pd.DataFrame(rows).to_csv(out_csv, index=False)

@@ -4,14 +4,10 @@ import csv
 import re
 from dotenv import load_dotenv
 from pronto import Ontology
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
 
 load_dotenv()
 INPUT_DIR = os.getenv("INPUT_DIR")
 OUTPUT_DIR = os.getenv("OUTPUT_DIR")
-
-model = SentenceTransformer('emilyalsentzer/Bio_ClinicalBERT')
 
 MORPH_RULES = [
     (re.compile(r'\b(hemi)?hyper(\w*)\b', re.IGNORECASE), r'\1hypo\2'),
@@ -89,16 +85,6 @@ def generate_opposite_labels(label, whole_word_map, prefix_map):
                     opposites[''.join(new_parts).strip()] = "prefix-based"
     return opposites
 
-DEBUG_PAIR = ("MONDO:0001040", "MONDO:0005709")
-def debug_match(term_id, label, name, other_id, opp_label, other_name, logic_source, score):
-    pair = tuple(sorted((term_id, other_id)))
-    if pair == tuple(sorted(DEBUG_PAIR)):
-        print(f"DEBUG MATCH FOUND:")
-        print(f"- {term_id}: label='{label}', name='{name}'")
-        print(f"- {other_id}: label='{opp_label}', name='{other_name}'")
-        print(f"- Matched by: {logic_source}")
-        print(f"- Similarity: {score:.4f}\n")
-
 def find_opposites_text_matching(ontology_path, antonyms_csv, output_file):
     whole_word_map, prefix_map = load_antonyms(antonyms_csv)
     ontology = Ontology(ontology_path)
@@ -121,20 +107,13 @@ def find_opposites_text_matching(ontology_path, antonyms_csv, output_file):
                                 seen_pairs.add(pair)
                                 name1 = id_to_canonical_label.get(term_id, "N/A")
                                 name2 = id_to_canonical_label.get(other_id, "N/A")
-                                emb1 = model.encode(name1, convert_to_tensor=True)
-                                emb2 = model.encode(name2, convert_to_tensor=True)
-                                score = cosine_similarity(
-                                    emb1.cpu().numpy().reshape(1, -1),
-                                    emb2.cpu().numpy().reshape(1, -1)
-                                )[0][0]
-                                debug_match(term_id, label, name1, other_id, opp_label, name2, logic_source, score)
-                                opposites.append((term_id, name1, other_id, name2, score))
+                                opposites.append((term_id, name1, other_id, name2))
 
     with open(output_file, 'w', encoding='utf-8', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(["mondo_id1", "mondo_term1", "mondo_id2", "mondo_term2", "similarity_score"])
-        for t1, name1, t2, name2, score in sorted(opposites):
-            writer.writerow([t1, name1, t2, name2, f"{score:.4f}"])
+        writer.writerow(["mondo_id1", "mondo_term1", "mondo_id2", "mondo_term2"])
+        for t1, name1, t2, name2 in sorted(opposites):
+            writer.writerow([t1, name1, t2, name2])
 
 if __name__ == "__main__":
     mondo_obo = os.path.join(INPUT_DIR, "mondo.obo")
