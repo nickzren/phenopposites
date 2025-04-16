@@ -5,14 +5,16 @@ from tqdm import tqdm
 from openai import OpenAI
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
+import boto3
+import json
 
 load_dotenv()
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Evaluate inverse relationships between phenotype/disease terms using OpenAI or DeepSeek API.")
+    parser = argparse.ArgumentParser(description="Evaluate inverse relationships between phenotype/disease terms using OpenAI, DeepSeek, or Claude via AWS Bedrock.")
     parser.add_argument("--input_file", required=True, help="Input CSV file path")
     parser.add_argument("--workers", type=int, default=8, help="Number of parallel LLM requests")
-    parser.add_argument("--llm_provider", choices=['openai', 'deepseek'], default='openai', help="LLM provider to use (default: openai)")
+    parser.add_argument("--llm_provider", choices=['openai', 'deepseek', 'aws-claude'], default='openai', help="LLM provider to use (default: openai)")
     return parser.parse_args()
 
 def generate_output_path(input_file):
@@ -32,33 +34,70 @@ def detect_file_type(header):
 
 def create_prompt(term1, term2, file_type):
     term_type = "human phenotype" if file_type == "hpo" else "disease"
-    return f"Determine if these two {term_type} terms represent an inverse (Opposite-of) relationship. Answer yes or no.\nTerm 1: {term1}\nTerm 2: {term2}"
+    return f"Determine if these two {term_type} terms represent an inverse (Opposite-of) relationship. Answer only 'yes' or 'no'.\nTerm 1: {term1}\nTerm 2: {term2}"
 
 def get_client(provider):
     if provider == 'openai':
         api_base_url = os.getenv("OPENAI_API_BASE_URL")
         api_key = os.getenv("OPENAI_API_KEY")
         api_model = os.getenv("OPENAI_API_MODEL")
-    else:
+        return OpenAI(api_key=api_key, base_url=api_base_url), api_model
+    elif provider == 'deepseek':
         api_base_url = os.getenv("DEEPSEEK_API_BASE_URL")
         api_key = os.getenv("DEEPSEEK_API_KEY")
         api_model = os.getenv("DEEPSEEK_API_MODEL")
-
-    return OpenAI(api_key=api_key, base_url=api_base_url), api_model
+        return OpenAI(api_key=api_key, base_url=api_base_url), api_model
+    elif provider == 'aws-claude':
+        model_id = os.getenv("AWS_CLAUDE_MODEL_ID")
+        region = os.getenv("AWS_REGION")
+        client = boto3.client("bedrock-runtime", region_name=region)
+        return client, model_id
+    else:
+        raise ValueError("Unsupported LLM provider")
 
 def query_llm(client, prompt, model, retries=3):
     for _ in range(retries):
         try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=1,
-                temperature=0
-            )
-            answer = response.choices[0].message.content.strip().lower()
-            return answer if answer in ["yes", "no"] else "N/A"
-        except Exception:
-            pass
+            if isinstance(client, OpenAI):
+                response = client.chat.completions.create(
+                    model=model,
+                    messages=[{"role": "user", "content": prompt}],
+                    max_tokens=1,
+                    temperature=0
+                )
+                answer = response.choices[0].message.content.strip().lower()
+            else:  # AWS Claude
+                body = json.dumps({
+                    "anthropic_version": "bedrock-2023-05-31",
+                    "max_tokens": 1,
+                    "temperature": 0,
+                    "top_p": 1,
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": [{"type": "text", "text": prompt}]
+                        }
+                    ]
+                })
+                response = client.invoke_model(
+                    modelId=model,
+                    contentType='application/json',
+                    accept='application/json',
+                    body=body
+                )
+                response_body = json.loads(response['body'].read())
+                answer = response_body["content"][0]["text"].strip().lower()
+
+            if answer.startswith("yes"):
+                return "yes"
+            elif answer.startswith("no"):
+                return "no"
+            else:
+                print(f"[WARN] Unexpected response for prompt: {prompt}\nResponse: {answer}. Retrying...")
+
+        except Exception as e:
+            print(f"[ERROR] Exception during LLM call: {e}")
+
     return "N/A"
 
 def process_csv(input_file, output_file, client, model, workers):

@@ -11,3 +11,4 @@ dependencies:
     - rdflib
     - python-dotenv
     - openai
+    - boto3
