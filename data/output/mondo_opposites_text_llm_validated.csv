@@ -6,7 +6,7 @@ MONDO:0000222,seminal vesicle acute gonorrhea,MONDO:0001025,seminal vesicle chro
 MONDO:0000257,acute diarrhea,MONDO:0044751,chronic diarrheal disease,no
 MONDO:0000261,adenoiditis,MONDO:0020686,acute tonsillitis,no
 MONDO:0000313,hypophosphatemia,MONDO:0000328,hyperphosphatemia,yes
-MONDO:0000333,early congenital syphilis,MONDO:0005821,late congenital syphilis,no
+MONDO:0000333,early congenital syphilis,MONDO:0005821,late congenital syphilis,yes
 MONDO:0000453,short QT syndrome,MONDO:0002442,long QT syndrome,yes
 MONDO:0000453,short QT syndrome,MONDO:0019171,familial long QT syndrome,yes
 MONDO:0000613,obsolete estrogen-receptor positive breast cancer,MONDO:0000614,obsolete estrogen-receptor negative breast cancer,yes
@@ -17,9 +17,9 @@ MONDO:0000897,obsolete chronic myelomonocytic leukemia,MONDO:0004968,obsolete ac
 MONDO:0000952,cancer of long bone of lower limb,MONDO:0000953,cancer of short bone of lower limb,no
 MONDO:0001014,chronic leukemia,MONDO:0010643,acute leukemia,yes
 MONDO:0001028,acute pericementitis,MONDO:0005076,periodontitis,no
-MONDO:0001028,acute pericementitis,MONDO:0005593,chronic periodontitis,no
-MONDO:0001028,acute pericementitis,MONDO:0009850,"periodontitis, chronic, adult",no
-MONDO:0001031,purulent acute otitis media,MONDO:0001920,chronic purulent otitis media,no
+MONDO:0001028,acute pericementitis,MONDO:0005593,chronic periodontitis,yes
+MONDO:0001028,acute pericementitis,MONDO:0009850,"periodontitis, chronic, adult",yes
+MONDO:0001031,purulent acute otitis media,MONDO:0001920,chronic purulent otitis media,yes
 MONDO:0001039,tonsillitis,MONDO:0020686,acute tonsillitis,no
 MONDO:0001040,nasopharyngitis,MONDO:0005709,common cold,no
 MONDO:0001064,acute eustachian salpingitis,MONDO:0002170,chronic eustachian salpingitis,no
@@ -47,13 +47,13 @@ MONDO:0001334,hypertrichosis of eyelid,MONDO:0001335,hypotrichosis of eyelid,yes
 MONDO:0001360,blind hypotensive eye,MONDO:0001363,blind hypertensive eye,yes
 MONDO:0001364,regular astigmatism,MONDO:0001831,irregular astigmatism,yes
 MONDO:0001369,chronic laryngitis,MONDO:0004777,acute laryngitis,yes
-MONDO:0001493,chronic pulmonary heart disease,MONDO:0004598,acute cor pulmonale,no
+MONDO:0001493,chronic pulmonary heart disease,MONDO:0004598,acute cor pulmonale,yes
 MONDO:0001566,hypercalcemia disease,MONDO:0018543,autosomal dominant hypocalcemia,yes
 MONDO:0001575,chronic gonococcal salpingitis,MONDO:0001837,acute gonococcal salpingitis,yes
 MONDO:0001610,acute dacryocystitis,MONDO:0004925,chronic dacryocystitis,yes
 MONDO:0001650,acute cystitis,MONDO:0006030,chronic cystitis,yes
 MONDO:0001689,hypertrophy of tongue papillae,MONDO:0001989,atrophic glossitis,yes
-MONDO:0001817,acute closed-angle glaucoma,MONDO:0001966,chronic closed-angle glaucoma,no
+MONDO:0001817,acute closed-angle glaucoma,MONDO:0001966,chronic closed-angle glaucoma,yes
 MONDO:0001822,hypolipoproteinemia,MONDO:0037748,hyperlipoproteinemia,yes
 MONDO:0001897,bilateral hyperactive labyrinth,MONDO:0003567,bilateral hypoactive labyrinth,yes
 MONDO:0001917,chronic perichondritis of pinna,MONDO:0002240,acute perichondritis of pinna,yes
@@ -79,7 +79,7 @@ MONDO:0004055,acute inflammation of lacrimal passage,MONDO:0004923,chronic infla
 MONDO:0004106,"testicular yolk sac tumor, macrocystic pattern",MONDO:0004547,reticular pattern testicular yolk sac tumor,yes
 MONDO:0004128,lung occult large cell carcinoma,MONDO:0003437,occult small cell lung carcinoma,no
 MONDO:0004265,acute endometritis,MONDO:0024279,chronic endometritis,yes
-MONDO:0004329,pancreatic intraductal papillary-mucinous neoplasm with high grade dysplasia,MONDO:0004381,pancreatic intraductal papillary-mucinous neoplasm with low grade dysplasia,no
+MONDO:0004329,pancreatic intraductal papillary-mucinous neoplasm with high grade dysplasia,MONDO:0004381,pancreatic intraductal papillary-mucinous neoplasm with low grade dysplasia,yes
 MONDO:0004390,ocular hypotension,MONDO:0006875,ocular hypertension,yes
 MONDO:0004425,hyperthyroidism,MONDO:0005420,hypothyroidism,yes
 MONDO:0004460,thyroid gland fetal adenoma,MONDO:0004558,thyroid gland macrofollicular adenoma,no
@@ -104,7 +104,7 @@ MONDO:0005231,hepatitis C virus infection,MONDO:0100371,acute hepatitis C virus 
 MONDO:0005232,large cell carcinoma,MONDO:0000402,small cell carcinoma,yes
 MONDO:0005335,colorectal neoplasm,MONDO:0004251,small intestine neoplasm,no
 MONDO:0005344,hepatitis B virus infection,MONDO:0100370,acute hepatitis B virus infection,no
-MONDO:0005354,chronic hepatitis C virus infection,MONDO:0100371,acute hepatitis C virus infection,no
+MONDO:0005354,chronic hepatitis C virus infection,MONDO:0100371,acute hepatitis C virus infection,yes
 MONDO:0005365,hearing loss disorder,MONDO:0043303,hyperacusis,yes
 MONDO:0005366,chronic hepatitis B virus infection,MONDO:0100370,acute hepatitis B virus infection,yes
 MONDO:0005417,wet macular degeneration,MONDO:0100114,dry age related macular degeneration,yes
@@ -120,7 +120,7 @@ MONDO:0006404,salivary gland large cell carcinoma,MONDO:0006405,salivary gland s
 MONDO:0006468,thyroid gland undifferentiated (anaplastic) carcinoma,MONDO:0015447,differentiated thyroid carcinoma,yes
 MONDO:0006512,estrogen-receptor positive breast cancer,MONDO:0006513,estrogen-receptor negative breast cancer,yes
 MONDO:0006561,eyelid hypopigmentation,MONDO:0007769,hyperpigmentation of eyelid,yes
-MONDO:0006702,chronic inflammatory demyelinating polyradiculoneuropathy,MONDO:0020347,acute inflammatory demyelinating polyradiculoneuropathy,yes
+MONDO:0006702,chronic inflammatory demyelinating polyradiculoneuropathy,MONDO:0020347,acute inflammatory demyelinating polyradiculoneuropathy,no
 MONDO:0006810,intracranial hypertension,MONDO:0006811,intracranial hypotension,yes
 MONDO:0007190,"leukemia, chronic lymphocytic, susceptibility to, 2",MONDO:0013109,"leukemia, acute lymphocytic, susceptibility to, 2",no
 MONDO:0007338,cleft soft palate,MONDO:0015092,cleft hard palate,no
@@ -130,7 +130,7 @@ MONDO:0007744,cholesterol-ester transfer protein deficiency,MONDO:0017773,hypoal
 MONDO:0007744,cholesterol-ester transfer protein deficiency,MONDO:0100189,obsolete apolipoprotein A-I deficiency,no
 MONDO:0007800,chromosome 18p deletion syndrome,MONDO:0011147,chromosome 18q deletion syndrome,no
 MONDO:0007915,systemic lupus erythematosus,MONDO:0011138,"systemic lupus erythematosus, susceptibility to, 1",no
-MONDO:0008013,chromosome 9p deletion syndrome,MONDO:0016908,partial monosomy of the long arm of chromosome 9,no
+MONDO:0008013,chromosome 9p deletion syndrome,MONDO:0016908,partial monosomy of the long arm of chromosome 9,yes
 MONDO:0008199,late-onset Parkinson disease,MONDO:0017279,young-onset Parkinson disease,yes
 MONDO:0008222,Andersen-Tawil syndrome,MONDO:0859368,short QT syndrome 7,no
 MONDO:0008223,hypokalemic periodic paralysis,MONDO:0008224,hyperkalemic periodic paralysis,yes
@@ -141,9 +141,9 @@ MONDO:0009266,Gaucher disease type II,MONDO:0009267,Gaucher disease type III,no
 MONDO:0009612,methylmalonic aciduria due to methylmalonyl-CoA mutase deficiency,MONDO:0017214,vitamin B12-responsive methylmalonic acidemia,no
 MONDO:0009665,biotinidase deficiency,MONDO:0009666,holocarboxylase synthetase deficiency,no
 MONDO:0010029,situs inversus,MONDO:0018677,visceral heterotaxy,no
-MONDO:0010264,X-linked adrenal hypoplasia congenita,MONDO:0018479,congenital adrenal hyperplasia,no
+MONDO:0010264,X-linked adrenal hypoplasia congenita,MONDO:0018479,congenital adrenal hyperplasia,yes
 MONDO:0011086,"severe combined immunodeficiency, autosomal recessive, T cell-negative, B cell-negative, NK cell-positive",MONDO:0012163,immunodeficiency 104,no
-MONDO:0011240,megalencephaly-capillary malformation-polymicrogyria syndrome,MONDO:0013659,microcephaly-capillary malformation syndrome,no
+MONDO:0011240,megalencephaly-capillary malformation-polymicrogyria syndrome,MONDO:0013659,microcephaly-capillary malformation syndrome,yes
 MONDO:0011377,long QT syndrome 3,MONDO:0012314,short QT syndrome type 3,yes
 MONDO:0011908,juvenile myelomonocytic leukemia,MONDO:0018871,acute myelomonocytic leukemia M4,no
 MONDO:0011996,"chronic myelogenous leukemia, BCR-ABL1 positive",MONDO:0015667,acute myeloid leukemia by FAB classification,no
@@ -151,10 +151,10 @@ MONDO:0011996,"chronic myelogenous leukemia, BCR-ABL1 positive",MONDO:0018874,ac
 MONDO:0012312,short QT syndrome type 1,MONDO:0100316,long QT syndrome 1,yes
 MONDO:0012313,short QT syndrome type 2,MONDO:0013367,long QT syndrome 2,yes
 MONDO:0012318,"leukemia, chronic lymphocytic, susceptibility to, 1",MONDO:0013108,"leukemia, acute lymphocytic, susceptibility to, 1",no
-MONDO:0013600,insomnia,MONDO:0021107,narcolepsy,no
+MONDO:0013600,insomnia,MONDO:0021107,narcolepsy,yes
 MONDO:0015027,familial isolated hyperparathyroidism,MONDO:0016390,familial hypoparathyroidism,yes
 MONDO:0015488,obsolete predominantly large-vessel vasculitis,MONDO:0015490,obsolete predominantly small-vessel vasculitis,yes
-MONDO:0015687,chronic eosinophilic leukemia,MONDO:0043881,obsolete acute eosinophilic leukemia,no
+MONDO:0015687,chronic eosinophilic leukemia,MONDO:0043881,obsolete acute eosinophilic leukemia,yes
 MONDO:0015731,high anorectal malformation,MONDO:0015733,low anorectal malformation,yes
 MONDO:0015832,true unicornuate uterus,MONDO:0015833,pseudounicornuate uterus,yes
 MONDO:0015893,obsolete rare hypothyroidism,MONDO:0015894,obsolete rare hyperthyroidism,yes
@@ -180,7 +180,7 @@ MONDO:0016890,partial deletion of the short arm of chromosome 8,MONDO:0016907,pa
 MONDO:0016892,partial deletion of the short arm of chromosome 10,MONDO:0016909,partial monosomy of the long arm of chromosome 10,no
 MONDO:0016893,partial deletion of the short arm of chromosome 11,MONDO:0016910,partial deletion of the long arm of chromosome 11,no
 MONDO:0016894,partial deletion of the short arm of chromosome 16,MONDO:0016914,partial deletion of the long arm of chromosome 16,no
-MONDO:0016896,obsolete partial deletion of the short arm of chromosome 18,MONDO:0016916,obsolete partial deletion of the long arm of chromosome 18,yes
+MONDO:0016896,obsolete partial deletion of the short arm of chromosome 18,MONDO:0016916,obsolete partial deletion of the long arm of chromosome 18,no
 MONDO:0016897,partial deletion of the short arm of chromosome 19,MONDO:0016917,partial deletion of the long arm of chromosome 19,no
 MONDO:0016898,partial monosomy of the short arm of chromosome 20,MONDO:0016918,partial deletion of the long arm of chromosome 20,no
 MONDO:0016903,partial deletion of the long arm of chromosome 4,MONDO:0022762,chromosome 4 short arm deletion,no
@@ -204,7 +204,7 @@ MONDO:0017202,acute endophthalmitis,MONDO:0017203,chronic endophthalmitis,yes
 MONDO:0017363,idiopathic chronic eosinophilic pneumonia,MONDO:0019122,idiopathic acute eosinophilic pneumonia,no
 MONDO:0017602,ALK-positive anaplastic large cell lymphoma,MONDO:0017603,ALK-negative anaplastic large cell lymphoma,yes
 MONDO:0018076,tuberculosis,MONDO:0040753,latent tuberculosis infection,no
-MONDO:0018871,acute myelomonocytic leukemia M4,MONDO:0020311,chronic myelomonocytic leukemia,no
+MONDO:0018871,acute myelomonocytic leukemia M4,MONDO:0020311,chronic myelomonocytic leukemia,yes
 MONDO:0019289,hyperpigmentation of the skin,MONDO:0019290,hypopigmentation of the skin,yes
 MONDO:0019328,macrocystic lymphatic malformation,MONDO:0019329,microcystic lymphatic malformation,yes
 MONDO:0019542,acute liver failure,MONDO:0100193,chronic liver failure,yes
