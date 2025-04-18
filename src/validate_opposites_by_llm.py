@@ -1,140 +1,189 @@
-import csv
-import os
+#!/usr/bin/env python3
 import argparse
-from tqdm import tqdm
-from openai import OpenAI
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from dotenv import load_dotenv
-import boto3
+import csv
 import json
+import os
+import re
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Tuple, Any
+
+import boto3
+from dotenv import load_dotenv
+from openai import OpenAI, RateLimitError, Timeout, OpenAIError
+from together import Together
+from tqdm import tqdm
 
 load_dotenv()
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="Evaluate inverse relationships between phenotype/disease terms using OpenAI, DeepSeek, or Claude via AWS Bedrock.")
-    parser.add_argument("--input_file", required=True, help="Input CSV file path")
-    parser.add_argument("--workers", type=int, default=8, help="Number of parallel LLM requests")
-    parser.add_argument("--llm_provider", choices=['openai', 'deepseek', 'aws-claude'], default='openai', help="LLM provider to use (default: openai)")
-    return parser.parse_args()
+YES_NO = re.compile(r"\b(?:yes|no)\b", re.I)
+PROVIDERS = ("openai", "deepseek", "aws-claude", "together-llama")
 
-def generate_output_path(input_file):
-    base_name = os.path.basename(input_file)
-    name, ext = os.path.splitext(base_name)
-    output_dir = os.getenv("OUTPUT_DIR")
-    os.makedirs(output_dir, exist_ok=True)
-    return os.path.join(output_dir, f"{name}_llm_validated{ext}")
+def parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description="Verify inverse term pairs with an LLM")
+    p.add_argument("--input_file", required=True)
+    p.add_argument("--workers", type=int, default=8)
+    p.add_argument("--llm_provider", choices=PROVIDERS, default="openai")
+    return p.parse_args()
 
-def detect_file_type(header):
-    if "hpo_id1" in header and "hpo_term1" in header:
+def output_path(src: str) -> str:
+    base, ext = os.path.splitext(os.path.basename(src))
+    out_dir = os.getenv("OUTPUT_DIR", ".")
+    os.makedirs(out_dir, exist_ok=True)
+    return os.path.join(out_dir, f"{base}_llm_validated{ext}")
+
+def detect_file_type(headers) -> str:
+    if {"hpo_id1", "hpo_term1"} <= set(headers):
         return "hpo"
-    elif "mondo_id1" in header and "mondo_term1" in header:
+    if {"mondo_id1", "mondo_term1"} <= set(headers):
         return "mondo"
-    else:
-        raise ValueError("Unsupported file format")
+    raise ValueError("Unsupported CSV format")
 
-def create_prompt(term1, term2, file_type):
-    term_type = "human phenotype" if file_type == "hpo" else "disease"
-    return f"Determine if these two {term_type} terms represent an inverse (Opposite-of) relationship. Answer only 'yes' or 'no'.\nTerm 1: {term1}\nTerm 2: {term2}"
+def make_prompt(t1: str, t2: str, ftype: str) -> str:
+    term_type = "human phenotype" if ftype == "hpo" else "human disease"
+    return (
+        f"Determine if these two {term_type} terms represent an inverse (Opposite‑of) "
+        f"relationship.\nReply with exactly one word — yes or no.\n\n"
+        f"Term 1: {t1}\nTerm 2: {t2}"
+    )
 
-def get_client(provider):
-    if provider == 'openai':
-        api_base_url = os.getenv("OPENAI_API_BASE_URL")
-        api_key = os.getenv("OPENAI_API_KEY")
-        api_model = os.getenv("OPENAI_API_MODEL")
-        return OpenAI(api_key=api_key, base_url=api_base_url), api_model
-    elif provider == 'deepseek':
-        api_base_url = os.getenv("DEEPSEEK_API_BASE_URL")
-        api_key = os.getenv("DEEPSEEK_API_KEY")
-        api_model = os.getenv("DEEPSEEK_API_MODEL")
-        return OpenAI(api_key=api_key, base_url=api_base_url), api_model
-    elif provider == 'aws-claude':
-        model_id = os.getenv("AWS_CLAUDE_MODEL_ID")
-        region = os.getenv("AWS_REGION")
-        client = boto3.client("bedrock-runtime", region_name=region)
-        return client, model_id
-    else:
-        raise ValueError("Unsupported LLM provider")
+def _missing(var: str) -> None:
+    raise RuntimeError(f"{var} missing in .env")
 
-def query_llm(client, prompt, model, retries=3):
-    for _ in range(retries):
+def get_client(provider: str) -> Tuple[Any, str, str]:
+    """Return (client, model_id, provider)."""
+    if provider == "openai":
+        model = os.getenv("OPENAI_API_MODEL_ID") or _missing("OPENAI_API_MODEL_ID")
+        return (
+            OpenAI(
+                api_key=os.getenv("OPENAI_API_KEY") or _missing("OPENAI_API_KEY"),
+                base_url=os.getenv("OPENAI_API_BASE_URL", "https://api.openai.com/v1"),
+            ),
+            model,
+            provider,
+        )
+
+    if provider == "deepseek":
+        model = os.getenv("DEEPSEEK_API_MODEL_ID") or _missing("DEEPSEEK_API_MODEL_ID")
+        return (
+            OpenAI(
+                api_key=os.getenv("DEEPSEEK_API_KEY") or _missing("DEEPSEEK_API_KEY"),
+                base_url=os.getenv("DEEPSEEK_API_BASE_URL"),
+            ),
+            model,
+            provider,
+        )
+
+    if provider == "aws-claude":
+        model = os.getenv("AWS_CLAUDE_MODEL_ID") or _missing("AWS_CLAUDE_MODEL_ID")
+        return (
+            boto3.client("bedrock-runtime", region_name=os.getenv("AWS_REGION")),
+            model,
+            provider,
+        )
+
+    if provider == "together-llama":
+        model = (
+            os.getenv("TOGETHER_LLAMA_MODEL_ID") or _missing("TOGETHER_LLAMA_MODEL_ID")
+        )
+        return (Together(api_key=os.getenv("TOGETHER_API_KEY") or _missing(
+            "TOGETHER_API_KEY")), model, provider)
+
+    raise ValueError("Unsupported provider")
+
+def ask_llm(
+    client,
+    prompt: str,
+    model_id: str,
+    provider: str,
+    retries: int = 4,
+    backoff: int = 2,
+) -> str:
+    """Return 'yes', 'no', or 'N/A'."""
+    for attempt in range(retries):
         try:
-            if isinstance(client, OpenAI):
-                response = client.chat.completions.create(
-                    model=model,
+            if provider == "aws-claude":
+                body = json.dumps(
+                    {
+                        "anthropic_version": "bedrock-2023-05-31",
+                        "max_tokens": 5,
+                        "temperature": 0,
+                        "top_p": 1,
+                        "messages": [
+                            {
+                                "role": "user",
+                                "content": [{"type": "text", "text": prompt}],
+                            }
+                        ],
+                    }
+                )
+                txt = json.loads(
+                    client.invoke_model(
+                        modelId=model_id,
+                        contentType="application/json",
+                        accept="application/json",
+                        body=body,
+                    )["body"].read()
+                )["content"][0]["text"]
+            else:  # OpenAI‑compatible providers
+                txt = client.chat.completions.create(
+                    model=model_id,
                     messages=[{"role": "user", "content": prompt}],
-                    max_tokens=1,
-                    temperature=0
-                )
-                answer = response.choices[0].message.content.strip().lower()
-            else:  # AWS Claude
-                body = json.dumps({
-                    "anthropic_version": "bedrock-2023-05-31",
-                    "max_tokens": 1,
-                    "temperature": 0,
-                    "top_p": 1,
-                    "messages": [
-                        {
-                            "role": "user",
-                            "content": [{"type": "text", "text": prompt}]
-                        }
-                    ]
-                })
-                response = client.invoke_model(
-                    modelId=model,
-                    contentType='application/json',
-                    accept='application/json',
-                    body=body
-                )
-                response_body = json.loads(response['body'].read())
-                answer = response_body["content"][0]["text"].strip().lower()
+                    max_tokens=5,
+                    temperature=0,
+                    top_p=1,
+                ).choices[0].message.content
 
-            if answer.startswith("yes"):
-                return "yes"
-            elif answer.startswith("no"):
-                return "no"
-            else:
-                print(f"[WARN] Unexpected response for prompt: {prompt}\nResponse: {answer}. Retrying...")
-
-        except Exception as e:
-            print(f"[ERROR] Exception during LLM call: {e}")
-
+            if m := YES_NO.search(txt.lower()):
+                return m.group(0)
+            time.sleep(backoff)
+        except (RateLimitError, Timeout, OpenAIError):
+            time.sleep(backoff * (2**attempt))
+        except Exception:
+            time.sleep(backoff)
     return "N/A"
 
-def process_csv(input_file, output_file, client, model, workers):
-    with open(input_file, 'r', encoding='utf-8') as infile:
-        reader = csv.DictReader(infile)
+def process_csv(
+    infile: str, outfile: str, client, model_id: str, provider: str, workers: int
+):
+    with open(infile, encoding="utf-8") as f:
+        reader = csv.DictReader(f)
         rows = list(reader)
-        file_type = detect_file_type(reader.fieldnames)
+        ftype = detect_file_type(reader.fieldnames)
 
-    term1_key = f"{file_type}_term1"
-    term2_key = f"{file_type}_term2"
-
-    prompts = [create_prompt(row[term1_key], row[term2_key], file_type) for row in rows]
+    prompts = [
+        make_prompt(r[f"{ftype}_term1"], r[f"{ftype}_term2"], ftype) for r in rows
+    ]
     results = ["N/A"] * len(prompts)
 
-    with ThreadPoolExecutor(max_workers=workers) as executor:
-        future_to_index = {executor.submit(query_llm, client, prompt, model): i for i, prompt in enumerate(prompts)}
-        for future in tqdm(as_completed(future_to_index), total=len(prompts), desc='Processing LLM queries'):
-            idx = future_to_index[future]
-            try:
-                results[idx] = future.result()
-            except Exception:
-                results[idx] = "N/A"
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {
+            pool.submit(ask_llm, client, p, model_id, provider): i
+            for i, p in enumerate(prompts)
+        }
+        for fut in tqdm(as_completed(futures), total=len(prompts), desc="LLM queries"):
+            results[futures[fut]] = fut.result()
 
     fieldnames = list(rows[0].keys()) + ["inverse_verified_by_llm"]
-    with open(output_file, 'w', encoding='utf-8', newline='') as outfile:
-        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
-        writer.writeheader()
-        for row, result in zip(rows, results):
-            row["inverse_verified_by_llm"] = result
-            writer.writerow(row)
+    with open(outfile, "w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+        for row, res in zip(rows, results):
+            row["inverse_verified_by_llm"] = res
+            w.writerow(row)
 
-def main():
+def main() -> None:
     args = parse_args()
-    client, model = get_client(args.llm_provider)
-    print(f"Using LLM Provider: {args.llm_provider.upper()}, Model: {model}")
-    output_file = generate_output_path(args.input_file)
-    process_csv(args.input_file, output_file, client, model, args.workers)
+    client, model_id, provider = get_client(args.llm_provider)
+    process_csv(
+        args.input_file,
+        output_path(args.input_file),
+        client,
+        model_id,
+        provider,
+        args.workers,
+    )
+
 
 if __name__ == "__main__":
     main()
