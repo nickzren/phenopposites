@@ -15,18 +15,22 @@ OUTPUT_DIR = os.getenv("OUTPUT_DIR")
 if not INPUT_DIR or not OUTPUT_DIR:
     raise EnvironmentError("INPUT_DIR and OUTPUT_DIR environment variables must be set.")
 
-def format_obo_id(obo_id):
+
+def format_obo_id(obo_id: str) -> str:
     return obo_id.replace("_", ":", 1) if "_" in obo_id else obo_id
 
-def short_hpo_id(full_iri):
+
+def short_hpo_id(full_iri: str) -> str:
     match = re.search(r"(HP_\d+)$", full_iri)
     return format_obo_id(match.group(1)) if match else full_iri
 
-def assert_file_exists(filepath):
+
+def assert_file_exists(filepath: str) -> None:
     if not os.path.exists(filepath):
         raise FileNotFoundError(f"Missing file: {filepath}")
 
-def load_opposite_qualities():
+
+def load_opposite_qualities() -> dict[str, set[str]]:
     """
     Loads quality opposites from pato_opposites.csv.
     Returns a dict {quality_id: set(opposite_ids)}.
@@ -35,7 +39,7 @@ def load_opposite_qualities():
     assert_file_exists(pato_opposites_path)
 
     df = pd.read_csv(pato_opposites_path, header=None, names=["quality1", "quality2"])
-    opp_map = defaultdict(set)
+    opp_map: dict[str, set[str]] = defaultdict(set)
     for _, row in df.iterrows():
         q1 = format_obo_id(row["quality1"].strip())
         q2 = format_obo_id(row["quality2"].strip())
@@ -43,6 +47,7 @@ def load_opposite_qualities():
         opp_map[q2].add(q1)
 
     return dict(opp_map)
+
 
 def parse_ontology_expressions(cls):
     """
@@ -58,6 +63,7 @@ def parse_ontology_expressions(cls):
 
     return ub_ids, pt_ids
 
+
 def extract_hpo_bearer_quality():
     """
     Extracts (bearer, quality) from hp.owl, writes hpo_bearer_quality.csv.
@@ -68,7 +74,8 @@ def extract_hpo_bearer_quality():
     world = World()
     hpo_ont = world.get_ontology(hp_owl_path).load()
 
-    bearer_quality_map, hp_labels = defaultdict(set), {}
+    bearer_quality_map: dict[tuple[str, str], set[str]] = defaultdict(set)
+    hp_labels: dict[str, str] = {}
 
     for cls in sorted(hpo_ont.classes(), key=lambda c: str(c.iri)):
         full_iri = str(cls.iri)
@@ -93,7 +100,7 @@ def extract_hpo_bearer_quality():
             "hpo_id": hpo_id,
             "hpo_term": hp_labels[hpo_id],
             "bearer_iri": bearer,
-            "quality_iri": quality
+            "quality_iri": quality,
         }
         for (bearer, quality), hpo_ids in sorted(bearer_quality_map.items())
         for hpo_id in sorted(hpo_ids)
@@ -105,18 +112,19 @@ def extract_hpo_bearer_quality():
 
     return bearer_quality_map, hp_labels
 
+
 def find_opposites(bearer_quality_map, opposite_map, hp_labels):
     """
     Identifies opposite phenotype pairs based on bearer-quality mappings.
     Returns sorted list of opposite phenotype tuples:
-      (hpo_id1, hpo_term1, hpo_id2, hpo_term2, bearer, quality1, quality2)
+      (hpo_id1, hpo_term1, hpo_id2, hpo_term2)
     """
     bearer_dict = defaultdict(list)
     for (bearer, quality), hpo_ids in bearer_quality_map.items():
         bearer_dict[bearer].append((quality, sorted(hpo_ids)))
 
     opposite_phenos = []
-    for bearer in sorted(bearer_dict.keys()):
+    for bearer in sorted(bearer_dict):
         qual_list = sorted(bearer_dict[bearer], key=lambda x: x[0])
         n = len(qual_list)
         for i in range(n):
@@ -130,18 +138,19 @@ def find_opposites(bearer_quality_map, opposite_map, hp_labels):
                     for c1 in hp_list1:
                         for c2 in hp_list2:
                             if c1 != c2:
-                                opposite_phenos.append((
-                                    c1,
-                                    hp_labels.get(c1, ""),
-                                    c2,
-                                    hp_labels.get(c2, ""),
-                                    bearer, q1, q2
-                                ))
+                                opposite_phenos.append(
+                                    (
+                                        c1,
+                                        hp_labels.get(c1, ""),
+                                        c2,
+                                        hp_labels.get(c2, ""),
+                                    )
+                                )
 
-    opposite_phenos = sorted(opposite_phenos, key=lambda x: (x[0], x[2], x[4], x[5], x[6]))
-    return opposite_phenos
+    return sorted(opposite_phenos, key=lambda x: (x[0], x[2]))
 
-def main():
+
+def main() -> None:
     opposite_map = load_opposite_qualities()
     bearer_quality_map, hp_labels = extract_hpo_bearer_quality()
 
@@ -157,16 +166,14 @@ def main():
             "hpo_term1": lbl1,
             "hpo_id2": c2,
             "hpo_term2": lbl2,
-            "bearer_iri": bearer,
-            "quality1": q1,
-            "quality2": q2
         }
-        for (c1, lbl1, c2, lbl2, bearer, q1, q2) in opposite_phenos
+        for (c1, lbl1, c2, lbl2) in opposite_phenos
     ]
 
     out_csv = os.path.join(OUTPUT_DIR, "hpo_opposites_logical.csv")
     pd.DataFrame(rows).to_csv(out_csv, index=False)
     print(f"Found {len(rows)} opposite phenotype pairs. Wrote to {out_csv}")
+
 
 if __name__ == "__main__":
     main()
