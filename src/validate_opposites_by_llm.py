@@ -2,7 +2,9 @@
 """
 validate_opposites_by_llm.py
 -------------------------------------------------
-Adds Google Gemini and writes one result file per provider to:
+Validates inverse (Opposite‑of) term pairs with
+multiple LLM providers and writes one result
+file per provider to:
 
     data/output/llm_validated/<basename><SUFFIX>.csv
 """
@@ -18,23 +20,24 @@ from typing import Any, Tuple
 
 import boto3
 from dotenv import load_dotenv
+from google import genai
+from google.genai import types as gtypes
 from openai import OpenAI, OpenAIError, RateLimitError, Timeout
 from together import Together
 from tqdm import tqdm
-from google import genai
-from google.genai import types as gtypes
 
 load_dotenv()
 
 PROVIDERS = ("openai", "deepseek", "aws", "together", "google")
-FILE_SUFFIX = {                  # <provider> : file‑suffix
-    "openai":   "_openai_validated.csv",
+FILE_SUFFIX = {
+    "openai": "_openai_validated.csv",
     "deepseek": "_deepseek_validated.csv",
-    "aws":      "_claude_validated.csv",
+    "aws": "_claude_validated.csv",
     "together": "_llama_validated.csv",
-    "google":   "_gemini_validated.csv",
+    "google": "_gemini_validated.csv",
 }
 YES_NO = re.compile(r"\b(?:yes|no)\b", re.I)
+
 
 # --------------------------------------------------------------------------- #
 #  CLI                                                                        #
@@ -48,7 +51,6 @@ def parse_args() -> argparse.Namespace:
 
 
 def output_path(src: str, provider: str) -> str:
-    """path = data/output/llm_validated/<basename><suffix>.csv"""
     base, _ = os.path.splitext(os.path.basename(src))
     out_dir = os.path.join("data", "output", "llm_validated")
     os.makedirs(out_dir, exist_ok=True)
@@ -56,14 +58,29 @@ def output_path(src: str, provider: str) -> str:
 
 
 # --------------------------------------------------------------------------- #
-#  Prompt helpers                                                             #
+#  Prompt helpers & CSV utilities                                             #
 # --------------------------------------------------------------------------- #
-def detect_file_type(headers) -> str:
-    if {"hpo_id1", "hpo_term1"} <= set(headers):
-        return "hpo"
-    if {"mondo_id1", "mondo_term1"} <= set(headers):
+def file_type_from_name(path: str) -> str:
+    name = os.path.basename(path).lower()
+    if "mondo" in name:
         return "mondo"
-    raise ValueError("Unsupported CSV format")
+    if "hpo" in name:
+        return "hpo"
+    raise ValueError("Unable to infer file type (hpo|mondo) from file name")
+
+
+def get_term_columns(headers: list[str], ftype: str) -> Tuple[str, str]:
+    for prefix in (f"{ftype}_", ""):
+        t1, t2 = f"{prefix}term1", f"{prefix}term2"
+        if t1 in headers and t2 in headers:
+            return t1, t2
+
+    t1_candidates = [h for h in headers if h.endswith("term1")]
+    t2_candidates = [h for h in headers if h.endswith("term2")]
+    if len(t1_candidates) == 1 and len(t2_candidates) == 1:
+        return t1_candidates[0], t2_candidates[0]
+
+    raise ValueError("Could not determine term1/term2 columns")
 
 
 def make_prompt(t1: str, t2: str, ftype: str) -> str:
@@ -91,7 +108,6 @@ def get_client(provider: str) -> Tuple[Any, str]:
             ),
             os.getenv("OPENAI_API_MODEL_ID") or _missing("OPENAI_API_MODEL_ID"),
         )
-
     if provider == "deepseek":
         return (
             OpenAI(
@@ -100,23 +116,19 @@ def get_client(provider: str) -> Tuple[Any, str]:
             ),
             os.getenv("DEEPSEEK_API_MODEL_ID") or _missing("DEEPSEEK_API_MODEL_ID"),
         )
-
     if provider == "aws":
         return (
             boto3.client("bedrock-runtime", region_name=os.getenv("AWS_REGION")),
             os.getenv("AWS_CLAUDE_MODEL_ID") or _missing("AWS_CLAUDE_MODEL_ID"),
         )
-
     if provider == "together":
         return (
             Together(api_key=os.getenv("TOGETHER_API_KEY") or _missing("TOGETHER_API_KEY")),
             os.getenv("TOGETHER_LLAMA_MODEL_ID") or _missing("TOGETHER_LLAMA_MODEL_ID"),
         )
-
     if provider == "google":
         api_key = os.getenv("GOOGLE_API_KEY") or _missing("GOOGLE_API_KEY")
         return genai.Client(api_key=api_key), os.getenv("GOOGLE_MODEL_ID") or _missing("GOOGLE_MODEL_ID")
-
     raise ValueError("Unsupported provider")
 
 
@@ -130,12 +142,9 @@ def ask_llm(
         try:
             if provider == "google":
                 cfg = gtypes.GenerateContentConfig(
-                    max_output_tokens=5,
-                    temperature=0.0,
-                    thinking_config=gtypes.ThinkingConfig(thinking_budget=0),
+                    max_output_tokens=5, temperature=0.0, thinking_config=gtypes.ThinkingConfig(thinking_budget=0)
                 )
                 txt = client.models.generate_content(model=model_id, contents=[prompt], config=cfg).text
-
             elif provider == "aws":
                 body = json.dumps(
                     {
@@ -151,7 +160,6 @@ def ask_llm(
                         modelId=model_id, contentType="application/json", accept="application/json", body=body
                     )["body"].read()
                 )["content"][0]["text"]
-
             else:  # OpenAI‑compatible
                 txt = client.chat.completions.create(
                     model=model_id,
@@ -174,15 +182,14 @@ def ask_llm(
 # --------------------------------------------------------------------------- #
 #  CSV driver                                                                 #
 # --------------------------------------------------------------------------- #
-def process_csv(
-    infile: str, outfile: str, client, model_id: str, provider: str, workers: int
-):
+def process_csv(infile: str, outfile: str, client, model_id: str, provider: str, workers: int):
     with open(infile, encoding="utf-8") as f:
         rdr = csv.DictReader(f)
         rows = list(rdr)
-        ftype = detect_file_type(rdr.fieldnames)
+        ftype = file_type_from_name(infile)
+        term1_col, term2_col = get_term_columns(rdr.fieldnames, ftype)
 
-    prompts = [make_prompt(r[f"{ftype}_term1"], r[f"{ftype}_term2"], ftype) for r in rows]
+    prompts = [make_prompt(r[term1_col], r[term2_col], ftype) for r in rows]
     results = ["N/A"] * len(prompts)
 
     with ThreadPoolExecutor(max_workers=workers) as pool:

@@ -55,7 +55,7 @@ HP:0000574,Thick eyebrow,HP:0045074,Thin eyebrow,yes
 HP:0000581,Blepharophimosis,HP:0000637,Long palpebral fissure,yes
 HP:0000594,Shallow anterior chamber,HP:0007765,Deep anterior chamber,yes
 HP:0000599,Abnormality of the frontal hairline,HP:0030141,Abnormality of the posterior hairline,no
-HP:0000633,Decreased lacrimation,HP:0009926,Epiphora,yes
+HP:0000633,Decreased lacrimation,HP:0009926,Epiphora,no
 HP:0000637,Long palpebral fissure,HP:0045025,Narrow palpebral fissure,yes
 HP:0000637,Long palpebral fissure,HP:0012745,Short palpebral fissure,yes
 HP:0000653,Sparse eyelashes,HP:0011231,Prominent eyelashes,yes
@@ -426,7 +426,7 @@ HP:0025708,Early young adult onset,HP:0025710,Late young adult onset,yes
 HP:0025759,Mobile lump,HP:0025760,Immobile lump,yes
 HP:0025767,Abnormal positive emotional state,HP:0031467,Abnormal negative emotional state,no
 HP:0030018,Decreased female libido,HP:0030019,Increased female libido,yes
-HP:0030050,Narcolepsy,HP:0100785,Insomnia,yes
+HP:0030050,Narcolepsy,HP:0100785,Insomnia,no
 HP:0030088,Increased serum testosterone level,HP:0040171,Decreased serum testosterone concentration,yes
 HP:0030143,Hyperactive bowel sounds,HP:0030144,Hypoactive bowel sounds,yes
 HP:0030255,Large intestinal polyposis,HP:0030256,Small intestinal polyposis,no
@@ -447,8 +447,8 @@ HP:0030607,Reduced OCT-measured macular thickness,HP:0030608,Increased OCT-measu
 HP:0030618,Increased OCT-measured foveal thickness,HP:0030619,Reduced OCT-measured foveal thickness,yes
 HP:0030631,Hyperautofluorescent macular lesion,HP:0030632,Hypoautofluorescent macular lesion,yes
 HP:0030633,Perifoveal ring of hyperautofluorescence surrounded by normal autofluorescence,HP:0030634,Perifoveal ring of hyperautofluorescence surrounded by abnormal autofluorescence,no
-HP:0030638,Congenital stationary night blindness with normal fundus,HP:0030639,Congenital stationary night blindness with abnormal fundus,yes
-HP:0030640,Complete congenital stationary night blindness,HP:0030641,Incomplete congenital stationary night blindness,no
+HP:0030638,Congenital stationary night blindness with normal fundus,HP:0030639,Congenital stationary night blindness with abnormal fundus,no
+HP:0030640,Complete congenital stationary night blindness,HP:0030641,Incomplete congenital stationary night blindness,yes
 HP:0030685,Decreased adiponectin level,HP:0030686,Increased adiponectin level,yes
 HP:0030689,Decreased glucagon level,HP:0030688,Increased glucagon level,yes
 HP:0030783,Increased circulating interleukin 6 concentration,HP:0430142,Reduced circulating interleukin 6 concentration,yes
@@ -625,7 +625,7 @@ HP:0410198,Decreased erythrocyte UDP glucose-4-epimerase concentration,HP:041019
 HP:0410212,Hyperoxemia in cord blood,HP:0410213,Hypoxemia in cord blood,yes
 HP:0410214,Hypercapnia in cord blood,HP:0410215,Hypocapnia in cord blood,yes
 HP:0410245,Decreased circulating IgD concentration,HP:0410246,Increased circulating IgD concentration,yes
-HP:0410257,Neutrophilia in presence of infection,HP:0410258,Neutrophilia in absence of infection,yes
+HP:0410257,Neutrophilia in presence of infection,HP:0410258,Neutrophilia in absence of infection,no
 HP:0410288,Hyperamylasemia,HP:0410289,Hypoamylasemia,yes
 HP:0410311,Hyposegmentation of neutrophil nuclei in CSF,HP:0410312,Hypersegmentation of neutrophil nuclei in CSF,yes
 HP:0410314,Decreased urinary 1-methylhistidine,HP:0410315,Increased urinary 1-methylhistidine,yes

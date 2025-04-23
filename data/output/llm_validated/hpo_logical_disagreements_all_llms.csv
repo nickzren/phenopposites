@@ -1,0 +1,174 @@
+hpo_id1,hpo_term1,hpo_id2,hpo_term2,inverse_verified_by_llm_openai,inverse_verified_by_llm_together,inverse_verified_by_llm_google
+HP:0000837,Increased circulating gonadotropin level,HP:0040171,Decreased serum testosterone concentration,no,no,yes
+HP:0000842,Hyperinsulinemia,HP:0030689,Decreased glucagon level,no,,yes
+HP:0000848,Increased circulating renin concentration,HP:0004319,Decreased circulating aldosterone concentration,no,,yes
+HP:0000848,Increased circulating renin concentration,HP:0012279,Hyposerinemia,yes,,no
+HP:0000859,Increased circulating aldosterone concentration,HP:0002920,Decreased circulating ACTH concentration,no,,yes
+HP:0000859,Increased circulating aldosterone concentration,HP:0003351,Decreased circulating renin concentration,no,,yes
+HP:0001090,Abnormally large globe,HP:0007633,Bilateral microphthalmos,yes,no,yes
+HP:0001805,Onychogryphosis,HP:0001816,Thin nail,yes,,no
+HP:0001880,Eosinophilia,HP:0001888,Lymphopenia,no,no,yes
+HP:0001880,Eosinophilia,HP:0001913,Granulocytopenia,no,no,yes
+HP:0001880,Eosinophilia,HP:0031891,Decreased eosinophil count,yes,no,yes
+HP:0001900,Increased circulating hemoglobin concentration,HP:0005510,Transient erythroblastopenia,yes,no,no
+HP:0002152,Hyperproteinemia,HP:0004313,Decreased circulating antibody concentration,no,no,yes
+HP:0002152,Hyperproteinemia,HP:0004315,Decreased circulating IgG concentration,no,no,yes
+HP:0002155,Hypertriglyceridemia,HP:0031242,Decreased circulating chylomicron concentration,yes,no,no
+HP:0002155,Hypertriglyceridemia,HP:0031243,Decreased VLDL cholesterol concentration,yes,,no
+HP:0002157,Azotemia,HP:0031969,Reduced blood urea nitrogen,yes,no,yes
+HP:0002160,Hyperhomocystinemia,HP:0003658,Hypomethioninemia,no,,yes
+HP:0002160,Hyperhomocystinemia,HP:0500152,Hypocystinemia,yes,no,no
+HP:0002716,Lymphadenopathy,HP:0002732,Lymph node hypoplasia,yes,no,yes
+HP:0002914,Hyperchloriduria,HP:0012604,Hyponatriuria,no,no,yes
+HP:0003077,Hyperlipidemia,HP:0031242,Decreased circulating chylomicron concentration,yes,no,yes
+HP:0003077,Hyperlipidemia,HP:0031243,Decreased VLDL cholesterol concentration,yes,no,yes
+HP:0003077,Hyperlipidemia,HP:0500132,Hypovalinemia,yes,no,no
+HP:0003077,Hyperlipidemia,HP:0500142,Hypolysinemia,yes,no,no
+HP:0003124,Hypercholesterolemia,HP:0010981,Hypolipoproteinemia,no,,yes
+HP:0003124,Hypercholesterolemia,HP:0031243,Decreased VLDL cholesterol concentration,yes,no,yes
+HP:0003124,Hypercholesterolemia,HP:0045014,Hypolipidemia,no,,yes
+HP:0003141,Increased LDL cholesterol concentration,HP:0010981,Hypolipoproteinemia,yes,no,yes
+HP:0003141,Increased LDL cholesterol concentration,HP:0045014,Hypolipidemia,yes,no,yes
+HP:0003149,Hyperuricosuria,HP:0011935,Decreased urinary urate,yes,no,yes
+HP:0003154,Increased circulating ACTH level,HP:0008163,Decreased circulating cortisol level,no,,yes
+HP:0003154,Increased circulating ACTH level,HP:0032363,Decreased circulating corticosterone level,no,,yes
+HP:0003217,Hyperglutaminemia,HP:0500150,Hypoglutamatemia,yes,yes,no
+HP:0003231,Hypertyrosinemia,HP:0012279,Hyposerinemia,yes,no,no
+HP:0003231,Hypertyrosinemia,HP:0500141,Hypophenylalaninemia,no,no,yes
+HP:0003235,Hypermethioninemia,HP:0012279,Hyposerinemia,yes,no,no
+HP:0003237,Increased circulating IgG concentration,HP:0012279,Hyposerinemia,yes,no,no
+HP:0003260,Hydroxyprolinemia,HP:0500140,Decreased circulating hydroxyproline concentration,yes,no,yes
+HP:0003261,Increased circulating IgA concentration,HP:0004313,Decreased circulating antibody concentration,no,no,yes
+HP:0003281,Increased circulating ferritin concentration,HP:0040303,Decreased circulating iron concentration,no,no,yes
+HP:0003334,Elevated circulating catecholamine level,HP:0012279,Hyposerinemia,yes,,no
+HP:0003362,Increased VLDL cholesterol concentration,HP:0010981,Hypolipoproteinemia,yes,no,yes
+HP:0003362,Increased VLDL cholesterol concentration,HP:0012153,Hypotriglyceridemia,no,no,yes
+HP:0003362,Increased VLDL cholesterol concentration,HP:0045014,Hypolipidemia,yes,no,yes
+HP:0003429,CNS hypomyelination,HP:0030173,Peripheral hypermyelination,yes,no,yes
+HP:0003455,Elevated circulating long chain fatty acid concentration,HP:0012153,Hypotriglyceridemia,no,,yes
+HP:0003496,Increased circulating IgM level,HP:0500142,Hypolysinemia,no,no,yes
+HP:0003639,Elevated urinary epinephrine level,HP:0045012,Decreased urinary catecholamine concentration,yes,,no
+HP:0003646,Bicarbonaturia,HP:0045011,Decreased urine bicarbonate concentration,yes,no,yes
+HP:0003758,Reduced subcutaneous adipose tissue,HP:0009003,Increased subcutaneous truncal adipose tissue,yes,no,no
+HP:0005019,Diaphyseal undertubulation,HP:0006470,Thin long bone diaphyses,no,no,yes
+HP:0005995,Decreased adipose tissue around neck,HP:0009126,Increased adipose tissue,yes,yes,no
+HP:0006067,Multiple carpal ossification centers,HP:0006611,Decreased number of sternal ossification centers,no,no,yes
+HP:0007182,Peripheral hypomyelination,HP:0012754,CNS hypermyelination,yes,no,no
+HP:0008358,Hyperprolinemia,HP:0500140,Decreased circulating hydroxyproline concentration,yes,no,yes
+HP:0008401,Onychogryphosis of toenails,HP:0012746,Thin toenail,yes,no,no
+HP:0009147,Enlarged epiphysis of the distal phalanx of the 5th finger,HP:0010254,Small epiphyses of the distal phalanges of the hand,yes,no,no
+HP:0009158,Enlarged epiphysis of the proximal phalanx of the 5th finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009158,Enlarged epiphysis of the proximal phalanx of the 5th finger,HP:0010276,Small epiphyses of the proximal phalanges of the hand,yes,,no
+HP:0009206,Enlarged epiphysis of the middle phalanx of the 5th finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009206,Enlarged epiphysis of the middle phalanx of the 5th finger,HP:0010265,Small epiphyses of the middle phalanges of the hand,yes,,no
+HP:0009217,Enlarged epiphysis of the middle phalanx of the 4th finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009217,Enlarged epiphysis of the middle phalanx of the 4th finger,HP:0010265,Small epiphyses of the middle phalanges of the hand,yes,yes,no
+HP:0009253,Enlarged epiphysis of the distal phalanx of the 4th finger,HP:0009683,Small epiphysis of the distal phalanx of the thumb,yes,no,no
+HP:0009253,Enlarged epiphysis of the distal phalanx of the 4th finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009253,Enlarged epiphysis of the distal phalanx of the 4th finger,HP:0010254,Small epiphyses of the distal phalanges of the hand,yes,yes,no
+HP:0009264,Enlarged epiphysis of the proximal phalanx of the 4th finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009264,Enlarged epiphysis of the proximal phalanx of the 4th finger,HP:0010276,Small epiphyses of the proximal phalanges of the hand,yes,no,no
+HP:0009324,Enlarged epiphysis of the middle phalanx of the 3rd finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009324,Enlarged epiphysis of the middle phalanx of the 3rd finger,HP:0010265,Small epiphyses of the middle phalanges of the hand,yes,yes,no
+HP:0009338,Enlarged epiphysis of the distal phalanx of the 3rd finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009338,Enlarged epiphysis of the distal phalanx of the 3rd finger,HP:0010254,Small epiphyses of the distal phalanges of the hand,yes,yes,no
+HP:0009349,Enlarged epiphysis of the proximal phalanx of the 3rd finger,HP:0009390,Small epiphyses of the 5th finger,no,no,yes
+HP:0009349,Enlarged epiphysis of the proximal phalanx of the 3rd finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009349,Enlarged epiphysis of the proximal phalanx of the 3rd finger,HP:0010276,Small epiphyses of the proximal phalanges of the hand,yes,yes,no
+HP:0009396,Enlarged epiphyses of the 4th finger,HP:0010236,Small epiphyses of the phalanges of the hand,yes,yes,no
+HP:0009413,Enlarged epiphyses of the 3rd finger,HP:0010265,Small epiphyses of the middle phalanges of the hand,yes,no,no
+HP:0009491,Enlarged epiphyses of the 2nd finger,HP:0009510,Small epiphysis of the distal phalanx of the 2nd finger,yes,yes,no
+HP:0009491,Enlarged epiphyses of the 2nd finger,HP:0009521,Small epiphysis of the middle phalanx of the 2nd finger,yes,yes,no
+HP:0009491,Enlarged epiphyses of the 2nd finger,HP:0009532,Small epiphysis of the proximal phalanx of the 2nd finger,yes,no,no
+HP:0009491,Enlarged epiphyses of the 2nd finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,yes
+HP:0009505,Enlarged epiphysis of the distal phalanx of the 2nd finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009505,Enlarged epiphysis of the distal phalanx of the 2nd finger,HP:0010254,Small epiphyses of the distal phalanges of the hand,yes,yes,no
+HP:0009516,Enlarged epiphysis of the middle phalanx of the 2nd finger,HP:0010236,Small epiphyses of the phalanges of the hand,yes,yes,no
+HP:0009516,Enlarged epiphysis of the middle phalanx of the 2nd finger,HP:0010265,Small epiphyses of the middle phalanges of the hand,yes,yes,no
+HP:0009527,Enlarged epiphysis of the proximal phalanx of the 2nd finger,HP:0010236,Small epiphyses of the phalanges of the hand,no,yes,no
+HP:0009527,Enlarged epiphysis of the proximal phalanx of the 2nd finger,HP:0010276,Small epiphyses of the proximal phalanges of the hand,yes,yes,no
+HP:0009667,Enlarged epiphysis of the proximal phalanx of the thumb,HP:0010236,Small epiphyses of the phalanges of the hand,yes,yes,no
+HP:0009667,Enlarged epiphysis of the proximal phalanx of the thumb,HP:0010276,Small epiphyses of the proximal phalanges of the hand,yes,no,no
+HP:0009678,Enlarged epiphysis of the distal phalanx of the thumb,HP:0010236,Small epiphyses of the phalanges of the hand,yes,no,no
+HP:0009689,Enlarged thumb epiphysis,HP:0010236,Small epiphyses of the phalanges of the hand,yes,no,yes
+HP:0009689,Enlarged thumb epiphysis,HP:0010254,Small epiphyses of the distal phalanges of the hand,yes,no,no
+HP:0009689,Enlarged thumb epiphysis,HP:0010265,Small epiphyses of the middle phalanges of the hand,yes,no,no
+HP:0009689,Enlarged thumb epiphysis,HP:0010276,Small epiphyses of the proximal phalanges of the hand,yes,no,no
+HP:0010116,Enlarged epiphyses of the hallux,HP:0010135,Small epiphysis of the proximal phalanx of the hallux,yes,no,yes
+HP:0010116,Enlarged epiphyses of the hallux,HP:0010146,Small epiphysis of the distal phalanx of the hallux,no,yes,yes
+HP:0010116,Enlarged epiphyses of the hallux,HP:0010585,Small epiphyses,no,yes,no
+HP:0010116,Enlarged epiphyses of the hallux,HP:0100085,Small epiphyses of the 5th toe,no,no,yes
+HP:0010116,Enlarged epiphyses of the hallux,HP:0100210,Small epiphysis of the distal phalanx of the 5th toe,no,no,yes
+HP:0010130,Enlarged epiphysis of the proximal phalanx of the hallux,HP:0010170,Small epiphyses of the toes,no,yes,no
+HP:0010130,Enlarged epiphysis of the proximal phalanx of the hallux,HP:0010585,Small epiphyses,no,yes,no
+HP:0010141,Enlarged epiphysis of the distal phalanx of the hallux,HP:0010170,Small epiphyses of the toes,no,yes,no
+HP:0010141,Enlarged epiphysis of the distal phalanx of the hallux,HP:0010585,Small epiphyses,no,yes,no
+HP:0010165,Enlarged epiphyses of the toes,HP:0010585,Small epiphyses,yes,yes,no
+HP:0010165,Enlarged epiphyses of the toes,HP:0100052,Small epiphyses of the 2nd toe,no,yes,no
+HP:0010165,Enlarged epiphyses of the toes,HP:0100119,Small epiphysis of the middle phalanx of the 2nd toe,yes,no,no
+HP:0010165,Enlarged epiphyses of the toes,HP:0100143,Small epiphysis of the distal phalanx of the 3rd toe,yes,,no
+HP:0010165,Enlarged epiphyses of the toes,HP:0100177,Small epiphysis of the distal phalanx of the 4th toe,yes,,no
+HP:0010165,Enlarged epiphyses of the toes,HP:0100210,Small epiphysis of the distal phalanx of the 5th toe,yes,,no
+HP:0010165,Enlarged epiphyses of the toes,HP:0100221,Small epiphysis of the middle phalanx of the 5th toe,yes,no,no
+HP:0010165,Enlarged epiphyses of the toes,HP:0100232,Small epiphysis of the proximal phalanx of the 5th toe,no,yes,no
+HP:0010231,Enlarged epiphyses of the phalanges of the hand,HP:0010254,Small epiphyses of the distal phalanges of the hand,yes,no,yes
+HP:0010231,Enlarged epiphyses of the phalanges of the hand,HP:0010265,Small epiphyses of the middle phalanges of the hand,yes,no,yes
+HP:0010231,Enlarged epiphyses of the phalanges of the hand,HP:0010276,Small epiphyses of the proximal phalanges of the hand,yes,no,yes
+HP:0010569,Elevated circulating 7-dehydrocholesterol concentration,HP:0012053,Decreased circulating calcifediol concentration,no,,yes
+HP:0010580,Enlarged epiphyses,HP:0100085,Small epiphyses of the 5th toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100108,Small epiphysis of the distal phalanx of the 2nd toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100119,Small epiphysis of the middle phalanx of the 2nd toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100130,Small epiphysis of the proximal phalanx of the 2nd toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100143,Small epiphysis of the distal phalanx of the 3rd toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100154,Small epiphysis of the middle phalanx of the 3rd toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100165,Small epiphysis of the proximal phalanx of the 3rd toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100177,Small epiphysis of the distal phalanx of the 4th toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100188,Small epiphysis of the middle phalanx of the 4th toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100199,Small epiphysis of the proximal phalanx of the 4th toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100221,Small epiphysis of the middle phalanx of the 5th toe,yes,no,no
+HP:0010580,Enlarged epiphyses,HP:0100232,Small epiphysis of the proximal phalanx of the 5th toe,yes,no,no
+HP:0010702,Increased circulating antibody concentration,HP:0410245,Decreased circulating IgD concentration,yes,no,no
+HP:0010702,Increased circulating antibody concentration,HP:0500142,Hypolysinemia,no,,yes
+HP:0010896,Hypersarcosinemia,HP:0012279,Hyposerinemia,yes,no,no
+HP:0010897,Hypersarcosinuria,HP:0410314,Decreased urinary 1-methylhistidine,yes,no,no
+HP:0010897,Hypersarcosinuria,HP:0410318,Decreased urinary 3-methylhistidine,yes,no,no
+HP:0010911,Hyperleucinemia,HP:0500144,Hypoisoleucinemia,yes,,no
+HP:0010913,Hyperisoleucinemia,HP:0500143,Hypoleucinemia,yes,no,no
+HP:0010934,Xanthinuria,HP:0011935,Decreased urinary urate,no,no,yes
+HP:0010934,Xanthinuria,HP:0040426,Decreased urinary hypoxanthine level,no,no,yes
+HP:0010980,Hyperlipoproteinemia,HP:0031242,Decreased circulating chylomicron concentration,yes,no,yes
+HP:0010980,Hyperlipoproteinemia,HP:0031243,Decreased VLDL cholesterol concentration,yes,no,yes
+HP:0011814,Increased urinary hypoxanthine level,HP:0011935,Decreased urinary urate,no,no,yes
+HP:0011969,Elevated circulating luteinizing hormone level,HP:0030339,Decreased circulating gonadotropin concentration,no,,yes
+HP:0011969,Elevated circulating luteinizing hormone level,HP:0040171,Decreased serum testosterone concentration,no,,yes
+HP:0011978,Elevated urinary vanillylmandelic acid,HP:0045012,Decreased urinary catecholamine concentration,no,,yes
+HP:0012238,Increased circulating chylomicron concentration,HP:0045014,Hypolipidemia,yes,no,yes
+HP:0012416,Hypercapnia,HP:0012418,Hypoxemia,no,no,yes
+HP:0012556,Hyperbeta-alaninemia,HP:0500154,Hypoalaninemia,yes,no,no
+HP:0030088,Increased serum testosterone level,HP:0030339,Decreased circulating gonadotropin concentration,no,,yes
+HP:0030088,Increased serum testosterone level,HP:0030344,Decreased circulating luteinizing hormone level,no,,yes
+HP:0030088,Increased serum testosterone level,HP:0030349,Decreased circulating androgen concentration,yes,no,yes
+HP:0030348,Increased circulating androgen concentration,HP:0040171,Decreased serum testosterone concentration,yes,no,yes
+HP:0030688,Increased glucagon level,HP:0040216,Hypoinsulinemia,no,,yes
+HP:0031414,High serum calcifediol,HP:0034935,Decreased circulating 7-dehydrocholesterol concentration,no,,yes
+HP:0031793,Increased serum leptin,HP:0040216,Hypoinsulinemia,no,no,yes
+HP:0032491,Increased circulating argininosuccinic acid,HP:0500163,Hypoornithinemia,no,,yes
+HP:0033148,Increased circulating isovaleric acid concentration,HP:0500143,Hypoleucinemia,no,,yes
+HP:0033157,Elevated circulating 3-methylhistidine concentration,HP:0500145,Hypohistidinemia,yes,no,no
+HP:0033301,Elevated circulating 1-methylhistidine concentration,HP:0500145,Hypohistidinemia,no,,yes
+HP:0033643,Increased circulating very long-chain fatty acid concentration,HP:0045014,Hypolipidemia,yes,no,no
+HP:0034277,Elevated circulating deoxyuridine concentration,HP:0100507,Reduced blood folate concentration,no,,yes
+HP:0034606,Elevated circulating porphyrin concentration,HP:0034869,Reduced erythrocyte free porphyrin concentration,yes,no,no
+HP:0034617,Elevated circulating S-adenosyl methionine concentration,HP:0100507,Reduced blood folate concentration,no,no,yes
+HP:0034731,Elevated circulating S-adenosyl-L-methionine concentration,HP:0100507,Reduced blood folate concentration,no,no,yes
+HP:0034736,Elevated circulating alpha-oxoadipic acid concentration,HP:0500142,Hypolysinemia,no,,yes
+HP:0034736,Elevated circulating alpha-oxoadipic acid concentration,HP:0500144,Hypoisoleucinemia,no,,yes
+HP:0040302,Hyperglycerolemia,HP:0045014,Hypolipidemia,yes,,no
+HP:0100047,Enlarged epiphyses of the 2nd toe,HP:0100108,Small epiphysis of the distal phalanx of the 2nd toe,yes,yes,no
+HP:0100047,Enlarged epiphyses of the 2nd toe,HP:0100130,Small epiphysis of the proximal phalanx of the 2nd toe,yes,no,no
+HP:0100058,Enlarged epiphyses of the 3rd toe,HP:0100143,Small epiphysis of the distal phalanx of the 3rd toe,yes,yes,no
+HP:0100058,Enlarged epiphyses of the 3rd toe,HP:0100165,Small epiphysis of the proximal phalanx of the 3rd toe,yes,no,no
+HP:0100069,Enlarged epiphyses of the 4th toe,HP:0100177,Small epiphysis of the distal phalanx of the 4th toe,yes,yes,no
+HP:0100069,Enlarged epiphyses of the 4th toe,HP:0100199,Small epiphysis of the proximal phalanx of the 4th toe,yes,yes,no
+HP:0100080,Enlarged epiphyses of the 5th toe,HP:0100232,Small epiphysis of the proximal phalanx of the 5th toe,yes,no,yes
+HP:0410206,Increased circulating nicotinurate level,HP:0500135,Hypotryptophanemia,yes,,no

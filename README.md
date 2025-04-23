@@ -39,14 +39,23 @@ This fork of **phenopposites** was created to modernize and extend the original 
    python src/hpo_opposites_text_matching.py 
 
    # validate opposite terms using LLM
-   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_text.csv
+   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_text.csv --llm_provider google
 
    # extracts opposite terms using logical definitions from ontology structure
    python src/hpo_opposites_logical_matching.py
 
+   # validate opposite terms using LLM
+   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_logical.csv --llm_provider google
+
    # merges text-based and logical opposite pairs into a single dataset
    python src/unify_hpo_opposites.py  
 
-   # (optional) inherits opposite-of relationships to descendant terms
-   python src/propagate_hpo_opposites.py  
+   # inherits opposite-of relationships to descendant terms
+   python src/propagate_hpo_opposites.py
+
+   # validate opposite terms using LLM
+   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_inherited.csv --llm_provider google
+
+   # extract final verified opposite terms
+   python src/hpo_opposites_extract_verified.py --input_file data/output/llm_validated/hpo_opposites_inherited_gemini_validated.csv 
    ```

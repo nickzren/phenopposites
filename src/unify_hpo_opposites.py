@@ -3,68 +3,70 @@ import os
 import pandas as pd
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
-OUTPUT_DIR = os.getenv("OUTPUT_DIR")
 
-def canonicalize_row(row):
-    id1, term1, id2, term2 = row['id1'], row['term1'], row['id2'], row['term2']
-    if id1 > id2:
-        row['id1'], row['term1'] = id2, term2
-        row['id2'], row['term2'] = id1, term1
+OUTPUT_DIR = os.getenv("OUTPUT_DIR", "data/output")
+VALIDATED_DIR = os.path.join(OUTPUT_DIR, "llm_validated")
+
+TEXT_FILE = os.path.join(
+    VALIDATED_DIR, "hpo_opposites_text_gemini_validated.csv"
+)
+LOGICAL_FILE = os.path.join(
+    VALIDATED_DIR, "hpo_opposites_logical_gemini_validated.csv"
+)
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.csv")
+
+
+def _canonicalize(row: pd.Series) -> pd.Series:
+    if row["id1"] > row["id2"]:
+        row["id1"], row["id2"] = row["id2"], row["id1"]
+        row["term1"], row["term2"] = row["term2"], row["term1"]
     return row
 
-def combine_flags(group):
-    text_flag = 't' if (group['text'] == 't').any() else 'f'
-    logical_flag = 't' if (group['logical'] == 't').any() else 'f'
-    row = group.iloc[0].copy()
-    row['text'] = text_flag
-    row['logical'] = logical_flag
-    return row
 
-def main():
-    text_file = os.path.join(OUTPUT_DIR, "hpo_opposites_text.csv")
-    logical_file = os.path.join(OUTPUT_DIR, "hpo_opposites_logical.csv")
-    output_file = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.csv")
+def _load(path: str, text_flag: str, logical_flag: str) -> pd.DataFrame:
+    df = pd.read_csv(path)
+    df = df[df["inverse_verified_by_llm"].str.lower() == "yes"].copy()
+    df["text"] = text_flag
+    df["logical"] = logical_flag
+    return df.drop(columns=["inverse_verified_by_llm"], errors="ignore")
 
-    # Read text-based file and assign flags: text = 't', logical = 'f'
-    df_text = pd.read_csv(text_file)
-    df_text['text'] = 't'
-    df_text['logical'] = 'f'
-    
-    # Read logical file and assign flags: text = 'f', logical = 't'
-    df_logical = pd.read_csv(logical_file)
-    df_logical['text'] = 'f'
-    df_logical['logical'] = 't'
 
-    # Rename columns
-    column_rename_map = {
-        'hpo_id1': 'id1',
-        'hpo_term1': 'term1',
-        'hpo_id2': 'id2',
-        'hpo_term2': 'term2'
+def main() -> None:
+    rename = {
+        "hpo_id1": "id1",
+        "hpo_term1": "term1",
+        "hpo_id2": "id2",
+        "hpo_term2": "term2",
     }
-    df_text.rename(columns=column_rename_map, inplace=True)
-    df_logical.rename(columns=column_rename_map, inplace=True)
 
-    # Combine both dataframes
-    df_combined = pd.concat([df_text, df_logical], ignore_index=True)
-    
-    # Canonicalize rows so that each pair is consistently ordered
-    df_combined = df_combined.apply(canonicalize_row, axis=1)
+    df_text = _load(TEXT_FILE, "t", "f").rename(columns=rename)
+    df_logical = _load(LOGICAL_FILE, "f", "t").rename(columns=rename)
 
-    # Group by the full canonical tuple to keep distinct term strings
-    group_cols = ['id1', 'term1', 'id2', 'term2']
-    df_unified = df_combined.groupby(group_cols, as_index=False).apply(combine_flags)
-    df_unified.reset_index(drop=True, inplace=True)
-    
-    # Reorder columns to new format
-    column_order = ['id1', 'id2', 'logical', 'text', 'term1', 'term2']
-    df_unified = df_unified[column_order]
-    
-    # Write out the unified output
-    df_unified.to_csv(output_file, index=False)
-    print(f"[INFO] Wrote {len(df_unified)} unified pairs to {output_file}")
+    combined = pd.concat([df_text, df_logical], ignore_index=True)
+    combined = combined.apply(_canonicalize, axis=1)
 
-if __name__ == '__main__':
+    unified = (
+        combined.groupby(["id1", "term1", "id2", "term2"], sort=False, as_index=False)
+        .agg(
+            logical=("logical", lambda s: "t" if (s == "t").any() else "f"),
+            text=("text",    lambda s: "t" if (s == "t").any() else "f"),
+        )
+    )
+
+    logical_total = (unified["logical"] == "t").sum()
+    text_total = (unified["text"] == "t").sum()
+    both_total = ((unified["logical"] == "t") & (unified["text"] == "t")).sum()
+
+    unified[["id1", "id2", "logical", "text", "term1", "term2"]].to_csv(
+        OUTPUT_FILE, index=False
+    )
+
+    print(f"[INFO] logical=t pairs: {logical_total}")
+    print(f"[INFO] text=t pairs: {text_total}")
+    print(f"[INFO] logical=t & text=t pairs: {both_total}")
+    print(f"[INFO] Wrote {len(unified)} unified pairs to {OUTPUT_FILE}")
+
+
+if __name__ == "__main__":
     main()

@@ -16,7 +16,7 @@ HP:0000331,Short chin,HP:0400000,Tall chin,no,no,no,yes,yes
 HP:0000371,Acute otitis media,HP:0000389,Chronic otitis media,no,no,no,yes,yes
 HP:0000581,Blepharophimosis,HP:0000637,Long palpebral fissure,yes,no,no,no,yes
 HP:0000599,Abnormality of the frontal hairline,HP:0030141,Abnormality of the posterior hairline,yes,yes,no,no,no
-HP:0000633,Decreased lacrimation,HP:0009926,Epiphora,yes,no,no,yes,yes
+HP:0000633,Decreased lacrimation,HP:0009926,Epiphora,yes,no,no,yes,no
 HP:0000653,Sparse eyelashes,HP:0011231,Prominent eyelashes,yes,yes,no,yes,yes
 HP:0000668,Hypodontia,HP:0011069,Supernumerary tooth,yes,no,yes,yes,yes
 HP:0000778,Hypoplasia of the thymus,HP:0010516,Thymus hyperplasia,yes,yes,no,yes,yes
@@ -115,11 +115,11 @@ HP:0025587,Hyperdeviation,HP:0025588,Hypodeviation,yes,yes,no,yes,yes
 HP:0025624,Reduced proportion of CD4+ effector memory T cells,HP:0410394,"Increased proportion of effector memory CD4-positive, alpha-beta T cells",yes,no,no,yes,yes
 HP:0025693,Pituitary macroadenoma,HP:0025694,Pituitary microadenoma,no,no,no,no,yes
 HP:0025767,Abnormal positive emotional state,HP:0031467,Abnormal negative emotional state,yes,yes,yes,yes,no
-HP:0030050,Narcolepsy,HP:0100785,Insomnia,no,yes,yes,no,yes
+HP:0030050,Narcolepsy,HP:0100785,Insomnia,no,yes,yes,no,no
 HP:0030341,Decreased circulating follicle stimulating hormone concentration,HP:0008232,Elevated circulating follicle stimulating hormone level,yes,yes,no,yes,yes
 HP:0030633,Perifoveal ring of hyperautofluorescence surrounded by normal autofluorescence,HP:0030634,Perifoveal ring of hyperautofluorescence surrounded by abnormal autofluorescence,yes,no,no,no,no
-HP:0030638,Congenital stationary night blindness with normal fundus,HP:0030639,Congenital stationary night blindness with abnormal fundus,yes,yes,yes,no,yes
-HP:0030640,Complete congenital stationary night blindness,HP:0030641,Incomplete congenital stationary night blindness,yes,yes,yes,no,no
+HP:0030638,Congenital stationary night blindness with normal fundus,HP:0030639,Congenital stationary night blindness with abnormal fundus,yes,yes,yes,no,no
+HP:0030640,Complete congenital stationary night blindness,HP:0030641,Incomplete congenital stationary night blindness,yes,yes,yes,no,yes
 HP:0031098,Decreased thyroid-stimulating hormone level,HP:0002925,Elevated circulating thyroid-stimulating hormone concentration,yes,no,no,yes,yes
 HP:0031103,Decreased circulating antimullerian hormone circulation,HP:0031102,Increased circulating antimullerian hormone concentration,yes,yes,no,yes,yes
 HP:0031594,PR segment depression,HP:0031597,PR segment elevation,yes,yes,no,yes,yes
@@ -142,7 +142,7 @@ HP:0100961,Enlarged hippocampus,HP:0025517,Hypoplastic hippocampus,yes,yes,no,ye
 HP:0200119,Acute hepatitis,HP:0200123,Chronic hepatitis,no,yes,no,yes,yes
 HP:0400004,Long ear,HP:0400005,Short ear,yes,yes,no,yes,yes
 HP:0410054,Decreased circulating GABA concentration,HP:0410053,Elevated circulating gamma-aminobutyric acid concentration,yes,yes,no,yes,yes
-HP:0410257,Neutrophilia in presence of infection,HP:0410258,Neutrophilia in absence of infection,yes,yes,no,no,yes
+HP:0410257,Neutrophilia in presence of infection,HP:0410258,Neutrophilia in absence of infection,yes,yes,no,no,no
 HP:0410311,Hyposegmentation of neutrophil nuclei in CSF,HP:0410312,Hypersegmentation of neutrophil nuclei in CSF,yes,yes,no,yes,yes
 HP:0500076,Alternating hypertropia,HP:0500078,Alternating hypotropia,yes,no,yes,yes,yes
 HP:0500077,Alternating hyperphoria,HP:0500079,Alternating hypophoria,no,yes,no,yes,yes

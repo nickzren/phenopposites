@@ -1,139 +1,143 @@
 #!/usr/bin/env python3
+from __future__ import annotations
 
-import os
+import argparse
 import csv
+import logging
+import os
+from functools import lru_cache
+from pathlib import Path
+from typing import Dict, Set, Tuple
+
 from dotenv import load_dotenv
 from pronto import Ontology
-from collections import defaultdict
 
-# Load environment variables
-load_dotenv()
-INPUT_DIR = os.getenv("INPUT_DIR")
-OUTPUT_DIR = os.getenv("OUTPUT_DIR")
 
-def build_hpo_graph(hpo_ontology):
-    """
-    Builds a dict of { parent_id -> set(child_ids) } for direct children only.
-    """
-    hpo_graph = defaultdict(set)
-    for term in hpo_ontology.terms():
-        # Only track standard HPO terms
-        if term.id.startswith("HP:"):
-            for parent in term.superclasses(distance=1):  # direct parents only
-                if parent.id.startswith("HP:"):
-                    hpo_graph[parent.id].add(term.id)
-    return hpo_graph
+log = logging.getLogger(__name__)
+logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
 
-def get_limited_descendants(start_id, known_opposites, hpo_graph):
-    """
-    DFS to collect descendants of `start_id`. 
-    Stops exploring deeper if a node is already in `known_opposites`.
-    Returns all visited nodes (including start_id).
-    """
-    visited = set()
-    stack = [start_id]
 
-    while stack:
-        current = stack.pop()
-        if current in visited:
+def build_hpo_graph(ontology: Ontology) -> Dict[str, Set[str]]:
+    """Return {parent_id -> {child_id, …}} including only HP:* terms."""
+    graph: Dict[str, Set[str]] = {}
+    for term in ontology.terms():
+        if not term.id.startswith("HP:"):
             continue
-        visited.add(current)
+        for parent in term.superclasses(distance=1):
+            if parent.id.startswith("HP:"):
+                graph.setdefault(parent.id, set()).add(term.id)
+    return graph
 
-        # Stop further expansion if current already has an opposite
-        if current in known_opposites:
-            continue
 
-        # Explore children
-        for child in hpo_graph[current]:
-            if child not in visited:
-                stack.append(child)
+def make_descendant_function(graph: Dict[str, Set[str]]):
+    """Return a cached descendant resolver tied to *graph*."""
 
-    return visited
+    @lru_cache(maxsize=None)
+    def descendants(start: str) -> Set[str]:
+        stack = [start]
+        seen: Set[str] = set()
+        while stack:
+            cur = stack.pop()
+            if cur in seen:
+                continue
+            seen.add(cur)
+            stack.extend(graph.get(cur, ()))
+        return seen
 
-def propagate_opposites(hpo_obo_path, unified_opposites_path, output_path):
-    """
-    Propagates opposite_of relationships by:
-      1. Building an HPO graph (parent->children).
-      2. Reading original opposite pairs from `hpo_opposites_unified.csv`.
-      3. For each pair, DFS from both sides with early stopping.
-      4. Cross all descendant nodes to create new inherited pairs.
-      5. Mark new nodes in `known_opposites` to stop expansions in later pairs.
-    """
-    # Load HPO ontology
-    ontology = Ontology(hpo_obo_path)
-    # Extract only terms that start with HP:
-    terms_by_id = {t.id: t for t in ontology.terms() if t.id.startswith("HP:")}
+    return descendants
 
-    # Build parent->children graph
-    hpo_graph = build_hpo_graph(ontology)
 
-    # Read original (non-inherited) opposite pairs
-    existing_pairs = set()
-    rows_original = []
-    with open(unified_opposites_path, "r", encoding="utf-8", newline="") as fin:
-        reader = csv.DictReader(fin)
+def propagate_opposites(
+    hpo_path: Path, pairs_path: Path, out_path: Path
+) -> None:
+    ont = Ontology(str(hpo_path))
+    terms = {t.id: t for t in ont.terms() if t.id.startswith("HP:")}
+
+    graph = build_hpo_graph(ont)
+    descendants = make_descendant_function(graph)
+
+    existing: Set[Tuple[str, str]] = set()
+    original_rows, inherited_rows = [], []
+
+    with pairs_path.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
         for row in reader:
-            id1 = row["id1"].strip()
-            id2 = row["id2"].strip()
-            existing_pairs.add((id1, id2))
-            existing_pairs.add((id2, id1))
             row["inherit"] = "f"
-            rows_original.append(row)
+            original_rows.append(row)
+            pair = (row["id1"].strip(), row["id2"].strip())
+            existing.update({pair, pair[::-1]})
 
-    # Keep track of which nodes are already known to have an opposite
-    known_opposites = set()
-    rows_inherited = []
-
-    # DFS expansions
-    for row in rows_original:
-        id1, id2 = row["id1"], row["id2"]
-
-        # Collect descendants of each root
-        s1 = get_limited_descendants(id1, known_opposites, hpo_graph) if id1 in terms_by_id else set()
-        s2 = get_limited_descendants(id2, known_opposites, hpo_graph) if id2 in terms_by_id else set()
-
-        # Cross all combinations
-        for x in s1:
-            for y in s2:
-                if x != y and (x, y) not in existing_pairs:
-                    existing_pairs.add((x, y))
-                    existing_pairs.add((y, x))
-                    known_opposites.add(x)
-                    known_opposites.add(y)
-                    rows_inherited.append({
-                        "id1": x,
-                        "id2": y,
+    for row in original_rows:
+        s1 = descendants(row["id1"]) if row["id1"] in terms else set()
+        s2 = descendants(row["id2"]) if row["id2"] in terms else set()
+        for a in s1:
+            for b in s2:
+                if a == b or (a, b) in existing:
+                    continue
+                existing.update({(a, b), (b, a)})
+                inherited_rows.append(
+                    {
+                        "id1": a,
+                        "id2": b,
                         "logical": row["logical"],
                         "text": row["text"],
                         "inherit": "t",
-                        "term1": terms_by_id[x].name.lower() if x in terms_by_id and terms_by_id[x].name else "",
-                        "term2": terms_by_id[y].name.lower() if y in terms_by_id and terms_by_id[y].name else ""
-                    })
+                        "term1": terms[a].name.lower() if a in terms else "",
+                        "term2": terms[b].name.lower() if b in terms else "",
+                    }
+                )
 
-        # Mark the root nodes themselves as known to have opposites
-        if id1 in terms_by_id:
-            known_opposites.add(id1)
-        if id2 in terms_by_id:
-            known_opposites.add(id2)
-
-    final_rows = rows_original + rows_inherited
-    fieldnames = ["id1", "id2", "logical", "text", "inherit", "term1", "term2"]
-
-    # Write output
-    with open(output_path, "w", encoding="utf-8", newline="") as fout:
-        writer = csv.DictWriter(fout, fieldnames=fieldnames)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with out_path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(
+            fh,
+            fieldnames=["id1", "id2", "logical", "text", "inherit", "term1", "term2"],
+        )
         writer.writeheader()
-        writer.writerows(final_rows)
+        writer.writerows(original_rows + inherited_rows)
 
-    print(f"[INFO] Propagated opposite_of relationships saved to: {output_path}")
-    print(f"[INFO] Original pairs: {len(rows_original)} | Inherited pairs: {len(rows_inherited)} | Total: {len(final_rows)}")
+    log.info(
+        "Original: %d | Inherited: %d | Total: %d",
+        len(original_rows),
+        len(inherited_rows),
+        len(original_rows) + len(inherited_rows),
+    )
+
+
+def parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description="Propagate HPO opposite_of pairs.")
+    p.add_argument("--hpo", type=Path, help="Path to hp.obo")
+    p.add_argument("--pairs", type=Path, help="CSV of root opposite pairs")
+    p.add_argument("--out", type=Path, help="Output CSV path")
+    return p.parse_args()
+
+
+def main() -> None:
+    load_dotenv()
+
+    args = parse_args()
+    env_input_dir = os.getenv("INPUT_DIR")
+    env_output_dir = os.getenv("OUTPUT_DIR")
+
+    if not args.hpo and not env_input_dir:
+        raise SystemExit("Provide --hpo or set INPUT_DIR.")
+    if not args.out and not env_output_dir:
+        raise SystemExit("Provide --out or set OUTPUT_DIR.")
+
+    hpo_path = Path(args.hpo) if args.hpo else Path(env_input_dir) / "hp.obo"
+    pairs_path = (
+        Path(args.pairs)
+        if args.pairs
+        else Path(env_output_dir) / "hpo_opposites_unified.csv"
+    )
+    out_path = (
+        Path(args.out)
+        if args.out
+        else Path(env_output_dir) / "hpo_opposites_inherited.csv"
+    )
+
+    propagate_opposites(hpo_path, pairs_path, out_path)
+
 
 if __name__ == "__main__":
-    if not INPUT_DIR or not OUTPUT_DIR:
-        raise ValueError("[ERROR] INPUT_DIR and OUTPUT_DIR must be set.")
-
-    hpo_obo = os.path.join(INPUT_DIR, "hp.obo")
-    unified_opposites = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.csv")
-    output_file = os.path.join(OUTPUT_DIR, "hpo_opposites_inherited.csv")
-
-    propagate_opposites(hpo_obo, unified_opposites, output_file)
+    main()
