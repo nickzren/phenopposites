@@ -1,166 +1,130 @@
 #!/usr/bin/env python3
 """
 compare_llm_opposites_validation.py
-
-Reads *_validated.csv files in data/output/llm_validated/,
-merges them, writes a *_disagreements_all_llms.csv for every
-(term_type, category) found, and reports each provider’s
-agreement rate against a user-specified base provider
-(default: openai).
+Report pair-wise agreement between LLM validations
 """
 
-import argparse
-import glob
-import os
-import sys
+import argparse, glob, os, sys
 import pandas as pd
 
-PROVIDERS = ["openai", "aws", "deepseek", "together", "google"]
+PROVIDERS = ["openai", "aws", "deepseek", "together", "google", "xai"]
+DISPLAY = {
+    "openai":  "openai",
+    "aws":     "claude",
+    "deepseek":"deepseek",
+    "together":"llama",
+    "google":  "gemini",
+    "xai":     "grok",
+}
 FILE_SUFFIX = {
     "openai":   "_openai_validated.csv",
     "deepseek": "_deepseek_validated.csv",
     "aws":      "_claude_validated.csv",
     "together": "_llama_validated.csv",
     "google":   "_gemini_validated.csv",
+    "xai":      "_grok_validated.csv",
 }
 
+SEP = "  "
 
-# --------------------------------------------------------------------------- #
-#  CLI                                                                        #
-# --------------------------------------------------------------------------- #
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(
-        description="Compare yes/no validation results across LLM providers."
-    )
-    p.add_argument(
-        "--input_dir",
-        default=os.path.join("data", "output", "llm_validated"),
-        help="Dir containing *_validated.csv files (default: %(default)s)",
-    )
-    p.add_argument(
-        "-b",
-        "--base_provider",
-        choices=PROVIDERS,
-        default="openai",
-        help="Provider to use as the agreement baseline (default: %(default)s)",
-    )
+    p = argparse.ArgumentParser()
+    p.add_argument("--input_dir", default="data/output/llm_validated")
+    p.add_argument("-b", "--base_provider", choices=PROVIDERS, default="openai")
     return p.parse_args()
 
+def provider_file(indir: str, ttype: str, cat: str, prov: str) -> str:
+    return os.path.join(indir, f"{ttype}_opposites_{cat}{FILE_SUFFIX[prov]}")
 
-# --------------------------------------------------------------------------- #
-#  Helpers                                                                    #
-# --------------------------------------------------------------------------- #
-def provider_file(input_dir: str, term_type: str, category: str, provider: str) -> str:
-    return os.path.join(
-        input_dir, f"{term_type}_opposites_{category}{FILE_SUFFIX[provider]}"
-    )
+def standardize(df: pd.DataFrame, ttype: str) -> pd.DataFrame:
+    return df.rename(columns={
+        "id1":   f"{ttype}_id1",
+        "id2":   f"{ttype}_id2",
+        "term1": f"{ttype}_term1",
+        "term2": f"{ttype}_term2",
+    })
 
-
-def standardize_columns(df: pd.DataFrame, term_type: str) -> pd.DataFrame:
-    rename_map = {
-        "id1": f"{term_type}_id1",
-        "id2": f"{term_type}_id2",
-        "term1": f"{term_type}_term1",
-        "term2": f"{term_type}_term2",
-    }
-    return df.rename(columns={k: v for k, v in rename_map.items() if k in df.columns})
-
-
-def load_df(path: str, term_type: str, provider: str) -> pd.DataFrame:
+def load_df(path: str, ttype: str, prov: str) -> pd.DataFrame:
     df = pd.read_csv(path)
-    df = standardize_columns(df, term_type)
-    return df.rename(columns={"inverse_verified_by_llm": f"inverse_verified_by_llm_{provider}"})
+    df = standardize(df, ttype)
+    return df.rename(columns={"inverse_verified_by_llm": f"inverse_verified_by_llm_{prov}"})
 
-
-def merge_providers(
-    input_dir: str, term_type: str, category: str
-) -> tuple[pd.DataFrame, list[str]]:
-    join_cols = [
-        f"{term_type}_id1",
-        f"{term_type}_term1",
-        f"{term_type}_id2",
-        f"{term_type}_term2",
-    ]
-
+def merge(indir: str, ttype: str, cat: str) -> tuple[pd.DataFrame, list[str]]:
+    join = [f"{ttype}_id1", f"{ttype}_term1", f"{ttype}_id2", f"{ttype}_term2"]
     dfs, used = [], []
-    for provider in PROVIDERS:
-        path = provider_file(input_dir, term_type, category, provider)
-        if os.path.exists(path):
-            df = load_df(path, term_type, provider)
-            dfs.append(df[join_cols + [f"inverse_verified_by_llm_{provider}"]])
-            used.append(provider)
-
+    for p in PROVIDERS:
+        fp = provider_file(indir, ttype, cat, p)
+        if os.path.exists(fp):
+            dfs.append(load_df(fp, ttype, p)[join + [f"inverse_verified_by_llm_{p}"]])
+            used.append(p)
     if not dfs:
-        raise FileNotFoundError(f"No provider files found for {term_type}-{category}")
+        raise FileNotFoundError
+    m = dfs[0]
+    for d in dfs[1:]:
+        m = m.merge(d, on=join)
+    return m, used
 
-    merged = dfs[0]
-    for df in dfs[1:]:
-        merged = merged.merge(df, on=join_cols)
+def pct(n: int, d: int) -> float:
+    return 0.0 if d == 0 else n / d * 100.0
 
-    return merged, used
+def norm(s: pd.Series) -> pd.Series:
+    return s.fillna("N/A").astype(str).str.strip().str.lower()
 
+def cell(match: int, denom: int) -> str:
+    return f"{pct(match, denom):6.2f}% ({match}/{denom})" if denom else "N/A"
 
-def agreement_stats(
-    df: pd.DataFrame, providers_used: list[str], base: str, term_type: str, category: str
-) -> None:
-    if base not in providers_used:
-        print(
-            f"[!] Skipping agreement stats for {term_type}-{category}: base provider '{base}' not present",
-            file=sys.stderr,
-        )
-        return
-    total = len(df)
+def agreement(df: pd.DataFrame, used: list[str], base: str, ttype: str, cat: str):
     base_col = f"inverse_verified_by_llm_{base}"
-    print(f"\n{term_type.upper()}-{category.upper()} – agreement with {base.upper()} ({total:,} rows)")
-    for p in providers_used:
+    df[base_col] = norm(df[base_col])
+    total = len(df)
+    yes_mask, no_mask = df[base_col] == "yes", df[base_col] == "no"
+    yes_tot, no_tot = yes_mask.sum(), no_mask.sum()
+
+    rows = []
+    for p in used:
         if p == base:
             continue
         col = f"inverse_verified_by_llm_{p}"
-        matches = (df[base_col] == df[col]).sum()
-        pct = matches / total * 100
-        print(f"  {base.capitalize()} vs {p:<9}: {pct:6.2f}%  ({matches}/{total})")
-
-
-def process_category(
-    input_dir: str, term_type: str, category: str, base: str
-) -> None:
-    try:
-        merged, providers_used = merge_providers(input_dir, term_type, category)
-    except FileNotFoundError as e:
-        print(f"[!] Skipping {term_type}-{category}: {e}", file=sys.stderr)
+        df[col] = norm(df[col])
+        rows.append((
+            DISPLAY[p],
+            cell((df[col] == df[base_col]).sum(), total),
+            cell(((df[col] == "yes") & yes_mask).sum(), yes_tot),
+            cell(((df[col] == "no") & no_mask).sum(), no_tot),
+        ))
+    if not rows:
         return
 
-    verdict_cols = [f"inverse_verified_by_llm_{p}" for p in providers_used]
-    disagreements = merged[merged[verdict_cols].nunique(axis=1) > 1]
+    headers = ("LLM", "Overall", "Yes", "No")
+    widths = [max(len(h), max(len(r[i]) for r in rows)) + 2 for i, h in enumerate(headers)]
+    header_line = SEP.join(f"{h:<{widths[i]}}" for i, h in enumerate(headers))
+    separator = "-" * (sum(widths) + len(SEP) * 3)
 
-    out_path = os.path.join(
-        input_dir, f"{term_type}_{category}_disagreements_all_llms.csv"
-    )
-    disagreements.to_csv(out_path, index=False)
-    print(f"[✓] {term_type.upper()}-{category.upper()}: {len(disagreements)} rows → {out_path}")
+    print(f"\n{ttype.upper()}-{cat.upper()} – agreement with {DISPLAY[base].upper()} ({total:,} rows)")
+    print(header_line)
+    print(separator)
+    for r in rows:
+        print(SEP.join(f"{r[i]:<{widths[i]}}" for i in range(4)))
 
-    agreement_stats(merged, providers_used, base, term_type, category)
+def process(indir: str, ttype: str, cat: str, base: str):
+    try:
+        df, used = merge(indir, ttype, cat)
+    except FileNotFoundError:
+        print(f"[!] missing {ttype}-{cat}")
+        return
+    disagreements = df[df[[f"inverse_verified_by_llm_{p}" for p in used]].nunique(axis=1) > 1]
+    disagreements.to_csv(os.path.join(indir, f"{ttype}_{cat}_disagreements_all_llms.csv"), index=False)
+    agreement(df, used, base, ttype, cat)
 
-
-# --------------------------------------------------------------------------- #
-#  Main                                                                       #
-# --------------------------------------------------------------------------- #
-def main() -> None:
+def main():
     args = parse_args()
-    base = args.base_provider
-
-    term_types = ("hpo", "mondo")
-    categories_for = lambda tt: {
-        os.path.basename(f).split("_opposites_")[1].split(FILE_SUFFIX[base])[0]
-        for f in glob.glob(
-            os.path.join(args.input_dir, f"{tt}_opposites_*{FILE_SUFFIX[base]}")
-        )
-    }
-
-    for t in term_types:
-        for c in sorted(categories_for(t)):
-            process_category(args.input_dir, t, c, base)
-
+    for ttype in ("hpo", "mondo"):
+        cats = {
+            os.path.basename(fp).split("_opposites_")[1].split(FILE_SUFFIX[args.base_provider])[0]
+            for fp in glob.glob(os.path.join(args.input_dir, f"{ttype}_opposites_*{FILE_SUFFIX[args.base_provider]}"))
+        }
+        for cat in sorted(cats):
+            process(args.input_dir, ttype, cat, args.base_provider)
 
 if __name__ == "__main__":
     main()

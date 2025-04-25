@@ -1,72 +1,148 @@
 #!/usr/bin/env python3
-import os
+"""
+unify_hpo_votes.py
+
+• hpo_opposites_text_unified.csv
+• hpo_opposites_logical_unified.csv
+  – every row, one column per *present* provider + pct_yes + majority
+
+• hpo_opposites_unified.csv
+  – keep a pair when majority(text) **or** majority(logical) is true
+
+Default majority cutoff is ≥ 50 %, override with --cutoff 0.6, etc.
+"""
+
+import os, re, csv, argparse
+from collections import defaultdict
+from typing import Dict, Tuple, List
+
 import pandas as pd
 from dotenv import load_dotenv
 
 load_dotenv()
 
-OUTPUT_DIR = os.getenv("OUTPUT_DIR", "data/output")
-VALIDATED_DIR = os.path.join(OUTPUT_DIR, "llm_validated")
+OUT_DIR = os.getenv("OUTPUT_DIR", "data/output")
+VAL_DIR = os.path.join(OUT_DIR, "llm_validated")
 
-TEXT_FILE = os.path.join(
-    VALIDATED_DIR, "hpo_opposites_text_gemini_validated.csv"
-)
-LOGICAL_FILE = os.path.join(
-    VALIDATED_DIR, "hpo_opposites_logical_gemini_validated.csv"
-)
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "hpo_opposites_unified.csv")
+PROV_FILE = {
+    "openai":   "_openai_validated.csv",
+    "deepseek": "_deepseek_validated.csv",
+    "claude":   "_claude_validated.csv",
+    "llama":    "_llama_validated.csv",
+    "gemini":   "_gemini_validated.csv",
+    "grok":     "_grok_validated.csv",
+}
+
+TEXT_RE  = re.compile(r"hpo_opposites_text_.*?_validated\.csv$")
+LOGIC_RE = re.compile(r"hpo_opposites_logical_.*?_validated\.csv$")
+
+Pair = Tuple[str, str, str, str]
 
 
-def _canonicalize(row: pd.Series) -> pd.Series:
-    if row["id1"] > row["id2"]:
-        row["id1"], row["id2"] = row["id2"], row["id1"]
-        row["term1"], row["term2"] = row["term2"], row["term1"]
-    return row
+# --------------------------------------------------------------------------- #
+#  CLI                                                                        #
+# --------------------------------------------------------------------------- #
+def parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser()
+    p.add_argument("--cutoff", type=float, default=0.5,
+                   help="majority threshold (default: 0.5)")
+    return p.parse_args()
 
 
-def _load(path: str, text_flag: str, logical_flag: str) -> pd.DataFrame:
+# --------------------------------------------------------------------------- #
+#  Helpers                                                                    #
+# --------------------------------------------------------------------------- #
+def canonical(id1: str, term1: str, id2: str, term2: str) -> Pair:
+    return (id2, term2, id1, term1) if id1 > id2 else (id1, term1, id2, term2)
+
+
+def add_votes(path: str, prov: str, bucket: Dict[Pair, Dict[str, str]]):
     df = pd.read_csv(path)
-    df = df[df["inverse_verified_by_llm"].str.lower() == "yes"].copy()
-    df["text"] = text_flag
-    df["logical"] = logical_flag
-    return df.drop(columns=["inverse_verified_by_llm"], errors="ignore")
-
-
-def main() -> None:
-    rename = {
-        "hpo_id1": "id1",
-        "hpo_term1": "term1",
-        "hpo_id2": "id2",
-        "hpo_term2": "term2",
-    }
-
-    df_text = _load(TEXT_FILE, "t", "f").rename(columns=rename)
-    df_logical = _load(LOGICAL_FILE, "f", "t").rename(columns=rename)
-
-    combined = pd.concat([df_text, df_logical], ignore_index=True)
-    combined = combined.apply(_canonicalize, axis=1)
-
-    unified = (
-        combined.groupby(["id1", "term1", "id2", "term2"], sort=False, as_index=False)
-        .agg(
-            logical=("logical", lambda s: "t" if (s == "t").any() else "f"),
-            text=("text",    lambda s: "t" if (s == "t").any() else "f"),
+    for _, r in df.iterrows():
+        pair = canonical(
+            r.get("hpo_id1") or r.get("id1"),
+            r.get("hpo_term1") or r.get("term1"),
+            r.get("hpo_id2") or r.get("id2"),
+            r.get("hpo_term2") or r.get("term2"),
         )
+        ans = str(r["inverse_verified_by_llm"]).strip().lower()
+        bucket[pair][prov] = "yes" if ans == "yes" else "no"
+
+
+def votes_table(pattern: re.Pattern, outfile: str, cutoff: float) -> Dict[Pair, bool]:
+    bucket: Dict[Pair, Dict[str, str]] = defaultdict(dict)
+    present: List[str] = []
+
+    for prov, suff in PROV_FILE.items():
+        for fn in os.listdir(VAL_DIR):
+            if pattern.match(fn) and fn.endswith(suff):
+                present.append(prov)
+                add_votes(os.path.join(VAL_DIR, fn), prov, bucket)
+                break
+
+    present.sort()
+
+    rows: List[Dict[str, str]] = []
+    majority: Dict[Pair, bool] = {}
+
+    for (id1, t1, id2, t2), votes in bucket.items():
+        ans_cnt = len(votes)
+        yes_cnt = sum(v == "yes" for v in votes.values())
+        pct_yes = 0.0 if ans_cnt == 0 else yes_cnt / ans_cnt
+        maj = pct_yes >= cutoff
+        majority[(id1, t1, id2, t2)] = maj
+
+        row = dict(
+            id1=id1, term1=t1, id2=id2, term2=t2,
+            pct_yes=f"{pct_yes:.2f}",
+            majority="t" if maj else "f",
+        )
+        for prov in present:
+            row[prov] = votes.get(prov, "N/A")
+        rows.append(row)
+
+    cols = ["id1", "term1", "id2", "term2"] + present + ["pct_yes", "majority"]
+    out_path = os.path.join(OUT_DIR, outfile)
+    pd.DataFrame(rows)[cols].to_csv(out_path, index=False, quoting=csv.QUOTE_MINIMAL)
+    print(f"[INFO] wrote {len(rows)} rows → {out_path}")
+    return majority
+
+
+def write_master(text_pass: Dict[Pair, bool], logic_pass: Dict[Pair, bool], out_csv: str):
+    keep = {p for p, ok in text_pass.items() if ok} | {p for p, ok in logic_pass.items() if ok}
+
+    rows: List[Dict[str, str]] = []
+    for p in keep:
+        id1, t1, id2, t2 = p
+        rows.append(
+            dict(
+                id1=id1, term1=t1,
+                id2=id2, term2=t2,
+                text="t" if text_pass.get(p, False) else "f",
+                logical="t" if logic_pass.get(p, False) else "f",
+            )
+        )
+
+    df = pd.DataFrame(rows)[["id1", "id2", "logical", "text", "term1", "term2"]]
+    df.to_csv(out_csv, index=False)
+
+    print(f"[INFO] logical=t pairs: {(df.logical=='t').sum()}")
+    print(f"[INFO] text=t pairs   : {(df.text=='t').sum()}")
+    print(f"[INFO] logical & text : {((df.logical=='t') & (df.text=='t')).sum()}")
+    print(f"[INFO] wrote {len(df)} unified rows → {out_csv}")
+
+
+# --------------------------------------------------------------------------- #
+#  Main                                                                       #
+# --------------------------------------------------------------------------- #
+def main():
+    args = parse_args()
+    text_pass  = votes_table(TEXT_RE,  "hpo_opposites_text_unified.csv",    args.cutoff)
+    logic_pass = votes_table(LOGIC_RE, "hpo_opposites_logical_unified.csv", args.cutoff)
+    write_master(
+        text_pass, logic_pass,
+        os.path.join(OUT_DIR, "hpo_opposites_unified.csv")
     )
-
-    logical_total = (unified["logical"] == "t").sum()
-    text_total = (unified["text"] == "t").sum()
-    both_total = ((unified["logical"] == "t") & (unified["text"] == "t")).sum()
-
-    unified[["id1", "id2", "logical", "text", "term1", "term2"]].to_csv(
-        OUTPUT_FILE, index=False
-    )
-
-    print(f"[INFO] logical=t pairs: {logical_total}")
-    print(f"[INFO] text=t pairs: {text_total}")
-    print(f"[INFO] logical=t & text=t pairs: {both_total}")
-    print(f"[INFO] Wrote {len(unified)} unified pairs to {OUTPUT_FILE}")
-
 
 if __name__ == "__main__":
     main()
