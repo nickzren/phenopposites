@@ -44,7 +44,7 @@ This fork of **phenopposites** was created to modernize and extend the original 
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_text.csv --llm deepseek
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_text.csv --llm gemini
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_text.csv --llm grok
-   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_text.csv --llm llama
+   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_text.csv --llm llama --workers 5
 
    # extracts opposite terms using logical definitions from ontology structure
    python src/hpo_opposites_logical_matching.py
@@ -55,13 +55,13 @@ This fork of **phenopposites** was created to modernize and extend the original 
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_logical.csv --llm deepseek
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_logical.csv --llm gemini
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_logical.csv --llm grok
-   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_logical.csv --llm llama
+   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_logical.csv --llm llama --workers 5
 
    # merges text-based and logical opposite pairs into a single dataset
-   python src/unify_hpo_opposites.py  
+   python src/hpo_opposites_unify.py  
 
    # inherits opposite-of relationships to descendant terms
-   python src/propagate_hpo_opposites.py
+   python src/hpo_opposites_propagate.py
 
    # validate opposite terms using LLM
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_inherited.csv --llm openai
@@ -69,8 +69,8 @@ This fork of **phenopposites** was created to modernize and extend the original 
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_inherited.csv --llm deepseek
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_inherited.csv --llm gemini
    python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_inherited.csv --llm grok
-   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_inherited.csv --llm llama
+   python src/validate_opposites_by_llm.py --input_file ./data/output/hpo_opposites_inherited.csv --llm llama --workers 5
 
    # extract final verified opposite terms
-   python src/hpo_opposites_extract_verified.py --input_file data/output/llm_validated/hpo_opposites_inherited_gemini_validated.csv 
+   python src/hpo_opposites_extract_verified.py 
    ```

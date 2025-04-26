@@ -6,8 +6,8 @@ HP:0000059,Hypoplastic labia majora,HP:0012882,Hyperplastic labia majora
 HP:0000105,Enlarged kidney,HP:0000089,Renal hypoplasia
 HP:0000117,Renal phosphate wasting,HP:0005571,Increased renal tubular phosphate reabsorption
 HP:0000154,Wide mouth,HP:0000160,Narrow mouth
-HP:0000158,Macroglossia,HP:0000171,Microglossia
 HP:0000158,Macroglossia,HP:0012473,Tongue atrophy
+HP:0000158,Macroglossia,HP:0000171,Microglossia
 HP:0000176,Submucous cleft hard palate,HP:0011819,Submucous cleft soft palate
 HP:0000179,Thick lower lip vermilion,HP:0010282,Thin lower lip vermilion
 HP:0000185,Cleft soft palate,HP:0410005,Cleft hard palate
@@ -417,8 +417,8 @@ HP:0025584,Hypotropia,HP:0025586,Hypertropia
 HP:0025585,Hyperphoria,HP:0031725,Hypophoria
 HP:0025587,Hyperdeviation,HP:0025588,Hypodeviation
 HP:0025622,obsolete Decreased proportion of CD4+ central memory cells,HP:0025621,obsolete Increased proportion of CD4+ central memory cells
-HP:0025624,Reduced proportion of CD4+ effector memory T cells,HP:0410394,"Increased proportion of effector memory CD4-positive, alpha-beta T cells"
 HP:0025624,Reduced proportion of CD4+ effector memory T cells,HP:0025625,Elevated proportion of CD4+ effector memory T cells
+HP:0025624,Reduced proportion of CD4+ effector memory T cells,HP:0410394,"Increased proportion of effector memory CD4-positive, alpha-beta T cells"
 HP:0025648,Steroid-sensitive nephrotic syndrome with infrequent relapses,HP:0025649,Steroid-sensitive nephrotic syndrome with frequent relapses
 HP:0025684,Decreased amyloid beta 42 peptide CSF concentration,HP:0025685,Increased amyloid beta 42 peptide CSF concentration
 HP:0025693,Pituitary macroadenoma,HP:0025694,Pituitary microadenoma

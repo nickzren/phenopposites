@@ -1,870 +1,833 @@
 id1,id2,logical,text,term1,term2
-HP:0000040,HP:0000054,f,t,Long penis,Micropenis
-HP:0000053,HP:0008734,t,t,Macroorchidism,Decreased testicular size
-HP:0000059,HP:0012882,t,t,Hypoplastic labia majora,Hyperplastic labia majora
-HP:0000089,HP:0000105,f,t,Renal hypoplasia,Enlarged kidney
-HP:0000117,HP:0005571,f,t,Renal phosphate wasting,Increased renal tubular phosphate reabsorption
-HP:0000154,HP:0000160,t,t,Wide mouth,Narrow mouth
-HP:0000158,HP:0000171,t,t,Macroglossia,Microglossia
-HP:0000158,HP:0012473,f,t,Macroglossia,Tongue atrophy
-HP:0000179,HP:0010282,f,t,Thick lower lip vermilion,Thin lower lip vermilion
-HP:0000188,HP:0011341,t,t,Short upper lip,Long upper lip
-HP:0000215,HP:0000219,f,t,Thick upper lip vermilion,Thin upper lip vermilion
-HP:0000233,HP:0012471,f,t,Thin vermilion border,Thick vermilion border
-HP:0000239,HP:0005486,t,t,Large fontanelles,Small fontanelle
-HP:0000248,HP:0000268,t,t,Brachycephaly,Dolichocephaly
-HP:0000252,HP:0000256,f,t,Microcephaly,Macrocephaly
-HP:0000252,HP:0040194,f,t,Microcephaly,Increased head circumference
-HP:0000253,HP:0004481,t,t,Progressive microcephaly,Progressive macrocephaly
-HP:0000255,HP:0011109,f,t,Acute sinusitis,Chronic sinusitis
-HP:0000237,HP:0000260,f,t,Small anterior fontanelle,Wide anterior fontanel
-HP:0000272,HP:0010620,f,t,Malar flattening,Malar prominence
-HP:0000274,HP:0100729,t,t,Small face,Large face
-HP:0000275,HP:0000283,t,t,Narrow face,Broad face
-HP:0000276,HP:0011219,t,t,Long face,Short face
-HP:0000287,HP:0009019,f,t,Increased facial adipose tissue,Progressive loss of facial adipose tissue
-HP:0000289,HP:0011829,f,t,Broad philtrum,Narrow philtrum
-HP:0000287,HP:0000292,t,t,Increased facial adipose tissue,Loss of facial adipose tissue
-HP:0000294,HP:0009890,f,t,Low anterior hairline,High anterior hairline
-HP:0000303,HP:0000347,f,t,Mandibular prognathia,Micrognathia
-HP:0000316,HP:0000601,t,t,Hypertelorism,Hypotelorism
-HP:0000319,HP:0002002,f,t,Smooth philtrum,Deep philtrum
-HP:0000322,HP:0000343,t,t,Short philtrum,Long philtrum
-HP:0000327,HP:0430028,t,t,Hypoplasia of the maxilla,Hyperplasia of the maxilla
-HP:0000331,HP:0400000,t,t,Short chin,Tall chin
-HP:0000336,HP:0009891,f,t,Prominent supraorbital ridges,Underdeveloped supraorbital ridges
-HP:0000337,HP:0000341,t,t,Broad forehead,Narrow forehead
-HP:0000350,HP:0002003,t,t,Small forehead,Large forehead
-HP:0000371,HP:0000389,f,t,Acute otitis media,Chronic otitis media
-HP:0000400,HP:0008551,f,t,Macrotia,Microtia
-HP:0000418,HP:0012811,f,t,Narrow nasal ridge,Wide nasal ridge
-HP:0000426,HP:0005280,f,t,Prominent nasal bridge,Depressed nasal bridge
-HP:0000431,HP:0000446,f,t,Wide nasal bridge,Narrow nasal bridge
-HP:0000444,HP:0011120,f,t,Convex nasal ridge,Concave nasal ridge
-HP:0000445,HP:0000460,t,t,Wide nose,Narrow nose
-HP:0000455,HP:0011832,f,t,Broad nasal tip,Narrow nasal tip
-HP:0000470,HP:0000472,t,t,Short neck,Long neck
-HP:0000482,HP:0000485,t,t,Microcornea,Megalocornea
-HP:0000494,HP:0000582,f,t,Downslanted palpebral fissures,Upslanted palpebral fissure
-HP:0000527,HP:0010764,t,t,Long eyelashes,Short eyelashes
-HP:0000571,HP:0007338,f,t,Hypometric saccades,Hypermetric saccades
-HP:0000574,HP:0045074,t,t,Thick eyebrow,Thin eyebrow
-HP:0000581,HP:0000637,f,t,Blepharophimosis,Long palpebral fissure
-HP:0000594,HP:0007765,f,t,Shallow anterior chamber,Deep anterior chamber
-HP:0000637,HP:0045025,f,t,Long palpebral fissure,Narrow palpebral fissure
-HP:0000637,HP:0012745,t,t,Long palpebral fissure,Short palpebral fissure
-HP:0000653,HP:0011231,f,t,Sparse eyelashes,Prominent eyelashes
-HP:0000668,HP:0011069,f,t,Hypodontia,Supernumerary tooth
-HP:0000684,HP:0006288,f,t,Delayed eruption of teeth,Advanced eruption of teeth
-HP:0000691,HP:0001572,t,t,Microdontia,Macrodontia
-HP:0000778,HP:0010516,t,t,Hypoplasia of the thymus,Thymus hyperplasia
-HP:0000821,HP:0000836,t,t,Hypothyroidism,Hyperthyroidism
-HP:0000822,HP:0002615,t,t,Hypertension,Hypotension
-HP:0000829,HP:0000843,t,t,Hypoparathyroidism,Hyperparathyroidism
-HP:0000835,HP:0008221,f,t,Adrenal hypoplasia,Adrenal hyperplasia
-HP:0000842,HP:0040216,t,t,Hyperinsulinemia,Hypoinsulinemia
-HP:0000860,HP:0008208,t,t,Parathyroid hypoplasia,Parathyroid hyperplasia
-HP:0000870,HP:0008202,f,t,Increased circulating prolactin concentration,Reduced circulating prolactin concentration
-HP:0000890,HP:0000894,t,t,Long clavicles,Short clavicles
-HP:0000953,HP:0001010,t,t,Hyperpigmentation of the skin,Hypopigmentation of the skin
-HP:0000963,HP:0001072,t,t,Thin skin,Thickened skin
-HP:0000966,HP:0000975,f,t,Hypohidrosis,Hyperhidrosis
-HP:0000998,HP:0008070,f,t,Hypertrichosis,Sparse hair
-HP:0001034,HP:0009719,f,t,Hypermelanotic macule,Hypomelanotic macule
-HP:0001169,HP:0004283,t,t,Broad palm,Narrow palm
-HP:0001176,HP:0200055,t,t,Large hands,Small hand
-HP:0001196,HP:0011417,t,t,Short umbilical cord,Long umbilical cord
-HP:0001238,HP:0001500,f,t,Slender finger,Broad finger
-HP:0001252,HP:0001276,t,t,Hypotonia,Hypertonia
-HP:0001265,HP:0001347,f,t,Hyporeflexia,Hyperreflexia
-HP:0001315,HP:0001347,f,t,Reduced tendon reflexes,Hyperreflexia
-HP:0001376,HP:0001382,t,t,Limitation of joint mobility,Joint hypermobility
-HP:0001403,HP:0001414,f,t,Macrovesicular hepatic steatosis,Microvesicular hepatic steatosis
-HP:0001413,HP:0006577,f,t,Micronodular cirrhosis,Macronodular cirrhosis
-HP:0001476,HP:0005458,f,t,Delayed closure of the anterior fontanelle,Premature closure of fontanelles
-HP:0001477,HP:0031706,f,t,Compensatory chin elevation,Compensatory chin depression
-HP:0001518,HP:0001520,f,t,Small for gestational age,Large for gestational age
-HP:0001558,HP:0010519,f,t,Decreased fetal movement,Increased fetal movement
-HP:0001561,HP:0001562,f,t,Polyhydramnios,Oligohydramnios
-HP:0001611,HP:0100271,f,t,Hypernasal speech,Hyponasal speech
-HP:0001620,HP:0010300,f,t,Abnormally high-pitched voice,Abnormally low-pitched voice
-HP:0001640,HP:0001961,f,t,Cardiomegaly,Hypoplastic heart
-HP:0001649,HP:0001662,f,t,Tachycardia,Bradycardia
-HP:0001657,HP:0012232,f,t,Prolonged QT interval,Shortened QT interval
-HP:0001688,HP:0011703,f,t,Sinus bradycardia,Sinus tachycardia
-HP:0001722,HP:0009805,f,t,High-output congestive heart failure,Low-output congestive heart failure
-HP:0001735,HP:0006280,f,t,Acute pancreatitis,Chronic pancreatitis
-HP:0001757,HP:0008573,f,t,High-frequency sensorineural hearing impairment,Low-frequency sensorineural hearing impairment
-HP:0001769,HP:0001786,f,t,Broad foot,Narrow foot
-HP:0001773,HP:0001833,f,t,Short foot,Long foot
-HP:0001821,HP:0011313,t,t,Broad nail,Narrow nail
-HP:0001831,HP:0010511,t,t,Short toe,Long toe
-HP:0001837,HP:0011308,f,t,Broad toe,Slender toe
-HP:0001847,HP:0010109,t,t,Long hallux,Short hallux
-HP:0001882,HP:0001974,t,t,Leukopenia,Leukocytosis
-HP:0001899,HP:0031851,f,t,Increased hematocrit,Reduced hematocrit
-HP:0001935,HP:0001972,f,t,Microcytic anemia,Macrocytic anemia
-HP:0001943,HP:0003074,t,t,Hypoglycemia,Hyperglycemia
-HP:0001945,HP:0002045,f,t,Fever,Hypothermia
-HP:0001987,HP:0100493,t,t,Hyperammonemia,Hypoammonemia
-HP:0002057,HP:0011222,f,t,Prominent glabella,Depressed glabella
-HP:0002148,HP:0002905,t,t,Hypophosphatemia,Hyperphosphatemia
-HP:0002149,HP:0003537,t,t,Hyperuricemia,Hypouricemia
-HP:0002150,HP:0003127,t,t,Hypercalciuria,Hypocalciuria
-HP:0002152,HP:0003075,t,t,Hyperproteinemia,Hypoproteinemia
-HP:0002153,HP:0002900,t,t,Hyperkalemia,Hypokalemia
-HP:0002154,HP:0012277,t,t,Hyperglycinemia,Hypoglycinemia
-HP:0002155,HP:0012153,t,t,Hypertriglyceridemia,Hypotriglyceridemia
-HP:0002161,HP:0500142,t,t,Hyperlysinemia,Hypolysinemia
-HP:0002162,HP:0012891,f,t,Low posterior hairline,High posterior hairline
-HP:0002213,HP:0100874,f,t,Fine hair,Thick hair
-HP:0002375,HP:0002487,f,t,Hypokinesia,Hyperkinetic movements
-HP:0002395,HP:0002600,t,t,Lower limb hyperreflexia,Hyporeflexia of lower limbs
-HP:0002488,HP:0005558,f,t,Acute leukemia,Chronic leukemia
-HP:0002490,HP:0030086,t,t,Increased CSF lactate,Reduced CSF lactate
-HP:0002509,HP:0012389,f,t,Limb hypertonia,Appendicular hypotonia
-HP:0002516,HP:0012641,f,t,Increased intracranial pressure,Decreased intracranial pressure
-HP:0002562,HP:6000229,f,t,Low-set nipples,High-set nipples
-HP:0002594,HP:0006277,t,t,Pancreatic hypoplasia,Pancreatic hyperplasia
-HP:0002677,HP:0002700,t,t,Small foramen magnum,Large foramen magnum
-HP:0002684,HP:0010539,t,t,Thickened calvaria,Thin calvarium
-HP:0002690,HP:0010538,t,t,Large sella turcica,Small sella turcica
-HP:0002714,HP:0010805,f,t,Downturned corners of mouth,Upturned corners of mouth
-HP:0002716,HP:0002732,t,t,Lymphadenopathy,Lymph node hypoplasia
-HP:0002720,HP:0003261,t,t,Decreased circulating IgA concentration,Increased circulating IgA concentration
-HP:0002731,HP:0030887,f,t,Decreased lymphocyte apoptosis,Increased lymphocyte apoptosis
-HP:0002789,HP:0046507,f,t,Tachypnea,Bradypnea
-HP:0002791,HP:0002883,f,t,Hypoventilation,Hyperventilation
-HP:0002850,HP:0003496,t,t,Decreased circulating total IgM,Increased circulating IgM level
-HP:0002901,HP:0003072,t,t,Hypocalcemia,Hypercalcemia
-HP:0002902,HP:0003228,t,t,Hyponatremia,Hypernatremia
-HP:0002904,HP:0033480,t,t,Hyperbilirubinemia,Hypobilirubinemia
-HP:0002914,HP:0012601,t,t,Hyperchloriduria,Hypochloriduria
-HP:0002917,HP:0002918,t,t,Hypomagnesemia,Hypermagnesemia
-HP:0002922,HP:0025457,t,t,Increased CSF protein concentration,Decreased CSF protein concentration
-HP:0002938,HP:0034770,f,t,Lumbar hyperlordosis,Lumbar hypolordosis
-HP:0003022,HP:0003988,f,t,Hypoplasia of the ulna,Long ulna
-HP:0003038,HP:0003085,f,t,Fibular hypoplasia,Long fibula
-HP:0003073,HP:0012117,t,t,Hypoalbuminemia,Hyperalbuminemia
-HP:0003077,HP:0045014,t,t,Hyperlipidemia,Hypolipidemia
-HP:0003109,HP:0012365,t,t,Hyperphosphaturia,Hypophosphaturia
-HP:0003113,HP:0011423,t,t,Hypochloremia,Hyperchloremia
-HP:0003124,HP:0003146,t,t,Hypercholesterolemia,Hypocholesterolemia
-HP:0003125,HP:0030977,f,t,Reduced factor VIII activity,Increased factor VIII activity
-HP:0003138,HP:0031969,t,t,Increased blood urea nitrogen,Reduced blood urea nitrogen
-HP:0003141,HP:0003563,t,t,Increased LDL cholesterol concentration,Decreased LDL cholesterol concentration
-HP:0003189,HP:0003196,f,t,Long nose,Short nose
-HP:0003194,HP:0033142,t,t,Short nasal bridge,Long nasal bridge
-HP:0003202,HP:0003712,f,t,Skeletal muscle atrophy,Skeletal muscle hypertrophy
-HP:0003217,HP:0500147,t,t,Hyperglutaminemia,Hypoglutaminemia
-HP:0003231,HP:0500133,t,t,Hypertyrosinemia,Hypotyrosinemia
-HP:0003233,HP:0012184,t,t,Decreased HDL cholesterol concentration,Increased HDL cholesterol concentration
-HP:0003235,HP:0003658,t,t,Hypermethioninemia,Hypomethioninemia
-HP:0003259,HP:0012101,f,t,Elevated circulating creatinine concentration,Decreased serum creatinine
-HP:0003281,HP:0012343,t,t,Increased circulating ferritin concentration,Decreased circulating ferritin concentration
-HP:0003155,HP:0003282,f,t,Elevated circulating alkaline phosphatase concentration,Decreased circulating alkaline phosphatase activity
-HP:0003292,HP:0031793,t,t,Decreased serum leptin,Increased serum leptin
-HP:0003348,HP:0500154,t,t,Hyperalaninemia,Hypoalaninemia
-HP:0000848,HP:0003351,t,t,Increased circulating renin concentration,Decreased circulating renin concentration
-HP:0003354,HP:0500136,t,t,Hyperthreoninemia,Hypothreoninemia
-HP:0003359,HP:0012613,t,t,Decreased urinary sulfate,Increased urinary sulfate
-HP:0003090,HP:0003371,f,t,Hypoplasia of the capital femoral epiphysis,Enlargement of the proximal femoral epiphysis
-HP:0003429,HP:0012754,t,t,CNS hypomyelination,CNS hypermyelination
-HP:0003565,HP:0025022,f,t,Elevated erythrocyte sedimentation rate,Decreased erythrocyte sedimentation rate
-HP:0003676,HP:0003680,f,t,Progressive,Nonprogressive
-HP:0003700,HP:0003720,f,t,Generalized amyotrophy,Generalized muscle hypertrophy
-HP:0003785,HP:0034201,f,t,Decreased CSF homovanillic acid concentration,Increased CSF homovanillic acid concentration
-HP:0003829,HP:0034950,f,t,Typified by incomplete penetrance,Typified by complete penetrance
-HP:0003898,HP:0003900,t,t,Large humeral epiphyses,Small humeral epiphyses
-HP:0004005,HP:0004010,t,t,Large radial epiphyses,Small radial epiphyses
-HP:0001498,HP:0004237,f,t,Carpal bone hypoplasia,Large carpal bones
-HP:0004279,HP:0011302,t,t,Short palm,Long palm
-HP:0004313,HP:0010702,t,t,Decreased circulating antibody concentration,Increased circulating antibody concentration
-HP:0003237,HP:0004315,t,t,Increased circulating IgG concentration,Decreased circulating IgG concentration
-HP:0000859,HP:0004319,t,t,Increased circulating aldosterone concentration,Decreased circulating aldosterone concentration
-HP:0000098,HP:0004322,t,t,Tall stature,Short stature
-HP:0004324,HP:0004325,t,t,Increased body weight,Decreased body weight
-HP:0004330,HP:0004331,t,t,Increased skull ossification,Decreased skull ossification
-HP:0004349,HP:0011001,t,t,Reduced bone mineral density,Increased bone mineral density
-HP:0004368,HP:0004369,f,t,Increased circulating purine concentration,Decreased circulating purine concentration
-HP:0004488,HP:0011451,f,t,Macrocephaly at birth,Primary microcephaly
-HP:0004528,HP:0004554,f,t,Generalized hypotrichosis,Generalized hypertrichosis
-HP:0004660,HP:0012892,f,t,Hypoplasia of facial musculature,Facial muscle hypertrophy
-HP:0004729,HP:0004743,f,t,Acute tubulointerstitial nephritis,Chronic tubulointerstitial nephritis
-HP:0004821,HP:0011447,f,t,Hypersegmentation of neutrophil nuclei,Hyposegmentation of neutrophil nuclei
-HP:0004826,HP:0004851,f,t,Folate-unresponsive megaloblastic anemia,Folate-responsive megaloblastic anemia
-HP:0004879,HP:0004881,f,t,Intermittent hyperventilation,Episodic hypoventilation
-HP:0004905,HP:4000212,f,t,Reduced circulating vitamin A concentration,Increased circulating vitamin A concentration
-HP:0004923,HP:0500141,t,t,Hyperphenylalaninemia,Hypophenylalaninemia
-HP:0005165,HP:0012248,f,t,Shortened PR interval,Prolonged PR interval
-HP:0005170,HP:0005178,f,t,Complete heart block with broad QRS complexes,Complete heart block with narrow QRS complexes
-HP:0005272,HP:0010801,f,t,Prominent nasolabial fold,Underdeveloped nasolabial fold
-HP:0005274,HP:0005278,f,t,Prominent nasal tip,Hypoplastic nasal tip
-HP:0005310,HP:0011944,f,t,Large vessel vasculitis,Small vessel vasculitis
-HP:0005323,HP:0011331,f,t,Hemifacial hypertrophy,Hemifacial atrophy
-HP:0005445,HP:0040010,f,t,Enlarged posterior fossa,Small posterior fossa
-HP:0003212,HP:0005479,t,t,Increased circulating IgE concentration,Decreased circulating IgE concentration
-HP:0005484,HP:0005490,f,t,Secondary microcephaly,Postnatal macrocephaly
-HP:0005528,HP:0031020,f,t,Bone marrow hypocellularity,Bone marrow hypercellularity
-HP:0005537,HP:0011877,f,t,Decreased mean platelet volume,Increased mean platelet volume
-HP:0005585,HP:0005590,f,t,Spotty hyperpigmentation,Spotty hypopigmentation
-HP:0005819,HP:0012298,t,t,Short middle phalanx of finger,Long middle phalanx of finger
-HP:0005961,HP:0500153,t,t,Hypoargininemia,Hyperargininemia
-HP:0005990,HP:0008249,t,t,Thyroid hypoplasia,Thyroid hyperplasia
-HP:0006127,HP:0010241,t,t,Long proximal phalanx of finger,Short proximal phalanx of finger
-HP:0006155,HP:0009803,f,t,Long phalanx of finger,Short phalanx of finger
-HP:0006184,HP:0006191,f,t,Decreased palmar creases,Deep palmar crease
-HP:0006266,HP:0006267,t,t,Small placenta,Large placenta
-HP:0006329,HP:0009085,f,t,Alveolar process hypoplasia,Alveolar ridge overgrowth
-HP:0006336,HP:0033189,f,t,Short dental root,Radiculomegaly
-HP:0006429,HP:0008819,t,t,Broad femoral neck,Narrow femoral neck
-HP:0006554,HP:0100626,f,t,Acute hepatic failure,Chronic hepatic failure
-HP:0007048,HP:0012697,t,t,Large basal ganglia,Small basal ganglia
-HP:0007074,HP:0033725,f,t,Thick corpus callosum,Thin corpus callosum
-HP:0007103,HP:0030890,f,t,Hypointensity of cerebral white matter on MRI,Hyperintensity of cerebral white matter on MRI
-HP:0007149,HP:0040267,f,t,Distal upper limb amyotrophy,Distal upper limb muscle hypertrophy
-HP:0007182,HP:0030173,t,t,Peripheral hypomyelination,Peripheral hypermyelination
-HP:0007183,HP:0012752,f,t,Focal T2 hyperintense basal ganglia lesion,Focal T2 hypointense basal ganglia lesion
-HP:0007410,HP:0034012,f,t,Palmoplantar hyperhidrosis,Palmoplantar hypohidrosis
-HP:0007440,HP:0007513,t,t,Generalized hyperpigmentation,Generalized hypopigmentation
-HP:0007535,HP:0007572,f,t,Hypopigmented streaks,Hyperpigmented streaks
-HP:0007840,HP:0040054,t,t,Long upper eyelashes,Short upper eyelashes
-HP:0007894,HP:0011512,t,t,Hypopigmentation of the fundus,Hyperpigmentation of the fundus
-HP:0007975,HP:0032013,f,t,Hypometric horizontal saccades,Hypermetric horizontal saccades
-HP:0007988,HP:0011509,t,t,Macular hypopigmentation,Macular hyperpigmentation
-HP:0008001,HP:0012643,t,t,Foveal hyperpigmentation,Foveal hypopigmentation
-HP:0003118,HP:0008163,t,t,Increased circulating cortisol level,Decreased circulating cortisol level
-HP:0008165,HP:0500264,f,t,Decreased helper T cell proportion,Increased helper T cell proportion
-HP:0008179,HP:0031155,f,t,Decreased Arden ratio of electrooculogram,Increased Arden ratio of electrooculogram
-HP:0008182,HP:6000152,f,t,Adrenocortical hypoplasia,Adrenocortical hyperplasia
-HP:0008214,HP:0025134,t,t,Decreased serum estradiol,Increased serum estradiol
-HP:0008233,HP:0031216,t,t,Decreased circulating progesterone,Increased circulating progesterone
-HP:0008244,HP:0008258,f,t,Congenital adrenal hypoplasia,Congenital adrenal hyperplasia
-HP:0008348,HP:0032299,f,t,Decreased circulating IgG2 concentration,Increased circulating IgG2 level
-HP:0008358,HP:0500139,t,t,Hyperprolinemia,Hypoprolinemia
-HP:0008593,HP:0011251,f,t,Prominent antitragus,Underdeveloped antitragus
-HP:0000060,HP:0008665,f,t,Clitoral hypoplasia,Clitoral hypertrophy
-HP:0002866,HP:0008818,f,t,Hypoplastic iliac wing,Large iliac wing
-HP:0008948,HP:0040266,f,t,Proximal upper limb amyotrophy,Proximal upper limb muscle hypertrophy
-HP:0008972,HP:0040015,f,t,Decreased activity of mitochondrial respiratory chain,Increased activity of mitochondrial respiratory chain
-HP:0009060,HP:0012895,f,t,Scapular muscle atrophy,Scapular muscle hypertrophy
-HP:0009147,HP:0009148,t,t,Enlarged epiphysis of the distal phalanx of the 5th finger,Small epiphysis of the distal phalanx of the 5th finger
-HP:0009158,HP:0009159,t,t,Enlarged epiphysis of the proximal phalanx of the 5th finger,Small epiphysis of the proximal phalanx of the 5th finger
-HP:0009206,HP:0009211,t,t,Enlarged epiphysis of the middle phalanx of the 5th finger,Small epiphysis of the middle phalanx of the 5th finger
-HP:0009217,HP:0009222,t,t,Enlarged epiphysis of the middle phalanx of the 4th finger,Small epiphysis of the middle phalanx of the 4th finger
-HP:0009253,HP:0009258,t,t,Enlarged epiphysis of the distal phalanx of the 4th finger,Small epiphysis of the distal phalanx of the 4th finger
-HP:0009264,HP:0009269,t,t,Enlarged epiphysis of the proximal phalanx of the 4th finger,Small epiphysis of the proximal phalanx of the 4th finger
-HP:0009324,HP:0009329,t,t,Enlarged epiphysis of the middle phalanx of the 3rd finger,Small epiphysis of the middle phalanx of the 3rd finger
-HP:0009338,HP:0009343,t,t,Enlarged epiphysis of the distal phalanx of the 3rd finger,Small epiphysis of the distal phalanx of the 3rd finger
-HP:0009349,HP:0009354,t,t,Enlarged epiphysis of the proximal phalanx of the 3rd finger,Small epiphysis of the proximal phalanx of the 3rd finger
-HP:0009385,HP:0009390,t,t,Enlarged epiphyses of the 5th finger,Small epiphyses of the 5th finger
-HP:0009396,HP:0009401,t,t,Enlarged epiphyses of the 4th finger,Small epiphyses of the 4th finger
-HP:0009413,HP:0009418,t,t,Enlarged epiphyses of the 3rd finger,Small epiphyses of the 3rd finger
-HP:0009491,HP:0009496,t,t,Enlarged epiphyses of the 2nd finger,Small epiphyses of the 2nd finger
-HP:0009505,HP:0009510,t,t,Enlarged epiphysis of the distal phalanx of the 2nd finger,Small epiphysis of the distal phalanx of the 2nd finger
-HP:0009516,HP:0009521,t,t,Enlarged epiphysis of the middle phalanx of the 2nd finger,Small epiphysis of the middle phalanx of the 2nd finger
-HP:0009527,HP:0009532,t,t,Enlarged epiphysis of the proximal phalanx of the 2nd finger,Small epiphysis of the proximal phalanx of the 2nd finger
-HP:0009667,HP:0009672,t,t,Enlarged epiphysis of the proximal phalanx of the thumb,Small epiphysis of the proximal phalanx of the thumb
-HP:0009678,HP:0009683,t,t,Enlarged epiphysis of the distal phalanx of the thumb,Small epiphysis of the distal phalanx of the thumb
-HP:0009689,HP:0009694,t,t,Enlarged thumb epiphysis,Small thumb epiphysis
-HP:0009746,HP:0009936,f,t,Thick nasal septum,Narrow nasal septum
-HP:0000385,HP:0009748,f,t,Small earlobe,Large earlobe
-HP:0009778,HP:0032524,f,t,Short thumb,Long thumb
-HP:0009804,HP:0011069,t,t,Tooth agenesis,Supernumerary tooth
-HP:0009882,HP:0012299,t,t,Short distal phalanx of finger,Long distal phalanx of finger
-HP:0000448,HP:0009924,f,t,Prominent nose,Aplasia/Hypoplasia involving the nose
-HP:0009931,HP:0009933,f,t,Enlarged naris,Narrow naris
-HP:0010018,HP:0010023,t,t,Enlarged epiphysis of the 1st metacarpal,Small epiphysis of the 1st metacarpal
-HP:0010049,HP:0010493,t,t,Short metacarpal,Long metacarpals
-HP:0010116,HP:0010121,t,t,Enlarged epiphyses of the hallux,Small epiphyses of the hallux
-HP:0010130,HP:0010135,t,t,Enlarged epiphysis of the proximal phalanx of the hallux,Small epiphysis of the proximal phalanx of the hallux
-HP:0010141,HP:0010146,t,t,Enlarged epiphysis of the distal phalanx of the hallux,Small epiphysis of the distal phalanx of the hallux
-HP:0010152,HP:0010157,t,t,Enlarged epiphysis of the 1st metatarsal,Small epiphysis of the 1st metatarsal
-HP:0010165,HP:0010170,t,t,Enlarged epiphyses of the toes,Small epiphyses of the toes
-HP:0010231,HP:0010236,t,t,Enlarged epiphyses of the phalanges of the hand,Small epiphyses of the phalanges of the hand
-HP:0010249,HP:0010254,t,t,Enlarged epiphyses of the distal phalanges of the hand,Small epiphyses of the distal phalanges of the hand
-HP:0010260,HP:0010265,t,t,Enlarged epiphyses of the middle phalanges of the hand,Small epiphyses of the middle phalanges of the hand
-HP:0010271,HP:0010276,t,t,Enlarged epiphyses of the proximal phalanges of the hand,Small epiphyses of the proximal phalanges of the hand
-HP:0010306,HP:0100818,f,t,Short thorax,Long thorax
-HP:0010450,HP:6000589,f,t,Esophageal stenosis,Esophageal dilation
-HP:0010514,HP:0040075,t,t,Hyperpituitarism,Hypopituitarism
-HP:0010545,HP:0011477,f,t,Downbeat nystagmus,Upbeat nystagmus
-HP:0010570,HP:0011432,f,t,Low maternal circulating alpha-fetoprotein concentration,Elevated maternal circulating alpha-fetoprotein concentration
-HP:0010580,HP:0010585,t,t,Enlarged epiphyses,Small epiphyses
-HP:0010650,HP:0430029,t,t,Hypoplasia of the premaxilla,Hyperplasia of the premaxilla
-HP:0010669,HP:0012370,f,t,Hypoplasia of the zygomatic bone,Prominence of the zygomatic bone
-HP:0010763,HP:0012807,f,t,Low insertion of columella,High insertion of columella
-HP:0008839,HP:0010779,f,t,Hypoplastic pelvis,Large pelvis bone
-HP:0010790,HP:0010791,f,t,Hypoplasia of the Leydig cells,Hyperplasia of the Leydig cells
-HP:0010809,HP:0010811,t,t,Broad uvula,Narrow uvula
-HP:0010810,HP:0010812,t,t,Long uvula,Short uvula
-HP:0010837,HP:0033145,f,t,Decreased circulating ceruloplasmin concentration,Increased circulating ceruloplasmin concentration
-HP:0010906,HP:0500145,t,t,Hyperhistidinemia,Hypohistidinemia
-HP:0010910,HP:0500132,t,t,Hypervalinemia,Hypovalinemia
-HP:0010911,HP:0500143,t,t,Hyperleucinemia,Hypoleucinemia
-HP:0010913,HP:0500144,t,t,Hyperisoleucinemia,Hypoisoleucinemia
-HP:0005404,HP:0010976,f,t,Increased B cell count,B lymphocytopenia
-HP:0010980,HP:0010981,t,t,Hyperlipoproteinemia,Hypolipoproteinemia
-HP:0011009,HP:0011010,f,t,Acute,Chronic
-HP:0000103,HP:0011037,f,t,Polyuria,Decreased urine output
-HP:0011105,HP:0011106,f,t,Hypervolemia,Hypovolemia
-HP:0011238,HP:0011239,f,t,Prominent inferior crus of antihelix,Underdeveloped inferior crus of antihelix
-HP:0011246,HP:0011247,f,t,Underdeveloped superior crus of antihelix,Prominent superior crus of antihelix
-HP:0011271,HP:0011272,f,t,Prominent tragus,Underdeveloped tragus
-HP:0011284,HP:0011285,f,t,Short-segment aganglionic megacolon,Long-segment aganglionic megacolon
-HP:0011382,HP:0011383,f,t,Hypoplasia of the semicircular canal,Enlarged semicircular canal
-HP:0011433,HP:0011434,f,t,High maternal circulating chorionic gonadotropin concentration,Low maternal circulating chorionic gonadotropin concentration
-HP:0011775,HP:0011776,f,t,Thyroid macrofollicular adenoma,Thyroid microfollicular adenoma
-HP:0011800,HP:0012371,f,t,Midface retrusion,Hyperplasia of midface
-HP:0011858,HP:0033061,f,t,Reduced factor IX activity,Increased factor IX activity
-HP:0011899,HP:0011900,f,t,Hyperfibrinogenemia,Hypofibrinogenemia
-HP:0003149,HP:0011935,t,t,Hyperuricosuria,Decreased urinary urate
-HP:0011967,HP:0032254,t,t,Decreased circulating copper concentration,Increased circulating copper concentration
-HP:0011972,HP:0031885,f,t,Hypoglycorrhachia,Hyperglycorrhachia
-HP:0011998,HP:0012051,f,t,Postprandial hyperglycemia,Reactive hypoglycemia
-HP:0012026,HP:0500163,t,t,Hyperornithinemia,Hypoornithinemia
-HP:0012052,HP:0031415,t,t,Low serum calcitriol,High serum calcitriol
-HP:0012053,HP:0031414,t,t,Decreased circulating calcifediol concentration,High serum calcifediol
-HP:0001321,HP:0012081,f,t,Cerebellar hypoplasia,Enlarged cerebellum
-HP:0012107,HP:0031107,f,t,Increased fibular diameter,Decreased fibular diameter
-HP:0012132,HP:0012133,f,t,Erythroid hyperplasia,Erythroid hypoplasia
-HP:0012138,HP:0012139,f,t,Granulocytic hyperplasia,Granulocytic hypoplasia
-HP:0012213,HP:0012214,f,t,Decreased glomerular filtration rate,Increased glomerular filtration rate
-HP:0012238,HP:0031242,t,t,Increased circulating chylomicron concentration,Decreased circulating chylomicron concentration
-HP:0012250,HP:0012251,f,t,ST segment depression,ST segment elevation
-HP:0009051,HP:0012270,t,t,Increased muscle glycogen content,Decreased muscle glycogen content
-HP:0012279,HP:0500138,t,t,Hyposerinemia,Hyperserinemia
-HP:0012311,HP:0012312,f,t,Monocytosis,Monocytopenia
-HP:0012339,HP:0012340,f,t,Increased resting energy expenditure,Decreased resting energy expenditure
-HP:0012341,HP:0012342,f,t,Microprolactinoma,Macroprolactinoma
-HP:0012350,HP:0012351,f,t,Decreased sialylation of N-linked protein glycosylation,Increased sialylation of N-linked protein glycosylation
-HP:0012353,HP:0012354,f,t,Decreased fucosylation of N-linked protein glycosylation,Increased fucosylation of N-linked protein glycosylation
-HP:0012356,HP:0012357,f,t,Decreased mannosylation of N-linked protein glycosylation,Increased mannosylation of N-linked protein glycosylation
-HP:0012360,HP:0012361,f,t,Decreased fucosylation of O-linked protein glycosylation,Increased fucosylation of O-linked protein glycosylation
-HP:0003081,HP:0012364,t,t,Increased urinary potassium,Decreased urinary potassium
-HP:0012392,HP:0033683,f,t,Jaw hyporeflexia,Jaw hyperreflexia
-HP:0012402,HP:0012403,t,t,Increased urine alpha-ketoglutarate concentration,Decreased urine alpha-ketoglutarate concentration
-HP:0012405,HP:0012406,t,t,Hypocitraturia,Hypercitraturia
-HP:0012416,HP:0012417,t,t,Hypercapnia,Hypocapnia
-HP:0012505,HP:0012506,t,t,Enlarged pituitary gland,Small pituitary gland
-HP:0012559,HP:0012560,f,t,Increased T3/T4 ratio,Decreased T3/T4 ratio
-HP:0012604,HP:0012605,t,t,Hyponatriuria,Hypernatriuria
-HP:0012608,HP:0012609,t,t,Hypermagnesiuria,Hypomagnesiuria
-HP:0012648,HP:0012649,f,t,Decreased inflammatory response,Increased inflammatory response
-HP:0012685,HP:0012686,t,t,Decreased pineal volume,Increased pineal volume
-HP:0012691,HP:0012692,f,t,Focal T2 hypointense thalamic lesion,Focal T2 hyperintense thalamic lesion
-HP:0012748,HP:0012749,f,t,Focal T2 hyperintense brainstem lesion,Focal T2 hypointense brainstem lesion
-HP:0002365,HP:0012755,f,t,Hypoplasia of the brainstem,Enlarged brainstem
-HP:0012770,HP:0012771,f,t,Reduced arm span,Increased arm span
-HP:0012773,HP:0012774,f,t,Reduced upper to lower segment ratio,Increased upper to lower segment ratio
-HP:0012801,HP:0012802,t,t,Narrow jaw,Broad jaw
-HP:0012809,HP:0012810,f,t,Narrow nasal base,Wide nasal base
-HP:0012857,HP:0012858,f,t,Increased scrotal rugation,Decreased scrotal rugation
-HP:0020059,HP:0020060,f,t,Increased red blood cell count,Decreased red blood cell count
-HP:0001900,HP:0020062,f,t,Increased circulating hemoglobin concentration,Decreased hemoglobin concentration
-HP:0020112,HP:0020113,f,t,Increased proportion of CD4+CD25+ regulatory T cells,Decreased proportion of CD4+CD25+ regulatory T cells
-HP:0020141,HP:0020142,f,t,Blood pressure substantially higher in legs than arms,Blood pressure substantially higher in arms than legs
-HP:0020170,HP:0020171,f,t,Increased blood drug concentration,Decreased blood drug concentration
-HP:0020183,HP:0020184,f,t,Increased circulating A-type natriuretic peptide concentration,Decreased circulating A-type natriuretic peptide concentration
-HP:0020199,HP:0020200,f,t,Decreased circulating 18-hydroxycortisone level,Increased circulating 18-hydroxycortisone level
-HP:0020285,HP:0020286,f,t,Decreased lymph node lymphocyte cytoplasm,Increased lymph node lymphocyte cytoplasm
-HP:0020291,HP:0020292,f,t,Increased lymph-node cellular CD20 expression,Decreased lymph-node cellular CD20 expression
-HP:0020293,HP:0020294,f,t,Decreased lymph-node cellular CD19 expression,Increased lymph-node cellular CD19 expression
-HP:0005518,HP:0025066,f,t,Increased mean corpuscular volume,Decreased mean corpuscular volume
-HP:0025075,HP:0025077,f,t,Increased QRS voltage,Decreased QRS voltage
-HP:0025136,HP:0025137,f,t,Increased serum estriol,Decreased serum estriol
-HP:0025139,HP:0025140,f,t,Increased serum estrone,Decreased serum estrone
-HP:0025158,HP:0025159,f,t,Hyperautofluorescent retinal lesion,Hypoautofluorescent retinal lesion
-HP:0025250,HP:0025251,f,t,Closed comedo,Open comedo
-HP:0025330,HP:0025331,f,t,Downgaze palsy,Upgaze palsy
-HP:0025346,HP:0025347,f,t,Increased circulating beta-2-microglobulin level,Decreased circulating beta-2-microglobulin level
-HP:0025434,HP:0031905,f,t,Reduced circulating CH50 activity,Increased total hemolytic complement activity
-HP:0025435,HP:0045041,f,t,Increased circulating lactate dehydrogenase concentration,Reduced circulating lactate dehydrogenase concentration
-HP:0025437,HP:0032561,f,t,Macrozoospermia,Microcephalic sperm head
-HP:0025458,HP:0500239,t,t,Decreased CSF albumin concentration,Increased CSF albumin concentration
-HP:0025547,HP:0025548,f,t,Decreased mean corpuscular hemoglobin concentration,Increased mean corpuscular hemoglobin concentration
-HP:0025584,HP:0025586,f,t,Hypotropia,Hypertropia
-HP:0025585,HP:0031725,f,t,Hyperphoria,Hypophoria
-HP:0025587,HP:0025588,f,t,Hyperdeviation,Hypodeviation
-HP:0025621,HP:0025622,f,t,obsolete Increased proportion of CD4+ central memory cells,obsolete Decreased proportion of CD4+ central memory cells
-HP:0025624,HP:0410394,f,t,Reduced proportion of CD4+ effector memory T cells,"Increased proportion of effector memory CD4-positive, alpha-beta T cells"
-HP:0025624,HP:0025625,f,t,Reduced proportion of CD4+ effector memory T cells,Elevated proportion of CD4+ effector memory T cells
-HP:0025648,HP:0025649,f,t,Steroid-sensitive nephrotic syndrome with infrequent relapses,Steroid-sensitive nephrotic syndrome with frequent relapses
-HP:0025684,HP:0025685,f,t,Decreased amyloid beta 42 peptide CSF concentration,Increased amyloid beta 42 peptide CSF concentration
-HP:0025693,HP:0025694,f,t,Pituitary macroadenoma,Pituitary microadenoma
-HP:0025708,HP:0025710,f,t,Early young adult onset,Late young adult onset
-HP:0025759,HP:0025760,f,t,Mobile lump,Immobile lump
-HP:0030018,HP:0030019,f,t,Decreased female libido,Increased female libido
-HP:0030088,HP:0040171,t,t,Increased serum testosterone level,Decreased serum testosterone concentration
-HP:0030143,HP:0030144,f,t,Hyperactive bowel sounds,Hypoactive bowel sounds
-HP:0030258,HP:0030259,f,t,Hyperpigmented genitalia,Hypopigmented genitalia
-HP:0000837,HP:0030339,t,t,Increased circulating gonadotropin level,Decreased circulating gonadotropin concentration
-HP:0008232,HP:0030341,f,t,Elevated circulating follicle stimulating hormone level,Decreased circulating follicle stimulating hormone concentration
-HP:0011969,HP:0030344,t,t,Elevated circulating luteinizing hormone level,Decreased circulating luteinizing hormone level
-HP:0030348,HP:0030349,t,t,Increased circulating androgen concentration,Decreased circulating androgen concentration
-HP:0030269,HP:0030353,f,t,Increased circulating insulin-like growth factor 1 concentration,Decreased serum insulin-like growth factor 1
-HP:0030357,HP:0030360,f,t,Small cell lung carcinoma,Large cell lung carcinoma
-HP:0030371,HP:0030372,f,t,Increased proportion of naive B cells,Decreased proportion of naive B cells
-HP:0030374,HP:0030375,f,t,Decreased proportion of memory B cells,Increased proportion of memory B cells
-HP:0030377,HP:0030378,f,t,Increased proportion of immature B cells,Decreased proportion of immature B cells
-HP:0030380,HP:0030381,f,t,Decreased proportion of transitional B cells,Increased proportion of transitional B cells
-HP:0030384,HP:0030385,f,t,Decreased proportion of marginal zone B cells,Increased proportion of marginal zone B cells
-HP:0030387,HP:0030388,f,t,Increased proportion of class-switched memory B cells,Decreased proportion of class-switched memory B cells
-HP:0030607,HP:0030608,f,t,Reduced OCT-measured macular thickness,Increased OCT-measured macular thickness
-HP:0030618,HP:0030619,f,t,Increased OCT-measured foveal thickness,Reduced OCT-measured foveal thickness
-HP:0030631,HP:0030632,f,t,Hyperautofluorescent macular lesion,Hypoautofluorescent macular lesion
-HP:0030640,HP:0030641,f,t,Complete congenital stationary night blindness,Incomplete congenital stationary night blindness
-HP:0030685,HP:0030686,f,t,Decreased adiponectin level,Increased adiponectin level
-HP:0030688,HP:0030689,t,t,Increased glucagon level,Decreased glucagon level
-HP:0030783,HP:0430142,f,t,Increased circulating interleukin 6 concentration,Reduced circulating interleukin 6 concentration
-HP:0030795,HP:0030796,f,t,Reduced C-peptide level,Increased C-peptide level
-HP:0030851,HP:0030852,f,t,Low pulse pressure,High pulse pressure
-HP:0030897,HP:0410204,f,t,Decreased intestinal transit time,Increased intestinal transit time
-HP:0025459,HP:0030978,f,t,Increased CSF/serum albumin ratio,Decreased CSF/serum albumin ratio
-HP:0012202,HP:0030985,t,t,Increased serum bile acid concentration,Decreased serum bile acid concentration
-HP:0031085,HP:0033451,f,t,Decreased circulating prealbumin concentration,Increased circulating prealbumin concentration
-HP:0002925,HP:0031098,f,t,Elevated circulating thyroid-stimulating hormone concentration,Decreased thyroid-stimulating hormone level
-HP:0031100,HP:6000520,f,t,Decreased circulating inhibin B concentration,Increased circulating inhibin B concentration
-HP:0031102,HP:0031103,f,t,Increased circulating antimullerian hormone concentration,Decreased circulating antimullerian hormone circulation
-HP:0031141,HP:0031143,f,t,Increased hepatic echogenicity,Decreased hepatic echogenicity
-HP:0031209,HP:0033478,f,t,Decreased circulating lipoprotein lipase concentration,Increased circulating lipoprotein lipase concentration
-HP:0031214,HP:0034908,f,t,Decreased circulating dehydroepiandrosterone concentration,Increased circulating dehydroepiandrosterone concentration
-HP:0031215,HP:0034589,f,t,Decreased circulating dehydroepiandrosterone-sulfate concentration,Increased circulating dehydroepiandrosterone-sulfate concentration
-HP:0031219,HP:0031220,f,t,Reduced radioactive iodine uptake,Increased radioactive iodine uptake
-HP:0031222,HP:0034591,f,t,Increased circulating thyroxine-binding globulin level,Decreased circulating thyroxine-binding globulin concentration
-HP:0031229,HP:0031230,f,t,Increased incisura length,Decreased incisura length
-HP:0003362,HP:0031243,t,t,Increased VLDL cholesterol concentration,Decreased VLDL cholesterol concentration
-HP:0031245,HP:0031246,f,t,Productive cough,Nonproductive cough
-HP:0031385,HP:0031388,f,t,Megakaryocyte nucleus hypolobulation,Megakaryocyte nucleus hyperlobulation
-HP:0031397,HP:0031398,f,t,Decreased proportion of naive T cells,Increased proportion of naive T cells
-HP:0031413,HP:6000036,f,t,Short telomere length,Long telomere length
-HP:0031425,HP:0031426,f,t,Increased circulating beta-C-terminal telopeptide concentration,Decreased circulating beta-C-terminal telopeptide concentration
-HP:0031428,HP:0031429,f,t,Increased circulating osteocalcin level,Decreased circulating osteocalcin level
-HP:0031506,HP:0031507,f,t,Increased circulating T4 concentration,Decreased circulating T4 concentration
-HP:0031594,HP:0031597,f,t,PR segment depression,PR segment elevation
-HP:0031807,HP:0031808,f,t,Increased basophil count,Decreased basophil count
-HP:0003165,HP:0031817,f,t,Elevated circulating parathyroid hormone level,Decreased circulating parathyroid hormone level
-HP:0031819,HP:0031820,f,t,Increased waist to hip ratio,Decreased waist to hip ratio
-HP:0011424,HP:0031831,t,t,Increased serum zinc,Decreased serum zinc
-HP:0031836,HP:0031837,f,t,Increased circulating superoxide dismutase concentration,Decreased circulating superoxide dismutase concentration
-HP:0031843,HP:0033844,f,t,Abnormally slow thought process,Racing thoughts
-HP:0031861,HP:0031862,f,t,Decreased heart rate variability,Increased heart rate variability
-HP:0031873,HP:0031874,f,t,Early chronotype,Late chronotype
-HP:0031937,HP:5200038,f,t,Tachylalia,Bradylalia
-HP:0031997,HP:0031998,f,t,Early inspiratory crackles,Late inspiratory crackles
-HP:0032097,HP:0032098,t,t,Hypermanganesemia,Hypomanganesemia
-HP:0032125,HP:0032126,f,t,Increased proportion of unswitched memory B cells,Decreased proportion of unswitched memory B cells
-HP:0032128,HP:0032129,f,t,Increased proportion of plasmablasts,Decreased proportion of plasmablasts
-HP:0032136,HP:0032298,f,t,Decreased circulating IgG1 concentration,Increased circulating IgG1 level
-HP:0032137,HP:0032297,f,t,Decreased circulating IgG3 concentration,Increased circulating IgG3 level
-HP:0032138,HP:0032300,f,t,Decreased circulating IgG4 concentration,Increased circulating IgG4 level
-HP:0032164,HP:0100507,t,t,Increased blood folate concentration,Reduced blood folate concentration
-HP:0032183,HP:0032184,f,t,Decreased proportion of memory T cells,Increased proportion of memory T cells
-HP:0008151,HP:0032198,f,t,Prolonged prothrombin time,Decreased prothrombin time
-HP:0011788,HP:0032210,t,t,Increased circulating free T3,Decreased circulating free T3
-HP:0032218,HP:0032219,f,t,Decreased proportion of CD4-positive T cells,Increased proportion of CD4-positive T cells
-HP:0032305,HP:0032306,f,t,Decreased circulating mannose-binding protein concentration,Increased circulating mannose-binding protein concentration
-HP:0032311,HP:0032312,f,t,Increased circulating globulin level,Decreased circulating globulin level
-HP:0032362,HP:0032363,t,t,Increased circulating corticosterone level,Decreased circulating corticosterone level
-HP:0032420,HP:0032421,f,t,Increased HDL2a concentration,Decreased HDL2a concentration
-HP:0032423,HP:0032424,f,t,Decreased HDL2b concentration,Increased HDL2b concentration
-HP:0032428,HP:0032429,f,t,Increased HDL3a concentration,Decreased HDL3a concentration
-HP:0032430,HP:0032431,f,t,Increased HDL3b concentration,Decreased HDL3b concentration
-HP:0032432,HP:0032433,f,t,Increased HDL3c concentration,Decreased HDL3c concentration
-HP:0003240,HP:0032460,f,t,Increased phosphoribosylpyrophosphate synthetase level,Decreased phosphoribosylpyrophosphate synthetase level
-HP:0031890,HP:0032473,f,t,Increased urine urobilinogen,Decreased urine urobilinogen
-HP:0031208,HP:0032482,f,t,Increased pituitary glycoprotein hormone alpha subunit level,Decreased pituitary glycoprotein hormone alpha subunit level
-HP:0032489,HP:0032490,f,t,Elevated fecal pH,Decreased fecal pH
-HP:0032675,HP:0032676,f,t,Acute cutaneous wound,Chronic cutaneous wound
-HP:0032994,HP:0032995,f,t,Supernumerary pulmonary fissure,Decreased pulmonary fissure count
-HP:0032997,HP:0032998,f,t,Decreased cystatin C level,Increased cystatin C level
-HP:0033014,HP:0033015,f,t,Decreased salivary cortisol level,Increased salivary cortisol level
-HP:0033077,HP:0033078,f,t,Increased circulating free T4 concentration,Decreased circulating free T4 concentration
-HP:0033085,HP:0033086,f,t,Reduced antral follicle count,Increased antral follicle count
-HP:0033191,HP:0033192,f,t,Increased circulating selenium concentration,Decreased circulating selenium concentration
-HP:0033199,HP:0034163,f,t,Increased circulating interleukin 10 concentration,Reduced circulating interleukin 10 concentration
-HP:0033200,HP:0033204,f,t,Triceps hyporeflexia,Triceps hyperreflexia
-HP:0033201,HP:0033205,f,t,Biceps hyporeflexia,Biceps hyperreflexia
-HP:0033202,HP:0033203,f,t,Brachioradialis hyporeflexia,Brachioradialis hyperreflexia
-HP:0025196,HP:0033211,f,t,Increased total iron binding capacity,Decreased total iron binding capacity
-HP:0033221,HP:0033222,f,t,Increased CD4:CD8 ratio,Decreased CD4:CD8 ratio
-HP:0033299,HP:0033300,f,t,Reduced circulating complement factor H related protein 1 concentration,Increased circulating complement factor H related protein 1 concentration
-HP:0033306,HP:0033307,f,t,Decreased circulating fetuin A concentration,Increased circulating fetuin A concentration
-HP:0033373,HP:0033374,f,t,Increased KCO,Decreased KCO
-HP:0033448,HP:0033449,f,t,Increased mid-arm muscle circumference,Decreased mid-arm muscle circumference
-HP:0033506,HP:0033507,f,t,Increased esterified to free carnitine ratio,Decreased esterified to free carnitine ratio
-HP:0033530,HP:0033531,f,t,Increased cardiac index,Decreased cardiac index
-HP:0033532,HP:0033533,f,t,Decreased cardiac output,Increased cardiac output
-HP:0033633,HP:0033634,f,t,Decreased alveolar volume,Increased alveolar volume
-HP:0033733,HP:0033734,f,t,Low-grade vesicoureteral reflux,High-grade vesicoureteral reflux
-HP:0033748,HP:0100963,f,t,Hypoesthesia,Hyperesthesia
-HP:0033755,HP:0033756,f,t,Increased left ventricular end-diastolic volume,Decreased left ventricular end-diastolic volume
-HP:0033765,HP:0100613,f,t,Death in late adulthood,Death in early adulthood
-HP:0025380,HP:0033812,f,t,Increased circulating androstenedione concentration,Decreased circulating androstenedione concentration
-HP:0033908,HP:0033918,f,t,Renal arteriole medial atrophy,Renal arteriole medial hypertrophy
-HP:0033909,HP:0033910,f,t,Arcuate vein medial hypertrophy,Arcuate vein medial atrophy
-HP:0033911,HP:0033912,f,t,Cortical radial artery medial hypertrophy,Cortical radial artery medial atrophy
-HP:0033972,HP:0033973,f,t,Interlobular vein medial atrophy,Interlobular vein medial hypertrophy
-HP:0033985,HP:0100864,f,t,Elongated femoral neck,Short femoral neck
-HP:0034073,HP:0034074,f,t,Reduced fetal long bone echogenicity,Increased fetal long bone echogenicity
-HP:0034165,HP:0034166,f,t,Reduced circulating interleukin 21 concentration,Increased circulating interleukin 21 concentration
-HP:0034168,HP:0034169,f,t,Reduced circulating interleukin 22 concentration,Increased circulating interleukin 22 concentration
-HP:0034171,HP:0034172,f,t,Reduced circulating interleukin 23 concentration,Increased circulating interleukin 23 concentration
-HP:0034174,HP:0034175,f,t,Reduced circulating interleukin 27 concentration,Increased circulating interleukin 27 concentration
-HP:0034177,HP:0034178,f,t,Reduced circulating interleukin 17A concentration,Increased circulating interleukin 17A concentration
-HP:0034184,HP:0045046,f,t,Increased insulin like growth factor binding protein acid labile subunit concentration,Reduced insulin like growth factor binding protein acid labile subunit concentration
-HP:0003538,HP:0034203,t,t,Increased iduronate sulfatase level,Decreased iduronate sulfatase level
-HP:0034237,HP:0034238,f,t,Open neural tube defect,Closed neural tube defect
-HP:0034390,HP:0500230,f,t,Decreased CSF glycine concentration,Increased CSF glycine concentration
-HP:0034441,HP:0500159,t,t,Decreased circulating aspartic acid concentration,Increased circulating aspartic acid concentration
-HP:0034449,HP:0034450,f,t,Increased phytanic acid:pristanic acid ratio,Decreased phytanic acid:pristanic acid ratio
-HP:0034487,HP:6000487,f,t,Increased circulating interleukin 12 concentration,Reduced circulating interleukin 12 concentration
-HP:0034712,HP:4000191,f,t,Decreased circulating alpha-mannosidase activity,Increased circulating alpha-mannosidase activity
-HP:0034740,HP:0500210,f,t,Reduced CSF methionine concentration,Increased CSF methionine concentration
-HP:0034791,HP:0034792,f,t,Increased muscle succinate dehydrogenase staining,Decreased muscle succinate dehydrogenase staining
-HP:0040013,HP:0040014,f,t,Decreased mitochondrial number,Increased mitochondrial number
-HP:0040030,HP:0040031,t,t,Chorioretinal hypopigmentation,Chorioretinal hyperpigmentation
-HP:0040053,HP:0040055,t,t,Long lower eyelashes,Short lower eyelashes
-HP:0009126,HP:0040063,f,t,Increased adipose tissue,Decreased adipose tissue
-HP:0040178,HP:0040179,f,t,Increased level of platelet-activating factor,Decreased level of platelet-activating factor
-HP:0040194,HP:0040195,f,t,Increased head circumference,Decreased head circumference
-HP:0040253,HP:0040254,t,t,Increased size of the clitoris,Decreased size of the clitoris
-HP:0040260,HP:0040261,t,t,Decreased size of nasopharyngeal adenoids,Increased size of nasopharyngeal adenoids
-HP:0030781,HP:0040299,f,t,Increased circulating free fatty acid level,Decreased circulating free fatty acid level
-HP:0003452,HP:0040303,t,t,Increased circulating iron concentration,Decreased circulating iron concentration
-HP:0040305,HP:0040306,f,t,Increased male libido,Decreased male libido
-HP:0000347,HP:0040309,f,t,Micrognathia,Increased size of the mandible
-HP:0040328,HP:0040331,f,t,Focal hyperintensity of cerebral white matter on MRI,Focal hypointensity of cerebral white matter on MRI
-HP:0040329,HP:0040332,f,t,Multifocal hyperintensity of cerebral white matter on MRI,Multifocal hypointensity of cerebral white matter on MRI
-HP:0040330,HP:0040333,f,t,Confluent hyperintensity of cerebral white matter on MRI,Confluent hypointensity of cerebral white matter on MRI
-HP:0011814,HP:0040426,t,t,Increased urinary hypoxanthine level,Decreased urinary hypoxanthine level
-HP:0041077,HP:0041078,t,t,Increased immunoglobulin level in body fluid,Decreased immunoglobulin level in body fluid
-HP:0025521,HP:0041079,f,t,Increased body fat percentage,Decreased body fat percentage
-HP:0010839,HP:0045035,t,t,Increased urinary copper concentration,Decreased urinary copper concentration
-HP:0045050,HP:0045051,f,t,Increased DLCO,Decreased DLCO
-HP:0031418,HP:0045082,f,t,Increased body mass index,Decreased body mass index
-HP:0046503,HP:0046504,f,t,Increased libido,Decreased libido
-HP:0100047,HP:0100052,t,t,Enlarged epiphyses of the 2nd toe,Small epiphyses of the 2nd toe
-HP:0100058,HP:0100063,t,t,Enlarged epiphyses of the 3rd toe,Small epiphyses of the 3rd toe
-HP:0100069,HP:0100074,t,t,Enlarged epiphyses of the 4th toe,Small epiphyses of the 4th toe
-HP:0100080,HP:0100085,t,t,Enlarged epiphyses of the 5th toe,Small epiphyses of the 5th toe
-HP:0100103,HP:0100108,t,t,Enlarged epiphysis of the distal phalanx of the 2nd toe,Small epiphysis of the distal phalanx of the 2nd toe
-HP:0100114,HP:0100119,t,t,Enlarged epiphysis of the middle phalanx of the 2nd toe,Small epiphysis of the middle phalanx of the 2nd toe
-HP:0100125,HP:0100130,t,t,Enlarged epiphysis of the proximal phalanx of the 2nd toe,Small epiphysis of the proximal phalanx of the 2nd toe
-HP:0100138,HP:0100143,t,t,Enlarged epiphysis of the distal phalanx of the 3rd toe,Small epiphysis of the distal phalanx of the 3rd toe
-HP:0100149,HP:0100154,t,t,Enlarged epiphysis of the middle phalanx of the 3rd toe,Small epiphysis of the middle phalanx of the 3rd toe
-HP:0100160,HP:0100165,t,t,Enlarged epiphysis of the proximal phalanx of the 3rd toe,Small epiphysis of the proximal phalanx of the 3rd toe
-HP:0100172,HP:0100177,t,t,Enlarged epiphysis of the distal phalanx of the 4th toe,Small epiphysis of the distal phalanx of the 4th toe
-HP:0100183,HP:0100188,t,t,Enlarged epiphysis of the middle phalanx of the 4th toe,Small epiphysis of the middle phalanx of the 4th toe
-HP:0100194,HP:0100199,t,t,Enlarged epiphysis of the proximal phalanx of the 4th toe,Small epiphysis of the proximal phalanx of the 4th toe
-HP:0100205,HP:0100210,t,t,Enlarged epiphysis of the distal phalanx of the 5th toe,Small epiphysis of the distal phalanx of the 5th toe
-HP:0100216,HP:0100221,t,t,Enlarged epiphysis of the middle phalanx of the 5th toe,Small epiphysis of the middle phalanx of the 5th toe
-HP:0100227,HP:0100232,t,t,Enlarged epiphysis of the proximal phalanx of the 5th toe,Small epiphysis of the proximal phalanx of the 5th toe
-HP:0100281,HP:0100282,f,t,Chronic colitis,Acute colitis
-HP:0100293,HP:0100295,f,t,Hypertrophied muscle fibers,Muscle fiber atrophy
-HP:0034901,HP:0100513,f,t,Increased circulating vitamin E concentration,Decreased circulating vitamin E concentration
-HP:0100553,HP:0200053,f,t,Hemihypertrophy of lower limb,Hemihypotrophy of lower limb
-HP:0100554,HP:0100558,f,t,Hemihypertrophy of upper limb,Hemiatrophy of upper limb
+HP:0009158,HP:0009390,t,f,Enlarged epiphysis of the proximal phalanx of the 5th finger,Small epiphyses of the 5th finger
 HP:0005257,HP:0100625,f,t,Thoracic hypoplasia,Enlarged thorax
-HP:0011487,HP:0100689,t,t,Increased corneal thickness,Decreased corneal thickness
-HP:0100770,HP:0100771,t,t,Hyperperistalsis,Hypoperistalsis
-HP:0000013,HP:0100878,f,t,Hypoplasia of the uterus,Enlarged uterus
-HP:0025517,HP:0100961,f,t,Hypoplastic hippocampus,Enlarged hippocampus
-HP:0200119,HP:0200123,f,t,Acute hepatitis,Chronic hepatitis
-HP:0400004,HP:0400005,t,t,Long ear,Short ear
-HP:0410053,HP:0410054,t,t,Elevated circulating gamma-aminobutyric acid concentration,Decreased circulating GABA concentration
-HP:0410145,HP:0410146,f,t,Decreased circulating biotinidase concentration,Elevated circulating biotinidase concentration
-HP:0410178,HP:0410179,t,t,Increased glucose-6-phosphate dehydrogenase level in blood,Decreased glucose-6-phosphate dehydrogenase level in blood
-HP:0410181,HP:0410182,f,t,Increased glucose-6-phosphate dehydrogenase level in dried blood spot,Decreased glucose-6-phosphate dehydrogenase level in dried blood spot
-HP:0410186,HP:0410187,t,t,Increased glucose-6-phosphate dehydrogenase level in tissue,Decreased glucose-6-phosphate dehydrogenase level in tissue
-HP:0410188,HP:0410189,f,t,Decreased glucose-6-phosphate dehydrogenase level in red blood cells,Increased glucose-6-phosphate dehydrogenase level in red blood cells
-HP:0410190,HP:0410191,f,t,Decreased glucose-6-phosphate dehydrogenase level in leukocytes,Increased glucose-6-phosphate dehydrogenase level in leukocytes
-HP:0410194,HP:0410195,t,t,Increased circulating UDP glucose-4-epimerase concentration,Decreased circulating UDP glucose-4-epimerase concentration
-HP:0410197,HP:0410198,f,t,Increased erythrocyte UDP glucose-4-epimerase concentration,Decreased erythrocyte UDP glucose-4-epimerase concentration
-HP:0410212,HP:0410213,t,t,Hyperoxemia in cord blood,Hypoxemia in cord blood
-HP:0410214,HP:0410215,t,t,Hypercapnia in cord blood,Hypocapnia in cord blood
-HP:0410245,HP:0410246,t,t,Decreased circulating IgD concentration,Increased circulating IgD concentration
-HP:0410288,HP:0410289,t,t,Hyperamylasemia,Hypoamylasemia
-HP:0410311,HP:0410312,f,t,Hyposegmentation of neutrophil nuclei in CSF,Hypersegmentation of neutrophil nuclei in CSF
-HP:0410314,HP:0410315,t,t,Decreased urinary 1-methylhistidine,Increased urinary 1-methylhistidine
-HP:0410317,HP:0410318,t,t,Increased urinary 3-methylhistidine,Decreased urinary 3-methylhistidine
-HP:0410342,HP:0410343,t,t,Increased circulating heparan sulfate level,Decreased circulating heparan sulfate level
-HP:0410352,HP:0410353,f,t,Increased complex N-glycan level,Decreased complex N-glycan level
-HP:0410354,HP:0410355,f,t,Increased sialylated N-glycan level,Decreased sialylated N-glycan level
-HP:0410357,HP:0410358,f,t,Increased high-mannose N-glycan level,Decreased high-mannose N-glycan level
-HP:0410360,HP:0410361,f,t,Increased core 1 O-glycan level,Decreased core 1 O-glycan level
-HP:0410363,HP:0410364,f,t,Increased monosialylated core 1 O-glycan level,Decreased monosialylated core 1 O-glycan level
-HP:0410375,HP:0410378,f,t,Increased proportion of naive CD4 T cells,Decreased proportion of naive CD4 T cells
-HP:0410376,HP:0410377,f,t,Increased proportion of naive CD8 T cells,Decreased proportion of naive CD8 T cells
-HP:0410385,HP:0410392,f,t,"Decreased proportion of CD8-positive, alpha-beta memory T cells","Increased proportion of CD8-positive, alpha-beta memory T cells"
-HP:0410386,HP:0410391,f,t,"Decreased proportion of CD4-positive, alpha-beta memory T cells","Increased proportion of CD4-positive, alpha-beta memory T cells"
-HP:0410388,HP:0410393,f,t,"Decreased proportion of central memory CD4-positive, alpha-beta T cells","Increased proportion of central memory CD4-positive, alpha-beta T cells"
-HP:0410389,HP:0410396,f,t,"Decreased proportion of central memory CD8-positive, alpha-beta T cells","Increased proportion of central memory CD8-positive, alpha-beta T cells"
-HP:0410390,HP:0410395,f,t,"Decreased proportion of effector memory CD8-positive, alpha-beta T cells","Increased proportion of effector memory CD8-positive, alpha-beta T cells"
-HP:0430073,HP:0430074,t,t,Decreased circulating beta-carotene concentration,Increased circulating beta-carotene concentration
-HP:0500076,HP:0500078,f,t,Alternating hypertropia,Alternating hypotropia
-HP:0500077,HP:0500079,f,t,Alternating hyperphoria,Alternating hypophoria
-HP:0500134,HP:0500135,t,t,Hypertryptophanemia,Hypotryptophanemia
-HP:0500149,HP:0500150,t,t,Hyperglutamatemia,Hypoglutamatemia
-HP:0500151,HP:0500152,t,t,Hypercystinemia,Hypocystinemia
-HP:0500156,HP:0500157,t,t,Hyperasparaginemia,Hypoasparaginemia
-HP:0500161,HP:0500162,t,t,Increased circulating carnosine concentration,Decreased circulating carnosine concentration
-HP:0500181,HP:0500182,t,t,Hypertaurinemia,Hypotaurinemia
-HP:0500187,HP:0500188,t,t,Increased CSF valine concentration,Decreased CSF valine concentration
-HP:0500190,HP:0500191,t,t,Decreased CSF leucine concentration,Increased CSF leucine concentration
-HP:0500193,HP:0500194,t,t,Increased CSF isoleucine concentration,Decreased CSF isoleucine concentration
-HP:0500197,HP:0500198,t,t,Increased CSF glutamine concentration,Decreased CSF glutamine concentration
-HP:0500200,HP:0500201,t,t,Increased CSF glutamate concentration,Decreased CSF glutamate concentration
-HP:0500203,HP:0500204,t,t,Increased CSF arginine concentration,Decreased CSF arginine concentration
-HP:0500207,HP:0500208,t,t,Decreased CSF lysine concentration,Increased CSF lysine concentration
-HP:0500212,HP:0500213,t,t,Increased CSF threonine concentration,Decreased CSF threonine concentration
-HP:0500220,HP:0500221,t,t,Increased CSF tyrosine concentration,Decreased CSF tyrosine concentration
-HP:0500223,HP:0500224,t,t,Increased CSF phenylalanine concentration,Decreased CSF phenylalanine concentration
-HP:0500227,HP:0500228,t,t,Increased CSF serine concentration,Decreased CSF serine concentration
-HP:0500233,HP:0500234,t,t,Increased CSF alanine concentration,Decreased CSF alanine concentration
-HP:0500236,HP:0500237,t,t,Increased CSF histidine concentration,Decreased CSF histidine concentration
-HP:0500265,HP:0500266,f,t,"Increased proportion of CD8-positive, alpha-beta TEMRA T cells","Decreased proportion of CD8-positive, alpha-beta TEMRA T cells"
-HP:0500270,HP:0500271,f,t,Increased proportion of gamma-delta T cells,Decreased proportion of gamma-delta T cells
-HP:0500273,HP:0500274,f,t,Increased proportion of immature gamma-delta T cells,Decreased proportion of immature gamma-delta T cells
-HP:4000050,HP:4000051,f,t,Open fracture,Closed fracture
-HP:4000158,HP:4000160,f,t,Typified by high penetrance,Typified by low penetrance
-HP:5200315,HP:5200320,f,t,Amplification of relationship seeking,Diminishment of relationship seeking
-HP:5200321,HP:5200327,f,t,Amplification of sexual behavior,Diminishment of sexual behavior
-HP:5200322,HP:5200328,f,t,Amplification of emotional expression,Diminishment of emotional expression
-HP:5201000,HP:5201001,f,t,Incomplete unilateral cleft lip,Complete unilateral cleft lip
-HP:5201007,HP:5201008,f,t,Incomplete cleft maxillary alveolar ridge,Complete cleft maxillary alveolar ridge
-HP:6000126,HP:6000523,f,t,Decreased urinary bile acid level,Increased urinary bile acid level
-HP:0025484,HP:6000244,f,t,Increased circulating thyroglobulin concentration,Decreased circulating thyroglobulin concentration
-HP:0032274,HP:6000674,f,t,Increased CSF N-acetylaspartic acid concentration,Decreased CSF N-acetylaspartic acid concentration
-HP:6000680,HP:6000681,f,t,Low serum osmolality,High serum osmolality
-HP:0003997,HP:6000885,f,t,Hypoplastic radial head,Enlarged radial head
-HP:0000253,HP:0040194,t,f,Progressive microcephaly,Increased head circumference
-HP:0000293,HP:0009938,t,f,Full cheeks,Sunken cheeks
+HP:0100058,HP:0100165,t,f,Enlarged epiphyses of the 3rd toe,Small epiphysis of the proximal phalanx of the 3rd toe
+HP:0007410,HP:0034012,f,t,Palmoplantar hyperhidrosis,Palmoplantar hypohidrosis
+HP:0012559,HP:0012560,f,t,Increased T3/T4 ratio,Decreased T3/T4 ratio
+HP:0030088,HP:0030349,t,f,Increased serum testosterone level,Decreased circulating androgen concentration
+HP:0010049,HP:0010493,t,t,Short metacarpal,Long metacarpals
+HP:0006610,HP:0040158,t,f,Wide intermamillary distance,Short intermamillary distance
+HP:0009217,HP:0010236,t,f,Enlarged epiphysis of the middle phalanx of the 4th finger,Small epiphyses of the phalanges of the hand
+HP:0010913,HP:0500143,t,f,Hyperisoleucinemia,Hypoleucinemia
+HP:0010980,HP:0010981,t,t,Hyperlipoproteinemia,Hypolipoproteinemia
+HP:0100080,HP:0100210,t,f,Enlarged epiphyses of the 5th toe,Small epiphysis of the distal phalanx of the 5th toe
+HP:0033155,HP:0500144,t,f,Elevated circulating L-alloisoleucine concentration,Hypoisoleucinemia
 HP:0000391,HP:0009905,t,f,Thickened helices,Thin ear helix
-HP:0000468,HP:0005995,t,f,Increased adipose tissue around the neck,Decreased adipose tissue around neck
-HP:0000568,HP:0001090,t,f,Microphthalmia,Abnormally large globe
-HP:0000837,HP:0040171,t,f,Increased circulating gonadotropin level,Decreased serum testosterone concentration
-HP:0000842,HP:0001988,t,f,Hyperinsulinemia,Recurrent hypoglycemia
-HP:0000842,HP:0030689,t,f,Hyperinsulinemia,Decreased glucagon level
-HP:0000846,HP:0002717,t,f,Adrenal insufficiency,Adrenal overactivity
-HP:0000848,HP:0004319,t,f,Increased circulating renin concentration,Decreased circulating aldosterone concentration
-HP:0000859,HP:0002920,t,f,Increased circulating aldosterone concentration,Decreased circulating ACTH concentration
-HP:0000859,HP:0003351,t,f,Increased circulating aldosterone concentration,Decreased circulating renin concentration
-HP:0000883,HP:0000900,t,f,Thin ribs,Thickened ribs
-HP:0000921,HP:0005815,t,f,Missing ribs,Supernumerary ribs
-HP:0000938,HP:0005789,t,f,Osteopenia,Generalized osteosclerosis
-HP:0000938,HP:0011001,t,f,Osteopenia,Increased bone mineral density
-HP:0000938,HP:0011002,t,f,Osteopenia,Osteopetrosis
-HP:0000954,HP:0006114,t,f,Single transverse palmar crease,Multiple palmar creases
-HP:0000977,HP:0030053,t,f,Soft skin,Stiff skin
-HP:0001090,HP:0007633,t,f,Abnormally large globe,Bilateral microphthalmos
-HP:0001276,HP:0001290,t,f,Hypertonia,Generalized hypotonia
-HP:0001276,HP:0006829,t,f,Hypertonia,Severe muscular hypotonia
-HP:0001376,HP:0006094,t,f,Limitation of joint mobility,Finger joint hypermobility
-HP:0001513,HP:0001824,t,f,Obesity,Weight loss
-HP:0001513,HP:0004325,t,f,Obesity,Decreased body weight
-HP:0001513,HP:0004326,t,f,Obesity,Cachexia
-HP:0001824,HP:0004324,t,f,Weight loss,Increased body weight
-HP:0001829,HP:0001849,t,f,Foot polydactyly,Foot oligodactyly
-HP:0001830,HP:0001849,t,f,Postaxial foot polydactyly,Foot oligodactyly
-HP:0001841,HP:0001849,t,f,Preaxial foot polydactyly,Foot oligodactyly
-HP:0001880,HP:0001888,t,f,Eosinophilia,Lymphopenia
-HP:0001880,HP:0001913,t,f,Eosinophilia,Granulocytopenia
-HP:0001880,HP:0031891,t,f,Eosinophilia,Decreased eosinophil count
-HP:0001888,HP:0001974,t,f,Lymphopenia,Leukocytosis
-HP:0001888,HP:0100827,t,f,Lymphopenia,Lymphocytosis
-HP:0001913,HP:0001974,t,f,Granulocytopenia,Leukocytosis
-HP:0001987,HP:0031969,t,f,Hyperammonemia,Reduced blood urea nitrogen
-HP:0001988,HP:0003074,t,f,Recurrent hypoglycemia,Hyperglycemia
-HP:0002152,HP:0004313,t,f,Hyperproteinemia,Decreased circulating antibody concentration
-HP:0002152,HP:0004315,t,f,Hyperproteinemia,Decreased circulating IgG concentration
-HP:0002155,HP:0045014,t,f,Hypertriglyceridemia,Hypolipidemia
-HP:0002157,HP:0031969,t,f,Azotemia,Reduced blood urea nitrogen
-HP:0002160,HP:0003658,t,f,Hyperhomocystinemia,Hypomethioninemia
-HP:0002160,HP:0020222,t,f,Hyperhomocystinemia,Hypohomocysteinemia
-HP:0002673,HP:0002812,t,f,Coxa valga,Coxa vara
-HP:0002750,HP:0005616,t,f,Delayed skeletal maturation,Accelerated skeletal maturation
-HP:0002901,HP:0002905,t,f,Hypocalcemia,Hyperphosphatemia
-HP:0002901,HP:0003528,t,f,Hypocalcemia,Elevated circulating calcitonin concentration
-HP:0002914,HP:0012604,t,f,Hyperchloriduria,Hyponatriuria
-HP:0002920,HP:0003118,t,f,Decreased circulating ACTH concentration,Increased circulating cortisol level
-HP:0002920,HP:0003154,t,f,Decreased circulating ACTH concentration,Increased circulating ACTH level
-HP:0002945,HP:0030320,t,f,Intervertebral space narrowing,Increased intervertebral space
-HP:0002946,HP:0030305,t,f,Supernumerary vertebrae,Decreased number of vertebrae
-HP:0003075,HP:0012117,t,f,Hypoproteinemia,Hyperalbuminemia
-HP:0003077,HP:0003146,t,f,Hyperlipidemia,Hypocholesterolemia
-HP:0003077,HP:0003563,t,f,Hyperlipidemia,Decreased LDL cholesterol concentration
-HP:0003077,HP:0010981,t,f,Hyperlipidemia,Hypolipoproteinemia
-HP:0003077,HP:0012153,t,f,Hyperlipidemia,Hypotriglyceridemia
-HP:0003077,HP:0031242,t,f,Hyperlipidemia,Decreased circulating chylomicron concentration
-HP:0003077,HP:0031243,t,f,Hyperlipidemia,Decreased VLDL cholesterol concentration
-HP:0003124,HP:0003563,t,f,Hypercholesterolemia,Decreased LDL cholesterol concentration
-HP:0003124,HP:0010981,t,f,Hypercholesterolemia,Hypolipoproteinemia
-HP:0003124,HP:0031243,t,f,Hypercholesterolemia,Decreased VLDL cholesterol concentration
-HP:0003124,HP:0045014,t,f,Hypercholesterolemia,Hypolipidemia
-HP:0003141,HP:0003146,t,f,Increased LDL cholesterol concentration,Hypocholesterolemia
-HP:0003141,HP:0010981,t,f,Increased LDL cholesterol concentration,Hypolipoproteinemia
-HP:0003141,HP:0045014,t,f,Increased LDL cholesterol concentration,Hypolipidemia
-HP:0003154,HP:0008163,t,f,Increased circulating ACTH level,Decreased circulating cortisol level
-HP:0003154,HP:0032363,t,f,Increased circulating ACTH level,Decreased circulating corticosterone level
-HP:0003231,HP:0500141,t,f,Hypertyrosinemia,Hypophenylalaninemia
-HP:0003234,HP:0003455,t,f,Decreased circulating carnitine concentration,Elevated circulating long chain fatty acid concentration
-HP:0003234,HP:0033419,t,f,Decreased circulating carnitine concentration,Elevated circulating 3-hydroxybutyric acid concentration
-HP:0003234,HP:0033643,t,f,Decreased circulating carnitine concentration,Increased circulating very long-chain fatty acid concentration
-HP:0003234,HP:0035030,t,f,Decreased circulating carnitine concentration,Elevated circulating carnitine concentration
-HP:0003237,HP:0004313,t,f,Increased circulating IgG concentration,Decreased circulating antibody concentration
+HP:0001376,HP:0010510,t,f,Limitation of joint mobility,Hypermobility of toe joints
+HP:0003375,HP:0008798,t,f,Narrow greater sciatic notch,Widened greater sciatic notch
+HP:0009258,HP:0010249,t,f,Small epiphysis of the distal phalanx of the 4th finger,Enlarged epiphyses of the distal phalanges of the hand
+HP:0100216,HP:0100221,t,t,Enlarged epiphysis of the middle phalanx of the 5th toe,Small epiphysis of the middle phalanx of the 5th toe
+HP:0002917,HP:0002918,t,t,Hypomagnesemia,Hypermagnesemia
+HP:0000252,HP:0040194,f,t,Microcephaly,Increased head circumference
+HP:0005165,HP:0012248,f,t,Shortened PR interval,Prolonged PR interval
+HP:0000294,HP:0009890,f,t,Low anterior hairline,High anterior hairline
+HP:0010152,HP:0010157,t,t,Enlarged epiphysis of the 1st metatarsal,Small epiphysis of the 1st metatarsal
+HP:0009060,HP:0012895,f,t,Scapular muscle atrophy,Scapular muscle hypertrophy
+HP:0003676,HP:0003680,f,t,Progressive,Nonprogressive
+HP:0009217,HP:0009222,t,t,Enlarged epiphysis of the middle phalanx of the 4th finger,Small epiphysis of the middle phalanx of the 4th finger
+HP:0030262,HP:0030265,t,f,Narrow penis,Wide penis
+HP:0012748,HP:0012749,f,t,Focal T2 hyperintense brainstem lesion,Focal T2 hypointense brainstem lesion
+HP:0030688,HP:0030689,t,t,Increased glucagon level,Decreased glucagon level
+HP:0000158,HP:0000171,t,t,Macroglossia,Microglossia
+HP:0004821,HP:0011447,f,t,Hypersegmentation of neutrophil nuclei,Hyposegmentation of neutrophil nuclei
+HP:0009126,HP:0040063,f,t,Increased adipose tissue,Decreased adipose tissue
+HP:0031245,HP:0031246,f,t,Productive cough,Nonproductive cough
+HP:0003202,HP:0003712,f,t,Skeletal muscle atrophy,Skeletal muscle hypertrophy
+HP:0002155,HP:0012153,t,t,Hypertriglyceridemia,Hypotriglyceridemia
+HP:0031397,HP:0031398,f,t,Decreased proportion of naive T cells,Increased proportion of naive T cells
+HP:0032432,HP:0032433,f,t,Increased HDL3c concentration,Decreased HDL3c concentration
+HP:0032274,HP:6000674,f,t,Increased CSF N-acetylaspartic acid concentration,Decreased CSF N-acetylaspartic acid concentration
+HP:0010580,HP:0100108,t,f,Enlarged epiphyses,Small epiphysis of the distal phalanx of the 2nd toe
+HP:0003240,HP:0032460,f,t,Increased phosphoribosylpyrophosphate synthetase level,Decreased phosphoribosylpyrophosphate synthetase level
+HP:0034237,HP:0034238,f,t,Open neural tube defect,Closed neural tube defect
+HP:0410311,HP:0410312,f,t,Hyposegmentation of neutrophil nuclei in CSF,Hypersegmentation of neutrophil nuclei in CSF
+HP:0002914,HP:0012601,t,t,Hyperchloriduria,Hypochloriduria
+HP:0001900,HP:0020062,f,t,Increased circulating hemoglobin concentration,Decreased hemoglobin concentration
+HP:0001315,HP:0001347,f,t,Reduced tendon reflexes,Hyperreflexia
+HP:0030357,HP:0030360,f,t,Small cell lung carcinoma,Large cell lung carcinoma
+HP:0003292,HP:0031793,t,t,Decreased serum leptin,Increased serum leptin
+HP:0010170,HP:0100080,t,f,Small epiphyses of the toes,Enlarged epiphyses of the 5th toe
+HP:0009349,HP:0010236,t,f,Enlarged epiphysis of the proximal phalanx of the 3rd finger,Small epiphyses of the phalanges of the hand
+HP:0001238,HP:0001500,f,t,Slender finger,Broad finger
+HP:0005019,HP:0006470,t,f,Diaphyseal undertubulation,Thin long bone diaphyses
+HP:0000953,HP:0001010,t,t,Hyperpigmentation of the skin,Hypopigmentation of the skin
+HP:0010763,HP:0012807,f,t,Low insertion of columella,High insertion of columella
+HP:0009527,HP:0009532,t,t,Enlarged epiphysis of the proximal phalanx of the 2nd finger,Small epiphysis of the proximal phalanx of the 2nd finger
+HP:0030795,HP:0030796,f,t,Reduced C-peptide level,Increased C-peptide level
+HP:0000316,HP:0000601,t,t,Hypertelorism,Hypotelorism
+HP:0030783,HP:0430142,f,t,Increased circulating interleukin 6 concentration,Reduced circulating interleukin 6 concentration
+HP:0030143,HP:0030144,f,t,Hyperactive bowel sounds,Hypoactive bowel sounds
+HP:0100047,HP:0100052,t,t,Enlarged epiphyses of the 2nd toe,Small epiphyses of the 2nd toe
+HP:0031794,HP:0040302,t,f,Decreased circulating glycerol level,Hyperglycerolemia
+HP:0009324,HP:0009329,t,t,Enlarged epiphysis of the middle phalanx of the 3rd finger,Small epiphysis of the middle phalanx of the 3rd finger
+HP:0030607,HP:0030608,f,t,Reduced OCT-measured macular thickness,Increased OCT-measured macular thickness
+HP:0000998,HP:0008070,f,t,Hypertrichosis,Sparse hair
+HP:0003429,HP:0012754,t,t,CNS hypomyelination,CNS hypermyelination
+HP:0033201,HP:0033205,f,t,Biceps hyporeflexia,Biceps hyperreflexia
+HP:0100293,HP:0100295,f,t,Hypertrophied muscle fibers,Muscle fiber atrophy
+HP:0002375,HP:0002487,f,t,Hypokinesia,Hyperkinetic movements
+HP:0030050,HP:0100785,f,t,Narcolepsy,Insomnia
+HP:0004005,HP:0004010,t,t,Large radial epiphyses,Small radial epiphyses
+HP:0009532,HP:0010271,t,f,Small epiphysis of the proximal phalanx of the 2nd finger,Enlarged epiphyses of the proximal phalanges of the hand
+HP:0009324,HP:0010236,t,f,Enlarged epiphysis of the middle phalanx of the 3rd finger,Small epiphyses of the phalanges of the hand
+HP:0000274,HP:0100729,t,t,Small face,Large face
+HP:0010450,HP:6000589,f,t,Esophageal stenosis,Esophageal dilation
+HP:0001640,HP:0001961,f,t,Cardiomegaly,Hypoplastic heart
 HP:0003260,HP:0500140,t,f,Hydroxyprolinemia,Decreased circulating hydroxyproline concentration
-HP:0003261,HP:0004313,t,f,Increased circulating IgA concentration,Decreased circulating antibody concentration
-HP:0003281,HP:0040303,t,f,Increased circulating ferritin concentration,Decreased circulating iron concentration
-HP:0003286,HP:0500152,t,f,Cystathioninemia,Hypocystinemia
-HP:0003292,HP:0003455,t,f,Decreased serum leptin,Elevated circulating long chain fatty acid concentration
-HP:0003345,HP:0045012,t,f,Elevated urinary norepinephrine level,Decreased urinary catecholamine concentration
-HP:0003359,HP:0011943,t,f,Decreased urinary sulfate,Increased urinary thiosulfate
-HP:0003362,HP:0010981,t,f,Increased VLDL cholesterol concentration,Hypolipoproteinemia
+HP:0009931,HP:0009933,f,t,Enlarged naris,Narrow naris
+HP:0012691,HP:0012692,f,t,Focal T2 hypointense thalamic lesion,Focal T2 hyperintense thalamic lesion
+HP:0500265,HP:0500266,f,t,"Increased proportion of CD8-positive, alpha-beta TEMRA T cells","Decreased proportion of CD8-positive, alpha-beta TEMRA T cells"
+HP:0100069,HP:0100199,t,f,Enlarged epiphyses of the 4th toe,Small epiphysis of the proximal phalanx of the 4th toe
+HP:0000431,HP:0000446,f,t,Wide nasal bridge,Narrow nasal bridge
+HP:0040178,HP:0040179,f,t,Increased level of platelet-activating factor,Decreased level of platelet-activating factor
+HP:0500156,HP:0500157,t,t,Hyperasparaginemia,Hypoasparaginemia
+HP:0030781,HP:0040299,f,t,Increased circulating free fatty acid level,Decreased circulating free fatty acid level
+HP:0009385,HP:0009390,t,t,Enlarged epiphyses of the 5th finger,Small epiphyses of the 5th finger
+HP:0008839,HP:0010779,f,t,Hypoplastic pelvis,Large pelvis bone
+HP:0010231,HP:0010265,t,f,Enlarged epiphyses of the phalanges of the hand,Small epiphyses of the middle phalanges of the hand
+HP:0010809,HP:0010811,t,t,Broad uvula,Narrow uvula
+HP:0034073,HP:0034074,f,t,Reduced fetal long bone echogenicity,Increased fetal long bone echogenicity
+HP:0001830,HP:0001849,t,f,Postaxial foot polydactyly,Foot oligodactyly
+HP:0000684,HP:0006288,f,t,Delayed eruption of teeth,Advanced eruption of teeth
+HP:0009264,HP:0009401,t,f,Enlarged epiphysis of the proximal phalanx of the 4th finger,Small epiphyses of the 4th finger
+HP:0010790,HP:0010791,f,t,Hypoplasia of the Leydig cells,Hyperplasia of the Leydig cells
+HP:0033014,HP:0033015,f,t,Decreased salivary cortisol level,Increased salivary cortisol level
+HP:0025380,HP:0033812,f,t,Increased circulating androstenedione concentration,Decreased circulating androstenedione concentration
+HP:0000691,HP:0001572,t,t,Microdontia,Macrodontia
+HP:0003077,HP:0031243,t,f,Hyperlipidemia,Decreased VLDL cholesterol concentration
+HP:0410375,HP:0410378,f,t,Increased proportion of naive CD4 T cells,Decreased proportion of naive CD4 T cells
+HP:4000158,HP:4000160,f,t,Typified by high penetrance,Typified by low penetrance
+HP:0031215,HP:0034589,f,t,Decreased circulating dehydroepiandrosterone-sulfate concentration,Increased circulating dehydroepiandrosterone-sulfate concentration
+HP:0001880,HP:0031891,t,f,Eosinophilia,Decreased eosinophil count
+HP:0010260,HP:0010265,t,t,Enlarged epiphyses of the middle phalanges of the hand,Small epiphyses of the middle phalanges of the hand
+HP:0008348,HP:0032299,f,t,Decreased circulating IgG2 concentration,Increased circulating IgG2 level
+HP:0000322,HP:0000343,t,t,Short philtrum,Long philtrum
+HP:0001477,HP:0031706,f,t,Compensatory chin elevation,Compensatory chin depression
+HP:0011009,HP:0011010,f,t,Acute,Chronic
+HP:0031219,HP:0031220,f,t,Reduced radioactive iodine uptake,Increased radioactive iodine uptake
+HP:0033085,HP:0033086,f,t,Reduced antral follicle count,Increased antral follicle count
+HP:0007350,HP:0012391,t,f,Upper limb hyperreflexia,Hyporeflexia of upper limbs
+HP:0002904,HP:0033480,t,t,Hyperbilirubinemia,Hypobilirubinemia
+HP:0500187,HP:0500188,t,t,Increased CSF valine concentration,Decreased CSF valine concentration
+HP:0025196,HP:0033211,f,t,Increased total iron binding capacity,Decreased total iron binding capacity
+HP:0001847,HP:0010109,t,t,Long hallux,Short hallux
+HP:0020059,HP:0020060,f,t,Increased red blood cell count,Decreased red blood cell count
+HP:0001476,HP:0005458,f,t,Delayed closure of the anterior fontanelle,Premature closure of fontanelles
+HP:0000426,HP:0005280,f,t,Prominent nasal bridge,Depressed nasal bridge
+HP:0000179,HP:0010282,f,t,Thick lower lip vermilion,Thin lower lip vermilion
+HP:0010170,HP:0010580,t,f,Small epiphyses of the toes,Enlarged epiphyses
+HP:0008948,HP:0040266,f,t,Proximal upper limb amyotrophy,Proximal upper limb muscle hypertrophy
+HP:0000637,HP:0012745,t,t,Long palpebral fissure,Short palpebral fissure
+HP:0008972,HP:0040015,f,t,Decreased activity of mitochondrial respiratory chain,Increased activity of mitochondrial respiratory chain
+HP:0033445,HP:0045045,t,f,Reduced circulating acylcarnitine concentration,Elevated circulating acylcarnitine concentration
+HP:0007182,HP:0030173,t,t,Peripheral hypomyelination,Peripheral hypermyelination
+HP:0006155,HP:0009803,f,t,Long phalanx of finger,Short phalanx of finger
+HP:0000255,HP:0011109,f,t,Acute sinusitis,Chronic sinusitis
+HP:0031428,HP:0031429,f,t,Increased circulating osteocalcin level,Decreased circulating osteocalcin level
+HP:0000859,HP:0004319,t,t,Increased circulating aldosterone concentration,Decreased circulating aldosterone concentration
+HP:0040260,HP:0040261,t,t,Decreased size of nasopharyngeal adenoids,Increased size of nasopharyngeal adenoids
+HP:0100080,HP:0100085,t,t,Enlarged epiphyses of the 5th toe,Small epiphyses of the 5th toe
+HP:0031385,HP:0031388,f,t,Megakaryocyte nucleus hypolobulation,Megakaryocyte nucleus hyperlobulation
+HP:0009521,HP:0010231,t,f,Small epiphysis of the middle phalanx of the 2nd finger,Enlarged epiphyses of the phalanges of the hand
+HP:0007535,HP:0007572,f,t,Hypopigmented streaks,Hyperpigmented streaks
+HP:0034449,HP:0034450,f,t,Increased phytanic acid:pristanic acid ratio,Decreased phytanic acid:pristanic acid ratio
+HP:0410388,HP:0410393,f,t,"Decreased proportion of central memory CD4-positive, alpha-beta T cells","Increased proportion of central memory CD4-positive, alpha-beta T cells"
+HP:0009264,HP:0010236,t,f,Enlarged epiphysis of the proximal phalanx of the 4th finger,Small epiphyses of the phalanges of the hand
+HP:0500077,HP:0500079,f,t,Alternating hyperphoria,Alternating hypophoria
+HP:0010580,HP:0100052,t,f,Enlarged epiphyses,Small epiphyses of the 2nd toe
+HP:0010236,HP:0010271,t,f,Small epiphyses of the phalanges of the hand,Enlarged epiphyses of the proximal phalanges of the hand
+HP:0010911,HP:0500143,t,t,Hyperleucinemia,Hypoleucinemia
+HP:0005819,HP:0012298,t,t,Short middle phalanx of finger,Long middle phalanx of finger
+HP:0020112,HP:0020113,f,t,Increased proportion of CD4+CD25+ regulatory T cells,Decreased proportion of CD4+CD25+ regulatory T cells
+HP:0000400,HP:0008551,f,t,Macrotia,Microtia
+HP:0000966,HP:0000975,f,t,Hypohidrosis,Hyperhidrosis
+HP:0025759,HP:0025760,f,t,Mobile lump,Immobile lump
+HP:0031836,HP:0031837,f,t,Increased circulating superoxide dismutase concentration,Decreased circulating superoxide dismutase concentration
+HP:0003149,HP:0011935,t,t,Hyperuricosuria,Decreased urinary urate
+HP:0410376,HP:0410377,f,t,Increased proportion of naive CD8 T cells,Decreased proportion of naive CD8 T cells
+HP:0005274,HP:0005278,f,t,Prominent nasal tip,Hypoplastic nasal tip
+HP:0009159,HP:0010271,t,f,Small epiphysis of the proximal phalanx of the 5th finger,Enlarged epiphyses of the proximal phalanges of the hand
+HP:0033733,HP:0033734,f,t,Low-grade vesicoureteral reflux,High-grade vesicoureteral reflux
+HP:0003113,HP:0011423,t,t,Hypochloremia,Hyperchloremia
+HP:0032125,HP:0032126,f,t,Increased proportion of unswitched memory B cells,Decreased proportion of unswitched memory B cells
+HP:0010231,HP:0010236,t,t,Enlarged epiphyses of the phalanges of the hand,Small epiphyses of the phalanges of the hand
+HP:0031807,HP:0031808,f,t,Increased basophil count,Decreased basophil count
+HP:0004586,HP:0004625,t,f,Biconcave vertebral bodies,Biconvex vertebral bodies
+HP:0033909,HP:0033910,f,t,Arcuate vein medial hypertrophy,Arcuate vein medial atrophy
+HP:0006329,HP:0009085,f,t,Alveolar process hypoplasia,Alveolar ridge overgrowth
+HP:0030018,HP:0030019,f,t,Decreased female libido,Increased female libido
+HP:0009496,HP:0010260,t,f,Small epiphyses of the 2nd finger,Enlarged epiphyses of the middle phalanges of the hand
+HP:0010669,HP:0012370,f,t,Hypoplasia of the zygomatic bone,Prominence of the zygomatic bone
+HP:0008687,HP:0008711,t,f,Hypoplasia of the prostate,Benign prostatic hyperplasia
+HP:0002677,HP:0002700,t,t,Small foramen magnum,Large foramen magnum
+HP:0001688,HP:0011703,f,t,Sinus bradycardia,Sinus tachycardia
+HP:0500181,HP:0500182,t,t,Hypertaurinemia,Hypotaurinemia
+HP:0001841,HP:0001849,t,f,Preaxial foot polydactyly,Foot oligodactyly
+HP:0010913,HP:0500144,t,t,Hyperisoleucinemia,Hypoisoleucinemia
+HP:0001657,HP:0012232,f,t,Prolonged QT interval,Shortened QT interval
+HP:0011972,HP:0031885,f,t,Hypoglycorrhachia,Hyperglycorrhachia
+HP:0002516,HP:0012641,f,t,Increased intracranial pressure,Decreased intracranial pressure
+HP:0004349,HP:0011001,t,t,Reduced bone mineral density,Increased bone mineral density
+HP:0012311,HP:0012312,f,t,Monocytosis,Monocytopenia
+HP:0002365,HP:0012755,f,t,Hypoplasia of the brainstem,Enlarged brainstem
+HP:0034291,HP:0034292,t,f,Elevated circulating creatine concentration,Reduced circulating creatine concentration
+HP:0046503,HP:0046504,f,t,Increased libido,Decreased libido
+HP:0010442,HP:0012165,t,f,Polydactyly,Oligodactyly
+HP:0000468,HP:0005995,t,f,Increased adipose tissue around the neck,Decreased adipose tissue around neck
+HP:0001837,HP:0011308,f,t,Broad toe,Slender toe
+HP:0004826,HP:0004851,f,t,Folate-unresponsive megaloblastic anemia,Folate-responsive megaloblastic anemia
+HP:0009258,HP:0010231,t,f,Small epiphysis of the distal phalanx of the 4th finger,Enlarged epiphyses of the phalanges of the hand
+HP:0009354,HP:0009413,t,f,Small epiphysis of the proximal phalanx of the 3rd finger,Enlarged epiphyses of the 3rd finger
+HP:0033908,HP:0033918,f,t,Renal arteriole medial atrophy,Renal arteriole medial hypertrophy
+HP:0100160,HP:0100165,t,t,Enlarged epiphysis of the proximal phalanx of the 3rd toe,Small epiphysis of the proximal phalanx of the 3rd toe
+HP:0030348,HP:0040171,t,f,Increased circulating androgen concentration,Decreased serum testosterone concentration
+HP:0030631,HP:0030632,f,t,Hyperautofluorescent macular lesion,Hypoautofluorescent macular lesion
+HP:0005404,HP:0010976,f,t,Increased B cell count,B lymphocytopenia
+HP:0025075,HP:0025077,f,t,Increased QRS voltage,Decreased QRS voltage
+HP:0030377,HP:0030378,f,t,Increased proportion of immature B cells,Decreased proportion of immature B cells
+HP:0009343,HP:0010231,t,f,Small epiphysis of the distal phalanx of the 3rd finger,Enlarged epiphyses of the phalanges of the hand
+HP:0001773,HP:0001833,f,t,Short foot,Long foot
+HP:0009349,HP:0010276,t,f,Enlarged epiphysis of the proximal phalanx of the 3rd finger,Small epiphyses of the proximal phalanges of the hand
+HP:0033506,HP:0033507,f,t,Increased esterified to free carnitine ratio,Decreased esterified to free carnitine ratio
+HP:0004313,HP:0010702,t,t,Decreased circulating antibody concentration,Increased circulating antibody concentration
+HP:0033532,HP:0033533,f,t,Decreased cardiac output,Increased cardiac output
+HP:0002938,HP:0034770,f,t,Lumbar hyperlordosis,Lumbar hypolordosis
+HP:0009804,HP:0011069,t,t,Tooth agenesis,Supernumerary tooth
+HP:0001821,HP:0011313,t,t,Broad nail,Narrow nail
+HP:0011814,HP:0040426,t,t,Increased urinary hypoxanthine level,Decreased urinary hypoxanthine level
+HP:0410363,HP:0410364,f,t,Increased monosialylated core 1 O-glycan level,Decreased monosialylated core 1 O-glycan level
+HP:0003141,HP:0003146,t,f,Increased LDL cholesterol concentration,Hypocholesterolemia
+HP:0002731,HP:0030887,f,t,Decreased lymphocyte apoptosis,Increased lymphocyte apoptosis
+HP:0010980,HP:0031243,t,f,Hyperlipoproteinemia,Decreased VLDL cholesterol concentration
+HP:0009329,HP:0010260,t,f,Small epiphysis of the middle phalanx of the 3rd finger,Enlarged epiphyses of the middle phalanges of the hand
+HP:0000337,HP:0000341,t,t,Broad forehead,Narrow forehead
+HP:0003359,HP:0012613,t,t,Decreased urinary sulfate,Increased urinary sulfate
+HP:0500207,HP:0500208,t,t,Decreased CSF lysine concentration,Increased CSF lysine concentration
+HP:0500203,HP:0500204,t,t,Increased CSF arginine concentration,Decreased CSF arginine concentration
+HP:0410352,HP:0410353,f,t,Increased complex N-glycan level,Decreased complex N-glycan level
+HP:0010585,HP:0100080,t,f,Small epiphyses,Enlarged epiphyses of the 5th toe
+HP:0000327,HP:0430028,t,t,Hypoplasia of the maxilla,Hyperplasia of the maxilla
+HP:0020170,HP:0020171,f,t,Increased blood drug concentration,Decreased blood drug concentration
+HP:0011271,HP:0011272,f,t,Prominent tragus,Underdeveloped tragus
+HP:0010249,HP:0010254,t,t,Enlarged epiphyses of the distal phalanges of the hand,Small epiphyses of the distal phalanges of the hand
+HP:0025158,HP:0025159,f,t,Hyperautofluorescent retinal lesion,Hypoautofluorescent retinal lesion
+HP:0025624,HP:0410394,f,t,Reduced proportion of CD4+ effector memory T cells,"Increased proportion of effector memory CD4-positive, alpha-beta T cells"
+HP:0410181,HP:0410182,f,t,Increased glucose-6-phosphate dehydrogenase level in dried blood spot,Decreased glucose-6-phosphate dehydrogenase level in dried blood spot
+HP:0001831,HP:0010511,t,t,Short toe,Long toe
+HP:0003237,HP:0004315,t,t,Increased circulating IgG concentration,Decreased circulating IgG concentration
+HP:0500161,HP:0500162,t,t,Increased circulating carnosine concentration,Decreased circulating carnosine concentration
+HP:0001090,HP:0007633,t,f,Abnormally large globe,Bilateral microphthalmos
+HP:0032420,HP:0032421,f,t,Increased HDL2a concentration,Decreased HDL2a concentration
+HP:0000846,HP:0002717,t,f,Adrenal insufficiency,Adrenal overactivity
+HP:0010837,HP:0033145,f,t,Decreased circulating ceruloplasmin concentration,Increased circulating ceruloplasmin concentration
+HP:0001620,HP:0010300,f,t,Abnormally high-pitched voice,Abnormally low-pitched voice
+HP:0010121,HP:0010141,t,f,Small epiphyses of the hallux,Enlarged epiphysis of the distal phalanx of the hallux
+HP:0033299,HP:0033300,f,t,Reduced circulating complement factor H related protein 1 concentration,Increased circulating complement factor H related protein 1 concentration
+HP:0100125,HP:0100130,t,t,Enlarged epiphysis of the proximal phalanx of the 2nd toe,Small epiphysis of the proximal phalanx of the 2nd toe
+HP:0012685,HP:0012686,t,t,Decreased pineal volume,Increased pineal volume
+HP:0002925,HP:0031098,f,t,Elevated circulating thyroid-stimulating hormone concentration,Decreased thyroid-stimulating hormone level
+HP:0031222,HP:0034591,f,t,Increased circulating thyroxine-binding globulin level,Decreased circulating thyroxine-binding globulin concentration
+HP:0033191,HP:0033192,f,t,Increased circulating selenium concentration,Decreased circulating selenium concentration
+HP:0032997,HP:0032998,f,t,Decreased cystatin C level,Increased cystatin C level
+HP:0010680,HP:0010685,t,f,Elevated alkaline phosphatase of renal origin,Low alkaline phosphatase of renal origin
+HP:0030088,HP:0040171,t,t,Increased serum testosterone level,Decreased serum testosterone concentration
+HP:0009051,HP:0012270,t,t,Increased muscle glycogen content,Decreased muscle glycogen content
+HP:0003124,HP:0003146,t,t,Hypercholesterolemia,Hypocholesterolemia
+HP:0011340,HP:5201009,f,t,Incomplete cleft of the upper lip,Complete cleft of the upper lip
+HP:0004368,HP:0004369,f,t,Increased circulating purine concentration,Decreased circulating purine concentration
+HP:0500151,HP:0500152,t,t,Hypercystinemia,Hypocystinemia
+HP:0009253,HP:0009258,t,t,Enlarged epiphysis of the distal phalanx of the 4th finger,Small epiphysis of the distal phalanx of the 4th finger
+HP:0007440,HP:0007513,t,t,Generalized hyperpigmentation,Generalized hypopigmentation
+HP:0010910,HP:0500132,t,t,Hypervalinemia,Hypovalinemia
+HP:0002789,HP:0046507,f,t,Tachypnea,Bradypnea
+HP:0031209,HP:0033478,f,t,Decreased circulating lipoprotein lipase concentration,Increased circulating lipoprotein lipase concentration
+HP:0006462,HP:0011002,t,f,Generalized bone demineralization,Osteopetrosis
+HP:0410317,HP:0410318,t,t,Increased urinary 3-methylhistidine,Decreased urinary 3-methylhistidine
+HP:0045050,HP:0045051,f,t,Increased DLCO,Decreased DLCO
+HP:0000829,HP:0000843,t,t,Hypoparathyroidism,Hyperparathyroidism
+HP:0008383,HP:0030806,t,f,Slow-growing nails,Fast-growing nails
+HP:0009418,HP:0010231,t,f,Small epiphyses of the 3rd finger,Enlarged epiphyses of the phalanges of the hand
+HP:0003259,HP:0012101,f,t,Elevated circulating creatinine concentration,Decreased serum creatinine
+HP:0032423,HP:0032424,f,t,Decreased HDL2b concentration,Increased HDL2b concentration
+HP:0009678,HP:0009694,t,f,Enlarged epiphysis of the distal phalanx of the thumb,Small thumb epiphysis
+HP:0025434,HP:0031905,f,t,Reduced circulating CH50 activity,Increased total hemolytic complement activity
+HP:0025693,HP:0025694,f,t,Pituitary macroadenoma,Pituitary microadenoma
+HP:0033199,HP:0034163,f,t,Increased circulating interleukin 10 concentration,Reduced circulating interleukin 10 concentration
+HP:0001649,HP:0001662,f,t,Tachycardia,Bradycardia
+HP:0003997,HP:6000885,f,t,Hypoplastic radial head,Enlarged radial head
+HP:0005272,HP:0010801,f,t,Prominent nasolabial fold,Underdeveloped nasolabial fold
+HP:0032136,HP:0032298,f,t,Decreased circulating IgG1 concentration,Increased circulating IgG1 level
+HP:0004660,HP:0012892,f,t,Hypoplasia of facial musculature,Facial muscle hypertrophy
+HP:0002509,HP:0012389,f,t,Limb hypertonia,Appendicular hypotonia
+HP:0032430,HP:0032431,f,t,Increased HDL3b concentration,Decreased HDL3b concentration
+HP:0009147,HP:0009390,t,f,Enlarged epiphysis of the distal phalanx of the 5th finger,Small epiphyses of the 5th finger
+HP:0020285,HP:0020286,f,t,Decreased lymph node lymphocyte cytoplasm,Increased lymph node lymphocyte cytoplasm
+HP:0004324,HP:0004326,t,f,Increased body weight,Cachexia
+HP:0010679,HP:0010683,t,f,Elevated tissue non-specific alkaline phosphatase,Low tissue non-specific alkaline phosphatase
+HP:0410194,HP:0410195,t,t,Increased circulating UDP glucose-4-epimerase concentration,Decreased circulating UDP glucose-4-epimerase concentration
+HP:0012418,HP:0012419,t,f,Hypoxemia,Hyperoxemia
+HP:0003844,HP:0010580,t,f,Small epiphyses of the upper limbs,Enlarged epiphyses
+HP:0009269,HP:0009396,t,f,Small epiphysis of the proximal phalanx of the 4th finger,Enlarged epiphyses of the 4th finger
+HP:0034487,HP:6000487,f,t,Increased circulating interleukin 12 concentration,Reduced circulating interleukin 12 concentration
+HP:0006336,HP:0033189,f,t,Short dental root,Radiculomegaly
+HP:0025136,HP:0025137,f,t,Increased serum estriol,Decreased serum estriol
+HP:0009516,HP:0009521,t,t,Enlarged epiphysis of the middle phalanx of the 2nd finger,Small epiphysis of the middle phalanx of the 2nd finger
+HP:0040053,HP:0040055,t,t,Long lower eyelashes,Short lower eyelashes
+HP:0034441,HP:0500159,t,t,Decreased circulating aspartic acid concentration,Increased circulating aspartic acid concentration
+HP:0410245,HP:0410246,t,t,Decreased circulating IgD concentration,Increased circulating IgD concentration
+HP:0002149,HP:0003537,t,t,Hyperuricemia,Hypouricemia
+HP:0033972,HP:0033973,f,t,Interlobular vein medial atrophy,Interlobular vein medial hypertrophy
+HP:0003237,HP:0004313,t,f,Increased circulating IgG concentration,Decreased circulating antibody concentration
+HP:0010580,HP:0100199,t,f,Enlarged epiphyses,Small epiphysis of the proximal phalanx of the 4th toe
 HP:0003362,HP:0012153,t,f,Increased VLDL cholesterol concentration,Hypotriglyceridemia
 HP:0003362,HP:0045014,t,f,Increased VLDL cholesterol concentration,Hypolipidemia
-HP:0003375,HP:0008798,t,f,Narrow greater sciatic notch,Widened greater sciatic notch
-HP:0003429,HP:0030173,t,f,CNS hypomyelination,Peripheral hypermyelination
-HP:0003455,HP:0012153,t,f,Elevated circulating long chain fatty acid concentration,Hypotriglyceridemia
-HP:0003455,HP:0045014,t,f,Elevated circulating long chain fatty acid concentration,Hypolipidemia
-HP:0003496,HP:0500142,t,f,Increased circulating IgM level,Hypolysinemia
-HP:0003537,HP:0004368,t,f,Hypouricemia,Increased circulating purine concentration
-HP:0003572,HP:0032491,t,f,Low plasma citrulline,Increased circulating argininosuccinic acid
-HP:0003646,HP:0045011,t,f,Bicarbonaturia,Decreased urine bicarbonate concentration
-HP:0003658,HP:0034617,t,f,Hypomethioninemia,Elevated circulating S-adenosyl methionine concentration
-HP:0003658,HP:0034730,t,f,Hypomethioninemia,Elevated circulating S-adenosyl-L-homocysteine concentration
-HP:0003658,HP:0034731,t,f,Hypomethioninemia,Elevated circulating S-adenosyl-L-methionine concentration
-HP:0003658,HP:0034745,t,f,Hypomethioninemia,Elevated circulating S-sulfocysteine concentration
-HP:0004324,HP:0004326,t,f,Increased body weight,Cachexia
-HP:0004349,HP:0005789,t,f,Reduced bone mineral density,Generalized osteosclerosis
-HP:0004586,HP:0004625,t,f,Biconcave vertebral bodies,Biconvex vertebral bodies
-HP:0005019,HP:0006470,t,f,Diaphyseal undertubulation,Thin long bone diaphyses
-HP:0005789,HP:0006462,t,f,Generalized osteosclerosis,Generalized bone demineralization
-HP:0006040,HP:0010038,t,f,Long second metacarpal,Short 2nd metacarpal
-HP:0006067,HP:0006611,t,f,Multiple carpal ossification centers,Decreased number of sternal ossification centers
-HP:0006462,HP:0011001,t,f,Generalized bone demineralization,Increased bone mineral density
-HP:0006462,HP:0011002,t,f,Generalized bone demineralization,Osteopetrosis
-HP:0006610,HP:0040158,t,f,Wide intermamillary distance,Short intermamillary distance
-HP:0007083,HP:0011808,t,f,Hyperactive patellar reflex,Decreased patellar reflex
-HP:0007350,HP:0012391,t,f,Upper limb hyperreflexia,Hyporeflexia of upper limbs
-HP:0008358,HP:0500140,t,f,Hyperprolinemia,Decreased circulating hydroxyproline concentration
-HP:0008383,HP:0030806,t,f,Slow-growing nails,Fast-growing nails
-HP:0008687,HP:0008711,t,f,Hypoplasia of the prostate,Benign prostatic hyperplasia
-HP:0009147,HP:0009390,t,f,Enlarged epiphysis of the distal phalanx of the 5th finger,Small epiphyses of the 5th finger
-HP:0009148,HP:0009385,t,f,Small epiphysis of the distal phalanx of the 5th finger,Enlarged epiphyses of the 5th finger
-HP:0009158,HP:0009390,t,f,Enlarged epiphysis of the proximal phalanx of the 5th finger,Small epiphyses of the 5th finger
-HP:0009159,HP:0009385,t,f,Small epiphysis of the proximal phalanx of the 5th finger,Enlarged epiphyses of the 5th finger
-HP:0009206,HP:0009390,t,f,Enlarged epiphysis of the middle phalanx of the 5th finger,Small epiphyses of the 5th finger
-HP:0009211,HP:0009385,t,f,Small epiphysis of the middle phalanx of the 5th finger,Enlarged epiphyses of the 5th finger
-HP:0009217,HP:0009401,t,f,Enlarged epiphysis of the middle phalanx of the 4th finger,Small epiphyses of the 4th finger
-HP:0009222,HP:0009396,t,f,Small epiphysis of the middle phalanx of the 4th finger,Enlarged epiphyses of the 4th finger
+HP:0003286,HP:0500152,t,f,Cystathioninemia,Hypocystinemia
+HP:0012648,HP:0012649,f,t,Decreased inflammatory response,Increased inflammatory response
+HP:0032311,HP:0032312,f,t,Increased circulating globulin level,Decreased circulating globulin level
+HP:0009269,HP:0010271,t,f,Small epiphysis of the proximal phalanx of the 4th finger,Enlarged epiphyses of the proximal phalanges of the hand
+HP:0009206,HP:0009211,t,t,Enlarged epiphysis of the middle phalanx of the 5th finger,Small epiphysis of the middle phalanx of the 5th finger
+HP:0009778,HP:0032524,f,t,Short thumb,Long thumb
 HP:0009253,HP:0009401,t,f,Enlarged epiphysis of the distal phalanx of the 4th finger,Small epiphyses of the 4th finger
-HP:0009258,HP:0009396,t,f,Small epiphysis of the distal phalanx of the 4th finger,Enlarged epiphyses of the 4th finger
-HP:0009264,HP:0009401,t,f,Enlarged epiphysis of the proximal phalanx of the 4th finger,Small epiphyses of the 4th finger
-HP:0009269,HP:0009396,t,f,Small epiphysis of the proximal phalanx of the 4th finger,Enlarged epiphyses of the 4th finger
-HP:0009324,HP:0009418,t,f,Enlarged epiphysis of the middle phalanx of the 3rd finger,Small epiphyses of the 3rd finger
-HP:0009329,HP:0009413,t,f,Small epiphysis of the middle phalanx of the 3rd finger,Enlarged epiphyses of the 3rd finger
-HP:0009338,HP:0009418,t,f,Enlarged epiphysis of the distal phalanx of the 3rd finger,Small epiphyses of the 3rd finger
-HP:0009343,HP:0009413,t,f,Small epiphysis of the distal phalanx of the 3rd finger,Enlarged epiphyses of the 3rd finger
-HP:0009349,HP:0009390,t,f,Enlarged epiphysis of the proximal phalanx of the 3rd finger,Small epiphyses of the 5th finger
-HP:0009349,HP:0009418,t,f,Enlarged epiphysis of the proximal phalanx of the 3rd finger,Small epiphyses of the 3rd finger
-HP:0009354,HP:0009413,t,f,Small epiphysis of the proximal phalanx of the 3rd finger,Enlarged epiphyses of the 3rd finger
-HP:0009381,HP:0100807,t,f,Short finger,Long fingers
-HP:0009413,HP:0010236,t,f,Enlarged epiphyses of the 3rd finger,Small epiphyses of the phalanges of the hand
-HP:0009491,HP:0010236,t,f,Enlarged epiphyses of the 2nd finger,Small epiphyses of the phalanges of the hand
-HP:0009496,HP:0010231,t,f,Small epiphyses of the 2nd finger,Enlarged epiphyses of the phalanges of the hand
-HP:0009667,HP:0009694,t,f,Enlarged epiphysis of the proximal phalanx of the thumb,Small thumb epiphysis
-HP:0009672,HP:0009689,t,f,Small epiphysis of the proximal phalanx of the thumb,Enlarged thumb epiphysis
-HP:0009678,HP:0009694,t,f,Enlarged epiphysis of the distal phalanx of the thumb,Small thumb epiphysis
-HP:0009683,HP:0009689,t,f,Small epiphysis of the distal phalanx of the thumb,Enlarged thumb epiphysis
-HP:0009689,HP:0010236,t,f,Enlarged thumb epiphysis,Small epiphyses of the phalanges of the hand
-HP:0009932,HP:0009934,t,f,Single naris,Supernumerary naris
-HP:0010116,HP:0010135,t,f,Enlarged epiphyses of the hallux,Small epiphysis of the proximal phalanx of the hallux
-HP:0010116,HP:0010146,t,f,Enlarged epiphyses of the hallux,Small epiphysis of the distal phalanx of the hallux
-HP:0010116,HP:0010170,t,f,Enlarged epiphyses of the hallux,Small epiphyses of the toes
-HP:0010116,HP:0100085,t,f,Enlarged epiphyses of the hallux,Small epiphyses of the 5th toe
-HP:0010116,HP:0100210,t,f,Enlarged epiphyses of the hallux,Small epiphysis of the distal phalanx of the 5th toe
-HP:0010121,HP:0010130,t,f,Small epiphyses of the hallux,Enlarged epiphysis of the proximal phalanx of the hallux
-HP:0010121,HP:0010141,t,f,Small epiphyses of the hallux,Enlarged epiphysis of the distal phalanx of the hallux
-HP:0010121,HP:0010165,t,f,Small epiphyses of the hallux,Enlarged epiphyses of the toes
-HP:0010231,HP:0010254,t,f,Enlarged epiphyses of the phalanges of the hand,Small epiphyses of the distal phalanges of the hand
-HP:0010231,HP:0010265,t,f,Enlarged epiphyses of the phalanges of the hand,Small epiphyses of the middle phalanges of the hand
-HP:0010231,HP:0010276,t,f,Enlarged epiphyses of the phalanges of the hand,Small epiphyses of the proximal phalanges of the hand
-HP:0010236,HP:0010249,t,f,Small epiphyses of the phalanges of the hand,Enlarged epiphyses of the distal phalanges of the hand
-HP:0010236,HP:0010260,t,f,Small epiphyses of the phalanges of the hand,Enlarged epiphyses of the middle phalanges of the hand
-HP:0010236,HP:0010271,t,f,Small epiphyses of the phalanges of the hand,Enlarged epiphyses of the proximal phalanges of the hand
-HP:0010254,HP:0010260,t,f,Small epiphyses of the distal phalanges of the hand,Enlarged epiphyses of the middle phalanges of the hand
-HP:0010254,HP:0010271,t,f,Small epiphyses of the distal phalanges of the hand,Enlarged epiphyses of the proximal phalanges of the hand
-HP:0010442,HP:0012165,t,f,Polydactyly,Oligodactyly
-HP:0010569,HP:0012053,t,f,Elevated circulating 7-dehydrocholesterol concentration,Decreased circulating calcifediol concentration
-HP:0010569,HP:0034935,t,f,Elevated circulating 7-dehydrocholesterol concentration,Decreased circulating 7-dehydrocholesterol concentration
-HP:0010638,HP:0010686,t,f,Elevated alkaline phosphatase of hepatic origin,Low alkaline phosphatase of hepatic origin
-HP:0010639,HP:0010684,t,f,Elevated alkaline phosphatase of bone origin,Low alkaline phosphatase of bone origin
-HP:0010679,HP:0010683,t,f,Elevated tissue non-specific alkaline phosphatase,Low tissue non-specific alkaline phosphatase
-HP:0010680,HP:0010685,t,f,Elevated alkaline phosphatase of renal origin,Low alkaline phosphatase of renal origin
-HP:0010702,HP:0500142,t,f,Increased circulating antibody concentration,Hypolysinemia
-HP:0010837,HP:0032254,t,f,Decreased circulating ceruloplasmin concentration,Increased circulating copper concentration
-HP:0010906,HP:0034870,t,f,Hyperhistidinemia,Reduced circulating urocanic acid concentration
-HP:0010934,HP:0011935,t,f,Xanthinuria,Decreased urinary urate
-HP:0010934,HP:0040426,t,f,Xanthinuria,Decreased urinary hypoxanthine level
-HP:0010980,HP:0012153,t,f,Hyperlipoproteinemia,Hypotriglyceridemia
-HP:0010980,HP:0031242,t,f,Hyperlipoproteinemia,Decreased circulating chylomicron concentration
-HP:0010980,HP:0031243,t,f,Hyperlipoproteinemia,Decreased VLDL cholesterol concentration
-HP:0010980,HP:0045014,t,f,Hyperlipoproteinemia,Hypolipidemia
-HP:0011580,HP:0025522,t,f,Short chordae tendineae of the mitral valve,Elongated chordae tendinae of the mitral valve
-HP:0011814,HP:0011935,t,f,Increased urinary hypoxanthine level,Decreased urinary urate
-HP:0011969,HP:0030339,t,f,Elevated circulating luteinizing hormone level,Decreased circulating gonadotropin concentration
-HP:0011969,HP:0040171,t,f,Elevated circulating luteinizing hormone level,Decreased serum testosterone concentration
-HP:0011976,HP:0045012,t,f,Elevated urinary catecholamine level,Decreased urinary catecholamine concentration
-HP:0011978,HP:0045012,t,f,Elevated urinary vanillylmandelic acid,Decreased urinary catecholamine concentration
-HP:0012101,HP:0034291,t,f,Decreased serum creatinine,Elevated circulating creatine concentration
-HP:0012101,HP:0034321,t,f,Decreased serum creatinine,Elevated circulating guanidinoacetic acid concentration
-HP:0012238,HP:0045014,t,f,Increased circulating chylomicron concentration,Hypolipidemia
-HP:0012277,HP:0033419,t,f,Hypoglycinemia,Elevated circulating 3-hydroxybutyric acid concentration
-HP:0012403,HP:0040144,t,f,Decreased urine alpha-ketoglutarate concentration,L-2-hydroxyglutaric aciduria
-HP:0012416,HP:0012418,t,f,Hypercapnia,Hypoxemia
-HP:0012418,HP:0012419,t,f,Hypoxemia,Hyperoxemia
-HP:0012655,HP:0012656,t,f,Elevated CSF dopamine concentration,Reduced CSF dopamine concentration
-HP:0030088,HP:0030339,t,f,Increased serum testosterone level,Decreased circulating gonadotropin concentration
-HP:0030088,HP:0030344,t,f,Increased serum testosterone level,Decreased circulating luteinizing hormone level
-HP:0030088,HP:0030349,t,f,Increased serum testosterone level,Decreased circulating androgen concentration
-HP:0030262,HP:0030265,t,f,Narrow penis,Wide penis
-HP:0030348,HP:0040171,t,f,Increased circulating androgen concentration,Decreased serum testosterone concentration
-HP:0030688,HP:0040216,t,f,Increased glucagon level,Hypoinsulinemia
-HP:0031414,HP:0034935,t,f,High serum calcifediol,Decreased circulating 7-dehydrocholesterol concentration
-HP:0031793,HP:0040216,t,f,Increased serum leptin,Hypoinsulinemia
-HP:0031794,HP:0040302,t,f,Decreased circulating glycerol level,Hyperglycerolemia
-HP:0031969,HP:0032491,t,f,Reduced blood urea nitrogen,Increased circulating argininosuccinic acid
-HP:0031969,HP:0034291,t,f,Reduced blood urea nitrogen,Elevated circulating creatine concentration
-HP:0032368,HP:0032369,t,f,Acidemia,Alkalemia
-HP:0032491,HP:0500163,t,f,Increased circulating argininosuccinic acid,Hypoornithinemia
-HP:0033148,HP:0500143,t,f,Increased circulating isovaleric acid concentration,Hypoleucinemia
-HP:0033155,HP:0500144,t,f,Elevated circulating L-alloisoleucine concentration,Hypoisoleucinemia
-HP:0033301,HP:0500145,t,f,Elevated circulating 1-methylhistidine concentration,Hypohistidinemia
-HP:0033302,HP:0500133,t,f,Elevated circulating 4-hydroxyphenylacetic acid concentration,Hypotyrosinemia
-HP:0033445,HP:0045045,t,f,Reduced circulating acylcarnitine concentration,Elevated circulating acylcarnitine concentration
-HP:0034203,HP:0034745,t,f,Decreased iduronate sulfatase level,Elevated circulating S-sulfocysteine concentration
-HP:0034203,HP:0410342,t,f,Decreased iduronate sulfatase level,Increased circulating heparan sulfate level
-HP:0034203,HP:4000213,t,f,Decreased iduronate sulfatase level,Elevated circulating hyaluronic acid concentration
-HP:0034277,HP:0100507,t,f,Elevated circulating deoxyuridine concentration,Reduced blood folate concentration
-HP:0034291,HP:0034292,t,f,Elevated circulating creatine concentration,Reduced circulating creatine concentration
-HP:0034292,HP:0034321,t,f,Reduced circulating creatine concentration,Elevated circulating guanidinoacetic acid concentration
-HP:0034617,HP:0100507,t,f,Elevated circulating S-adenosyl methionine concentration,Reduced blood folate concentration
-HP:0034731,HP:0100507,t,f,Elevated circulating S-adenosyl-L-methionine concentration,Reduced blood folate concentration
-HP:0034736,HP:0500142,t,f,Elevated circulating alpha-oxoadipic acid concentration,Hypolysinemia
-HP:0034736,HP:0500144,t,f,Elevated circulating alpha-oxoadipic acid concentration,Hypoisoleucinemia
-HP:0034745,HP:0500152,t,f,Elevated circulating S-sulfocysteine concentration,Hypocystinemia
-HP:0034935,HP:0034936,t,f,Decreased circulating 7-dehydrocholesterol concentration,Elevated circulating lathosterol concentration
-HP:0040204,HP:0040205,t,f,Elevated CSF neopterin level,Decreased CSF neopterin level
+HP:0410186,HP:0410187,t,t,Increased glucose-6-phosphate dehydrogenase level in tissue,Decreased glucose-6-phosphate dehydrogenase level in tissue
+HP:0000287,HP:0000292,t,t,Increased facial adipose tissue,Loss of facial adipose tissue
+HP:0410188,HP:0410189,f,t,Decreased glucose-6-phosphate dehydrogenase level in red blood cells,Increased glucose-6-phosphate dehydrogenase level in red blood cells
+HP:0000870,HP:0008202,f,t,Increased circulating prolactin concentration,Reduced circulating prolactin concentration
+HP:0002716,HP:0002732,t,t,Lymphadenopathy,Lymph node hypoplasia
+HP:0009329,HP:0010231,t,f,Small epiphysis of the middle phalanx of the 3rd finger,Enlarged epiphyses of the phalanges of the hand
+HP:0031425,HP:0031426,f,t,Increased circulating beta-C-terminal telopeptide concentration,Decreased circulating beta-C-terminal telopeptide concentration
+HP:0031890,HP:0032473,f,t,Increased urine urobilinogen,Decreased urine urobilinogen
+HP:0010116,HP:0010121,t,t,Enlarged epiphyses of the hallux,Small epiphyses of the hallux
+HP:0410390,HP:0410395,f,t,"Decreased proportion of effector memory CD8-positive, alpha-beta T cells","Increased proportion of effector memory CD8-positive, alpha-beta T cells"
+HP:0031141,HP:0031143,f,t,Increased hepatic echogenicity,Decreased hepatic echogenicity
+HP:0009505,HP:0009510,t,t,Enlarged epiphysis of the distal phalanx of the 2nd finger,Small epiphysis of the distal phalanx of the 2nd finger
+HP:0000938,HP:0011002,t,f,Osteopenia,Osteopetrosis
+HP:0009147,HP:0009148,t,t,Enlarged epiphysis of the distal phalanx of the 5th finger,Small epiphysis of the distal phalanx of the 5th finger
+HP:0009396,HP:0009401,t,t,Enlarged epiphyses of the 4th finger,Small epiphyses of the 4th finger
+HP:0410342,HP:0410343,t,t,Increased circulating heparan sulfate level,Decreased circulating heparan sulfate level
+HP:0004330,HP:0004331,t,t,Increased skull ossification,Decreased skull ossification
+HP:0000289,HP:0011829,f,t,Broad philtrum,Narrow philtrum
+HP:0010271,HP:0010276,t,t,Enlarged epiphyses of the proximal phalanges of the hand,Small epiphyses of the proximal phalanges of the hand
+HP:0003141,HP:0010981,t,f,Increased LDL cholesterol concentration,Hypolipoproteinemia
+HP:0008001,HP:0012643,t,t,Foveal hyperpigmentation,Foveal hypopigmentation
+HP:0011967,HP:0032254,t,t,Decreased circulating copper concentration,Increased circulating copper concentration
+HP:0025624,HP:0025625,f,t,Reduced proportion of CD4+ effector memory T cells,Elevated proportion of CD4+ effector memory T cells
 HP:0040208,HP:0040209,t,f,Elevated CSF biopterin level,Decreased CSF biopterin level
-HP:0100080,HP:0100210,t,f,Enlarged epiphyses of the 5th toe,Small epiphysis of the distal phalanx of the 5th toe
+HP:0011246,HP:0011247,f,t,Underdeveloped superior crus of antihelix,Prominent superior crus of antihelix
+HP:0025346,HP:0025347,f,t,Increased circulating beta-2-microglobulin level,Decreased circulating beta-2-microglobulin level
+HP:0009496,HP:0009505,t,f,Small epiphyses of the 2nd finger,Enlarged epiphysis of the distal phalanx of the 2nd finger
+HP:0010236,HP:0010249,t,f,Small epiphyses of the phalanges of the hand,Enlarged epiphyses of the distal phalanges of the hand
+HP:0001252,HP:0001276,t,t,Hypotonia,Hypertonia
+HP:0001403,HP:0001414,f,t,Macrovesicular hepatic steatosis,Microvesicular hepatic steatosis
+HP:0500149,HP:0500150,t,t,Hyperglutamatemia,Hypoglutamatemia
+HP:0002714,HP:0010805,f,t,Downturned corners of mouth,Upturned corners of mouth
+HP:0008179,HP:0031155,f,t,Decreased Arden ratio of electrooculogram,Increased Arden ratio of electrooculogram
+HP:0004923,HP:0500141,t,t,Hyperphenylalaninemia,Hypophenylalaninemia
+HP:0009491,HP:0009496,t,t,Enlarged epiphyses of the 2nd finger,Small epiphyses of the 2nd finger
+HP:0025139,HP:0025140,f,t,Increased serum estrone,Decreased serum estrone
+HP:0002750,HP:0005616,t,f,Delayed skeletal maturation,Accelerated skeletal maturation
+HP:0003362,HP:0031243,t,t,Increased VLDL cholesterol concentration,Decreased VLDL cholesterol concentration
+HP:0009496,HP:0010231,t,f,Small epiphyses of the 2nd finger,Enlarged epiphyses of the phalanges of the hand
+HP:0001376,HP:0006094,t,f,Limitation of joint mobility,Finger joint hypermobility
+HP:0034171,HP:0034172,f,t,Reduced circulating interleukin 23 concentration,Increased circulating interleukin 23 concentration
+HP:0009491,HP:0009510,t,f,Enlarged epiphyses of the 2nd finger,Small epiphysis of the distal phalanx of the 2nd finger
+HP:0001034,HP:0009719,f,t,Hypermelanotic macule,Hypomelanotic macule
+HP:0002160,HP:0500152,t,f,Hyperhomocystinemia,Hypocystinemia
+HP:0000276,HP:0011219,t,t,Long face,Short face
+HP:0410357,HP:0410358,f,t,Increased high-mannose N-glycan level,Decreased high-mannose N-glycan level
+HP:0032368,HP:0032369,t,f,Acidemia,Alkalemia
+HP:0002945,HP:0030320,t,f,Intervertebral space narrowing,Increased intervertebral space
+HP:0000568,HP:0001090,t,f,Microphthalmia,Abnormally large globe
+HP:0001935,HP:0001972,f,t,Microcytic anemia,Macrocytic anemia
+HP:0000347,HP:0040309,f,t,Micrognathia,Increased size of the mandible
+HP:0100172,HP:0100177,t,t,Enlarged epiphysis of the distal phalanx of the 4th toe,Small epiphysis of the distal phalanx of the 4th toe
+HP:0410197,HP:0410198,f,t,Increased erythrocyte UDP glucose-4-epimerase concentration,Decreased erythrocyte UDP glucose-4-epimerase concentration
+HP:0000668,HP:0011069,f,t,Hypodontia,Supernumerary tooth
+HP:0001265,HP:0001347,f,t,Hyporeflexia,Hyperreflexia
+HP:0003077,HP:0045014,t,t,Hyperlipidemia,Hypolipidemia
+HP:0400004,HP:0400005,t,t,Long ear,Short ear
+HP:0003077,HP:0012153,t,f,Hyperlipidemia,Hypotriglyceridemia
+HP:0007975,HP:0032013,f,t,Hypometric horizontal saccades,Hypermetric horizontal saccades
+HP:0020293,HP:0020294,f,t,Decreased lymph-node cellular CD19 expression,Increased lymph-node cellular CD19 expression
+HP:0009258,HP:0009396,t,f,Small epiphysis of the distal phalanx of the 4th finger,Enlarged epiphyses of the 4th finger
+HP:6000126,HP:6000523,f,t,Decreased urinary bile acid level,Increased urinary bile acid level
+HP:0010569,HP:0034935,t,f,Elevated circulating 7-dehydrocholesterol concentration,Decreased circulating 7-dehydrocholesterol concentration
+HP:0000303,HP:0000347,f,t,Mandibular prognathia,Micrognathia
+HP:0410389,HP:0410396,f,t,"Decreased proportion of central memory CD8-positive, alpha-beta T cells","Increased proportion of central memory CD8-positive, alpha-beta T cells"
+HP:0010170,HP:0100058,t,f,Small epiphyses of the toes,Enlarged epiphyses of the 3rd toe
+HP:0000921,HP:0005815,t,f,Missing ribs,Supernumerary ribs
+HP:0001376,HP:0001382,t,t,Limitation of joint mobility,Joint hypermobility
+HP:0001945,HP:0002045,f,t,Fever,Hypothermia
+HP:0020141,HP:0020142,f,t,Blood pressure substantially higher in legs than arms,Blood pressure substantially higher in arms than legs
+HP:0010545,HP:0011477,f,t,Downbeat nystagmus,Upbeat nystagmus
+HP:0004488,HP:0011451,f,t,Macrocephaly at birth,Primary microcephaly
+HP:0025648,HP:0025649,f,t,Steroid-sensitive nephrotic syndrome with infrequent relapses,Steroid-sensitive nephrotic syndrome with frequent relapses
+HP:0010702,HP:0500142,t,f,Increased circulating antibody concentration,Hypolysinemia
+HP:0012339,HP:0012340,f,t,Increased resting energy expenditure,Decreased resting energy expenditure
+HP:0100058,HP:0100063,t,t,Enlarged epiphyses of the 3rd toe,Small epiphyses of the 3rd toe
+HP:0000098,HP:0004322,t,t,Tall stature,Short stature
+HP:0009338,HP:0010254,t,f,Enlarged epiphysis of the distal phalanx of the 3rd finger,Small epiphyses of the distal phalanges of the hand
+HP:0003125,HP:0030977,f,t,Reduced factor VIII activity,Increased factor VIII activity
+HP:0004879,HP:0004881,f,t,Intermittent hyperventilation,Episodic hypoventilation
+HP:0000188,HP:0011341,t,t,Short upper lip,Long upper lip
+HP:0025330,HP:0025331,f,t,Downgaze palsy,Upgaze palsy
+HP:0032994,HP:0032995,f,t,Supernumerary pulmonary fissure,Decreased pulmonary fissure count
+HP:0011775,HP:0011776,f,t,Thyroid macrofollicular adenoma,Thyroid microfollicular adenoma
+HP:0001882,HP:0001974,t,t,Leukopenia,Leukocytosis
+HP:0011580,HP:0025522,t,f,Short chordae tendineae of the mitral valve,Elongated chordae tendinae of the mitral valve
+HP:0100205,HP:0100210,t,t,Enlarged epiphysis of the distal phalanx of the 5th toe,Small epiphysis of the distal phalanx of the 5th toe
+HP:0003348,HP:0500154,t,t,Hyperalaninemia,Hypoalaninemia
+HP:0000860,HP:0008208,t,t,Parathyroid hypoplasia,Parathyroid hyperplasia
+HP:0009527,HP:0010236,t,f,Enlarged epiphysis of the proximal phalanx of the 2nd finger,Small epiphyses of the phalanges of the hand
+HP:0000470,HP:0000472,t,t,Short neck,Long neck
+HP:0006127,HP:0010241,t,t,Long proximal phalanx of finger,Short proximal phalanx of finger
+HP:0031413,HP:6000036,f,t,Short telomere length,Long telomere length
+HP:0010639,HP:0010684,t,f,Elevated alkaline phosphatase of bone origin,Low alkaline phosphatase of bone origin
+HP:0410212,HP:0410213,t,t,Hyperoxemia in cord blood,Hypoxemia in cord blood
+HP:0033755,HP:0033756,f,t,Increased left ventricular end-diastolic volume,Decreased left ventricular end-diastolic volume
+HP:0000571,HP:0007338,f,t,Hypometric saccades,Hypermetric saccades
+HP:0034901,HP:0100513,f,t,Increased circulating vitamin E concentration,Decreased circulating vitamin E concentration
+HP:0040204,HP:0040205,t,f,Elevated CSF neopterin level,Decreased CSF neopterin level
+HP:0000233,HP:0012471,f,t,Thin vermilion border,Thick vermilion border
+HP:0030269,HP:0030353,f,t,Increased circulating insulin-like growth factor 1 concentration,Decreased serum insulin-like growth factor 1
+HP:0100103,HP:0100108,t,t,Enlarged epiphysis of the distal phalanx of the 2nd toe,Small epiphysis of the distal phalanx of the 2nd toe
+HP:0007894,HP:0011512,t,t,Hypopigmentation of the fundus,Hyperpigmentation of the fundus
 HP:0100080,HP:0100232,t,f,Enlarged epiphyses of the 5th toe,Small epiphysis of the proximal phalanx of the 5th toe
+HP:0009401,HP:0010231,t,f,Small epiphyses of the 4th finger,Enlarged epiphyses of the phalanges of the hand
+HP:0001321,HP:0012081,f,t,Cerebellar hypoplasia,Enlarged cerebellum
+HP:0003118,HP:0008163,t,t,Increased circulating cortisol level,Decreased circulating cortisol level
+HP:0005518,HP:0025066,f,t,Increased mean corpuscular volume,Decreased mean corpuscular volume
+HP:0009222,HP:0010231,t,f,Small epiphysis of the middle phalanx of the 4th finger,Enlarged epiphyses of the phalanges of the hand
+HP:0001558,HP:0010519,f,t,Decreased fetal movement,Increased fetal movement
+HP:0012250,HP:0012251,f,t,ST segment depression,ST segment elevation
+HP:0034740,HP:0500210,f,t,Reduced CSF methionine concentration,Increased CSF methionine concentration
+HP:0010580,HP:0010585,t,t,Enlarged epiphyses,Small epiphyses
+HP:0005170,HP:0005178,f,t,Complete heart block with broad QRS complexes,Complete heart block with narrow QRS complexes
+HP:0034791,HP:0034792,f,t,Increased muscle succinate dehydrogenase staining,Decreased muscle succinate dehydrogenase staining
+HP:0003538,HP:0034203,t,t,Increased iduronate sulfatase level,Decreased iduronate sulfatase level
+HP:0009148,HP:0010249,t,f,Small epiphysis of the distal phalanx of the 5th finger,Enlarged epiphyses of the distal phalanges of the hand
+HP:0031873,HP:0031874,f,t,Early chronotype,Late chronotype
+HP:0034712,HP:4000191,f,t,Decreased circulating alpha-mannosidase activity,Increased circulating alpha-mannosidase activity
+HP:0002866,HP:0008818,f,t,Hypoplastic iliac wing,Large iliac wing
+HP:0001176,HP:0200055,t,t,Large hands,Small hand
+HP:0025459,HP:0030978,f,t,Increased CSF/serum albumin ratio,Decreased CSF/serum albumin ratio
+HP:0410314,HP:0410315,t,t,Decreased urinary 1-methylhistidine,Increased urinary 1-methylhistidine
+HP:0100069,HP:0100177,t,f,Enlarged epiphyses of the 4th toe,Small epiphysis of the distal phalanx of the 4th toe
+HP:0002946,HP:0030305,t,f,Supernumerary vertebrae,Decreased number of vertebrae
+HP:0009672,HP:0009689,t,f,Small epiphysis of the proximal phalanx of the thumb,Enlarged thumb epiphysis
+HP:0500200,HP:0500201,t,t,Increased CSF glutamate concentration,Decreased CSF glutamate concentration
+HP:0001849,HP:0010328,t,f,Foot oligodactyly,Polydactyly affecting the 2nd toe
+HP:0009338,HP:0009418,t,f,Enlarged epiphysis of the distal phalanx of the 3rd finger,Small epiphyses of the 3rd finger
+HP:0000336,HP:0009891,f,t,Prominent supraorbital ridges,Underdeveloped supraorbital ridges
+HP:0009510,HP:0010249,t,f,Small epiphysis of the distal phalanx of the 2nd finger,Enlarged epiphyses of the distal phalanges of the hand
+HP:0040030,HP:0040031,t,t,Chorioretinal hypopigmentation,Chorioretinal hyperpigmentation
+HP:0003194,HP:0033142,t,t,Short nasal bridge,Long nasal bridge
+HP:0002562,HP:6000229,f,t,Low-set nipples,High-set nipples
+HP:0003124,HP:0045014,t,f,Hypercholesterolemia,Hypolipidemia
+HP:0000963,HP:0001072,t,t,Thin skin,Thickened skin
+HP:0010306,HP:0100818,f,t,Short thorax,Long thorax
+HP:0010236,HP:0010260,t,f,Small epiphyses of the phalanges of the hand,Enlarged epiphyses of the middle phalanges of the hand
+HP:0010980,HP:0045014,t,f,Hyperlipoproteinemia,Hypolipidemia
+HP:0008214,HP:0025134,t,t,Decreased serum estradiol,Increased serum estradiol
+HP:0033985,HP:0100864,f,t,Elongated femoral neck,Short femoral neck
+HP:0025587,HP:0025588,f,t,Hyperdeviation,Hypodeviation
+HP:0031418,HP:0045082,f,t,Increased body mass index,Decreased body mass index
+HP:0000248,HP:0000268,t,t,Brachycephaly,Dolichocephaly
+HP:0002673,HP:0002812,t,f,Coxa valga,Coxa vara
+HP:0001498,HP:0004237,f,t,Carpal bone hypoplasia,Large carpal bones
+HP:0012279,HP:0500138,t,t,Hyposerinemia,Hyperserinemia
+HP:0025684,HP:0025685,f,t,Decreased amyloid beta 42 peptide CSF concentration,Increased amyloid beta 42 peptide CSF concentration
+HP:0010121,HP:0010165,t,f,Small epiphyses of the hallux,Enlarged epiphyses of the toes
+HP:0410360,HP:0410361,f,t,Increased core 1 O-glycan level,Decreased core 1 O-glycan level
+HP:0012213,HP:0012214,f,t,Decreased glomerular filtration rate,Increased glomerular filtration rate
+HP:0002901,HP:0003072,t,t,Hypocalcemia,Hypercalcemia
+HP:0002690,HP:0010538,t,t,Large sella turcica,Small sella turcica
+HP:0002395,HP:0002600,t,t,Lower limb hyperreflexia,Hyporeflexia of lower limbs
+HP:0003155,HP:0003282,f,t,Elevated circulating alkaline phosphatase concentration,Decreased circulating alkaline phosphatase activity
+HP:0002150,HP:0003127,t,t,Hypercalciuria,Hypocalciuria
+HP:0033911,HP:0033912,f,t,Cortical radial artery medial hypertrophy,Cortical radial artery medial atrophy
+HP:0500270,HP:0500271,f,t,Increased proportion of gamma-delta T cells,Decreased proportion of gamma-delta T cells
+HP:0000581,HP:0000637,f,t,Blepharophimosis,Long palpebral fissure
+HP:0008165,HP:0500264,f,t,Decreased helper T cell proportion,Increased helper T cell proportion
+HP:0012350,HP:0012351,f,t,Decreased sialylation of N-linked protein glycosylation,Increased sialylation of N-linked protein glycosylation
+HP:0003141,HP:0045014,t,f,Increased LDL cholesterol concentration,Hypolipidemia
+HP:0009667,HP:0009672,t,t,Enlarged epiphysis of the proximal phalanx of the thumb,Small epiphysis of the proximal phalanx of the thumb
+HP:0001988,HP:0003074,t,f,Recurrent hypoglycemia,Hyperglycemia
+HP:0008358,HP:0500139,t,t,Hyperprolinemia,Hypoprolinemia
+HP:0011105,HP:0011106,f,t,Hypervolemia,Hypovolemia
+HP:0009349,HP:0009418,t,f,Enlarged epiphysis of the proximal phalanx of the 3rd finger,Small epiphyses of the 3rd finger
+HP:0025708,HP:0025710,f,t,Early young adult onset,Late young adult onset
+HP:0002791,HP:0002883,f,t,Hypoventilation,Hyperventilation
+HP:0007048,HP:0012697,t,t,Large basal ganglia,Small basal ganglia
+HP:0030258,HP:0030259,f,t,Hyperpigmented genitalia,Hypopigmented genitalia
+HP:0009148,HP:0009385,t,f,Small epiphysis of the distal phalanx of the 5th finger,Enlarged epiphyses of the 5th finger
+HP:0003233,HP:0012184,t,t,Decreased HDL cholesterol concentration,Increased HDL cholesterol concentration
+HP:0000319,HP:0002002,f,t,Smooth philtrum,Deep philtrum
+HP:0010934,HP:0040426,t,f,Xanthinuria,Decreased urinary hypoxanthine level
+HP:0002720,HP:0003261,t,t,Decreased circulating IgA concentration,Increased circulating IgA concentration
+HP:0012132,HP:0012133,f,t,Erythroid hyperplasia,Erythroid hypoplasia
+HP:0003081,HP:0012364,t,t,Increased urinary potassium,Decreased urinary potassium
+HP:5200321,HP:5200327,f,t,Amplification of sexual behavior,Diminishment of sexual behavior
+HP:0001829,HP:0001849,t,f,Foot polydactyly,Foot oligodactyly
+HP:0002490,HP:0030086,t,t,Increased CSF lactate,Reduced CSF lactate
+HP:0040329,HP:0040332,f,t,Multifocal hyperintensity of cerebral white matter on MRI,Multifocal hypointensity of cerebral white matter on MRI
+HP:0010514,HP:0040075,t,t,Hyperpituitarism,Hypopituitarism
+HP:0003124,HP:0003563,t,f,Hypercholesterolemia,Decreased LDL cholesterol concentration
+HP:0005789,HP:0006462,t,f,Generalized osteosclerosis,Generalized bone demineralization
+HP:0011976,HP:0045012,t,f,Elevated urinary catecholamine level,Decreased urinary catecholamine concentration
+HP:0040330,HP:0040333,f,t,Confluent hyperintensity of cerebral white matter on MRI,Confluent hypointensity of cerebral white matter on MRI
+HP:0003646,HP:0045011,t,t,Bicarbonaturia,Decreased urine bicarbonate concentration
+HP:0004324,HP:0004325,t,t,Increased body weight,Decreased body weight
+HP:0100149,HP:0100154,t,t,Enlarged epiphysis of the middle phalanx of the 3rd toe,Small epiphysis of the middle phalanx of the 3rd toe
+HP:0500273,HP:0500274,f,t,Increased proportion of immature gamma-delta T cells,Decreased proportion of immature gamma-delta T cells
+HP:0031100,HP:6000520,f,t,Decreased circulating inhibin B concentration,Increased circulating inhibin B concentration
+HP:0034168,HP:0034169,f,t,Reduced circulating interleukin 22 concentration,Increased circulating interleukin 22 concentration
+HP:0000890,HP:0000894,t,t,Long clavicles,Short clavicles
+HP:0000778,HP:0010516,t,t,Hypoplasia of the thymus,Thymus hyperplasia
+HP:0002152,HP:0003075,t,t,Hyperproteinemia,Hypoproteinemia
+HP:0003090,HP:0003371,f,t,Hypoplasia of the capital femoral epiphysis,Enlargement of the proximal femoral epiphysis
+HP:0002160,HP:0020222,t,f,Hyperhomocystinemia,Hypohomocysteinemia
+HP:0000637,HP:0045025,f,t,Long palpebral fissure,Narrow palpebral fissure
+HP:0009678,HP:0009683,t,t,Enlarged epiphysis of the distal phalanx of the thumb,Small epiphysis of the distal phalanx of the thumb
+HP:0004349,HP:0005789,t,f,Reduced bone mineral density,Generalized osteosclerosis
+HP:0100063,HP:0100149,t,f,Small epiphyses of the 3rd toe,Enlarged epiphysis of the middle phalanx of the 3rd toe
+HP:0031208,HP:0032482,f,t,Increased pituitary glycoprotein hormone alpha subunit level,Decreased pituitary glycoprotein hormone alpha subunit level
+HP:0001513,HP:0004325,t,f,Obesity,Decreased body weight
+HP:0100227,HP:0100232,t,t,Enlarged epiphysis of the proximal phalanx of the 5th toe,Small epiphysis of the proximal phalanx of the 5th toe
+HP:0100770,HP:0100771,t,t,Hyperperistalsis,Hypoperistalsis
+HP:0009159,HP:0009385,t,f,Small epiphysis of the proximal phalanx of the 5th finger,Enlarged epiphyses of the 5th finger
+HP:0003281,HP:0012343,t,t,Increased circulating ferritin concentration,Decreased circulating ferritin concentration
+HP:0003141,HP:0003563,t,t,Increased LDL cholesterol concentration,Decreased LDL cholesterol concentration
+HP:0005528,HP:0031020,f,t,Bone marrow hypocellularity,Bone marrow hypercellularity
+HP:0002157,HP:0031969,t,f,Azotemia,Reduced blood urea nitrogen
+HP:0000293,HP:0009938,t,f,Full cheeks,Sunken cheeks
+HP:0003231,HP:0500133,t,t,Hypertyrosinemia,Hypotyrosinemia
+HP:0007149,HP:0040267,f,t,Distal upper limb amyotrophy,Distal upper limb muscle hypertrophy
+HP:0012416,HP:0012417,t,t,Hypercapnia,Hypocapnia
+HP:0032164,HP:0100507,t,t,Increased blood folate concentration,Reduced blood folate concentration
+HP:0033633,HP:0033634,f,t,Decreased alveolar volume,Increased alveolar volume
+HP:0034165,HP:0034166,f,t,Reduced circulating interleukin 21 concentration,Increased circulating interleukin 21 concentration
+HP:0003022,HP:0003988,f,t,Hypoplasia of the ulna,Long ulna
+HP:0012356,HP:0012357,f,t,Decreased mannosylation of N-linked protein glycosylation,Increased mannosylation of N-linked protein glycosylation
+HP:0032128,HP:0032129,f,t,Increased proportion of plasmablasts,Decreased proportion of plasmablasts
+HP:0410190,HP:0410191,f,t,Decreased glucose-6-phosphate dehydrogenase level in leukocytes,Increased glucose-6-phosphate dehydrogenase level in leukocytes
+HP:0009746,HP:0009936,f,t,Thick nasal septum,Narrow nasal septum
+HP:0011788,HP:0032210,t,t,Increased circulating free T3,Decreased circulating free T3
+HP:0030897,HP:0410204,f,t,Decreased intestinal transit time,Increased intestinal transit time
+HP:0410145,HP:0410146,f,t,Decreased circulating biotinidase concentration,Elevated circulating biotinidase concentration
+HP:0004905,HP:4000212,f,t,Reduced circulating vitamin A concentration,Increased circulating vitamin A concentration
+HP:0005323,HP:0011331,f,t,Hemifacial hypertrophy,Hemifacial atrophy
+HP:0009689,HP:0009694,t,t,Enlarged thumb epiphysis,Small thumb epiphysis
+HP:0010018,HP:0010023,t,t,Enlarged epiphysis of the 1st metacarpal,Small epiphysis of the 1st metacarpal
+HP:0001849,HP:0010334,t,f,Foot oligodactyly,Polydactyly affecting the 3rd toe
+HP:0034390,HP:0500230,f,t,Decreased CSF glycine concentration,Increased CSF glycine concentration
+HP:0000013,HP:0100878,f,t,Hypoplasia of the uterus,Enlarged uterus
+HP:0012505,HP:0012506,t,t,Enlarged pituitary gland,Small pituitary gland
+HP:0011858,HP:0033061,f,t,Reduced factor IX activity,Increased factor IX activity
+HP:0009413,HP:0009418,t,t,Enlarged epiphyses of the 3rd finger,Small epiphyses of the 3rd finger
+HP:0010650,HP:0430029,t,t,Hypoplasia of the premaxilla,Hyperplasia of the premaxilla
+HP:0000253,HP:0004481,t,t,Progressive microcephaly,Progressive macrocephaly
+HP:0011800,HP:0012371,f,t,Midface retrusion,Hyperplasia of midface
+HP:0025484,HP:6000244,f,t,Increased circulating thyroglobulin concentration,Decreased circulating thyroglobulin concentration
+HP:0001413,HP:0006577,f,t,Micronodular cirrhosis,Macronodular cirrhosis
+HP:0030387,HP:0030388,f,t,Increased proportion of class-switched memory B cells,Decreased proportion of class-switched memory B cells
+HP:0031819,HP:0031820,f,t,Increased waist to hip ratio,Decreased waist to hip ratio
+HP:0500223,HP:0500224,t,t,Increased CSF phenylalanine concentration,Decreased CSF phenylalanine concentration
+HP:0030371,HP:0030372,f,t,Increased proportion of naive B cells,Decreased proportion of naive B cells
+HP:0000594,HP:0007765,f,t,Shallow anterior chamber,Deep anterior chamber
+HP:0000089,HP:0000105,f,t,Renal hypoplasia,Enlarged kidney
+HP:0004528,HP:0004554,f,t,Generalized hypotrichosis,Generalized hypertrichosis
+HP:0025621,HP:0025622,f,t,obsolete Increased proportion of CD4+ central memory cells,obsolete Decreased proportion of CD4+ central memory cells
+HP:0033200,HP:0033204,f,t,Triceps hyporeflexia,Triceps hyperreflexia
+HP:0010810,HP:0010812,t,t,Long uvula,Short uvula
+HP:0009264,HP:0010276,t,f,Enlarged epiphysis of the proximal phalanx of the 4th finger,Small epiphyses of the proximal phalanges of the hand
+HP:0008232,HP:0030341,f,t,Elevated circulating follicle stimulating hormone level,Decreased circulating follicle stimulating hormone concentration
+HP:0002213,HP:0100874,f,t,Fine hair,Thick hair
+HP:0005484,HP:0005490,f,t,Secondary microcephaly,Postnatal macrocephaly
+HP:0009354,HP:0010231,t,f,Small epiphysis of the proximal phalanx of the 3rd finger,Enlarged epiphyses of the phalanges of the hand
+HP:0009496,HP:0009527,t,f,Small epiphyses of the 2nd finger,Enlarged epiphysis of the proximal phalanx of the 2nd finger
+HP:0001805,HP:0001816,t,t,Onychogryphosis,Thin nail
+HP:0010165,HP:0010585,t,f,Enlarged epiphyses of the toes,Small epiphyses
+HP:0025458,HP:0500239,t,t,Decreased CSF albumin concentration,Increased CSF albumin concentration
+HP:0001943,HP:0003074,t,t,Hypoglycemia,Hyperglycemia
+HP:0009521,HP:0010260,t,f,Small epiphysis of the middle phalanx of the 2nd finger,Enlarged epiphyses of the middle phalanges of the hand
+HP:0001513,HP:0004326,t,f,Obesity,Cachexia
+HP:0003038,HP:0003085,f,t,Fibular hypoplasia,Long fibula
+HP:0430073,HP:0430074,t,t,Decreased circulating beta-carotene concentration,Increased circulating beta-carotene concentration
+HP:0000272,HP:0010620,f,t,Malar flattening,Malar prominence
+HP:0012392,HP:0033683,f,t,Jaw hyporeflexia,Jaw hyperreflexia
+HP:0033306,HP:0033307,f,t,Decreased circulating fetuin A concentration,Increased circulating fetuin A concentration
+HP:0009222,HP:0009396,t,f,Small epiphysis of the middle phalanx of the 4th finger,Enlarged epiphyses of the 4th finger
+HP:0025547,HP:0025548,f,t,Decreased mean corpuscular hemoglobin concentration,Increased mean corpuscular hemoglobin concentration
+HP:0000044,HP:0000815,f,t,Hypogonadotropic hypogonadism,Hypergonadotropic hypogonadism
+HP:0001518,HP:0001520,f,t,Small for gestational age,Large for gestational age
+HP:0002161,HP:0500142,t,t,Hyperlysinemia,Hypolysinemia
+HP:0000835,HP:0008221,f,t,Adrenal hypoplasia,Adrenal hyperplasia
+HP:0000385,HP:0009748,f,t,Small earlobe,Large earlobe
+HP:0010231,HP:0010276,t,f,Enlarged epiphyses of the phalanges of the hand,Small epiphyses of the proximal phalanges of the hand
+HP:0012857,HP:0012858,f,t,Increased scrotal rugation,Decreased scrotal rugation
+HP:0010585,HP:0100058,t,f,Small epiphyses,Enlarged epiphyses of the 3rd toe
+HP:0009211,HP:0009385,t,f,Small epiphysis of the middle phalanx of the 5th finger,Enlarged epiphyses of the 5th finger
+HP:0009496,HP:0009516,t,f,Small epiphyses of the 2nd finger,Enlarged epiphysis of the middle phalanx of the 2nd finger
+HP:0033765,HP:0100613,f,t,Death in late adulthood,Death in early adulthood
+HP:0010121,HP:0010130,t,f,Small epiphyses of the hallux,Enlarged epiphysis of the proximal phalanx of the hallux
+HP:0010165,HP:0010170,t,t,Enlarged epiphyses of the toes,Small epiphyses of the toes
+HP:0033077,HP:0033078,f,t,Increased circulating free T4 concentration,Decreased circulating free T4 concentration
+HP:0000040,HP:0000054,f,t,Long penis,Micropenis
+HP:0034174,HP:0034175,f,t,Reduced circulating interleukin 27 concentration,Increased circulating interleukin 27 concentration
+HP:0002148,HP:0002905,t,t,Hypophosphatemia,Hyperphosphatemia
+HP:0032218,HP:0032219,f,t,Decreased proportion of CD4-positive T cells,Increased proportion of CD4-positive T cells
+HP:0010906,HP:0500145,t,t,Hyperhistidinemia,Hypohistidinemia
+HP:0002154,HP:0012277,t,t,Hyperglycinemia,Hypoglycinemia
+HP:0000252,HP:0000256,f,t,Microcephaly,Macrocephaly
+HP:0002907,HP:0012587,f,t,Microscopic hematuria,Macroscopic hematuria
+HP:0003565,HP:0025022,f,t,Elevated erythrocyte sedimentation rate,Decreased erythrocyte sedimentation rate
+HP:0009338,HP:0010236,t,f,Enlarged epiphysis of the distal phalanx of the 3rd finger,Small epiphyses of the phalanges of the hand
+HP:0100138,HP:0100143,t,t,Enlarged epiphysis of the distal phalanx of the 3rd toe,Small epiphysis of the distal phalanx of the 3rd toe
+HP:0020199,HP:0020200,f,t,Decreased circulating 18-hydroxycortisone level,Increased circulating 18-hydroxycortisone level
+HP:0025585,HP:0031725,f,t,Hyperphoria,Hypophoria
+HP:0040328,HP:0040331,f,t,Focal hyperintensity of cerebral white matter on MRI,Focal hypointensity of cerebral white matter on MRI
+HP:0032428,HP:0032429,f,t,Increased HDL3a concentration,Decreased HDL3a concentration
+HP:0004349,HP:0011002,t,f,Reduced bone mineral density,Osteopetrosis
+HP:0012026,HP:0500163,t,t,Hyperornithinemia,Hypoornithinemia
+HP:0011899,HP:0011900,f,t,Hyperfibrinogenemia,Hypofibrinogenemia
+HP:0003452,HP:0040303,t,t,Increased circulating iron concentration,Decreased circulating iron concentration
+HP:0001561,HP:0001562,f,t,Polyhydramnios,Oligohydramnios
+HP:0030374,HP:0030375,f,t,Decreased proportion of memory B cells,Increased proportion of memory B cells
+HP:0010116,HP:0010135,t,f,Enlarged epiphyses of the hallux,Small epiphysis of the proximal phalanx of the hallux
+HP:0000418,HP:0012811,f,t,Narrow nasal ridge,Wide nasal ridge
+HP:0410053,HP:0410054,t,t,Elevated circulating gamma-aminobutyric acid concentration,Decreased circulating GABA concentration
+HP:0500076,HP:0500078,f,t,Alternating hypertropia,Alternating hypotropia
+HP:0000445,HP:0000460,t,t,Wide nose,Narrow nose
+HP:0006184,HP:0006191,f,t,Decreased palmar creases,Deep palmar crease
+HP:0009683,HP:0009689,t,f,Small epiphysis of the distal phalanx of the thumb,Enlarged thumb epiphysis
+HP:0100114,HP:0100119,t,t,Enlarged epiphysis of the middle phalanx of the 2nd toe,Small epiphysis of the middle phalanx of the 2nd toe
+HP:0003234,HP:0035030,t,f,Decreased circulating carnitine concentration,Elevated circulating carnitine concentration
+HP:0009516,HP:0010265,t,f,Enlarged epiphysis of the middle phalanx of the 2nd finger,Small epiphyses of the middle phalanges of the hand
+HP:0009882,HP:0012299,t,t,Short distal phalanx of finger,Long distal phalanx of finger
+HP:0040253,HP:0040254,t,t,Increased size of the clitoris,Decreased size of the clitoris
+HP:0032137,HP:0032297,f,t,Decreased circulating IgG3 concentration,Increased circulating IgG3 level
+HP:0009206,HP:0009390,t,f,Enlarged epiphysis of the middle phalanx of the 5th finger,Small epiphyses of the 5th finger
+HP:0006462,HP:0011001,t,f,Generalized bone demineralization,Increased bone mineral density
+HP:0000350,HP:0002003,t,t,Small forehead,Large forehead
+HP:0010585,HP:0100047,t,f,Small epiphyses,Enlarged epiphyses of the 2nd toe
+HP:0006429,HP:0008819,t,t,Broad femoral neck,Narrow femoral neck
+HP:0001722,HP:0009805,f,t,High-output congestive heart failure,Low-output congestive heart failure
+HP:0005445,HP:0040010,f,t,Enlarged posterior fossa,Small posterior fossa
+HP:0025521,HP:0041079,f,t,Increased body fat percentage,Decreased body fat percentage
+HP:0000837,HP:0030339,t,t,Increased circulating gonadotropin level,Decreased circulating gonadotropin concentration
+HP:0009505,HP:0010254,t,f,Enlarged epiphysis of the distal phalanx of the 2nd finger,Small epiphyses of the distal phalanges of the hand
+HP:0005990,HP:0008249,t,t,Thyroid hypoplasia,Thyroid hyperplasia
+HP:0002153,HP:0002900,t,t,Hyperkalemia,Hypokalemia
+HP:0011969,HP:0030344,t,t,Elevated circulating luteinizing hormone level,Decreased circulating luteinizing hormone level
+HP:0011424,HP:0031831,t,t,Increased serum zinc,Decreased serum zinc
+HP:0034184,HP:0045046,f,t,Increased insulin like growth factor binding protein acid labile subunit concentration,Reduced insulin like growth factor binding protein acid labile subunit concentration
+HP:0001849,HP:0010340,t,f,Foot oligodactyly,Polydactyly affecting the 4th toe
+HP:0025517,HP:0100961,f,t,Hypoplastic hippocampus,Enlarged hippocampus
+HP:0100047,HP:0100130,t,f,Enlarged epiphyses of the 2nd toe,Small epiphysis of the proximal phalanx of the 2nd toe
 HP:0100085,HP:0100205,t,f,Small epiphyses of the 5th toe,Enlarged epiphysis of the distal phalanx of the 5th toe
-HP:0100085,HP:0100227,t,f,Small epiphyses of the 5th toe,Enlarged epiphysis of the proximal phalanx of the 5th toe
-HP:0100177,HP:0100216,t,f,Small epiphysis of the distal phalanx of the 4th toe,Enlarged epiphysis of the middle phalanx of the 5th toe
-HP:0410213,HP:0410214,t,f,Hypoxemia in cord blood,Hypercapnia in cord blood
-HP:0500139,HP:6000268,t,f,Hypoprolinemia,Elevated circulating pipecolic acid concentration
-HP:0500157,HP:0500159,t,f,Hypoasparaginemia,Increased circulating aspartic acid concentration
-HP:0500204,HP:0500244,t,f,Decreased CSF arginine concentration,Increased CSF ornithine concentration
-HP:0500204,HP:0500246,t,f,Decreased CSF arginine concentration,Increased CSF citrulline concentration
-HP:0500221,HP:0500223,t,f,Decreased CSF tyrosine concentration,Increased CSF phenylalanine concentration
+HP:0009253,HP:0010254,t,f,Enlarged epiphysis of the distal phalanx of the 4th finger,Small epiphyses of the distal phalanges of the hand
+HP:0011382,HP:0011383,f,t,Hypoplasia of the semicircular canal,Enlarged semicircular canal
+HP:0000053,HP:0008734,t,t,Macroorchidism,Decreased testicular size
+HP:0030685,HP:0030686,f,t,Decreased adiponectin level,Increased adiponectin level
+HP:0009510,HP:0010231,t,f,Small epiphysis of the distal phalanx of the 2nd finger,Enlarged epiphyses of the phalanges of the hand
+HP:0001888,HP:0100827,t,f,Lymphopenia,Lymphocytosis
+HP:0003235,HP:0003658,t,t,Hypermethioninemia,Hypomethioninemia
+HP:0009381,HP:0100807,t,f,Short finger,Long fingers
+HP:0007083,HP:0011808,t,f,Hyperactive patellar reflex,Decreased patellar reflex
+HP:0030380,HP:0030381,f,t,Decreased proportion of transitional B cells,Increased proportion of transitional B cells
+HP:0100183,HP:0100188,t,t,Enlarged epiphysis of the middle phalanx of the 4th toe,Small epiphysis of the middle phalanx of the 4th toe
+HP:0011238,HP:0011239,f,t,Prominent inferior crus of antihelix,Underdeveloped inferior crus of antihelix
+HP:0012604,HP:0012605,t,t,Hyponatriuria,Hypernatriuria
+HP:0007103,HP:0030890,f,t,Hypointensity of cerebral white matter on MRI,Hyperintensity of cerebral white matter on MRI
+HP:0007840,HP:0040054,t,t,Long upper eyelashes,Short upper eyelashes
+HP:0032183,HP:0032184,f,t,Decreased proportion of memory T cells,Increased proportion of memory T cells
+HP:0030618,HP:0030619,f,t,Increased OCT-measured foveal thickness,Reduced OCT-measured foveal thickness
+HP:0033373,HP:0033374,f,t,Increased KCO,Decreased KCO
+HP:0030851,HP:0030852,f,t,Low pulse pressure,High pulse pressure
+HP:0009338,HP:0009343,t,t,Enlarged epiphysis of the distal phalanx of the 3rd finger,Small epiphysis of the distal phalanx of the 3rd finger
+HP:0012809,HP:0012810,f,t,Narrow nasal base,Wide nasal base
+HP:0410178,HP:0410179,t,t,Increased glucose-6-phosphate dehydrogenase level in blood,Decreased glucose-6-phosphate dehydrogenase level in blood
+HP:0009667,HP:0009694,t,f,Enlarged epiphysis of the proximal phalanx of the thumb,Small thumb epiphysis
+HP:0012655,HP:0012656,t,f,Elevated CSF dopamine concentration,Reduced CSF dopamine concentration
+HP:0009264,HP:0009269,t,t,Enlarged epiphysis of the proximal phalanx of the 4th finger,Small epiphysis of the proximal phalanx of the 4th finger
+HP:0003700,HP:0003720,f,t,Generalized amyotrophy,Generalized muscle hypertrophy
+HP:0008401,HP:0012746,t,f,Onychogryphosis of toenails,Thin toenail
+HP:0010638,HP:0010686,t,f,Elevated alkaline phosphatase of hepatic origin,Low alkaline phosphatase of hepatic origin
+HP:5201007,HP:5201008,f,t,Incomplete cleft maxillary alveolar ridge,Complete cleft maxillary alveolar ridge
+HP:0004279,HP:0011302,t,t,Short palm,Long palm
+HP:0001899,HP:0031851,f,t,Increased hematocrit,Reduced hematocrit
+HP:0025250,HP:0025251,f,t,Closed comedo,Open comedo
+HP:0001196,HP:0011417,t,t,Short umbilical cord,Long umbilical cord
+HP:0009211,HP:0010231,t,f,Small epiphysis of the middle phalanx of the 5th finger,Enlarged epiphyses of the phalanges of the hand
+HP:0009491,HP:0009521,t,f,Enlarged epiphyses of the 2nd finger,Small epiphysis of the middle phalanx of the 2nd finger
+HP:4000050,HP:4000051,f,t,Open fracture,Closed fracture
+HP:0003829,HP:0034950,f,t,Typified by incomplete penetrance,Typified by complete penetrance
+HP:0012608,HP:0012609,t,t,Hypermagnesiuria,Hypomagnesiuria
+HP:0000848,HP:0012279,t,f,Increased circulating renin concentration,Hyposerinemia
+HP:0025435,HP:0045041,f,t,Increased circulating lactate dehydrogenase concentration,Reduced circulating lactate dehydrogenase concentration
+HP:0410354,HP:0410355,f,t,Increased sialylated N-glycan level,Decreased sialylated N-glycan level
+HP:0001769,HP:0001786,f,t,Broad foot,Narrow foot
+HP:0000103,HP:0011037,f,t,Polyuria,Decreased urine output
+HP:0006040,HP:0010038,t,f,Long second metacarpal,Short 2nd metacarpal
+HP:0000938,HP:0011001,t,f,Osteopenia,Increased bone mineral density
+HP:0009343,HP:0009413,t,f,Small epiphysis of the distal phalanx of the 3rd finger,Enlarged epiphyses of the 3rd finger
+HP:0009418,HP:0010260,t,f,Small epiphyses of the 3rd finger,Enlarged epiphyses of the middle phalanges of the hand
+HP:0000059,HP:0012882,t,t,Hypoplastic labia majora,Hyperplastic labia majora
+HP:0005537,HP:0011877,f,t,Decreased mean platelet volume,Increased mean platelet volume
+HP:0033448,HP:0033449,f,t,Increased mid-arm muscle circumference,Decreased mid-arm muscle circumference
+HP:0410288,HP:0410289,t,t,Hyperamylasemia,Hypoamylasemia
+HP:0003073,HP:0012117,t,t,Hypoalbuminemia,Hyperalbuminemia
+HP:0001757,HP:0008573,f,t,High-frequency sensorineural hearing impairment,Low-frequency sensorineural hearing impairment
+HP:0009158,HP:0009159,t,t,Enlarged epiphysis of the proximal phalanx of the 5th finger,Small epiphysis of the proximal phalanx of the 5th finger
+HP:0032138,HP:0032300,f,t,Decreased circulating IgG4 concentration,Increased circulating IgG4 level
+HP:0500220,HP:0500221,t,t,Increased CSF tyrosine concentration,Decreased CSF tyrosine concentration
+HP:0410385,HP:0410392,f,t,"Decreased proportion of CD8-positive, alpha-beta memory T cells","Increased proportion of CD8-positive, alpha-beta memory T cells"
+HP:0009194,HP:0010580,t,f,Small epiphyses of the metacarpals,Enlarged epiphyses
+HP:0010839,HP:0045035,t,t,Increased urinary copper concentration,Decreased urinary copper concentration
+HP:0008593,HP:0011251,f,t,Prominent antitragus,Underdeveloped antitragus
+HP:0009217,HP:0010265,t,f,Enlarged epiphysis of the middle phalanx of the 4th finger,Small epiphyses of the middle phalanges of the hand
+HP:0033748,HP:0100963,f,t,Hypoesthesia,Hyperesthesia
+HP:0040194,HP:0040195,f,t,Increased head circumference,Decreased head circumference
+HP:0034177,HP:0034178,f,t,Reduced circulating interleukin 17A concentration,Increased circulating interleukin 17A concentration
+HP:0003138,HP:0031969,t,t,Increased blood urea nitrogen,Reduced blood urea nitrogen
+HP:0000237,HP:0000260,f,t,Small anterior fontanelle,Wide anterior fontanel
+HP:0010130,HP:0010135,t,t,Enlarged epiphysis of the proximal phalanx of the hallux,Small epiphysis of the proximal phalanx of the hallux
+HP:0012402,HP:0012403,t,t,Increased urine alpha-ketoglutarate concentration,Decreased urine alpha-ketoglutarate concentration
+HP:0012405,HP:0012406,t,t,Hypocitraturia,Hypercitraturia
+HP:0000482,HP:0000485,t,t,Microcornea,Megalocornea
+HP:0012773,HP:0012774,f,t,Reduced upper to lower segment ratio,Increased upper to lower segment ratio
+HP:0020291,HP:0020292,f,t,Increased lymph-node cellular CD20 expression,Decreased lymph-node cellular CD20 expression
+HP:0100554,HP:0100558,f,t,Hemihypertrophy of upper limb,Hemiatrophy of upper limb
+HP:0000117,HP:0005571,f,t,Renal phosphate wasting,Increased renal tubular phosphate reabsorption
+HP:0000527,HP:0010764,t,t,Long eyelashes,Short eyelashes
+HP:0009158,HP:0010276,t,f,Enlarged epiphysis of the proximal phalanx of the 5th finger,Small epiphyses of the proximal phalanges of the hand
+HP:0011487,HP:0100689,t,t,Increased corneal thickness,Decreased corneal thickness
+HP:0003898,HP:0003900,t,t,Large humeral epiphyses,Small humeral epiphyses
+HP:0100074,HP:0100172,t,f,Small epiphyses of the 4th toe,Enlarged epiphysis of the distal phalanx of the 4th toe
+HP:0000842,HP:0040216,t,t,Hyperinsulinemia,Hypoinsulinemia
+HP:0008244,HP:0008258,f,t,Congenital adrenal hypoplasia,Congenital adrenal hyperplasia
+HP:0025584,HP:0025586,f,t,Hypotropia,Hypertropia
+HP:0003077,HP:0003146,t,f,Hyperlipidemia,Hypocholesterolemia
+HP:0031214,HP:0034908,f,t,Decreased circulating dehydroepiandrosterone concentration,Increased circulating dehydroepiandrosterone concentration
+HP:0032305,HP:0032306,f,t,Decreased circulating mannose-binding protein concentration,Increased circulating mannose-binding protein concentration
+HP:0012052,HP:0031415,t,t,Low serum calcitriol,High serum calcitriol
+HP:0012053,HP:0031414,t,t,Decreased circulating calcifediol concentration,High serum calcifediol
+HP:0001611,HP:0100271,f,t,Hypernasal speech,Hyponasal speech
+HP:0001276,HP:0001290,t,f,Hypertonia,Generalized hypotonia
+HP:0009354,HP:0010271,t,f,Small epiphysis of the proximal phalanx of the 3rd finger,Enlarged epiphyses of the proximal phalanges of the hand
+HP:0031861,HP:0031862,f,t,Decreased heart rate variability,Increased heart rate variability
+HP:0009491,HP:0009532,t,f,Enlarged epiphyses of the 2nd finger,Small epiphysis of the proximal phalanx of the 2nd finger
+HP:0000455,HP:0011832,f,t,Broad nasal tip,Narrow nasal tip
+HP:0000822,HP:0002615,t,t,Hypertension,Hypotension
+HP:0032362,HP:0032363,t,t,Increased circulating corticosterone level,Decreased circulating corticosterone level
+HP:0002684,HP:0010539,t,t,Thickened calvaria,Thin calvarium
+HP:0000977,HP:0030053,t,f,Soft skin,Stiff skin
+HP:0002850,HP:0003496,t,t,Decreased circulating total IgM,Increased circulating IgM level
+HP:0031594,HP:0031597,f,t,PR segment depression,PR segment elevation
+HP:0100052,HP:0100125,t,f,Small epiphyses of the 2nd toe,Enlarged epiphysis of the proximal phalanx of the 2nd toe
+HP:0000287,HP:0009019,f,t,Increased facial adipose tissue,Progressive loss of facial adipose tissue
+HP:0001276,HP:0006829,t,f,Hypertonia,Severe muscular hypotonia
+HP:0000239,HP:0005486,t,t,Large fontanelles,Small fontanelle
+HP:0000158,HP:0012473,f,t,Macroglossia,Tongue atrophy
+HP:0033202,HP:0033203,f,t,Brachioradialis hyporeflexia,Brachioradialis hyperreflexia
+HP:0031506,HP:0031507,f,t,Increased circulating T4 concentration,Decreased circulating T4 concentration
+HP:0008233,HP:0031216,t,t,Decreased circulating progesterone,Increased circulating progesterone
+HP:5200322,HP:5200328,f,t,Amplification of emotional expression,Diminishment of emotional expression
+HP:0001824,HP:0004324,t,f,Weight loss,Increased body weight
+HP:0000331,HP:0400000,t,t,Short chin,Tall chin
+HP:0009527,HP:0010276,t,f,Enlarged epiphysis of the proximal phalanx of the 2nd finger,Small epiphyses of the proximal phalanges of the hand
+HP:0500227,HP:0500228,t,t,Increased CSF serine concentration,Decreased CSF serine concentration
+HP:0031229,HP:0031230,f,t,Increased incisura length,Decreased incisura length
+HP:0009324,HP:0009418,t,f,Enlarged epiphysis of the middle phalanx of the 3rd finger,Small epiphyses of the 3rd finger
+HP:0009349,HP:0009354,t,t,Enlarged epiphysis of the proximal phalanx of the 3rd finger,Small epiphysis of the proximal phalanx of the 3rd finger
+HP:0011433,HP:0011434,f,t,High maternal circulating chorionic gonadotropin concentration,Low maternal circulating chorionic gonadotropin concentration
+HP:0012202,HP:0030985,t,t,Increased serum bile acid concentration,Decreased serum bile acid concentration
+HP:0007074,HP:0033725,f,t,Thick corpus callosum,Thin corpus callosum
+HP:0100194,HP:0100199,t,t,Enlarged epiphysis of the proximal phalanx of the 4th toe,Small epiphysis of the proximal phalanx of the 4th toe
+HP:0410214,HP:0410215,t,t,Hypercapnia in cord blood,Hypocapnia in cord blood
+HP:0003077,HP:0010981,t,f,Hyperlipidemia,Hypolipoproteinemia
+HP:6000680,HP:6000681,f,t,Low serum osmolality,High serum osmolality
+HP:0012770,HP:0012771,f,t,Reduced arm span,Increased arm span
+HP:0011284,HP:0011285,f,t,Short-segment aganglionic megacolon,Long-segment aganglionic megacolon
+HP:5200315,HP:5200320,f,t,Amplification of relationship seeking,Diminishment of relationship seeking
+HP:0000633,HP:0009926,f,t,Decreased lacrimation,Epiphora
+HP:0003354,HP:0500136,t,t,Hyperthreoninemia,Hypothreoninemia
+HP:0410386,HP:0410391,f,t,"Decreased proportion of CD4-positive, alpha-beta memory T cells","Increased proportion of CD4-positive, alpha-beta memory T cells"
+HP:0000444,HP:0011120,f,t,Convex nasal ridge,Concave nasal ridge
+HP:0031843,HP:0033844,f,t,Abnormally slow thought process,Racing thoughts
+HP:0500190,HP:0500191,t,t,Decreased CSF leucine concentration,Increased CSF leucine concentration
+HP:0500193,HP:0500194,t,t,Increased CSF isoleucine concentration,Decreased CSF isoleucine concentration
+HP:0040013,HP:0040014,f,t,Decreased mitochondrial number,Increased mitochondrial number
+HP:0002922,HP:0025457,t,t,Increased CSF protein concentration,Decreased CSF protein concentration
+HP:0007988,HP:0011509,t,t,Macular hypopigmentation,Macular hyperpigmentation
+HP:0003217,HP:0500147,t,t,Hyperglutaminemia,Hypoglutaminemia
+HP:0001513,HP:0001824,t,f,Obesity,Weight loss
+HP:0002902,HP:0003228,t,t,Hyponatremia,Hypernatremia
+HP:0009329,HP:0009413,t,f,Small epiphysis of the middle phalanx of the 3rd finger,Enlarged epiphyses of the 3rd finger
+HP:0000574,HP:0045074,t,t,Thick eyebrow,Thin eyebrow
+HP:0020183,HP:0020184,f,t,Increased circulating A-type natriuretic peptide concentration,Decreased circulating A-type natriuretic peptide concentration
+HP:0000883,HP:0000900,t,f,Thin ribs,Thickened ribs
+HP:0012353,HP:0012354,f,t,Decreased fucosylation of N-linked protein glycosylation,Increased fucosylation of N-linked protein glycosylation
+HP:0002057,HP:0011222,f,t,Prominent glabella,Depressed glabella
+HP:0009206,HP:0010265,t,f,Enlarged epiphysis of the middle phalanx of the 5th finger,Small epiphyses of the middle phalanges of the hand
+HP:0000653,HP:0011231,f,t,Sparse eyelashes,Prominent eyelashes
+HP:0000821,HP:0000836,t,t,Hypothyroidism,Hyperthyroidism
+HP:0003212,HP:0005479,t,t,Increased circulating IgE concentration,Decreased circulating IgE concentration
+HP:0000938,HP:0005789,t,f,Osteopenia,Generalized osteosclerosis
+HP:0000494,HP:0000582,f,t,Downslanted palpebral fissures,Upslanted palpebral fissure
+HP:0500212,HP:0500213,t,t,Increased CSF threonine concentration,Decreased CSF threonine concentration
+HP:0012138,HP:0012139,f,t,Granulocytic hyperplasia,Granulocytic hypoplasia
+HP:0000215,HP:0000219,f,t,Thick upper lip vermilion,Thin upper lip vermilion
+HP:0008182,HP:6000152,f,t,Adrenocortical hypoplasia,Adrenocortical hyperplasia
+HP:0032489,HP:0032490,f,t,Elevated fecal pH,Decreased fecal pH
+HP:0012279,HP:0033356,t,f,Hyposerinemia,Elevated circulating o-phosphoserine concentration
+HP:0031937,HP:5200038,f,t,Tachylalia,Bradylalia
+HP:0012801,HP:0012802,t,t,Narrow jaw,Broad jaw
+HP:0009324,HP:0010265,t,f,Enlarged epiphysis of the middle phalanx of the 3rd finger,Small epiphyses of the middle phalanges of the hand
+HP:0003165,HP:0031817,f,t,Elevated circulating parathyroid hormone level,Decreased circulating parathyroid hormone level
+HP:0100069,HP:0100074,t,t,Enlarged epiphyses of the 4th toe,Small epiphyses of the 4th toe
+HP:0031085,HP:0033451,f,t,Decreased circulating prealbumin concentration,Increased circulating prealbumin concentration
+HP:0003109,HP:0012365,t,t,Hyperphosphaturia,Hypophosphaturia
+HP:0003189,HP:0003196,f,t,Long nose,Short nose
+HP:0002594,HP:0006277,t,t,Pancreatic hypoplasia,Pancreatic hyperplasia
+HP:0000060,HP:0008665,f,t,Clitoral hypoplasia,Clitoral hypertrophy
+HP:0012341,HP:0012342,f,t,Microprolactinoma,Macroprolactinoma
+HP:0012238,HP:0031242,t,t,Increased circulating chylomicron concentration,Decreased circulating chylomicron concentration
+HP:0010121,HP:0010580,t,f,Small epiphyses of the hallux,Enlarged epiphyses
+HP:0005585,HP:0005590,f,t,Spotty hyperpigmentation,Spotty hypopigmentation
+HP:0006266,HP:0006267,t,t,Small placenta,Large placenta
+HP:0032097,HP:0032098,t,t,Hypermanganesemia,Hypomanganesemia
+HP:0031102,HP:0031103,f,t,Increased circulating antimullerian hormone concentration,Decreased circulating antimullerian hormone circulation
+HP:0100553,HP:0200053,f,t,Hemihypertrophy of lower limb,Hemihypotrophy of lower limb
+HP:0009390,HP:0010231,t,f,Small epiphyses of the 5th finger,Enlarged epiphyses of the phalanges of the hand
+HP:0030348,HP:0030349,t,t,Increased circulating androgen concentration,Decreased circulating androgen concentration
+HP:0041077,HP:0041078,t,t,Increased immunoglobulin level in body fluid,Decreased immunoglobulin level in body fluid
+HP:0003785,HP:0034201,f,t,Decreased CSF homovanillic acid concentration,Increased CSF homovanillic acid concentration
+HP:0008151,HP:0032198,f,t,Prolonged prothrombin time,Decreased prothrombin time
+HP:0003217,HP:0500150,t,f,Hyperglutaminemia,Hypoglutamatemia
+HP:0010141,HP:0010146,t,t,Enlarged epiphysis of the distal phalanx of the hallux,Small epiphysis of the distal phalanx of the hallux
+HP:0012107,HP:0031107,f,t,Increased fibular diameter,Decreased fibular diameter
+HP:0012360,HP:0012361,f,t,Decreased fucosylation of O-linked protein glycosylation,Increased fucosylation of O-linked protein glycosylation
+HP:0033530,HP:0033531,f,t,Increased cardiac index,Decreased cardiac index
+HP:0011998,HP:0012051,f,t,Postprandial hyperglycemia,Reactive hypoglycemia
+HP:0500236,HP:0500237,t,t,Increased CSF histidine concentration,Decreased CSF histidine concentration
+HP:0009217,HP:0009401,t,f,Enlarged epiphysis of the middle phalanx of the 4th finger,Small epiphyses of the 4th finger
+HP:0000848,HP:0003351,t,t,Increased circulating renin concentration,Decreased circulating renin concentration
+HP:0033221,HP:0033222,f,t,Increased CD4:CD8 ratio,Decreased CD4:CD8 ratio
+HP:0000275,HP:0000283,t,t,Narrow face,Broad face
+HP:0001169,HP:0004283,t,t,Broad palm,Narrow palm
+HP:0002162,HP:0012891,f,t,Low posterior hairline,High posterior hairline
+HP:0010231,HP:0010254,t,f,Enlarged epiphyses of the phalanges of the hand,Small epiphyses of the distal phalanges of the hand
+HP:0500134,HP:0500135,t,t,Hypertryptophanemia,Hypotryptophanemia
+HP:0500197,HP:0500198,t,t,Increased CSF glutamine concentration,Decreased CSF glutamine concentration
+HP:0030384,HP:0030385,f,t,Decreased proportion of marginal zone B cells,Increased proportion of marginal zone B cells
+HP:0002920,HP:0003154,t,f,Decreased circulating ACTH concentration,Increased circulating ACTH level
+HP:0005961,HP:0500153,t,t,Hypoargininemia,Hyperargininemia
+HP:0025767,HP:0031467,f,t,Abnormal positive emotional state,Abnormal negative emotional state
+HP:0500233,HP:0500234,t,t,Increased CSF alanine concentration,Decreased CSF alanine concentration
+HP:0010570,HP:0011432,f,t,Low maternal circulating alpha-fetoprotein concentration,Elevated maternal circulating alpha-fetoprotein concentration
+HP:0007183,HP:0012752,f,t,Focal T2 hyperintense basal ganglia lesion,Focal T2 hypointense basal ganglia lesion
+HP:0040305,HP:0040306,f,t,Increased male libido,Decreased male libido
+HP:0000154,HP:0000160,t,t,Wide mouth,Narrow mouth
+HP:0010116,HP:0010146,t,f,Enlarged epiphyses of the hallux,Small epiphysis of the distal phalanx of the hallux
+HP:0001987,HP:0100493,t,t,Hyperammonemia,Hypoammonemia

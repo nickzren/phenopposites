@@ -146,6 +146,7 @@ def ask_llm(client, user_prompt: str, model_id: str, provider: str, retries: int
                 prompt = SYSTEM_PROMPT + "\n\n" + user_prompt
                 body = json.dumps({
                     "anthropic_version": "bedrock-2023-05-31",
+                    "max_tokens": 5,
                     "temperature": 0,
                     "top_p": 1,
                     "messages": [{"role": "user", "content": [{"type": "text", "text": prompt}]}],

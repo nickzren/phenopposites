@@ -3,11 +3,11 @@ HP:0000040,Long penis,HP:0000054,Micropenis,yes
 HP:0000044,Hypogonadotropic hypogonadism,HP:0000815,Hypergonadotropic hypogonadism,yes
 HP:0000053,Macroorchidism,HP:0008734,Decreased testicular size,yes
 HP:0000059,Hypoplastic labia majora,HP:0012882,Hyperplastic labia majora,yes
-HP:0000105,Enlarged kidney,HP:0000089,Renal hypoplasia,no
-HP:0000117,Renal phosphate wasting,HP:0005571,Increased renal tubular phosphate reabsorption,N/A
+HP:0000105,Enlarged kidney,HP:0000089,Renal hypoplasia,yes
+HP:0000117,Renal phosphate wasting,HP:0005571,Increased renal tubular phosphate reabsorption,yes
 HP:0000154,Wide mouth,HP:0000160,Narrow mouth,yes
-HP:0000158,Macroglossia,HP:0000171,Microglossia,yes
 HP:0000158,Macroglossia,HP:0012473,Tongue atrophy,yes
+HP:0000158,Macroglossia,HP:0000171,Microglossia,yes
 HP:0000176,Submucous cleft hard palate,HP:0011819,Submucous cleft soft palate,no
 HP:0000179,Thick lower lip vermilion,HP:0010282,Thin lower lip vermilion,yes
 HP:0000185,Cleft soft palate,HP:0410005,Cleft hard palate,no
@@ -17,7 +17,7 @@ HP:0000233,Thin vermilion border,HP:0012471,Thick vermilion border,yes
 HP:0000239,Large fontanelles,HP:0005486,Small fontanelle,yes
 HP:0000248,Brachycephaly,HP:0000268,Dolichocephaly,yes
 HP:0000252,Microcephaly,HP:0000256,Macrocephaly,yes
-HP:0000252,Microcephaly,HP:0040194,Increased head circumference,yes
+HP:0000252,Microcephaly,HP:0040194,Increased head circumference,no
 HP:0000253,Progressive microcephaly,HP:0004481,Progressive macrocephaly,yes
 HP:0000255,Acute sinusitis,HP:0011109,Chronic sinusitis,yes
 HP:0000260,Wide anterior fontanel,HP:0000237,Small anterior fontanelle,yes
@@ -31,14 +31,14 @@ HP:0000292,Loss of facial adipose tissue,HP:0000287,Increased facial adipose tis
 HP:0000294,Low anterior hairline,HP:0009890,High anterior hairline,yes
 HP:0000303,Mandibular prognathia,HP:0000347,Micrognathia,yes
 HP:0000316,Hypertelorism,HP:0000601,Hypotelorism,yes
-HP:0000319,Smooth philtrum,HP:0002002,Deep philtrum,no
+HP:0000319,Smooth philtrum,HP:0002002,Deep philtrum,yes
 HP:0000322,Short philtrum,HP:0000343,Long philtrum,yes
 HP:0000327,Hypoplasia of the maxilla,HP:0430028,Hyperplasia of the maxilla,yes
 HP:0000331,Short chin,HP:0400000,Tall chin,yes
 HP:0000336,Prominent supraorbital ridges,HP:0009891,Underdeveloped supraorbital ridges,yes
 HP:0000337,Broad forehead,HP:0000341,Narrow forehead,yes
 HP:0000350,Small forehead,HP:0002003,Large forehead,yes
-HP:0000371,Acute otitis media,HP:0000389,Chronic otitis media,yes
+HP:0000371,Acute otitis media,HP:0000389,Chronic otitis media,no
 HP:0000400,Macrotia,HP:0008551,Microtia,yes
 HP:0000418,Narrow nasal ridge,HP:0012811,Wide nasal ridge,yes
 HP:0000426,Prominent nasal bridge,HP:0005280,Depressed nasal bridge,yes
@@ -52,7 +52,7 @@ HP:0000494,Downslanted palpebral fissures,HP:0000582,Upslanted palpebral fissure
 HP:0000527,Long eyelashes,HP:0010764,Short eyelashes,yes
 HP:0000571,Hypometric saccades,HP:0007338,Hypermetric saccades,yes
 HP:0000574,Thick eyebrow,HP:0045074,Thin eyebrow,yes
-HP:0000581,Blepharophimosis,HP:0000637,Long palpebral fissure,no
+HP:0000581,Blepharophimosis,HP:0000637,Long palpebral fissure,yes
 HP:0000594,Shallow anterior chamber,HP:0007765,Deep anterior chamber,yes
 HP:0000599,Abnormality of the frontal hairline,HP:0030141,Abnormality of the posterior hairline,no
 HP:0000633,Decreased lacrimation,HP:0009926,Epiphora,yes
@@ -68,13 +68,13 @@ HP:0000822,Hypertension,HP:0002615,Hypotension,yes
 HP:0000829,Hypoparathyroidism,HP:0000843,Hyperparathyroidism,yes
 HP:0000835,Adrenal hypoplasia,HP:0008221,Adrenal hyperplasia,yes
 HP:0000842,Hyperinsulinemia,HP:0040216,Hypoinsulinemia,yes
-HP:0000860,Parathyroid hypoplasia,HP:0008208,Parathyroid hyperplasia,no
+HP:0000860,Parathyroid hypoplasia,HP:0008208,Parathyroid hyperplasia,yes
 HP:0000870,Increased circulating prolactin concentration,HP:0008202,Reduced circulating prolactin concentration,yes
 HP:0000890,Long clavicles,HP:0000894,Short clavicles,yes
 HP:0000953,Hyperpigmentation of the skin,HP:0001010,Hypopigmentation of the skin,yes
 HP:0000963,Thin skin,HP:0001072,Thickened skin,yes
 HP:0000966,Hypohidrosis,HP:0000975,Hyperhidrosis,yes
-HP:0000973,Cutis laxa,HP:0000974,Hyperextensible skin,no
+HP:0000973,Cutis laxa,HP:0000974,Hyperextensible skin,yes
 HP:0000998,Hypertrichosis,HP:0008070,Sparse hair,yes
 HP:0001034,Hypermelanotic macule,HP:0009719,Hypomelanotic macule,yes
 HP:0001169,Broad palm,HP:0004283,Narrow palm,yes
@@ -83,9 +83,9 @@ HP:0001196,Short umbilical cord,HP:0011417,Long umbilical cord,yes
 HP:0001238,Slender finger,HP:0001500,Broad finger,yes
 HP:0001252,Hypotonia,HP:0001276,Hypertonia,yes
 HP:0001265,Hyporeflexia,HP:0001347,Hyperreflexia,yes
-HP:0001315,Reduced tendon reflexes,HP:0001347,Hyperreflexia,no
+HP:0001315,Reduced tendon reflexes,HP:0001347,Hyperreflexia,yes
 HP:0001376,Limitation of joint mobility,HP:0001382,Joint hypermobility,yes
-HP:0001403,Macrovesicular hepatic steatosis,HP:0001414,Microvesicular hepatic steatosis,yes
+HP:0001403,Macrovesicular hepatic steatosis,HP:0001414,Microvesicular hepatic steatosis,no
 HP:0001413,Micronodular cirrhosis,HP:0006577,Macronodular cirrhosis,yes
 HP:0001476,Delayed closure of the anterior fontanelle,HP:0005458,Premature closure of fontanelles,yes
 HP:0001477,Compensatory chin elevation,HP:0031706,Compensatory chin depression,yes
@@ -94,26 +94,26 @@ HP:0001558,Decreased fetal movement,HP:0010519,Increased fetal movement,yes
 HP:0001561,Polyhydramnios,HP:0001562,Oligohydramnios,yes
 HP:0001611,Hypernasal speech,HP:0100271,Hyponasal speech,yes
 HP:0001620,Abnormally high-pitched voice,HP:0010300,Abnormally low-pitched voice,yes
-HP:0001640,Cardiomegaly,HP:0001961,Hypoplastic heart,no
+HP:0001640,Cardiomegaly,HP:0001961,Hypoplastic heart,yes
 HP:0001649,Tachycardia,HP:0001662,Bradycardia,yes
 HP:0001657,Prolonged QT interval,HP:0012232,Shortened QT interval,yes
-HP:0001674,Complete atrioventricular canal defect,HP:0011577,Partial atrioventricular canal defect,yes
+HP:0001674,Complete atrioventricular canal defect,HP:0011577,Partial atrioventricular canal defect,no
 HP:0001688,Sinus bradycardia,HP:0011703,Sinus tachycardia,yes
 HP:0001722,High-output congestive heart failure,HP:0009805,Low-output congestive heart failure,yes
-HP:0001735,Acute pancreatitis,HP:0006280,Chronic pancreatitis,yes
+HP:0001735,Acute pancreatitis,HP:0006280,Chronic pancreatitis,no
 HP:0001757,High-frequency sensorineural hearing impairment,HP:0008573,Low-frequency sensorineural hearing impairment,yes
 HP:0001769,Broad foot,HP:0001786,Narrow foot,yes
 HP:0001773,Short foot,HP:0001833,Long foot,yes
-HP:0001805,Onychogryphosis,HP:0001816,Thin nail,no
+HP:0001805,Onychogryphosis,HP:0001816,Thin nail,yes
 HP:0001821,Broad nail,HP:0011313,Narrow nail,yes
 HP:0001831,Short toe,HP:0010511,Long toe,yes
 HP:0001837,Broad toe,HP:0011308,Slender toe,yes
 HP:0001847,Long hallux,HP:0010109,Short hallux,yes
-HP:0001882,Leukopenia,HP:0001974,Leukocytosis,N/A
+HP:0001882,Leukopenia,HP:0001974,Leukocytosis,yes
 HP:0001899,Increased hematocrit,HP:0031851,Reduced hematocrit,yes
 HP:0001919,Acute kidney injury,HP:0003774,Stage 5 chronic kidney disease,no
 HP:0001935,Microcytic anemia,HP:0001972,Macrocytic anemia,yes
-HP:0001943,Hypoglycemia,HP:0003074,Hyperglycemia,no
+HP:0001943,Hypoglycemia,HP:0003074,Hyperglycemia,yes
 HP:0001945,Fever,HP:0002045,Hypothermia,yes
 HP:0001987,Hyperammonemia,HP:0100493,Hypoammonemia,yes
 HP:0002057,Prominent glabella,HP:0011222,Depressed glabella,yes
@@ -128,11 +128,11 @@ HP:0002161,Hyperlysinemia,HP:0500142,Hypolysinemia,yes
 HP:0002162,Low posterior hairline,HP:0012891,High posterior hairline,yes
 HP:0002213,Fine hair,HP:0100874,Thick hair,yes
 HP:0002250,Abnormal large intestine morphology,HP:0002244,Abnormal small intestine morphology,no
-HP:0002375,Hypokinesia,HP:0002487,Hyperkinetic movements,no
-HP:0002395,Lower limb hyperreflexia,HP:0002600,Hyporeflexia of lower limbs,no
-HP:0002488,Acute leukemia,HP:0005558,Chronic leukemia,yes
+HP:0002375,Hypokinesia,HP:0002487,Hyperkinetic movements,yes
+HP:0002395,Lower limb hyperreflexia,HP:0002600,Hyporeflexia of lower limbs,yes
+HP:0002488,Acute leukemia,HP:0005558,Chronic leukemia,no
 HP:0002490,Increased CSF lactate,HP:0030086,Reduced CSF lactate,yes
-HP:0002509,Limb hypertonia,HP:0012389,Appendicular hypotonia,N/A
+HP:0002509,Limb hypertonia,HP:0012389,Appendicular hypotonia,yes
 HP:0002516,Increased intracranial pressure,HP:0012641,Decreased intracranial pressure,yes
 HP:0002562,Low-set nipples,HP:6000229,High-set nipples,yes
 HP:0002594,Pancreatic hypoplasia,HP:0006277,Pancreatic hyperplasia,yes
@@ -140,7 +140,7 @@ HP:0002677,Small foramen magnum,HP:0002700,Large foramen magnum,yes
 HP:0002684,Thickened calvaria,HP:0010539,Thin calvarium,yes
 HP:0002690,Large sella turcica,HP:0010538,Small sella turcica,yes
 HP:0002714,Downturned corners of mouth,HP:0010805,Upturned corners of mouth,yes
-HP:0002716,Lymphadenopathy,HP:0002732,Lymph node hypoplasia,N/A
+HP:0002716,Lymphadenopathy,HP:0002732,Lymph node hypoplasia,yes
 HP:0002720,Decreased circulating IgA concentration,HP:0003261,Increased circulating IgA concentration,yes
 HP:0002731,Decreased lymphocyte apoptosis,HP:0030887,Increased lymphocyte apoptosis,yes
 HP:0002789,Tachypnea,HP:0046507,Bradypnea,yes
@@ -154,8 +154,8 @@ HP:0002914,Hyperchloriduria,HP:0012601,Hypochloriduria,yes
 HP:0002917,Hypomagnesemia,HP:0002918,Hypermagnesemia,yes
 HP:0002922,Increased CSF protein concentration,HP:0025457,Decreased CSF protein concentration,yes
 HP:0002938,Lumbar hyperlordosis,HP:0034770,Lumbar hypolordosis,yes
-HP:0003022,Hypoplasia of the ulna,HP:0003988,Long ulna,no
-HP:0003038,Fibular hypoplasia,HP:0003085,Long fibula,no
+HP:0003022,Hypoplasia of the ulna,HP:0003988,Long ulna,yes
+HP:0003038,Fibular hypoplasia,HP:0003085,Long fibula,yes
 HP:0003073,Hypoalbuminemia,HP:0012117,Hyperalbuminemia,yes
 HP:0003077,Hyperlipidemia,HP:0045014,Hypolipidemia,yes
 HP:0003109,Hyperphosphaturia,HP:0012365,Hypophosphaturia,yes
@@ -173,7 +173,7 @@ HP:0003231,Hypertyrosinemia,HP:0500133,Hypotyrosinemia,yes
 HP:0003233,Decreased HDL cholesterol concentration,HP:0003563,Decreased LDL cholesterol concentration,no
 HP:0003233,Decreased HDL cholesterol concentration,HP:0012184,Increased HDL cholesterol concentration,yes
 HP:0003235,Hypermethioninemia,HP:0003658,Hypomethioninemia,yes
-HP:0003259,Elevated circulating creatinine concentration,HP:0012101,Decreased serum creatinine,N/A
+HP:0003259,Elevated circulating creatinine concentration,HP:0012101,Decreased serum creatinine,no
 HP:0003281,Increased circulating ferritin concentration,HP:0012343,Decreased circulating ferritin concentration,yes
 HP:0003282,Decreased circulating alkaline phosphatase activity,HP:0003155,Elevated circulating alkaline phosphatase concentration,yes
 HP:0003292,Decreased serum leptin,HP:0031793,Increased serum leptin,yes
@@ -181,19 +181,19 @@ HP:0003348,Hyperalaninemia,HP:0500154,Hypoalaninemia,yes
 HP:0003351,Decreased circulating renin concentration,HP:0000848,Increased circulating renin concentration,yes
 HP:0003354,Hyperthreoninemia,HP:0500136,Hypothreoninemia,yes
 HP:0003359,Decreased urinary sulfate,HP:0012613,Increased urinary sulfate,yes
-HP:0003371,Enlargement of the proximal femoral epiphysis,HP:0003090,Hypoplasia of the capital femoral epiphysis,N/A
+HP:0003371,Enlargement of the proximal femoral epiphysis,HP:0003090,Hypoplasia of the capital femoral epiphysis,yes
 HP:0003387,Decreased number of large peripheral myelinated nerve fibers,HP:0007249,Decreased number of small peripheral myelinated nerve fibers,no
 HP:0003429,CNS hypomyelination,HP:0012754,CNS hypermyelination,yes
-HP:0003551,Difficulty climbing stairs,HP:0033235,Difficulty descending stairs,no
+HP:0003551,Difficulty climbing stairs,HP:0033235,Difficulty descending stairs,yes
 HP:0003565,Elevated erythrocyte sedimentation rate,HP:0025022,Decreased erythrocyte sedimentation rate,yes
 HP:0003676,Progressive,HP:0003680,Nonprogressive,yes
 HP:0003700,Generalized amyotrophy,HP:0003720,Generalized muscle hypertrophy,yes
 HP:0003745,Sporadic,HP:0031796,Recurrent,no
 HP:0003785,Decreased CSF homovanillic acid concentration,HP:0034201,Increased CSF homovanillic acid concentration,yes
-HP:0003829,Typified by incomplete penetrance,HP:0034950,Typified by complete penetrance,yes
+HP:0003829,Typified by incomplete penetrance,HP:0034950,Typified by complete penetrance,no
 HP:0003898,Large humeral epiphyses,HP:0003900,Small humeral epiphyses,yes
 HP:0004005,Large radial epiphyses,HP:0004010,Small radial epiphyses,yes
-HP:0004237,Large carpal bones,HP:0001498,Carpal bone hypoplasia,no
+HP:0004237,Large carpal bones,HP:0001498,Carpal bone hypoplasia,yes
 HP:0004279,Short palm,HP:0011302,Long palm,yes
 HP:0004313,Decreased circulating antibody concentration,HP:0010702,Increased circulating antibody concentration,yes
 HP:0004315,Decreased circulating IgG concentration,HP:0003237,Increased circulating IgG concentration,yes
@@ -203,16 +203,16 @@ HP:0004325,Decreased body weight,HP:0004324,Increased body weight,yes
 HP:0004330,Increased skull ossification,HP:0004331,Decreased skull ossification,yes
 HP:0004349,Reduced bone mineral density,HP:0011001,Increased bone mineral density,yes
 HP:0004369,Decreased circulating purine concentration,HP:0004368,Increased circulating purine concentration,yes
-HP:0004469,Chronic bronchitis,HP:0012388,Acute bronchitis,yes
+HP:0004469,Chronic bronchitis,HP:0012388,Acute bronchitis,no
 HP:0004488,Macrocephaly at birth,HP:0011451,Primary microcephaly,yes
 HP:0004528,Generalized hypotrichosis,HP:0004554,Generalized hypertrichosis,yes
 HP:0004660,Hypoplasia of facial musculature,HP:0012892,Facial muscle hypertrophy,yes
-HP:0004729,Acute tubulointerstitial nephritis,HP:0004743,Chronic tubulointerstitial nephritis,yes
+HP:0004729,Acute tubulointerstitial nephritis,HP:0004743,Chronic tubulointerstitial nephritis,no
 HP:0004808,Acute myeloid leukemia,HP:0005506,Chronic myelogenous leukemia,no
-HP:0004820,Acute myelomonocytic leukemia,HP:0012325,Chronic myelomonocytic leukemia,yes
+HP:0004820,Acute myelomonocytic leukemia,HP:0012325,Chronic myelomonocytic leukemia,no
 HP:0004821,Hypersegmentation of neutrophil nuclei,HP:0011447,Hyposegmentation of neutrophil nuclei,yes
 HP:0004826,Folate-unresponsive megaloblastic anemia,HP:0004851,Folate-responsive megaloblastic anemia,yes
-HP:0004879,Intermittent hyperventilation,HP:0004881,Episodic hypoventilation,N/A
+HP:0004879,Intermittent hyperventilation,HP:0004881,Episodic hypoventilation,yes
 HP:0004905,Reduced circulating vitamin A concentration,HP:4000212,Increased circulating vitamin A concentration,yes
 HP:0004923,Hyperphenylalaninemia,HP:0500141,Hypophenylalaninemia,yes
 HP:0004966,Medial calcification of large arteries,HP:0012458,Medial calcification of small arteries,no
@@ -220,30 +220,30 @@ HP:0005165,Shortened PR interval,HP:0012248,Prolonged PR interval,yes
 HP:0005170,Complete heart block with broad QRS complexes,HP:0005178,Complete heart block with narrow QRS complexes,yes
 HP:0005272,Prominent nasolabial fold,HP:0010801,Underdeveloped nasolabial fold,yes
 HP:0005274,Prominent nasal tip,HP:0005278,Hypoplastic nasal tip,yes
-HP:0005310,Large vessel vasculitis,HP:0011944,Small vessel vasculitis,yes
+HP:0005310,Large vessel vasculitis,HP:0011944,Small vessel vasculitis,no
 HP:0005323,Hemifacial hypertrophy,HP:0011331,Hemifacial atrophy,yes
 HP:0005445,Enlarged posterior fossa,HP:0040010,Small posterior fossa,yes
 HP:0005479,Decreased circulating IgE concentration,HP:0003212,Increased circulating IgE concentration,yes
-HP:0005484,Secondary microcephaly,HP:0005490,Postnatal macrocephaly,no
-HP:0005520,Chronic disseminated intravascular coagulation,HP:0011880,Acute disseminated intravascular coagulation,yes
+HP:0005484,Secondary microcephaly,HP:0005490,Postnatal macrocephaly,yes
+HP:0005520,Chronic disseminated intravascular coagulation,HP:0011880,Acute disseminated intravascular coagulation,no
 HP:0005528,Bone marrow hypocellularity,HP:0031020,Bone marrow hypercellularity,yes
 HP:0005537,Decreased mean platelet volume,HP:0011877,Increased mean platelet volume,yes
 HP:0005550,Chronic lymphatic leukemia,HP:0006721,Acute lymphoblastic leukemia,no
 HP:0005585,Spotty hyperpigmentation,HP:0005590,Spotty hypopigmentation,yes
 HP:0005819,Short middle phalanx of finger,HP:0012298,Long middle phalanx of finger,yes
 HP:0005961,Hypoargininemia,HP:0500153,Hyperargininemia,yes
-HP:0005990,Thyroid hypoplasia,HP:0008249,Thyroid hyperplasia,no
+HP:0005990,Thyroid hypoplasia,HP:0008249,Thyroid hyperplasia,yes
 HP:0006127,Long proximal phalanx of finger,HP:0010241,Short proximal phalanx of finger,yes
 HP:0006155,Long phalanx of finger,HP:0009803,Short phalanx of finger,yes
-HP:0006184,Decreased palmar creases,HP:0006191,Deep palmar crease,no
+HP:0006184,Decreased palmar creases,HP:0006191,Deep palmar crease,yes
 HP:0006267,Large placenta,HP:0006266,Small placenta,yes
-HP:0006329,Alveolar process hypoplasia,HP:0009085,Alveolar ridge overgrowth,no
-HP:0006336,Short dental root,HP:0033189,Radiculomegaly,N/A
+HP:0006329,Alveolar process hypoplasia,HP:0009085,Alveolar ridge overgrowth,yes
+HP:0006336,Short dental root,HP:0033189,Radiculomegaly,yes
 HP:0006429,Broad femoral neck,HP:0008819,Narrow femoral neck,yes
-HP:0006554,Acute hepatic failure,HP:0100626,Chronic hepatic failure,yes
+HP:0006554,Acute hepatic failure,HP:0100626,Chronic hepatic failure,no
 HP:0007048,Large basal ganglia,HP:0012697,Small basal ganglia,yes
 HP:0007074,Thick corpus callosum,HP:0033725,Thin corpus callosum,yes
-HP:0007103,Hypointensity of cerebral white matter on MRI,HP:0030890,Hyperintensity of cerebral white matter on MRI,no
+HP:0007103,Hypointensity of cerebral white matter on MRI,HP:0030890,Hyperintensity of cerebral white matter on MRI,yes
 HP:0007149,Distal upper limb amyotrophy,HP:0040267,Distal upper limb muscle hypertrophy,yes
 HP:0007182,Peripheral hypomyelination,HP:0030173,Peripheral hypermyelination,yes
 HP:0007183,Focal T2 hyperintense basal ganglia lesion,HP:0012752,Focal T2 hypointense basal ganglia lesion,yes
@@ -268,7 +268,7 @@ HP:0008358,Hyperprolinemia,HP:0500139,Hypoprolinemia,yes
 HP:0008593,Prominent antitragus,HP:0011251,Underdeveloped antitragus,yes
 HP:0008665,Clitoral hypertrophy,HP:0000060,Clitoral hypoplasia,yes
 HP:0008818,Large iliac wing,HP:0002866,Hypoplastic iliac wing,yes
-HP:0008948,Proximal upper limb amyotrophy,HP:0040266,Proximal upper limb muscle hypertrophy,no
+HP:0008948,Proximal upper limb amyotrophy,HP:0040266,Proximal upper limb muscle hypertrophy,yes
 HP:0008972,Decreased activity of mitochondrial respiratory chain,HP:0040015,Increased activity of mitochondrial respiratory chain,yes
 HP:0009060,Scapular muscle atrophy,HP:0012895,Scapular muscle hypertrophy,yes
 HP:0009147,Enlarged epiphysis of the distal phalanx of the 5th finger,HP:0009148,Small epiphysis of the distal phalanx of the 5th finger,yes
@@ -293,9 +293,9 @@ HP:0009689,Enlarged thumb epiphysis,HP:0009694,Small thumb epiphysis,yes
 HP:0009746,Thick nasal septum,HP:0009936,Narrow nasal septum,yes
 HP:0009748,Large earlobe,HP:0000385,Small earlobe,yes
 HP:0009778,Short thumb,HP:0032524,Long thumb,yes
-HP:0009804,Tooth agenesis,HP:0011069,Supernumerary tooth,yes
+HP:0009804,Tooth agenesis,HP:0011069,Supernumerary tooth,no
 HP:0009882,Short distal phalanx of finger,HP:0012299,Long distal phalanx of finger,yes
-HP:0009924,Aplasia/Hypoplasia involving the nose,HP:0000448,Prominent nose,no
+HP:0009924,Aplasia/Hypoplasia involving the nose,HP:0000448,Prominent nose,yes
 HP:0009931,Enlarged naris,HP:0009933,Narrow naris,yes
 HP:0010018,Enlarged epiphysis of the 1st metacarpal,HP:0010023,Small epiphysis of the 1st metacarpal,yes
 HP:0010049,Short metacarpal,HP:0010493,Long metacarpals,yes
@@ -322,7 +322,7 @@ HP:0010790,Hypoplasia of the Leydig cells,HP:0010791,Hyperplasia of the Leydig c
 HP:0010809,Broad uvula,HP:0010811,Narrow uvula,yes
 HP:0010810,Long uvula,HP:0010812,Short uvula,yes
 HP:0010837,Decreased circulating ceruloplasmin concentration,HP:0033145,Increased circulating ceruloplasmin concentration,yes
-HP:0010860,Complete breech presentation,HP:0010861,Incomplete breech presentation,yes
+HP:0010860,Complete breech presentation,HP:0010861,Incomplete breech presentation,no
 HP:0010906,Hyperhistidinemia,HP:0500145,Hypohistidinemia,yes
 HP:0010910,Hypervalinemia,HP:0500132,Hypovalinemia,yes
 HP:0010911,Hyperleucinemia,HP:0500143,Hypoleucinemia,yes
@@ -331,9 +331,9 @@ HP:0010964,Abnormal circulating long-chain fatty-acid concentration,HP:0033147,A
 HP:0010976,B lymphocytopenia,HP:0005404,Increased B cell count,yes
 HP:0010980,Hyperlipoproteinemia,HP:0010981,Hypolipoproteinemia,yes
 HP:0011009,Acute,HP:0011010,Chronic,yes
-HP:0011037,Decreased urine output,HP:0000103,Polyuria,no
+HP:0011037,Decreased urine output,HP:0000103,Polyuria,yes
 HP:0011105,Hypervolemia,HP:0011106,Hypovolemia,yes
-HP:0011173,Focal behavior arrest seizure,HP:0011174,Focal hyperkinetic seizure,yes
+HP:0011173,Focal behavior arrest seizure,HP:0011174,Focal hyperkinetic seizure,no
 HP:0011238,Prominent inferior crus of antihelix,HP:0011239,Underdeveloped inferior crus of antihelix,yes
 HP:0011246,Underdeveloped superior crus of antihelix,HP:0011247,Prominent superior crus of antihelix,yes
 HP:0011271,Prominent tragus,HP:0011272,Underdeveloped tragus,yes
@@ -342,13 +342,13 @@ HP:0011340,Incomplete cleft of the upper lip,HP:5201009,Complete cleft of the up
 HP:0011383,Enlarged semicircular canal,HP:0011382,Hypoplasia of the semicircular canal,yes
 HP:0011433,High maternal circulating chorionic gonadotropin concentration,HP:0011434,Low maternal circulating chorionic gonadotropin concentration,yes
 HP:0011775,Thyroid macrofollicular adenoma,HP:0011776,Thyroid microfollicular adenoma,yes
-HP:0011800,Midface retrusion,HP:0012371,Hyperplasia of midface,no
+HP:0011800,Midface retrusion,HP:0012371,Hyperplasia of midface,yes
 HP:0011858,Reduced factor IX activity,HP:0033061,Increased factor IX activity,yes
 HP:0011899,Hyperfibrinogenemia,HP:0011900,Hypofibrinogenemia,yes
-HP:0011935,Decreased urinary urate,HP:0003149,Hyperuricosuria,no
+HP:0011935,Decreased urinary urate,HP:0003149,Hyperuricosuria,yes
 HP:0011967,Decreased circulating copper concentration,HP:0032254,Increased circulating copper concentration,yes
 HP:0011972,Hypoglycorrhachia,HP:0031885,Hyperglycorrhachia,yes
-HP:0011998,Postprandial hyperglycemia,HP:0012051,Reactive hypoglycemia,yes
+HP:0011998,Postprandial hyperglycemia,HP:0012051,Reactive hypoglycemia,no
 HP:0012026,Hyperornithinemia,HP:0500163,Hypoornithinemia,yes
 HP:0012052,Low serum calcitriol,HP:0031415,High serum calcitriol,yes
 HP:0012053,Decreased circulating calcifediol concentration,HP:0031414,High serum calcifediol,yes
@@ -360,10 +360,10 @@ HP:0012213,Decreased glomerular filtration rate,HP:0012214,Increased glomerular 
 HP:0012238,Increased circulating chylomicron concentration,HP:0031242,Decreased circulating chylomicron concentration,yes
 HP:0012250,ST segment depression,HP:0012251,ST segment elevation,yes
 HP:0012270,Decreased muscle glycogen content,HP:0009051,Increased muscle glycogen content,yes
-HP:0012279,Hyposerinemia,HP:0500138,Hyperserinemia,no
+HP:0012279,Hyposerinemia,HP:0500138,Hyperserinemia,yes
 HP:0012311,Monocytosis,HP:0012312,Monocytopenia,yes
 HP:0012340,Decreased resting energy expenditure,HP:0012339,Increased resting energy expenditure,yes
-HP:0012341,Microprolactinoma,HP:0012342,Macroprolactinoma,yes
+HP:0012341,Microprolactinoma,HP:0012342,Macroprolactinoma,no
 HP:0012350,Decreased sialylation of N-linked protein glycosylation,HP:0012351,Increased sialylation of N-linked protein glycosylation,yes
 HP:0012353,Decreased fucosylation of N-linked protein glycosylation,HP:0012354,Increased fucosylation of N-linked protein glycosylation,yes
 HP:0012356,Decreased mannosylation of N-linked protein glycosylation,HP:0012357,Increased mannosylation of N-linked protein glycosylation,yes
@@ -371,13 +371,13 @@ HP:0012360,Decreased fucosylation of O-linked protein glycosylation,HP:0012361,I
 HP:0012364,Decreased urinary potassium,HP:0003081,Increased urinary potassium,yes
 HP:0012392,Jaw hyporeflexia,HP:0033683,Jaw hyperreflexia,yes
 HP:0012403,Decreased urine alpha-ketoglutarate concentration,HP:0012402,Increased urine alpha-ketoglutarate concentration,yes
-HP:0012405,Hypocitraturia,HP:0012406,Hypercitraturia,N/A
+HP:0012405,Hypocitraturia,HP:0012406,Hypercitraturia,yes
 HP:0012416,Hypercapnia,HP:0012417,Hypocapnia,yes
 HP:0012450,Chronic constipation,HP:0012451,Acute constipation,no
 HP:0012466,Chronic respiratory acidosis,HP:0012467,Acute respiratory acidosis,no
 HP:0012505,Enlarged pituitary gland,HP:0012506,Small pituitary gland,yes
 HP:0012560,Decreased T3/T4 ratio,HP:0012559,Increased T3/T4 ratio,yes
-HP:0012604,Hyponatriuria,HP:0012605,Hypernatriuria,no
+HP:0012604,Hyponatriuria,HP:0012605,Hypernatriuria,yes
 HP:0012608,Hypermagnesiuria,HP:0012609,Hypomagnesiuria,yes
 HP:0012648,Decreased inflammatory response,HP:0012649,Increased inflammatory response,yes
 HP:0012685,Decreased pineal volume,HP:0012686,Increased pineal volume,yes
@@ -405,7 +405,7 @@ HP:0025090,Abnormal large intestinal mucosa morphology,HP:0025129,Abnormal small
 HP:0025137,Decreased serum estriol,HP:0025136,Increased serum estriol,yes
 HP:0025140,Decreased serum estrone,HP:0025139,Increased serum estrone,yes
 HP:0025158,Hyperautofluorescent retinal lesion,HP:0025159,Hypoautofluorescent retinal lesion,yes
-HP:0025250,Closed comedo,HP:0025251,Open comedo,yes
+HP:0025250,Closed comedo,HP:0025251,Open comedo,no
 HP:0025330,Downgaze palsy,HP:0025331,Upgaze palsy,yes
 HP:0025346,Increased circulating beta-2-microglobulin level,HP:0025347,Decreased circulating beta-2-microglobulin level,yes
 HP:0025434,Reduced circulating CH50 activity,HP:0031905,Increased total hemolytic complement activity,no
@@ -417,16 +417,16 @@ HP:0025584,Hypotropia,HP:0025586,Hypertropia,yes
 HP:0025585,Hyperphoria,HP:0031725,Hypophoria,yes
 HP:0025587,Hyperdeviation,HP:0025588,Hypodeviation,yes
 HP:0025622,obsolete Decreased proportion of CD4+ central memory cells,HP:0025621,obsolete Increased proportion of CD4+ central memory cells,yes
-HP:0025624,Reduced proportion of CD4+ effector memory T cells,HP:0410394,"Increased proportion of effector memory CD4-positive, alpha-beta T cells",yes
 HP:0025624,Reduced proportion of CD4+ effector memory T cells,HP:0025625,Elevated proportion of CD4+ effector memory T cells,yes
+HP:0025624,Reduced proportion of CD4+ effector memory T cells,HP:0410394,"Increased proportion of effector memory CD4-positive, alpha-beta T cells",yes
 HP:0025648,Steroid-sensitive nephrotic syndrome with infrequent relapses,HP:0025649,Steroid-sensitive nephrotic syndrome with frequent relapses,yes
 HP:0025684,Decreased amyloid beta 42 peptide CSF concentration,HP:0025685,Increased amyloid beta 42 peptide CSF concentration,yes
-HP:0025693,Pituitary macroadenoma,HP:0025694,Pituitary microadenoma,no
+HP:0025693,Pituitary macroadenoma,HP:0025694,Pituitary microadenoma,yes
 HP:0025708,Early young adult onset,HP:0025710,Late young adult onset,yes
 HP:0025759,Mobile lump,HP:0025760,Immobile lump,yes
 HP:0025767,Abnormal positive emotional state,HP:0031467,Abnormal negative emotional state,yes
 HP:0030018,Decreased female libido,HP:0030019,Increased female libido,yes
-HP:0030050,Narcolepsy,HP:0100785,Insomnia,no
+HP:0030050,Narcolepsy,HP:0100785,Insomnia,yes
 HP:0030088,Increased serum testosterone level,HP:0040171,Decreased serum testosterone concentration,yes
 HP:0030143,Hyperactive bowel sounds,HP:0030144,Hypoactive bowel sounds,yes
 HP:0030255,Large intestinal polyposis,HP:0030256,Small intestinal polyposis,no
@@ -510,7 +510,7 @@ HP:0032460,Decreased phosphoribosylpyrophosphate synthetase level,HP:0003240,Inc
 HP:0032473,Decreased urine urobilinogen,HP:0031890,Increased urine urobilinogen,yes
 HP:0032482,Decreased pituitary glycoprotein hormone alpha subunit level,HP:0031208,Increased pituitary glycoprotein hormone alpha subunit level,yes
 HP:0032489,Elevated fecal pH,HP:0032490,Decreased fecal pH,yes
-HP:0032675,Acute cutaneous wound,HP:0032676,Chronic cutaneous wound,yes
+HP:0032675,Acute cutaneous wound,HP:0032676,Chronic cutaneous wound,no
 HP:0032994,Supernumerary pulmonary fissure,HP:0032995,Decreased pulmonary fissure count,yes
 HP:0032997,Decreased cystatin C level,HP:0032998,Increased cystatin C level,yes
 HP:0033014,Decreased salivary cortisol level,HP:0033015,Increased salivary cortisol level,yes
@@ -531,9 +531,9 @@ HP:0033507,Decreased esterified to free carnitine ratio,HP:0033506,Increased est
 HP:0033531,Decreased cardiac index,HP:0033530,Increased cardiac index,yes
 HP:0033532,Decreased cardiac output,HP:0033533,Increased cardiac output,yes
 HP:0033633,Decreased alveolar volume,HP:0033634,Increased alveolar volume,yes
-HP:0033687,Short term memory impairment,HP:0033688,Long term memory impairment,yes
+HP:0033687,Short term memory impairment,HP:0033688,Long term memory impairment,no
 HP:0033733,Low-grade vesicoureteral reflux,HP:0033734,High-grade vesicoureteral reflux,yes
-HP:0033748,Hypoesthesia,HP:0100963,Hyperesthesia,no
+HP:0033748,Hypoesthesia,HP:0100963,Hyperesthesia,yes
 HP:0033756,Decreased left ventricular end-diastolic volume,HP:0033755,Increased left ventricular end-diastolic volume,yes
 HP:0033765,Death in late adulthood,HP:0100613,Death in early adulthood,yes
 HP:0033812,Decreased circulating androstenedione concentration,HP:0025380,Increased circulating androstenedione concentration,yes
@@ -572,13 +572,13 @@ HP:0040299,Decreased circulating free fatty acid level,HP:0030781,Increased circ
 HP:0040303,Decreased circulating iron concentration,HP:0003452,Increased circulating iron concentration,yes
 HP:0040306,Decreased male libido,HP:0040305,Increased male libido,yes
 HP:0040309,Increased size of the mandible,HP:0000347,Micrognathia,yes
-HP:0040328,Focal hyperintensity of cerebral white matter on MRI,HP:0040331,Focal hypointensity of cerebral white matter on MRI,no
+HP:0040328,Focal hyperintensity of cerebral white matter on MRI,HP:0040331,Focal hypointensity of cerebral white matter on MRI,yes
 HP:0040329,Multifocal hyperintensity of cerebral white matter on MRI,HP:0040332,Multifocal hypointensity of cerebral white matter on MRI,yes
-HP:0040330,Confluent hyperintensity of cerebral white matter on MRI,HP:0040333,Confluent hypointensity of cerebral white matter on MRI,no
+HP:0040330,Confluent hyperintensity of cerebral white matter on MRI,HP:0040333,Confluent hypointensity of cerebral white matter on MRI,yes
 HP:0040426,Decreased urinary hypoxanthine level,HP:0011814,Increased urinary hypoxanthine level,yes
 HP:0041078,Decreased immunoglobulin level in body fluid,HP:0041077,Increased immunoglobulin level in body fluid,yes
 HP:0041079,Decreased body fat percentage,HP:0025521,Increased body fat percentage,yes
-HP:0045011,Decreased urine bicarbonate concentration,HP:0003646,Bicarbonaturia,no
+HP:0045011,Decreased urine bicarbonate concentration,HP:0003646,Bicarbonaturia,yes
 HP:0045035,Decreased urinary copper concentration,HP:0010839,Increased urinary copper concentration,yes
 HP:0045051,Decreased DLCO,HP:0045050,Increased DLCO,yes
 HP:0045082,Decreased body mass index,HP:0031418,Increased body mass index,yes
@@ -609,9 +609,9 @@ HP:0100689,Decreased corneal thickness,HP:0011487,Increased corneal thickness,ye
 HP:0100736,Abnormal soft palate morphology,HP:0100737,Abnormal hard palate morphology,no
 HP:0100770,Hyperperistalsis,HP:0100771,Hypoperistalsis,yes
 HP:0100834,Neoplasm of the large intestine,HP:0100833,Neoplasm of the small intestine,no
-HP:0100878,Enlarged uterus,HP:0000013,Hypoplasia of the uterus,N/A
+HP:0100878,Enlarged uterus,HP:0000013,Hypoplasia of the uterus,yes
 HP:0100961,Enlarged hippocampus,HP:0025517,Hypoplastic hippocampus,yes
-HP:0200119,Acute hepatitis,HP:0200123,Chronic hepatitis,yes
+HP:0200119,Acute hepatitis,HP:0200123,Chronic hepatitis,no
 HP:0400004,Long ear,HP:0400005,Short ear,yes
 HP:0410054,Decreased circulating GABA concentration,HP:0410053,Elevated circulating gamma-aminobutyric acid concentration,yes
 HP:0410145,Decreased circulating biotinidase concentration,HP:0410146,Elevated circulating biotinidase concentration,yes
@@ -680,9 +680,9 @@ HP:5201003,Complete cleft hard palate,HP:5201005,Complete cleft soft palate,no
 HP:5201004,Incomplete cleft hard palate,HP:5201006,Incomplete cleft soft palate,no
 HP:5201005,Complete cleft soft palate,HP:5201006,Incomplete cleft soft palate,yes
 HP:5201007,Incomplete cleft maxillary alveolar ridge,HP:5201008,Complete cleft maxillary alveolar ridge,yes
-HP:5201011,Complete bilateral cleft lip,HP:5201012,Incomplete bilateral cleft lip,yes
+HP:5201011,Complete bilateral cleft lip,HP:5201012,Incomplete bilateral cleft lip,no
 HP:6000126,Decreased urinary bile acid level,HP:6000523,Increased urinary bile acid level,yes
 HP:6000244,Decreased circulating thyroglobulin concentration,HP:0025484,Increased circulating thyroglobulin concentration,yes
 HP:6000674,Decreased CSF N-acetylaspartic acid concentration,HP:0032274,Increased CSF N-acetylaspartic acid concentration,yes
 HP:6000680,Low serum osmolality,HP:6000681,High serum osmolality,yes
-HP:6000885,Enlarged radial head,HP:0003997,Hypoplastic radial head,N/A
+HP:6000885,Enlarged radial head,HP:0003997,Hypoplastic radial head,yes
