@@ -1,161 +1,182 @@
 #!/usr/bin/env python3
 """
-Generate phenotype opposites by matching bearer–quality pairs whose qualities
-are logical opposites (from pato_opposites.csv). 
+generate_hpo_opposites.py
+Builds a CSV of opposite HPO term pairs using precise bearer–quality mapping.
+
+• hpo_opposites_logical.csv          (column “strict” = 't' or 'f')
 """
-import os
-import re
+
+import os, itertools, re
 from collections import defaultdict
-from typing import Dict, Set, Tuple, List
 
 import pandas as pd
-from owlready2 import World
 from dotenv import load_dotenv
+from owlready2 import World, Restriction, And, Or, Not
 
 load_dotenv()
-INPUT_DIR = os.getenv("INPUT_DIR")
+INPUT_DIR  = os.getenv("INPUT_DIR")
 OUTPUT_DIR = os.getenv("OUTPUT_DIR")
-if not INPUT_DIR or not OUTPUT_DIR:
-    raise EnvironmentError("INPUT_DIR and OUTPUT_DIR environment variables must be set.")
 
-HP_OWL_PATH = os.path.join(INPUT_DIR, "hp.owl")
-PATO_OPPOSITES_PATH = os.path.join(OUTPUT_DIR, "pato_opposites.csv")
-HPO_BEARER_QUALITY_CSV = os.path.join(OUTPUT_DIR, "hpo_bearer_quality.csv")
-LOGICAL_OUT_CSV = os.path.join(OUTPUT_DIR, "hpo_opposites_logical.csv")
+HP_OWL_PATH          = os.path.join(INPUT_DIR,  "hp.owl")
+PATO_OPPOSITES_PATH  = os.path.join(OUTPUT_DIR, "pato_opposites.csv")
+HPO_BEARER_QUALITY   = os.path.join(OUTPUT_DIR, "hpo_bearer_quality.csv")
+LOGICAL_OUT_CSV      = os.path.join(OUTPUT_DIR, "hpo_opposites_logical.csv")
 
+ID_RX       = re.compile(r'(HP|UBERON|PATO|GO|CL|CHEBI|PR|NBO|MPATH)_[0-9]+')
+BEARERS     = {"UBERON", "CL", "GO", "CHEBI", "PR", "NBO", "MPATH"}
+LINK_LOCAL  = {"RO_0000052","RO_0002502","RO_0002314","RO_0000058","BFO_0000066"}
+Q_MODIFIER  = "RO_0002573"
+HP_ID_RX    = re.compile(r'(HP_\d+)$')
+fmt_id      = lambda obo: obo.replace("_", ":", 1)
 
-def _format_obo_id(obo_id: str) -> str:
-    return obo_id.replace("_", ":", 1) if "_" in obo_id else obo_id
+def curie(iri: str):
+    m = ID_RX.search(iri)
+    return (m.group(1), fmt_id(m.group())) if m else (None, None)
 
+def local_id(iri: str):
+    m = re.search(r'([A-Za-z]+_[0-9]+)$', iri)
+    return m.group(1) if m else None
 
-def _short_hpo_id(full_iri: str) -> str:
-    match = re.search(r"(HP_\d+)$", full_iri)
-    return _format_obo_id(match.group(1)) if match else full_iri
+def direct_bearers(filler):
+    """
+    Return all bearer classes that occur *directly* within the current filler
+    (either the filler itself or its immediate intersection members). This
+    preserves the 1‑to‑1 mapping between each bearer set and the local PATO
+    qualities collected in process_and().
+    """
+    out = set()
 
+    def maybe_add(obj):
+        if hasattr(obj, "iri"):
+            pref, cur = curie(obj.iri)
+            if pref in BEARERS:
+                out.add(cur)
 
-def _assert_exists(path: str) -> None:
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Missing file: {path}")
+    # Add the filler itself (it may already be a bearer class)
+    maybe_add(filler)
 
+    # Add any named classes that appear directly in an intersection
+    if isinstance(filler, And):
+        for part in filler.Classes:
+            maybe_add(part)
 
-def _load_opposite_qualities() -> Dict[str, Set[str]]:
-    _assert_exists(PATO_OPPOSITES_PATH)
-    df = pd.read_csv(PATO_OPPOSITES_PATH, header=None, names=["q1", "q2"])
-    mapping: Dict[str, Set[str]] = defaultdict(set)
-    for q1, q2 in df.itertuples(index=False):
-        q1, q2 = map(str.strip, (q1, q2))
-        q1, q2 = _format_obo_id(q1), _format_obo_id(q2)
-        mapping[q1].add(q2)
-        mapping[q2].add(q1)
-    return dict(mapping)
+    return out
 
+def allowed_qualities(opp: dict[str, set[str]]) -> set[str]:
+    """
+    Return the full set of PATO IDs that participate in at least one
+    opposite‑of pair. This will be used to filter hpo_bearer_quality.csv.
+    """
+    return set(opp.keys())
 
-def _parse_expressions(cls) -> Tuple[Set[str], Set[str]]:
-    expressions = getattr(cls, "is_a", []) + getattr(cls, "equivalent_to", [])
-    ub_ids, pt_ids = set(), set()
-    for expr in expressions:
-        expr_str = str(expr)
-        ub_ids.update(re.findall(r"UBERON_\d+", expr_str))
-        pt_ids.update(re.findall(r"PATO_\d+", expr_str))
-    return ub_ids, pt_ids
+def process_and(and_expr, mapping, allowed_qs):
+    local_qs = set()
+    for sub in and_expr.Classes:
+        if hasattr(sub, "iri") and curie(sub.iri)[0] == "PATO":
+            q = curie(sub.iri)[1]
+            if q in allowed_qs:
+                local_qs.add(q)
+        if isinstance(sub, Restriction):
+            if local_id(sub.property.iri) == Q_MODIFIER and hasattr(sub.value, "iri"):
+                if curie(sub.value.iri)[0] == "PATO":
+                    q = curie(sub.value.iri)[1]
+                    if q in allowed_qs:
+                        local_qs.add(q)
 
+    for sub in and_expr.Classes:
+        if isinstance(sub, Restriction) and local_id(sub.property.iri) in LINK_LOCAL:
+            for b in direct_bearers(sub.value):
+                mapping[b].update(local_qs)
 
-def _extract_bearer_quality() -> Tuple[Dict[Tuple[str, str], Set[str]], Dict[str, str]]:
-    _assert_exists(HP_OWL_PATH)
-    world = World()
-    hpo_ont = world.get_ontology(HP_OWL_PATH).load()
+def walk(expr, mapping, allowed_qs):
+    if isinstance(expr, And):
+        process_and(expr, mapping, allowed_qs)
+        for part in expr.Classes:
+            walk(part, mapping, allowed_qs)
+    elif isinstance(expr, Restriction):
+        walk(expr.value, mapping, allowed_qs)
+    elif isinstance(expr, Or):
+        for part in expr.Classes:
+            walk(part, mapping, allowed_qs)
+    elif isinstance(expr, Not):
+        walk(expr.Class, mapping, allowed_qs)
 
-    bearer_quality: Dict[Tuple[str, str], Set[str]] = defaultdict(set)
-    hp_labels: Dict[str, str] = {}
+def load_opposite_map():
+    df = pd.read_csv(PATO_OPPOSITES_PATH, header=None, names=["q1","q2"])
+    opp = defaultdict(set)
+    for q1, q2 in df.itertuples(False):
+        q1, q2 = map(lambda x: fmt_id(str(x).strip()), (q1, q2))
+        opp[q1].add(q2); opp[q2].add(q1)
+    return opp
 
-    for cls in sorted(hpo_ont.classes(), key=lambda c: str(c.iri)):
-        full_iri = str(cls.iri)
-        if not full_iri.startswith("http://purl.obolibrary.org/obo/HP_"):
-            continue
+def extract(allowed_qs):
+    w = World(); hpo = w.get_ontology(HP_OWL_PATH).load()
+    bmap, qmap, labels, rows = defaultdict(set), defaultdict(set), {}, []
+    for cls in hpo.classes():
+        iri = str(cls.iri); m = HP_ID_RX.search(iri)
+        if not m: continue
+        hp = fmt_id(m.group(1))
+        labels[hp] = ";".join(sorted(cls.label)) if cls.label else ""
+        mapping = defaultdict(set)
+        for ax in list(cls.is_a) + list(cls.equivalent_to):
+            walk(ax, mapping, allowed_qs)
+        if not mapping: continue                     # skip terms w/o bearers
+        for b, qs in mapping.items():
+            bmap[hp].add(b)
+            for q in qs:
+                if q in allowed_qs:
+                    qmap[hp].add(q)
+                    rows.append({"hpo_id":hp,"hpo_term":labels[hp],"bearer_iri":b,"quality_iri":q})
+    pd.DataFrame(rows).to_csv(HPO_BEARER_QUALITY, index=False)
+    unique_prefixes = sorted({bearer.split(":")[0] for bearer in {row["bearer_iri"] for row in rows}})
+    print(f"Unique BEARER prefixes used ({len(unique_prefixes)}):", unique_prefixes)
+    return bmap, qmap, labels
 
-        hpo_id = _short_hpo_id(full_iri)
-        hp_labels[hpo_id] = ";".join(sorted(cls.label)) if cls.label else ""
+def qualities_opposed(q1,q2,opp):
+    return any(q in opp and opp[q] & q2 for q in q1)
 
-        ub_ids, pt_ids = _parse_expressions(cls)
-        if not (ub_ids and pt_ids):
-            continue
+def make_pair(a,b,lbl):
+    return (a,lbl[a],b,lbl[b]) if a<b else (b,lbl[b],a,lbl[a])
 
-        for ub in ub_ids:
-            for pt in pt_ids:
-                bearer_quality[(_format_obo_id(ub), _format_obo_id(pt))].add(hpo_id)
+def find_pairs(bearers, qualities, opp, labels):
+    idx = defaultdict(list)
+    for hp, bs in bearers.items():
+        for b in bs: idx[b].append(hp)
+    strict, nonstrict, seen = set(), set(), set()
+    for group in idx.values():
+        for a,b in itertools.combinations(sorted(set(group)),2):
+            key = (a,b) if a<b else (b,a)
+            if key in seen: continue; seen.add(key)
+            if not qualities_opposed(qualities[a],qualities[b],opp): continue
+            ba, bb = bearers[a], bearers[b]
+            pair   = make_pair(a,b,labels)
+            if ba and ba==bb:     strict.add(pair)       # identical non-empty
+            elif ba & bb:         nonstrict.add(pair)    # overlap but diff
+    nonstrict -= strict
+    return sorted(strict,key=lambda x:(x[0],x[2])), sorted(nonstrict,key=lambda x:(x[0],x[2]))
 
-    rows = [
-        {
-            "hpo_id": hpo_id,
-            "hpo_term": hp_labels[hpo_id],
-            "bearer_iri": bearer,
-            "quality_iri": quality,
-        }
-        for (bearer, quality), ids in sorted(bearer_quality.items())
-        for hpo_id in sorted(ids)
-    ]
-    pd.DataFrame(rows).to_csv(HPO_BEARER_QUALITY_CSV, index=False)
-    print(f"Wrote {len(rows)} bearer-quality pairs to {HPO_BEARER_QUALITY_CSV}")
-    return bearer_quality, hp_labels
+def main():
+    opp = load_opposite_map()
+    aqs = allowed_qualities(opp)
 
+    bmap, qmap, lbl = extract(aqs)
 
-def _canonical_pair(
-    c1: str, t1: str, c2: str, t2: str
-) -> Tuple[str, str, str, str]:
-    return (c1, t1, c2, t2) if c1 < c2 else (c2, t2, c1, t1)
+    for hp_id in ("HP:0000024", "HP:0012648"):
+        print(f"{hp_id}  bearers: {sorted(bmap.get(hp_id, []))}  "
+              f"qualities: {sorted(qmap.get(hp_id, []))}")
 
-
-def _find_opposites(
-    bearer_quality: Dict[Tuple[str, str], Set[str]],
-    opposites: Dict[str, Set[str]],
-    labels: Dict[str, str],
-) -> List[Tuple[str, str, str, str]]:
-    bearer_dict: Dict[str, List[Tuple[str, List[str]]]] = defaultdict(list)
-    for (bearer, quality), ids in bearer_quality.items():
-        bearer_dict[bearer].append((quality, sorted(ids)))
-
-    pairs: Set[Tuple[str, str, str, str]] = set()
-    for bearer, q_list in bearer_dict.items():
-        q_list.sort(key=lambda x: x[0])
-        for i, (q1, ids1) in enumerate(q_list):
-            if q1 not in opposites:
-                continue
-            opp_set = opposites[q1]
-            for q2, ids2 in q_list[i + 1 :]:
-                if q2 not in opp_set:
-                    continue
-                for c1 in ids1:
-                    for c2 in ids2:
-                        if c1 != c2:
-                            pairs.add(
-                                _canonical_pair(
-                                    c1, labels.get(c1, ""), c2, labels.get(c2, "")
-                                )
-                            )
-    return sorted(pairs, key=lambda p: (p[0], p[2]))
-
-
-def main() -> None:
-    opposite_map = _load_opposite_qualities()
-    bearer_quality_map, hp_labels = _extract_bearer_quality()
-    if not bearer_quality_map:
-        print("No bearer-quality pairs found.")
-        return
-
-    opposite_pairs = _find_opposites(bearer_quality_map, opposite_map, hp_labels)
-    rows = [
-        {
-            "hpo_id1": id1,
-            "hpo_term1": term1,
-            "hpo_id2": id2,
-            "hpo_term2": term2,
-        }
-        for id1, term1, id2, term2 in opposite_pairs
-    ]
-
-    pd.DataFrame(rows).to_csv(LOGICAL_OUT_CSV, index=False)
-    print(f"Found {len(rows)} unique opposite phenotype pairs. Wrote to {LOGICAL_OUT_CSV}")
-
+    strict, nonstrict = find_pairs(bmap,qmap,opp,lbl)
+    # merge into one table with a 'strict' flag ('t' for strict, 'f' otherwise)
+    rows = [(*p, "t") for p in strict] + [(*p, "f") for p in nonstrict]
+    pd.DataFrame(
+        rows,
+        columns=["hpo_id1", "hpo_term1", "hpo_id2", "hpo_term2", "strict"]
+    ).to_csv(LOGICAL_OUT_CSV, index=False)
+    print(f"Total logical pairs: {len(rows):>6} → {LOGICAL_OUT_CSV}")
 
 if __name__ == "__main__":
+    if not INPUT_DIR or not OUTPUT_DIR:
+        raise EnvironmentError("Set INPUT_DIR and OUTPUT_DIR")
+    for p in (HP_OWL_PATH, PATO_OPPOSITES_PATH):
+        if not os.path.exists(p): raise FileNotFoundError(p)
     main()
