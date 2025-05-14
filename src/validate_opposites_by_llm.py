@@ -19,7 +19,7 @@ from tqdm import tqdm
 
 load_dotenv()
 
-PROVIDERS = ("openai", "deepseek", "aws", "together", "google", "xai")
+PROVIDERS = ("openai", "deepseek", "aws", "together", "google", "xai", "qwen")
 FILE_SUFFIX = {
     "openai":   "_openai_validated.csv",
     "deepseek": "_deepseek_validated.csv",
@@ -27,6 +27,7 @@ FILE_SUFFIX = {
     "together": "_llama_validated.csv",
     "google":   "_gemini_validated.csv",
     "xai":      "_grok_validated.csv",
+    "qwen":     "_qwen_validated.csv",
 }
 USER_TO_PROVIDER = {
     "openai": "openai",
@@ -35,6 +36,7 @@ USER_TO_PROVIDER = {
     "llama": "together",
     "gemini": "google",
     "grok": "xai",
+    "qwen": "qwen",
 }
 YES_NO = re.compile(r"\b(?:yes|no)\b", re.I)
 
@@ -97,26 +99,22 @@ def get_client(p: str) -> Tuple[Any, str]:
             os.getenv("OPENAI_API_MODEL_ID"),
         )
 
-    # deepseek **via Together** ---------------------------------------------
-    if p == "deepseek":
+    if p in ("deepseek", "qwen", "together"):
         return (
-            Together(
-                api_key=os.getenv("TOGETHER_API_KEY")
+            Together(api_key=os.getenv("TOGETHER_API_KEY")),
+            os.getenv(
+                {
+                    "deepseek": "TOGETHER_DEEPSEEK_MODEL_ID",
+                    "qwen": "TOGETHER_QWEN_MODEL_ID",
+                    "together": "TOGETHER_LLAMA_MODEL_ID",
+                }[p]
             ),
-            os.getenv("TOGETHER_DEEPSEEK_MODEL_ID"),
         )
 
     if p == "aws":
         return (
             boto3.client("bedrock-runtime", region_name=os.getenv("AWS_REGION")),
             os.getenv("AWS_CLAUDE_MODEL_ID"),
-        )
-
-    # llama-4 (Together)
-    if p == "together":
-        return (
-            Together(api_key=os.getenv("TOGETHER_API_KEY")),
-            os.getenv("TOGETHER_LLAMA_MODEL_ID"),
         )
 
     if p == "google":
