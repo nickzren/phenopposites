@@ -14,7 +14,7 @@ Default majority cutoff is ≥ 50 %, override with --cutoff 0.6, etc.
 
 import os, re, csv, argparse
 from collections import defaultdict
-from typing import Dict, Tuple, List
+from typing import Dict, Tuple, List, Any
 
 import pandas as pd
 from dotenv import load_dotenv
@@ -24,14 +24,7 @@ load_dotenv()
 OUT_DIR = os.getenv("OUTPUT_DIR", "data/output")
 VAL_DIR = os.path.join(OUT_DIR, "llm_validated")
 
-PROV_FILE = {
-    "openai":   "_openai_validated.csv",
-    "deepseek": "_deepseek_validated.csv",
-    "claude":   "_claude_validated.csv",
-    "llama":    "_llama_validated.csv",
-    "gemini":   "_gemini_validated.csv",
-    "grok":     "_grok_validated.csv",
-}
+LLM = ["openai", "deepseek", "claude", "llama", "gemini", "grok", "qwen"]
 
 TEXT_RE  = re.compile(r"hpo_opposites_text_.*?_validated\.csv$")
 LOGIC_RE = re.compile(r"hpo_opposites_logical_.*?_validated\.csv$")
@@ -56,7 +49,12 @@ def canonical(id1: str, term1: str, id2: str, term2: str) -> Pair:
     return (id2, term2, id1, term1) if id1 > id2 else (id1, term1, id2, term2)
 
 
-def add_votes(path: str, prov: str, bucket: Dict[Pair, Dict[str, str]]):
+def add_votes(
+    path: str,
+    prov: str,
+    bucket: Dict[Pair, Dict[str, str]],
+    extra_data: Dict[Pair, Dict[str, Any]],
+):
     df = pd.read_csv(path)
     for _, r in df.iterrows():
         pair = canonical(
@@ -67,17 +65,21 @@ def add_votes(path: str, prov: str, bucket: Dict[Pair, Dict[str, str]]):
         )
         ans = str(r["inverse_verified_by_llm"]).strip().lower()
         bucket[pair][prov] = "yes" if ans == "yes" else "no"
+        # store the full original row so we can propagate extra columns (e.g. "strict")
+        extra_data.setdefault(pair, {}).update(r.to_dict())
 
 
-def votes_table(pattern: re.Pattern, outfile: str, cutoff: float) -> Dict[Pair, bool]:
+def votes_table(pattern: re.Pattern, outfile: str, cutoff: float, include_strict: bool = False) -> Dict[Pair, bool]:
     bucket: Dict[Pair, Dict[str, str]] = defaultdict(dict)
     present: List[str] = []
+    extra_data: Dict[Pair, Dict[str, Any]] = {}
 
-    for prov, suff in PROV_FILE.items():
+    for prov in LLM:
+        suff = f"_{prov}_validated.csv"
         for fn in os.listdir(VAL_DIR):
             if pattern.match(fn) and fn.endswith(suff):
                 present.append(prov)
-                add_votes(os.path.join(VAL_DIR, fn), prov, bucket)
+                add_votes(os.path.join(VAL_DIR, fn), prov, bucket, extra_data)
                 break
 
     present.sort()
@@ -99,9 +101,14 @@ def votes_table(pattern: re.Pattern, outfile: str, cutoff: float) -> Dict[Pair, 
         )
         for prov in present:
             row[prov] = votes.get(prov, "N/A")
+        if include_strict:
+            row["strict"] = extra_data.get((id1, t1, id2, t2), {}).get("strict", "N/A")
         rows.append(row)
 
-    cols = ["id1", "term1", "id2", "term2"] + present + ["pct_yes", "majority"]
+    cols = ["id1", "term1", "id2", "term2"]
+    if include_strict:
+        cols.append("strict")
+    cols += present + ["pct_yes", "majority"]
     out_path = os.path.join(OUT_DIR, outfile)
     pd.DataFrame(rows)[cols].to_csv(out_path, index=False, quoting=csv.QUOTE_MINIMAL)
     print(f"[INFO] wrote {len(rows)} rows → {out_path}")
@@ -137,8 +144,8 @@ def write_master(text_pass: Dict[Pair, bool], logic_pass: Dict[Pair, bool], out_
 # --------------------------------------------------------------------------- #
 def main():
     args = parse_args()
-    text_pass  = votes_table(TEXT_RE,  "hpo_opposites_text_unified.csv",    args.cutoff)
-    logic_pass = votes_table(LOGIC_RE, "hpo_opposites_logical_unified.csv", args.cutoff)
+    text_pass  = votes_table(TEXT_RE,  "hpo_opposites_text_unified.csv",    args.cutoff, include_strict=False)
+    logic_pass = votes_table(LOGIC_RE, "hpo_opposites_logical_unified.csv", args.cutoff, include_strict=True)
     write_master(
         text_pass, logic_pass,
         os.path.join(OUT_DIR, "hpo_opposites_unified.csv")
