@@ -1,137 +1,141 @@
-from owlready2 import get_ontology, Thing, Or, And, Not, Restriction
-import re
+#!/usr/bin/env python3
+"""
+precise_bearer_quality.py
+Return exact bearer–quality pairs for a list of HPO terms.
 
-# 1) LOAD THE ONTOLOGY
-ontology_path = "data/input/hp.owl"
-onto = get_ontology(ontology_path).load()
+  • Bearer   = UBERON / CL / GO / CHEBI / PR / NBO
+  • Quality  = PATO
+  • A pair is recorded only when the quality appears in the same restriction
+    whose property is inheres_in / inheres_in_part_of / towards / occurs_in.
 
-# 2) SPECIFY THE HPO TERMS YOU WANT TO INSPECT
-phenotype_ids = [
-    "HP:0003268",
-    "HP:0005961"
-]
+Usage
+-----
+python precise_bearer_quality.py data/input/hp.owl HP:0000093 HP:0003127
+"""
 
-# 3) REGEX TO EXTRACT ONTOLOGY IDS
-#    Matches things like HP_0000824, UBERON_0000979, PATO_0000574, etc.
-id_pattern = re.compile(r'(HP|UBERON|PATO|GO|CL|CHEBI)_[0-9]+')
+import re, sys
+from collections import defaultdict
+from owlready2 import get_ontology, Restriction, And, Or, Not
 
-def get_label_or_name(cls):
-    """Helper to get a human-readable label if present, else use the raw class name."""
-    if cls.label and len(cls.label) > 0:
-        return cls.label[0]
-    return cls.name
+# --------------------------------------------------------------------------- #
+ID_RX       = re.compile(r'(HP|UBERON|PATO|GO|CL|CHEBI|PR|NBO)_[0-9]+')
+BEARERS     = {"UBERON", "CL", "GO", "CHEBI", "PR", "NBO"}
+LINK_LOCAL  = {         # local IDs of RO/BFO relations that link bearer↔quality
+    "RO_0000052", "RO_0002502", "RO_0002314", "RO_0000058", "BFO_0000066"
+}
+Q_MODIFIER  = "RO_0002573"   # has_modifier – carries additional PATO term
+# --------------------------------------------------------------------------- #
 
-def classify_named_class(named_class):
-    """
-    Determine if 'named_class' is from PATO (i.e., a Quality)
-    or from one of the typical 'bearer' ontologies (UBERON, CL, GO, CHEBI, etc.).
-    Returns (bearer_set, quality_set).
-    """
-    bearer_set, quality_set = set(), set()
-    iri = named_class.iri
-    match = id_pattern.search(iri)
-    if not match:
-        return bearer_set, quality_set
-    
-    oid = match.group().replace("_", ":")  # e.g. UBERON_0000979 -> UBERON:0000979
-    label = get_label_or_name(named_class)
-    
-    # PATO => Quality
-    if "PATO_" in iri:
-        quality_set.add((label, oid))
-    # UBERON, CL, GO, CHEBI => "Bearers" (structures or processes or chemicals)
-    elif any(x in iri for x in ("UBERON_", "CL_", "GO_", "CHEBI_")):
-        bearer_set.add((label, oid))
-    # You might add more logic for other ontologies if needed
-    
-    return bearer_set, quality_set
 
-def parse_class_expression(expr):
-    """
-    Recursively parse any class expression (named class, Restriction, And, Or, etc.)
-    and collect 'bearer' and 'quality' references.
-    """
-    bearers, qualities = set(), set()
-    
-    # CASE 1: Named class (e.g., PATO:0000574, UBERON:0000979, etc.)
-    if hasattr(expr, "iri"):
-        bset, qset = classify_named_class(expr)
-        bearers.update(bset)
-        qualities.update(qset)
-    
-    # CASE 2: Restriction, e.g., has_part some X, inheres_in some Y
-    if isinstance(expr, Restriction):
-        # Dive into the 'value' (the filler for that restriction)
-        if hasattr(expr, "value"):
-            # Recursively parse the filler
-            child_bearers, child_qualities = parse_class_expression(expr.value)
-            bearers.update(child_bearers)
-            qualities.update(child_qualities)
-    
-    # CASE 3: Logical AND / OR expression
-    #         e.g. And([ClassA, Restriction(...), ClassB])
-    #         or Or([ ... ])
-    if isinstance(expr, And) or isinstance(expr, Or):
-        for subexpr in expr.Classes:
-            child_bearers, child_qualities = parse_class_expression(subexpr)
-            bearers.update(child_bearers)
-            qualities.update(child_qualities)
-    
-    # CASE 4: Negation (Not) - parse whatever is inside
-    if isinstance(expr, Not):
-        child_bearers, child_qualities = parse_class_expression(expr.Class)
-        bearers.update(child_bearers)
-        qualities.update(child_qualities)
-    
-    return bearers, qualities
+def curie(iri: str):
+    """Return (prefix, CURIE) or (None, None) if no match."""
+    m = ID_RX.search(iri)
+    return (m.group(1), m.group().replace("_", ":")) if m else (None, None)
 
-def extract_bearers_qualities(cls):
-    """
-    Gather all logical definitions from both 'is_a' (subClassOf) and 'equivalent_to',
-    parse them recursively, and return sets of (label, ID) for bearers and qualities.
-    """
-    all_bearers, all_qualities = set(), set()
-    
-    # 1) Check subClassOf axioms
-    for super_expr in cls.is_a:
-        b, q = parse_class_expression(super_expr)
-        all_bearers.update(b)
-        all_qualities.update(q)
-    
-    # 2) Check equivalentTo axioms
-    for eq_expr in cls.equivalent_to:
-        b, q = parse_class_expression(eq_expr)
-        all_bearers.update(b)
-        all_qualities.update(q)
-    
-    return all_bearers, all_qualities
 
-# MAIN EXECUTION:
-for pid in phenotype_ids:
-    # Convert HP:0000824 -> HP_0000824 to match typical IRIs in HPO
-    iri_pid = pid.replace(":", "_")
-    
-    # Attempt to locate the class using its full IRI pattern
-    pheno_class = onto.search_one(iri=f"*{iri_pid}")
-    if not pheno_class:
-        print(f"Phenotype {pid} not found in the ontology.")
-        continue
-    
-    label = get_label_or_name(pheno_class)
-    print(f"\nPhenotype: {label} ({pid})")
-    
-    # Parse the class definitions
-    bearers, qualities = extract_bearers_qualities(pheno_class)
-    
-    # Print results
-    if not bearers and not qualities:
-        print("  No bearer or quality references found in logical axioms.")
-    else:
-        if bearers:
-            print("  Bearers:")
-            for b_label, b_id in sorted(bearers):
-                print(f"    - {b_label} ({b_id})")
-        if qualities:
-            print("  Qualities:")
-            for q_label, q_id in sorted(qualities):
-                print(f"    - {q_label} ({q_id})")
+def local_id(iri: str) -> str | None:
+    """Return the last 'PREFIX_1234567' fragment of an IRI, else None."""
+    m = re.search(r'([A-Za-z]+_[0-9]+)$', iri)
+    return m.group(1) if m else None
+
+
+def label(cls):
+    return cls.label[0] if cls.label else cls.name
+
+
+# ── direct bearer extraction (no recursion into nested restrictions) ─────────
+def direct_bearers(filler):
+    bears = set()
+    if hasattr(filler, "iri"):
+        pref, cur = curie(filler.iri)
+        if pref in BEARERS:
+            bears.add((label(filler), cur))
+            return bears
+    if isinstance(filler, And):
+        for part in filler.Classes:
+            if hasattr(part, "iri"):
+                pref, cur = curie(part.iri)
+                if pref in BEARERS:
+                    bears.add((label(part), cur))
+    return bears
+
+
+# ── process a single And([...]) filler ──────────────────────────────────────
+def process_and(and_expr, mapping):
+    local_quals = set()
+
+    # pass 1 – collect PATO qualities in this And-group
+    for sub in and_expr.Classes:
+        # named PATO class
+        if hasattr(sub, "iri"):
+            pref, cur = curie(sub.iri)
+            if pref == "PATO":
+                local_quals.add((label(sub), cur))
+
+        # has_modifier some PATO_x
+        if isinstance(sub, Restriction):
+            if local_id(sub.property.iri) == Q_MODIFIER and hasattr(sub.value, "iri"):
+                q_pref, q_cur = curie(sub.value.iri)
+                if q_pref == "PATO":
+                    local_quals.add((label(sub.value), q_cur))
+
+    # pass 2 – link each bearer to the collected qualities
+    for sub in and_expr.Classes:
+        if not isinstance(sub, Restriction):
+            continue
+
+        prop_local = local_id(sub.property.iri)
+        if prop_local not in LINK_LOCAL:
+            continue
+
+        for b in direct_bearers(sub.value):
+            mapping[b].update(local_quals)
+
+
+# ── recursive walker ────────────────────────────────────────────────────────
+def walk(expr, mapping):
+    if isinstance(expr, And):
+        process_and(expr, mapping)
+        for s in expr.Classes:
+            walk(s, mapping)
+    elif isinstance(expr, Restriction):
+        walk(expr.value, mapping)
+    elif isinstance(expr, Or):
+        for s in expr.Classes:
+            walk(s, mapping)
+    elif isinstance(expr, Not):
+        walk(expr.Class, mapping)
+
+
+def extract(term):
+    mp = defaultdict(set)          # bearer → {qualities}
+    for ax in list(term.is_a) + list(term.equivalent_to):
+        walk(ax, mp)
+    return mp
+
+
+# ── main ────────────────────────────────────────────────────────────────────
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        sys.exit("Usage: python precise_bearer_quality.py hp.owl HP:0000093 [...]")
+
+    owl_path, hp_ids = sys.argv[1], sys.argv[2:]
+    onto = get_ontology(owl_path).load()
+
+    for pid in hp_ids:
+        term = onto.search_one(iri=f"*{pid.replace(':', '_')}")
+        if not term:
+            print(f"{pid} not found"); continue
+
+        print(f"\nPhenotype: {label(term)} ({pid})")
+        pq_map = extract(term)
+        if not pq_map:
+            print("  No bearer–quality pairs found."); continue
+
+        print("  bearer → qualities")
+        last = len(pq_map) - 1
+        for i, ((b_lbl, b_id), qset) in enumerate(sorted(pq_map.items(), key=lambda x: x[0][1])):
+            pre = "└─" if i == last else "├─"
+            print(f"  {pre} {b_lbl} ({b_id})")
+            for q_lbl, q_id in sorted(qset, key=lambda x: x[1]):
+                print(f"      • {q_lbl} ({q_id})")
